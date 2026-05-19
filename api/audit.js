@@ -111,7 +111,7 @@ module.exports = async (req, res) => {
     const { data, error } = await resend.emails.send({
       from: from,
       to: [to],
-      reply_to: email,
+      replyTo: email,
       subject: subject,
       text: text,
       html: html,
