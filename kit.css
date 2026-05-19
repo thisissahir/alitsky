@@ -246,6 +246,10 @@ img { max-width: 100%; height: auto; }
   letter-spacing: -0.02em;
 }
 .case-stat-label { margin-top: 8px; font-size: 14px; color: rgba(255,255,255,0.6); }
+.case-stat-arrow { display: inline-block; margin: 0 0.15em; opacity: 0.85; }
+
+/* Tabular figures so digits don't jitter as the count animates. */
+.count { font-variant-numeric: tabular-nums; }
 
 /* ---------- How It Works ---------- */
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }

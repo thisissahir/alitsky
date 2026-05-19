@@ -100,8 +100,8 @@
           <div class="service-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           </div>
-          <h3>Your leads got a reply in 1m 47s.</h3>
-          <p>An AI receptionist that answers your calls, asks the right questions, books the appointment, and texts you the summary. Average across 142 calls in the Coastal Plumbing build.</p>
+          <h3>Your leads got a reply in <span class="count" data-target="107" data-format="time-ms" data-duration="1800">0m 0s</span>.</h3>
+          <p>An AI receptionist that answers your calls, asks the right questions, books the appointment, and texts you the summary. Average across <span class="count" data-target="142" data-format="int" data-duration="1600">0</span> calls in the Coastal Plumbing build.</p>
           <a href="#" class="more">Read more
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
@@ -157,15 +157,19 @@
         </div>
         <div class="case-numbers">
           <div class="case-stat">
-            <div class="case-stat-val">40 → 4</div>
+            <div class="case-stat-val">
+              <span class="count" data-target="40" data-format="int" data-duration="1400">0</span>
+              <span class="case-stat-arrow">→</span>
+              <span class="count" data-target="4" data-format="int" data-duration="1400">0</span>
+            </div>
             <div class="case-stat-label">Missed calls per week, before vs after</div>
           </div>
           <div class="case-stat">
-            <div class="case-stat-val">1.4s</div>
+            <div class="case-stat-val"><span class="count" data-target="1.4" data-format="decimal-1" data-duration="1600">0.0</span>s</div>
             <div class="case-stat-label">New homepage load time on 4G</div>
           </div>
           <div class="case-stat">
-            <div class="case-stat-val">3 weeks</div>
+            <div class="case-stat-val"><span class="count" data-target="3" data-format="int" data-duration="1200">0</span> weeks</div>
             <div class="case-stat-label">From kickoff to launch</div>
           </div>
         </div>
@@ -263,5 +267,6 @@
     </div>
   </footer>
 
+  <script src="count-up.js" defer></script>
 </body>
 </html>
