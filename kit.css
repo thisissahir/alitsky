@@ -553,6 +553,7 @@ img { max-width: 100%; height: auto; }
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
+.coverage-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
 .coverage-card {
   background: #fff;
   border: 1px solid var(--border);
@@ -666,6 +667,47 @@ img { max-width: 100%; height: auto; }
   opacity: 0.7; pointer-events: none;
 }
 
+/* ---------- Long-form narrative (about page, etc) ---------- */
+.narrative {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.narrative p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--ink-700);
+  margin: 0 0 22px;
+  text-wrap: pretty;
+}
+.narrative p:last-child { margin-bottom: 0; }
+.narrative p strong { color: var(--ink-900); font-weight: 600; }
+
+/* ---------- Founders block ---------- */
+.founders {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.founders .eyebrow { display: block; margin-bottom: 16px; }
+.founders h2 {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  color: var(--ink-900);
+  margin: 0 0 14px;
+}
+.founders-names {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.4vw, 28px);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--deep-teal-700);
+  margin: 0;
+}
+
 /* ---------- Page CTA (reuses .cta but slightly less heavy) ---------- */
 .page-cta { padding: 96px 0; }
 
@@ -728,8 +770,10 @@ img { max-width: 100%; height: auto; }
 @media (max-width: 960px) {
   .page-hero { padding: 72px 0 48px; }
   .coverage-grid { grid-template-columns: 1fr; }
+  .coverage-grid.cols-3 { grid-template-columns: 1fr; }
   .callout { padding: 32px 32px; }
   .audit-form { padding: 32px 28px; }
+  .narrative p { font-size: 17px; line-height: 1.65; }
 }
 
 @media (max-width: 640px) {
