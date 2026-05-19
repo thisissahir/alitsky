@@ -1,0 +1,12 @@
+{
+  "name": "alitsky-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Light in the Sky — marketing site. Static HTML + Vercel Serverless Function for the audit form.",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "resend": "^4.0.0"
+  }
+}

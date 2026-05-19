@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Business Analysis — A Light in the Sky</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A full analysis of your business's digital presence — website, Google profile, AI visibility, competitors, social, reviews. Plain English. No pitch.">
+  <meta name="theme-color" content="#051a23">
+  <link rel="icon" type="image/svg+xml" href="/assets/logo-mark-small.svg">
+  <link rel="stylesheet" href="/colors_and_type.css">
+  <link rel="stylesheet" href="/kit.css">
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand">
+        <img src="/assets/logo-mark-small.svg" width="32" height="32" alt="">
+        <span class="nav-brand-name">A Light in the Sky</span>
+      </a>
+      <div class="nav-links">
+        <a href="/#work">What we build</a>
+        <a href="/#how">How it works</a>
+        <a href="/#proof">Proof</a>
+        <a href="/about">About</a>
+      </div>
+      <a href="/audit" class="btn btn-primary nav-cta">Talk to us</a>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Business Analysis</span>
+      <h1>See exactly where your business stands online.</h1>
+      <p class="subhead">One honest look. No pitch.</p>
+      <p class="opening">
+        Most business owners have a feeling something is not working online — but they do not know what, or where to start. We do a full analysis of your business's digital presence and hand you a clear, plain-English report that shows you exactly what is working, what is not, and what to do about it.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ COVERAGE ============ -->
+  <section class="page-section surface">
+    <div class="container">
+      <div class="page-section-head center">
+        <span class="eyebrow">What we look at</span>
+        <h2>Six lenses. One clear picture.</h2>
+      </div>
+      <div class="coverage-grid">
+
+        <div class="coverage-card">
+          <h3>Your website</h3>
+          <p>Speed, design, mobile experience, copy, conversion rate, SEO health.</p>
+        </div>
+
+        <div class="coverage-card">
+          <h3>Your Google Business Profile</h3>
+          <p>Completeness, reviews, local ranking, photo quality.</p>
+        </div>
+
+        <div class="coverage-card">
+          <h3>Your competitors</h3>
+          <p>What they are doing that you are not, and where you have the edge.</p>
+        </div>
+
+        <div class="coverage-card">
+          <h3>Your AI visibility</h3>
+          <p>Whether ChatGPT, Claude, and Perplexity recommend your business when someone asks for what you do in your city.</p>
+        </div>
+
+        <div class="coverage-card">
+          <h3>Your social presence</h3>
+          <p>Consistency, activity, and whether it is helping or just existing.</p>
+        </div>
+
+        <div class="coverage-card">
+          <h3>Your review profile</h3>
+          <p>Volume, recency, response rate, sentiment.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT YOU GET ============ -->
+  <section class="page-section">
+    <div class="container">
+      <div class="callout">
+        <span class="eyebrow">What you get</span>
+        <h3>A written report and a 30-minute call.</h3>
+        <p>A written report and a 30-minute call where we walk you through every finding. No jargon. No upsell until you have seen the full picture. If we think we can help you, we will say so and explain exactly how. If we do not, we will tell you that too. This analysis is also included free with every website build.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EMBEDDED FORM ============ -->
+  <section class="page-section surface">
+    <div class="container">
+      <div class="page-section-head center">
+        <span class="eyebrow">Get yours</span>
+        <h2>Tell us about your business.</h2>
+        <p>Fill in the form and we will get back within 24 hours.</p>
+      </div>
+      <form data-audit-form class="audit-form" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="businessName">
+            Business name <span class="required" aria-hidden="true">*</span>
+          </label>
+          <input class="form-input" type="text" id="businessName" name="businessName" autocomplete="organization" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">
+            Your email <span class="required" aria-hidden="true">*</span>
+          </label>
+          <input class="form-input" type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="website">
+            Website URL <span class="required" aria-hidden="true">*</span>
+          </label>
+          <input class="form-input" type="text" id="website" name="website" placeholder="No website? Paste your Google Business link instead" autocomplete="url" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="description">
+            What does your business do? <span class="required" aria-hidden="true">*</span>
+          </label>
+          <textarea class="form-textarea" id="description" name="description" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="yearsOperating">
+            How many years have you been operating? <span class="required" aria-hidden="true">*</span>
+          </label>
+          <input class="form-input" type="number" id="yearsOperating" name="yearsOperating" min="0" max="200" step="1" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="challenge">
+            What is your biggest challenge right now? <span class="optional">Optional</span>
+          </label>
+          <textarea class="form-textarea" id="challenge" name="challenge" rows="3"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn-primary btn-lg" type="submit">Send it over →</button>
+          <div class="form-status" data-form-status role="status" aria-live="polite"></div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ BOTTOM CTA ============ -->
+  <section class="cta">
+    <div class="container cta-inner">
+      <img src="/assets/logo-mark-reverse.svg" alt="" width="64" height="64" class="cta-mark">
+      <h2>Not sure where to start? Start here.</h2>
+      <p>Fill in the form above or book a call. Either way, no pitch until we know what you need.</p>
+      <a href="/audit" class="btn btn-primary btn-lg">Book a call instead →</a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="/assets/logo-mark-small.svg" width="28" height="28" alt="">
+            <span class="footer-brand-name">A Light in the Sky</span>
+          </div>
+          <p class="footer-tag">
+            You built something real. We make sure the world can find it.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>What we build</h4>
+          <ul>
+            <li><a href="/services/websites">Websites</a></li>
+            <li><a href="/services/ai-receptionist">AI Receptionists &amp; Chatbots</a></li>
+            <li><a href="/services/ai-seo">AI SEO &amp; GEO</a></li>
+            <li><a href="/services/automations">Automations</a></li>
+            <li><a href="/services/analysis">Business Analysis</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/case-studies">Case studies</a></li>
+            <li><a href="/pricing">Pricing</a></li>
+            <li><a href="/audit">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:info@alitsky.com">info@alitsky.com</a></li>
+            <li><a href="tel:+15085550142">(508) 555 — 0142</a></li>
+            <li>Salem, Massachusetts</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 A Light in the Sky · All rights reserved</div>
+        <div class="footer-legal">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/audit-form.js" defer></script>
+</body>
+</html>

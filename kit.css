@@ -393,3 +393,286 @@ img { max-width: 100%; height: auto; }
   .footer-tag { max-width: none; }
   .footer-bottom { font-size: 12px; }
 }
+
+/* =========================================================
+   SUB-PAGE COMPONENTS
+   (audit, services/*, about, case-studies, pricing, thank-you)
+   ========================================================= */
+
+/* ---------- Page hero (smaller than homepage hero) ---------- */
+.page-hero {
+  padding: 96px 0 64px;
+  text-align: center;
+  position: relative;
+}
+.page-hero .eyebrow { display: inline-block; margin-bottom: 18px; }
+.page-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 5.5vw, 72px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  margin: 0 0 18px;
+  color: var(--ink-900);
+  text-wrap: balance;
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-hero h1 em {
+  font-style: normal; color: #DC4413; font-weight: 300;
+}
+.page-hero .subhead {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  font-weight: 400;
+  color: var(--deep-teal-700);
+  margin: 0 0 32px;
+  text-wrap: balance;
+}
+.page-hero .opening {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--ink-700);
+  max-width: 720px;
+  margin: 0 auto;
+  text-wrap: pretty;
+}
+.page-hero .opening.prominent {
+  font-size: 22px;
+  line-height: 1.55;
+  color: var(--ink-900);
+}
+
+/* ---------- Page section: standard content block ---------- */
+.page-section { padding: 72px 0; }
+.page-section.surface { background: var(--bg-surface); }
+.page-section.ink {
+  background: #051a23;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.page-section.ink .page-section-head h2 { color: #fff; }
+.page-section.ink .page-section-head p { color: rgba(255,255,255,0.7); }
+.page-section.ink .eyebrow { color: #3FC1D4; }
+
+.page-section-head { max-width: 720px; margin: 0 auto 48px; }
+.page-section-head.center { text-align: center; margin-left: auto; margin-right: auto; }
+.page-section-head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.4vw, 40px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+  margin: 12px 0 14px;
+  color: var(--ink-900);
+  text-wrap: balance;
+}
+.page-section-head p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--fg-muted);
+  margin: 0;
+}
+
+/* ---------- Coverage cards grid ---------- */
+.coverage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.coverage-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px 30px;
+  transition: all 220ms var(--ease-out);
+  box-shadow: 0 2px 0 rgba(11, 32, 48, 0.02);
+}
+.coverage-card:hover {
+  border-color: var(--deep-teal-300);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px -12px rgba(11, 32, 48, 0.18);
+}
+.coverage-card h3 {
+  font-family: var(--font-display);
+  font-size: 19px; line-height: 1.25;
+  font-weight: 500; letter-spacing: -0.01em;
+  margin: 0 0 10px;
+  color: var(--ink-900);
+}
+.coverage-card p {
+  margin: 0; color: var(--fg-muted);
+  font-size: 15px; line-height: 1.6;
+}
+
+/* ---------- Callout (boxed paragraph with heading) ---------- */
+.callout {
+  background: var(--bg-surface);
+  border-radius: 18px;
+  padding: 40px 44px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+.callout h3 {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.4vw, 28px);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+  margin: 0 0 12px;
+  color: var(--ink-900);
+}
+.callout p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink-700);
+}
+.callout.ink {
+  background: #051a23;
+  color: #fff;
+}
+.callout.ink h3 { color: #fff; }
+.callout.ink p { color: rgba(255,255,255,0.78); }
+.callout.ink .eyebrow { color: #3FC1D4; }
+.callout .eyebrow { display: block; margin-bottom: 8px; }
+
+/* ---------- Audit form ---------- */
+.audit-form {
+  max-width: 640px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 40px 44px;
+  box-shadow: 0 12px 32px -16px rgba(11, 32, 48, 0.12);
+}
+.form-group {
+  display: flex; flex-direction: column; gap: 8px;
+  margin-bottom: 22px;
+}
+.form-group:last-of-type { margin-bottom: 28px; }
+.form-label {
+  font-size: 14px; font-weight: 600;
+  color: var(--ink-900);
+  letter-spacing: -0.005em;
+}
+.form-label .required { color: var(--ember-600); margin-left: 2px; }
+.form-label .optional {
+  color: var(--fg-muted); font-weight: 400; font-size: 13px;
+  margin-left: 6px;
+}
+.form-input, .form-textarea {
+  font-family: var(--font-body);
+  font-size: 16px;
+  padding: 13px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ink-900);
+  transition: border-color 160ms, box-shadow 160ms;
+  width: 100%;
+}
+.form-input::placeholder, .form-textarea::placeholder {
+  color: var(--fg-subtle);
+}
+.form-input:focus, .form-textarea:focus {
+  outline: none;
+  border-color: var(--deep-teal-700);
+  box-shadow: var(--shadow-focus);
+}
+.form-textarea { resize: vertical; min-height: 96px; line-height: 1.5; }
+.form-actions { display: flex; flex-direction: column; gap: 12px; }
+.form-actions .btn { justify-content: center; width: 100%; }
+.form-status {
+  font-size: 14px; color: var(--fg-muted); text-align: center;
+  min-height: 1.4em;
+}
+.form-status.error { color: var(--ember-700); font-weight: 500; }
+.btn[disabled], .btn[aria-busy="true"] {
+  opacity: 0.7; pointer-events: none;
+}
+
+/* ---------- Page CTA (reuses .cta but slightly less heavy) ---------- */
+.page-cta { padding: 96px 0; }
+
+/* ---------- Thank-you page ---------- */
+.thank-you {
+  min-height: 70vh;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  padding: 96px 24px;
+}
+.thank-you-inner { max-width: 640px; }
+.thank-you-mark {
+  width: 80px; height: 80px;
+  margin: 0 auto 28px;
+  display: block;
+  filter: drop-shadow(0 0 30px rgba(63, 193, 212, 0.35));
+}
+.thank-you h1 {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  margin: 0 0 18px;
+  color: var(--ink-900);
+}
+.thank-you p {
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--ink-700);
+  margin: 0 0 36px;
+  text-wrap: balance;
+}
+
+/* ---------- Placeholder pages (about, case-studies, pricing) ---------- */
+.placeholder {
+  min-height: 60vh;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  padding: 96px 24px;
+}
+.placeholder-inner { max-width: 640px; }
+.placeholder h1 {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  margin: 0 0 18px;
+  color: var(--ink-900);
+}
+.placeholder p {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--ink-700);
+  margin: 0 0 28px;
+}
+
+/* ---------- Sub-page responsive ---------- */
+@media (max-width: 960px) {
+  .page-hero { padding: 72px 0 48px; }
+  .coverage-grid { grid-template-columns: 1fr; }
+  .callout { padding: 32px 32px; }
+  .audit-form { padding: 32px 28px; }
+}
+
+@media (max-width: 640px) {
+  .page-hero { padding: 56px 0 40px; }
+  .page-hero .opening { font-size: 17px; }
+  .page-hero .opening.prominent { font-size: 19px; }
+  .page-section { padding: 56px 0; }
+  .page-section-head { margin-bottom: 36px; }
+  .coverage-card { padding: 24px 24px; }
+  .callout { padding: 28px 24px; border-radius: 14px; }
+  .callout p { font-size: 16px; }
+  .audit-form { padding: 28px 22px; border-radius: 14px; }
+  .form-input, .form-textarea { font-size: 16px; padding: 12px 14px; }
+  .thank-you, .placeholder { padding: 64px 20px; min-height: 60vh; }
+}
