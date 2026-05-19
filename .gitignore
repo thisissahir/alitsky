@@ -1,0 +1,15 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Logs / build artifacts (not used today, but here in case)
+node_modules/
+dist/
+.vercel/
+*.log

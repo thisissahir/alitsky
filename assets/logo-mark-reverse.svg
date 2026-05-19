@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  
+  <path d="M100 24 L109 53 L100 82 L91 53 Z" fill="#FFFFFF"></path>
+  <path d="M138 34.18 L131.29 63.8 L109 84.41 L115.71 54.8 Z" fill="#FFFFFF"></path>
+  <path d="M165.82 62 L145.2 84.29 L115.59 91 L136.2 68.71 Z" fill="#FFFFFF"></path>
+  <path d="M176 100 L147 109 L118 100 L147 91 Z" fill="#FFFFFF"></path>
+  <path d="M165.82 138 L136.2 131.29 L115.59 109 L145.2 115.71 Z" fill="#FFFFFF"></path>
+  <path d="M138 165.82 L115.71 145.2 L109 115.59 L131.29 136.2 Z" fill="#FFFFFF"></path>
+  <path d="M100 176 L91 147 L100 118 L109 147 Z" fill="#FFFFFF"></path>
+  <path d="M62 165.82 L68.71 136.2 L91 115.59 L84.29 145.2 Z" fill="#FFFFFF"></path>
+  <path d="M34.18 138 L54.8 115.71 L84.41 109 L63.8 131.29 Z" fill="#FFFFFF"></path>
+  <path d="M24 100 L53 91 L82 100 L53 109 Z" fill="#FFFFFF"></path>
+  <path d="M34.18 62 L63.8 68.71 L84.41 91 L54.8 84.29 Z" fill="#FFFFFF"></path>
+  <path d="M62 34.18 L84.29 54.8 L91 84.41 L68.71 63.8 Z" fill="#FFFFFF"></path>
+  <line x1="106.73" y1="74.89" x2="122.78" y2="15" stroke="#FFFFFF" stroke-width="2"></line>
+  <line x1="118.38" y1="81.62" x2="162.23" y2="37.77" stroke="#FFFFFF" stroke-width="2"></line>
+  <line x1="125.11" y1="93.27" x2="185" y2="77.22" stroke="#FFFFFF" stroke-width="2"></line>
+  <line x1="125.11" y1="106.73" x2="185" y2="122.78" stroke="#FFFFFF" stroke-width="2"></line>
+  <line x1="118.38" y1="118.38" x2="162.23" y2="162.23" stroke="#FFFFFF" stroke-width="2"></line>
+  <line x1="106.73" y1="125.11" x2="122.78" y2="185" stroke="#FFFFFF" stroke-width="2"></line>
+  <line x1="93.27" y1="125.11" x2="77.22" y2="185" stroke="#FFFFFF" stroke-width="2"></line>
+  <line x1="81.62" y1="118.38" x2="37.77" y2="162.23" stroke="#FFFFFF" stroke-width="2"></line>
+  <line x1="74.89" y1="106.73" x2="15" y2="122.78" stroke="#FFFFFF" stroke-width="2"></line>
+  <line x1="74.89" y1="93.27" x2="15" y2="77.22" stroke="#FFFFFF" stroke-width="2"></line>
+  <line x1="81.62" y1="81.62" x2="37.77" y2="37.77" stroke="#FFFFFF" stroke-width="2"></line>
+  <line x1="93.27" y1="74.89" x2="77.22" y2="15" stroke="#FFFFFF" stroke-width="2"></line>
+</svg>
