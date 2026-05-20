@@ -176,10 +176,20 @@ img { max-width: 100%; height: auto; }
 .hero-star {
   position: absolute; left: 50%; top: 38%;
   transform: translate(-50%, -50%);
+  transform-origin: center center;
   width: 130px; height: 130px;
   color: #FFFFFF;
   z-index: 2;
   filter: drop-shadow(0 0 50px rgba(63, 193, 212, 0.55));
+  /* One graceful rotation on page load: 4s, decelerates, stops. */
+  animation: hero-star-spin 4s var(--ease-out) 0.2s 1 both;
+}
+@keyframes hero-star-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-star { animation: none; }
 }
 .hero-card {
   position: absolute;
