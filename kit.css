@@ -251,13 +251,13 @@ img { max-width: 100%; height: auto; }
   background: linear-gradient(180deg, transparent 50%, rgba(5, 26, 35, 0.7) 100%);
 }
 .hero-star {
-  position: absolute; left: 50%; top: 38%;
+  position: absolute; left: 50%; top: 50%;
   transform: translate(-50%, -50%);
   transform-origin: center center;
-  width: 130px; height: 130px;
+  width: 180px; height: 180px;
   color: #FFFFFF;
   z-index: 2;
-  filter: drop-shadow(0 0 50px rgba(63, 193, 212, 0.55));
+  filter: drop-shadow(0 0 60px rgba(63, 193, 212, 0.55));
   /* One graceful rotation on page load: 4s, decelerates, stops. */
   animation: hero-star-spin 4s var(--ease-out) 0.2s 1 both;
 }
