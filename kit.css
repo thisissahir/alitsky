@@ -395,16 +395,18 @@ img { max-width: 100%; height: auto; }
   text-wrap: pretty;
 }
 .service-pricing {
-  font-family: var(--font-mono);
-  font-size: 13px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums lining-nums;
   color: var(--teal-700);
   margin: 0 0 22px;
-  padding: 10px 14px;
+  padding: 10px 16px;
   background: var(--deep-teal-50);
   border: 1px solid rgba(14, 72, 88, 0.08);
-  border-radius: 8px;
+  border-radius: 999px;
   display: inline-block;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.005em;
 }
 .service-row .btn-primary { align-self: flex-start; }
 
@@ -510,14 +512,16 @@ img { max-width: 100%; height: auto; }
   margin: 8px 0 0;
 }
 .bundle-pricing {
-  font-family: var(--font-mono);
-  font-size: 12px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums lining-nums;
   color: var(--teal-700);
   margin: 8px 0;
   padding: 10px 14px;
   background: var(--deep-teal-50);
   border-radius: 8px;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.005em;
 }
 .bundle-card .btn-primary { margin-top: auto; align-self: flex-start; }
 
