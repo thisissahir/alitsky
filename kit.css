@@ -683,6 +683,63 @@ img { max-width: 100%; height: auto; }
 }
 
 /* =========================================================
+   WINDOW SECTION (urgency statement right after hero)
+   ========================================================= */
+.window-section {
+  background: var(--bg-surface);
+  padding: 96px 0 88px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+.window-inner {
+  max-width: 880px;
+}
+.window-section .eyebrow {
+  display: block;
+  margin-bottom: 22px;
+}
+.window-h {
+  font-family: var(--font-display);
+  font-size: clamp(38px, 5.2vw, 68px);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  color: var(--ink-900);
+  margin: 0 0 14px;
+  text-wrap: balance;
+}
+.window-subline {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.6vw, 30px);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--ink-700);
+  margin: 0 0 28px;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+.window-body {
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--ink-700);
+  max-width: 720px;
+  margin: 0 auto 36px;
+  text-wrap: pretty;
+}
+.window-ctas {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 640px) {
+  .window-section { padding: 64px 0 56px; }
+  .window-body { font-size: 16px; }
+  .window-ctas .btn-lg { padding: 14px 22px; font-size: 15px; }
+}
+
+/* =========================================================
    STATS RIBBON (homepage, between hero and GEO anchor)
    ========================================================= */
 .stats-ribbon {
