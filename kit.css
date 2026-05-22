@@ -196,7 +196,7 @@ img { max-width: 100%; height: auto; }
 /* ---------- Hero ---------- */
 .hero { padding: 88px 0 96px; position: relative; overflow: hidden; }
 .hero-grid {
-  display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 80px; align-items: center;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;
 }
 .hero h1 {
   font-family: var(--font-display);
@@ -235,30 +235,42 @@ img { max-width: 100%; height: auto; }
 .hero-trust strong { color: var(--fg); font-weight: 600; }
 
 /* Hero visual — deepest ink, vivid cyan glow on the mark. */
+/* Hero visual — large dark teal panel with radial bloom + glowing star */
 .hero-visual {
-  aspect-ratio: 1 / 1.05;
-  background: #051a23;
-  border-radius: 22px;
+  aspect-ratio: 1 / 1;
+  min-height: 500px;
+  border-radius: 28px;
   position: relative;
   overflow: hidden;
-  background-image:
-    radial-gradient(ellipse at 50% 30%, rgba(63, 193, 212, 0.32) 0%, transparent 55%);
-  box-shadow: 0 40px 80px -20px rgba(5, 26, 35, 0.55);
+  /* Three-layer radial gradient: subtle white bloom at centre, then cyan
+     glow, over a dark-teal-to-near-black falloff at the edges. */
+  background:
+    radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.06) 0%, transparent 32%),
+    radial-gradient(circle at 50% 45%, rgba(63, 193, 212, 0.18) 0%, transparent 55%),
+    radial-gradient(circle at 50% 45%, #0c2e3a 0%, #04141c 75%);
+  box-shadow: 0 50px 110px -30px rgba(5, 26, 35, 0.6);
 }
 .hero-visual::after {
   content: "";
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, transparent 50%, rgba(5, 26, 35, 0.7) 100%);
+  background: linear-gradient(180deg, transparent 55%, rgba(4, 20, 28, 0.55) 100%);
+  pointer-events: none;
 }
 .hero-star {
-  position: absolute; left: 50%; top: 50%;
+  position: absolute; left: 50%; top: 44%;
   transform: translate(-50%, -50%);
   transform-origin: center center;
-  width: 220px; height: 220px;
+  /* 65% of card width, so it scales with the card; capped at 360px so it
+     does not get silly on very wide viewports. */
+  width: 65%;
+  max-width: 360px;
+  height: auto;
   color: #FFFFFF;
   z-index: 2;
-  filter: drop-shadow(0 0 80px rgba(63, 193, 212, 0.55));
-  /* One graceful rotation on page load: 4s, decelerates, stops. */
+  /* Soft white bloom + cyan halo behind the mark */
+  filter:
+    drop-shadow(0 0 100px rgba(255, 255, 255, 0.16))
+    drop-shadow(0 0 70px rgba(63, 193, 212, 0.45));
   animation: hero-star-spin 4s var(--ease-out) 0.2s 1 both;
 }
 
@@ -1488,7 +1500,7 @@ img { max-width: 100%; height: auto; }
   .hero { padding: 64px 0 80px; }
   .hero-grid { grid-template-columns: 1fr; gap: 56px; }
   .hero .lede { max-width: none; }
-  .hero-visual { max-width: 480px; margin: 0 auto; width: 100%; }
+  .hero-visual { max-width: 560px; margin: 0 auto; width: 100%; min-height: 480px; }
 
   .case-grid { grid-template-columns: 1fr; gap: 48px; }
 
@@ -1516,7 +1528,7 @@ img { max-width: 100%; height: auto; }
   .hero .lede { font-size: 17px; margin-bottom: 24px; }
   .hero-ctas .btn-lg { padding: 14px 22px; font-size: 15px; }
   .hero-trust { margin-top: 28px; gap: 10px 24px; }
-  .hero-star { width: 96px; height: 96px; }
+  .hero-visual { min-height: 380px; border-radius: 22px; }
   .hero-card { left: 18px; right: 18px; bottom: 18px; padding: 14px 16px; }
   .hero-card-icon { width: 34px; height: 34px; }
   .hero-card-title { font-size: 13px; }
