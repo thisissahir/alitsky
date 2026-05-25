@@ -1,0 +1,51 @@
+# A Light in the Sky — robots.txt
+# Everything on this site is meant to be found. Crawlers welcome.
+
+User-agent: *
+Allow: /
+
+# AI crawlers — explicitly allowed so AI assistants can read,
+# index, and recommend the site (the whole point of GEO).
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Server-only paths — nothing user-facing here.
+Disallow: /api/
+
+Sitemap: https://www.alitsky.com/sitemap.xml
