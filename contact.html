@@ -2,16 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Case studies | A Light in the Sky</title>
+  <title>Let's talk | A Light in the Sky</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Real results from real businesses. Detailed case studies coming soon.">
+  <meta name="description" content="Leave your details. We will be in touch within 24 hours. No pitch until we know what you need.">
   <meta name="theme-color" content="#051a23">
   <link rel="icon" type="image/svg+xml" href="/assets/logo-mark-small.svg">
   <link rel="stylesheet" href="/colors_and_type.css">
   <link rel="stylesheet" href="/kit.css">
+  <style>
+    /* /contact page — minimal centered form */
+    .contact-shell {
+      min-height: calc(100vh - 58px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 24px;
+      background: var(--bg);
+    }
+    .contact-card {
+      width: 100%;
+      max-width: 480px;
+      text-align: center;
+    }
+    .contact-h1 {
+      font-family: var(--font-display);
+      font-size: clamp(40px, 5.4vw, 56px);
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+      font-weight: 500;
+      color: var(--ink-900);
+      margin: 0 0 14px;
+      text-wrap: balance;
+    }
+    .contact-sub {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--ink-700);
+      margin: 0 0 36px;
+      text-wrap: pretty;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: left;
+    }
+    .contact-input {
+      width: 100%;
+      height: 56px;
+      padding: 0 22px;
+      font: 500 16px/1 var(--font-body);
+      color: var(--ink-900);
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: 999px;
+      transition: border-color 160ms var(--ease-out), box-shadow 160ms var(--ease-out);
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    .contact-input::placeholder { color: var(--ink-300); font-weight: 400; }
+    .contact-input:focus {
+      outline: none;
+      border-color: var(--teal-700);
+      box-shadow: 0 0 0 4px rgba(14,72,88,0.10);
+    }
+    .contact-submit {
+      width: 100%;
+      height: 56px;
+      padding: 0 22px;
+      font: 600 16px/1 var(--font-body);
+      color: #fff;
+      background: var(--teal-700);
+      border: 0;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 160ms var(--ease-out), transform 160ms var(--ease-out);
+      margin-top: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .contact-submit:hover { background: var(--teal-800); }
+    .contact-submit:active { transform: translateY(1px); }
+    .contact-submit[aria-busy="true"] { background: var(--teal-800); cursor: progress; }
+    .contact-fineprint {
+      margin: 22px 0 0;
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--ink-500);
+    }
+    .contact-status {
+      margin: 18px 0 0;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--ink-700);
+      min-height: 1.5em;
+    }
+    .contact-status.error { color: var(--ember-700); }
+    @media (max-width: 640px) {
+      .contact-shell { padding: 48px 20px; }
+      .contact-h1 { font-size: clamp(36px, 9vw, 44px); }
+    }
+    /* Visually hidden for screen-reader-only labels */
+    .visually-hidden {
+      position: absolute;
+      width: 1px; height: 1px;
+      margin: -1px; padding: 0;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
 </head>
 <body>
 
+  <!-- ============ NAV ============ -->
   <nav class="nav">
     <div class="container nav-inner">
       <a href="/" class="nav-brand">
@@ -83,66 +190,53 @@
     </div>
   </nav>
 
-  <main class="placeholder">
-    <div class="placeholder-inner">
-      <span class="eyebrow" style="display:block;margin-bottom:18px;">Case studies</span>
-      <h1>Real businesses. Real results.</h1>
-      <p>Detailed case studies are on the way. For now, you can read the Coastal Plumbing story on our homepage: 40 missed calls a week down to 4, in three weeks. Same shape of result, different shape of business, each time.</p>
-      <a href="/#proof" class="btn btn-primary btn-lg">Read the Coastal story →</a>
+  <!-- ============ CONTACT ============ -->
+  <main class="contact-shell">
+    <div class="contact-card">
+      <h1 class="contact-h1">Let's talk.</h1>
+      <p class="contact-sub">
+        Leave your details. We will be in touch within 24 hours.
+        No pitch until we know what you need.
+      </p>
+
+      <form class="contact-form" data-contact-form novalidate>
+        <label class="visually-hidden" for="contact-email">Email address</label>
+        <input
+          class="contact-input"
+          type="email"
+          id="contact-email"
+          name="email"
+          inputmode="email"
+          autocomplete="email"
+          placeholder="Email address"
+          required
+        >
+
+        <label class="visually-hidden" for="contact-phone">Phone number</label>
+        <input
+          class="contact-input"
+          type="tel"
+          id="contact-phone"
+          name="phone"
+          inputmode="tel"
+          autocomplete="tel"
+          placeholder="Best number to reach you"
+          required
+        >
+
+        <button class="contact-submit" type="submit">Send it over →</button>
+
+        <p class="contact-status" data-form-status role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="contact-fineprint">
+        Plain English. Always.<br>
+        No pitch until we know what you need.
+      </p>
     </div>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand">
-            <img src="/assets/logo-mark-small.svg" width="28" height="28" alt="">
-            <span class="footer-brand-name">A Light in the Sky</span>
-          </div>
-          <p class="footer-tag">
-            You built something real. We make sure the world can find it.
-          </p>
-        </div>
-        <div class="footer-col">
-          <h4>How we help</h4>
-          <ul>
-            <li><a href="/services/websites">Websites</a></li>
-            <li><a href="/services/ai-receptionist">AI Receptionists &amp; Chatbots</a></li>
-            <li><a href="/services/ai-seo">GEO: Generative Engine Optimization</a></li>
-            <li><a href="/services/seo">SEO</a></li>
-            <li><a href="/services/analysis">Marketing Audit</a></li>
-            <li><a href="/services/automations">AI Agents &amp; Automation</a></li>
-            <li><a href="/services/crm">HubSpot CRM Buildout</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/case-studies">Case studies</a></li>
-            <li><a href="/pricing">Pricing</a></li>
-            <li><a href="/audit">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="mailto:info@alitsky.com">info@alitsky.com</a></li>
-            <li>Denver, Colorado</li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div>© 2026 A Light in the Sky · All rights reserved</div>
-        <div class="footer-legal">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
+  <script src="/contact-form.js" defer></script>
   <script src="/nav-dropdown.js" defer></script>
 </body>
 </html>
