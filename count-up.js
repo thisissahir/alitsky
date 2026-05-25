@@ -8,6 +8,12 @@
  *   "decimal-1"  — one decimal place (e.g. 1.4)
  *   "time-ms"    — formats total seconds as "Xm Ys" (e.g. 107 -> "1m 47s")
  *
+ * Optional data attributes:
+ *   data-snap    — final string to display once the count finishes
+ *                  (e.g. data-snap="800M+" snaps after the number reaches 800)
+ *   data-delay   — ms to wait after the element enters the viewport before
+ *                  starting (used to stagger a row of counters)
+ *
  * Each element animates only once, the first time it crosses 40% into the viewport.
  * Respects prefers-reduced-motion: snaps to final value instead of animating.
  */
@@ -29,14 +35,18 @@
   const fmt = (el) => formatters[el.dataset.format] || formatters.int;
   const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
 
+  const finalText = (el) => {
+    if (el.dataset.snap) return el.dataset.snap;
+    return fmt(el)(parseFloat(el.dataset.target));
+  };
+
   // Reduced-motion: skip animation, jump straight to final values.
   if (
     window.matchMedia &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches
   ) {
     counters.forEach((el) => {
-      const target = parseFloat(el.dataset.target);
-      el.textContent = fmt(el)(target);
+      el.textContent = finalText(el);
     });
     return;
   }
@@ -45,15 +55,29 @@
     const target = parseFloat(el.dataset.target);
     const format = fmt(el);
     const duration = parseInt(el.dataset.duration, 10) || 1400;
-    const start = performance.now();
+    const delay = parseInt(el.dataset.delay, 10) || 0;
+    const snap = el.dataset.snap;
 
-    function tick(now) {
-      const t = Math.min((now - start) / duration, 1);
-      const value = target * easeOutCubic(t);
-      el.textContent = format(value);
-      if (t < 1) requestAnimationFrame(tick);
+    function run() {
+      const start = performance.now();
+      function tick(now) {
+        const t = Math.min((now - start) / duration, 1);
+        const value = target * easeOutCubic(t);
+        el.textContent = format(value);
+        if (t < 1) {
+          requestAnimationFrame(tick);
+        } else if (snap) {
+          el.textContent = snap;
+        }
+      }
+      requestAnimationFrame(tick);
     }
-    requestAnimationFrame(tick);
+
+    if (delay > 0) {
+      setTimeout(run, delay);
+    } else {
+      run();
+    }
   }
 
   // Fallback for ancient browsers without IntersectionObserver.
