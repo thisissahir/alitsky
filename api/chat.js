@@ -12,6 +12,7 @@
 // Handle both CJS shapes the SDK can export depending on bundler/version.
 const AnthropicLib = require("@anthropic-ai/sdk");
 const Anthropic = AnthropicLib.default || AnthropicLib;
+const { Resend } = require("resend");
 
 const SYSTEM_PROMPT = `You are Sky, the AI assistant for A Light in the Sky (ALITSKY), a web services and AI automation agency based in Denver, Colorado. Your job is to help business owners understand what ALITSKY does, answer questions about services and pricing, and guide them toward booking a free marketing audit.
 
@@ -96,6 +97,177 @@ function isRateLimited(ip) {
   return entry.count > RATE_LIMIT;
 }
 
+// ---- Summary-email logic ----
+// After every chat response we may want to email a conversation summary to
+// the team at hey@alitsky.com. Two triggers (either is enough):
+//   1. The total conversation reaches a multiple of 8 messages (one summary
+//      per "8 message exchange milestone" — 8, 16, 24, ...)
+//   2. The user's last message contains a goodbye-ish signal
+const CLOSING_SIGNALS = [
+  "thanks",
+  "thank you",
+  "thank u",
+  "bye",
+  "goodbye",
+  "good bye",
+  "that's all",
+  "thats all",
+  "that is all",
+  "got it",
+  "perfect",
+  "great",
+];
+
+function hasClosingSignal(text) {
+  if (!text) return false;
+  const lower = String(text).toLowerCase();
+  return CLOSING_SIGNALS.some((sig) => {
+    const escaped = sig.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const re = new RegExp("\\b" + escaped + "\\b", "i");
+    return re.test(lower);
+  });
+}
+
+function shouldSendSummary(fullConversation) {
+  const total = fullConversation.length;
+  if (total > 0 && total % 8 === 0) return true;
+  // Check the most recent user message for a closing signal.
+  for (let i = fullConversation.length - 1; i >= 0; i--) {
+    const msg = fullConversation[i];
+    if (msg.role === "user") return hasClosingSignal(msg.content);
+  }
+  return false;
+}
+
+function formatConversationPlain(conv) {
+  return conv
+    .map((m) => (m.role === "user" ? "Visitor" : "ALITSKY") + ": " + m.content)
+    .join("\n\n");
+}
+
+function formatConversationHtml(conv) {
+  return conv
+    .map((m) => {
+      const who = m.role === "user" ? "Visitor" : "ALITSKY";
+      const color = m.role === "user" ? "#0E4858" : "#137F8E";
+      return (
+        '<p style="margin:0 0 14px;font-size:14px;line-height:1.55;">' +
+        '<strong style="color:' + color + ';">' + who + ':</strong> ' +
+        escapeHtml(m.content) +
+        "</p>"
+      );
+    })
+    .join("");
+}
+
+function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+async function sendChatSummary(client, fullConversation) {
+  if (!process.env.RESEND_API_KEY) {
+    console.warn("Skipping chat summary: RESEND_API_KEY not set");
+    return;
+  }
+
+  const conversationPlain = formatConversationPlain(fullConversation);
+  const conversationHtml = formatConversationHtml(fullConversation);
+
+  // 1. Ask Claude to summarize.
+  let summaryText = "";
+  try {
+    const summaryResp = await client.messages.create({
+      model: "claude-sonnet-4-5",
+      max_tokens: 512,
+      messages: [
+        {
+          role: "user",
+          content:
+            "Summarize this conversation in 5 bullet points maximum. Include: what business the visitor runs, what services they asked about, what their main problem or goal is, whether they seemed ready to buy or just browsing, and any specific details they mentioned. Be concise and direct. Format as bullet points.\n\n--- CONVERSATION ---\n" +
+            conversationPlain,
+        },
+      ],
+    });
+    if (
+      summaryResp &&
+      Array.isArray(summaryResp.content) &&
+      summaryResp.content[0] &&
+      summaryResp.content[0].type === "text"
+    ) {
+      summaryText = summaryResp.content[0].text || "";
+    }
+  } catch (err) {
+    console.error("Chat summary: Claude summarization failed:", err);
+    summaryText = "(Summary unavailable — Claude summarization failed.)";
+  }
+
+  // 2. Compose the email.
+  const firstUserMsg =
+    (fullConversation.find((m) => m.role === "user") || {}).content || "";
+  const first6Words = firstUserMsg
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 6)
+    .join(" ")
+    .slice(0, 80);
+  const subject =
+    "New chat conversation — " + (first6Words || "visitor");
+
+  const now = new Date().toLocaleString("en-US", {
+    timeZone: "America/Denver",
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: true,
+  });
+
+  const text = [
+    "NEW CHAT CONVERSATION SUMMARY",
+    "Date: " + now + " (Denver)",
+    "",
+    "SUMMARY:",
+    summaryText,
+    "",
+    "FULL CONVERSATION:",
+    conversationPlain,
+  ].join("\n");
+
+  const html =
+    '<div style="font-family:system-ui,-apple-system,sans-serif;color:#0B2030;line-height:1.55;font-size:15px;max-width:640px;">' +
+      '<h2 style="font-size:18px;margin:0 0 6px;letter-spacing:-0.01em;">New chat conversation</h2>' +
+      '<div style="font-size:12px;color:#5d7382;margin-bottom:24px;">' + escapeHtml(now) + " (Denver)</div>" +
+      '<h3 style="font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:#137F8E;margin:0 0 10px;">Summary</h3>' +
+      '<div style="font-size:14.5px;line-height:1.6;margin-bottom:24px;white-space:pre-wrap;">' + escapeHtml(summaryText) + "</div>" +
+      '<h3 style="font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:#137F8E;margin:0 0 12px;">Full conversation</h3>' +
+      '<div style="border-left:3px solid #eef6f8;padding:6px 0 6px 14px;">' + conversationHtml + "</div>" +
+    "</div>";
+
+  // 3. Send via Resend (reuses existing env vars from /api/audit + /api/contact).
+  const resend = new Resend(process.env.RESEND_API_KEY);
+  const to = process.env.AUDIT_TO_EMAIL || "hey@alitsky.com";
+  const from =
+    process.env.AUDIT_FROM_EMAIL ||
+    "A Light in the Sky <onboarding@resend.dev>";
+
+  const { error } = await resend.emails.send({
+    from,
+    to: [to],
+    subject,
+    text,
+    html,
+  });
+  if (error) {
+    console.error("Chat summary: Resend rejected:", error);
+  }
+}
+
 // ---- Handler ----
 module.exports = async (req, res) => {
   if (req.method !== "POST") {
@@ -161,6 +333,9 @@ module.exports = async (req, res) => {
       messages: cleanMessages,
     });
 
+    // Capture the full assistant reply so we can summarize the conversation
+    // after streaming finishes (if the trigger conditions are met).
+    let assistantText = "";
     for await (const event of stream) {
       if (
         event.type === "content_block_delta" &&
@@ -168,9 +343,25 @@ module.exports = async (req, res) => {
         event.delta.type === "text_delta"
       ) {
         res.write(event.delta.text);
+        assistantText += event.delta.text;
       }
     }
     res.end();
+
+    // Background: maybe send a conversation summary to hey@alitsky.com.
+    // The user's response has already streamed back; this only affects how
+    // long the serverless function stays alive. Wrapped in try/catch so any
+    // failure here is silent and can't impact the chat UX.
+    try {
+      const fullConversation = cleanMessages.concat([
+        { role: "assistant", content: assistantText },
+      ]);
+      if (shouldSendSummary(fullConversation)) {
+        await sendChatSummary(client, fullConversation);
+      }
+    } catch (err) {
+      console.error("Chat summary email failed (silent):", err);
+    }
   } catch (err) {
     console.error("Chat API error:", err);
     // If we already started streaming we can't send JSON — just end the stream.
@@ -182,4 +373,11 @@ module.exports = async (req, res) => {
     }
     return res.status(500).json({ error: "Something went wrong" });
   }
+};
+
+// Give the function up to 30s so the streamed reply (~10s max) plus the
+// optional summary email (Claude summary + Resend send, usually 2-5s) can
+// finish before Vercel kills the invocation. Hobby tier allows up to 60s.
+module.exports.config = {
+  maxDuration: 30,
 };
