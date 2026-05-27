@@ -152,7 +152,7 @@ module.exports = async (req, res) => {
     res.setHeader("X-Accel-Buffering", "no"); // disables proxy buffering
 
     const stream = await client.messages.stream({
-      model: "claude-sonnet-4-20250514",
+      model: "claude-sonnet-4-5",
       max_tokens: 1024,
       system: SYSTEM_PROMPT,
       messages: cleanMessages,
@@ -177,15 +177,6 @@ module.exports = async (req, res) => {
       } catch (_) {}
       return;
     }
-    // Temporary verbose error for debugging — strip back to generic later.
-    return res.status(500).json({
-      error: "Something went wrong",
-      debug: {
-        name: err && err.name,
-        message: err && err.message,
-        status: err && err.status,
-        type: err && err.error && err.error.type,
-      },
-    });
+    return res.status(500).json({ error: "Something went wrong" });
   }
 };
