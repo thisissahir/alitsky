@@ -2,11 +2,12 @@
   "name": "alitsky-website",
   "version": "1.0.0",
   "private": true,
-  "description": "A Light in the Sky — marketing site. Static HTML + Vercel Serverless Function for the audit form.",
+  "description": "A Light in the Sky — marketing site. Static HTML + Vercel Serverless Functions for forms and chatbot.",
   "engines": {
     "node": ">=18"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
     "resend": "^4.0.0"
   }
 }
