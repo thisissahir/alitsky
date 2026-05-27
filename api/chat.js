@@ -9,7 +9,9 @@
 // (resets on cold start). Good enough for a launch. If abuse becomes a real
 // problem, swap for Upstash Redis or Vercel KV later.
 
-const Anthropic = require("@anthropic-ai/sdk");
+// Handle both CJS shapes the SDK can export depending on bundler/version.
+const AnthropicLib = require("@anthropic-ai/sdk");
+const Anthropic = AnthropicLib.default || AnthropicLib;
 
 const SYSTEM_PROMPT = `You are the AI assistant for A Light in the Sky (ALITSKY), a web services and AI automation agency based in Denver, Colorado. Your job is to help business owners understand what ALITSKY does, answer questions about services and pricing, and guide them toward booking a free marketing audit.
 
@@ -141,9 +143,7 @@ module.exports = async (req, res) => {
     return res.status(500).json({ error: "Chatbot is not configured" });
   }
 
-  const client = new Anthropic.default
-    ? new Anthropic.default({ apiKey: process.env.ANTHROPIC_API_KEY })
-    : new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+  const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
   try {
     // Stream tokens back to the browser as plain text.
