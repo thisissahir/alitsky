@@ -1,709 +1,1612 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>A Light in the Sky | You built something real. We make sure the world finds it.</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="You built something real. We make sure the world can find it. Websites, AI receptionists, and quiet automations for local businesses.">
-  <meta name="theme-color" content="#051a23">
-  <link rel="canonical" href="https://www.alitsky.com/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Light in the Sky — AI Client Capture Systems for Service Businesses</title>
+  <meta name="description" content="Most service businesses lose customers before the conversation starts. We build AI-powered systems that help you get found in AI search, respond to every lead instantly, and convert more visitors into paying clients. Free marketing audit.">
+  <meta name="keywords" content="AI Client Capture, GEO, Generative Engine Optimization, AI receptionist, lead capture, service business, AI visibility, ChatGPT optimization, Indianapolis">
+  <meta name="theme-color" content="#0B1F26">
+  <link rel="canonical" href="https://alitsky.com">
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="A Light in the Sky">
-  <meta property="og:url" content="https://www.alitsky.com/">
-  <meta property="og:title" content="A Light in the Sky | You built something real. We make sure the world finds it.">
-  <meta property="og:description" content="You built something real. We make sure the world can find it. Websites, AI receptionists, and quiet automations for local businesses.">
-  <meta property="og:image" content="https://www.alitsky.com/assets/og-card.svg">
+  <meta property="og:url" content="https://alitsky.com">
+  <meta property="og:title" content="A Light in the Sky — AI Client Capture Systems for Service Businesses">
+  <meta property="og:description" content="The system that gets you found in AI search, replies to every lead, and converts more visitors into paying clients. Free marketing audit.">
+  <meta property="og:image" content="https://alitsky.com/assets/og-card.svg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="A Light in the Sky | You built something real. We make sure the world finds it.">
-  <meta name="twitter:description" content="You built something real. We make sure the world can find it. Websites, AI receptionists, and quiet automations for local businesses.">
-  <meta name="twitter:image" content="https://www.alitsky.com/assets/og-card.svg">
-  <link rel="icon" type="image/svg+xml" href="assets/logo-mark-small.svg">
-  <link rel="stylesheet" href="colors_and_type.css">
-  <link rel="stylesheet" href="kit.css">
+  <meta name="twitter:title" content="A Light in the Sky — AI Client Capture Systems for Service Businesses">
+  <meta name="twitter:description" content="The system that gets you found in AI search, replies to every lead, and converts more visitors into paying clients.">
+  <meta name="twitter:image" content="https://alitsky.com/assets/og-card.svg">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/logo-mark-small.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- LocalBusiness JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "A Light in the Sky",
+    "description": "AI Client Capture Systems for service businesses. Visibility, conversion, intake, memory, and execution — built as one connected system.",
+    "url": "https://alitsky.com",
+    "email": "hey@alitsky.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Indianapolis",
+      "addressRegion": "IN",
+      "addressCountry": "US"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "AI Client Capture Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Visibility Audit", "description": "Tests your business across ChatGPT, Perplexity, and Google AI. Documents competitor visibility, website gaps, and prioritized fixes. Delivered in 72 hours." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "GEO / AEO Optimization", "description": "Generative and Answer Engine Optimization. Makes your business discoverable in AI-generated search results." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Receptionist", "description": "Custom AI chatbot that qualifies leads, books appointments, and logs every conversation to your CRM." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "CRM Setup", "description": "HoneyBook or HubSpot configured around your specific business. Every lead captured, every client tracked." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Automations", "description": "Lead response, follow-up sequences, invoice reminders, and CRM population — built as workflows that run while you work." } }
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    /* ============================================================
+       RESET + TOKENS
+       ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+
+    :root {
+      --dk:  #0B1F26;
+      --dk2: #0D2230;
+      --dk3: #112A34;
+      --dk4: #1A3A46;
+      --lt:  #F2F5F4;
+      --lt2: #E6EEEC;
+      --tl:  #17B8C4;
+      --tl-dk: #0C9BAA;
+      --rust: #C63B1A;
+      --ink: #192A2D;
+      --mid: #4A6268;
+      --dim: #7A9298;
+      --bd: rgba(255,255,255,0.08);
+      --bd2: rgba(255,255,255,0.14);
+      --bd-lt: rgba(0,0,0,0.08);
+      --bd-lt2: rgba(0,0,0,0.14);
+      --f: 'Plus Jakarta Sans', system-ui, -apple-system, Segoe UI, sans-serif;
+      --m: 'DM Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    body {
+      font-family: var(--f);
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: 0; background: transparent; color: inherit; }
+
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+    .mono { font-family: var(--m); letter-spacing: 0.14em; text-transform: uppercase; }
+    .sec-tag {
+      font-family: var(--m); font-size: 11px; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--tl); display: inline-flex;
+      align-items: center; gap: 0.6rem; margin-bottom: 1rem;
+    }
+    .sec-tag::before { content: ''; width: 22px; height: 1.5px; background: var(--tl); }
+    .sec-tag.dark { color: var(--tl-dk); }
+    .sec-tag.dark::before { background: var(--tl-dk); }
+
+    .fade { opacity: 0; transform: translateY(24px); transition: opacity 700ms var(--ease), transform 700ms var(--ease); }
+    .fade.in { opacity: 1; transform: translateY(0); }
+
+    /* ============================================================
+       BUTTONS
+       ============================================================ */
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.55rem;
+      font-size: 14px; font-weight: 700; letter-spacing: 0.01em;
+      padding: 0.9rem 1.7rem; border-radius: 10px;
+      transition: all 200ms var(--ease); white-space: nowrap;
+    }
+    .btn svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; }
+    .btn-dark { background: var(--dk); color: #fff; }
+    .btn-dark:hover { background: var(--dk2); transform: translateY(-1px); box-shadow: 0 12px 24px -8px rgba(11,31,38,0.30); }
+    .btn-teal { background: var(--tl); color: var(--dk); }
+    .btn-teal:hover { background: var(--tl-dk); color: #fff; transform: translateY(-1px); box-shadow: 0 14px 28px -10px rgba(23,184,196,0.55); }
+    .btn-ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--bd-lt2); }
+    .btn-ghost:hover { border-color: var(--tl); color: var(--tl-dk); }
+    .btn-ghost-dk {
+      background: transparent; color: rgba(255,255,255,0.85);
+      border: 1.5px solid rgba(255,255,255,0.18);
+    }
+    .btn-ghost-dk:hover { color: #fff; border-color: var(--tl); background: rgba(23,184,196,0.05); }
+
+    /* ============================================================
+       NAV
+       ============================================================ */
+    nav.site-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: 58px; background: rgba(11,31,38,0.85);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex; align-items: center; padding: 0 2rem;
+      transition: box-shadow 200ms ease;
+    }
+    nav.site-nav.scrolled { box-shadow: 0 12px 32px -8px rgba(0,0,0,0.55); border-bottom-color: rgba(255,255,255,0.10); }
+    .nav-inner { max-width: 1180px; width: 100%; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; align-items: center; gap: 0.6rem; }
+    .nav-mark {
+      width: 28px; height: 28px; border-radius: 7px;
+      background: rgba(23,184,196,0.14);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .nav-mark svg { width: 16px; height: 16px; fill: var(--tl); }
+    .nav-name { font-size: 14px; font-weight: 700; color: #fff; letter-spacing: -0.01em; }
+    .nav-links { display: flex; align-items: center; gap: 0.2rem; }
+    .nav-links a {
+      font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.55);
+      padding: 0.42rem 0.85rem; border-radius: 6px;
+      transition: color 150ms, background 150ms;
+    }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.05); }
+    .nav-cta {
+      font-size: 13px; font-weight: 700; padding: 0.5rem 1.1rem;
+      border-radius: 8px; border: 1.5px solid rgba(255,255,255,0.20);
+      color: #fff; transition: all 180ms ease;
+      display: inline-flex; align-items: center; gap: 0.4rem;
+    }
+    .nav-cta:hover { background: var(--tl); border-color: var(--tl); color: var(--dk); }
+
+    @media (max-width: 900px) {
+      nav.site-nav { padding: 0 1.2rem; }
+      .nav-links { display: none; }
+    }
+
+    /* ============================================================
+       HERO
+       ============================================================ */
+    .hero {
+      background: var(--dk); color: #fff;
+      padding: 108px 0 88px; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -80px; right: -120px;
+      width: 620px; height: 620px;
+      background: radial-gradient(circle, rgba(23,184,196,0.18) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 4.5rem; align-items: center; position: relative; }
+    .hero-eyebrow { font-family: var(--m); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--tl); margin-bottom: 1.4rem; }
+    .hero h1 {
+      font-size: clamp(2.8rem, 5.2vw, 4.4rem); font-weight: 800; line-height: 1.02;
+      letter-spacing: -0.03em; color: #fff;
+    }
+    .hero h2.rust {
+      font-size: clamp(2.8rem, 5.2vw, 4.4rem); font-weight: 800; line-height: 1.02;
+      letter-spacing: -0.03em; color: var(--rust); margin-bottom: 1.6rem;
+    }
+    .hero-body {
+      font-size: 17px; line-height: 1.75; color: rgba(255,255,255,0.72);
+      max-width: 460px; margin-bottom: 2rem;
+    }
+    .hero-body strong { color: #fff; font-weight: 600; }
+    .hero-ctas { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .hero-proof {
+      font-family: var(--m); font-size: 11px; letter-spacing: 0.14em;
+      color: rgba(255,255,255,0.38); padding-top: 1.4rem;
+      border-top: 1px solid rgba(255,255,255,0.08); line-height: 1.8;
+    }
+
+    /* Hero visual stack */
+    .hero-visual { display: flex; flex-direction: column; gap: 0.85rem; }
+    .hv-card {
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 12px; padding: 1.1rem 1.25rem;
+    }
+    .hv-tag {
+      font-family: var(--m); font-size: 10px; letter-spacing: 0.18em;
+      color: rgba(255,255,255,0.45); text-transform: uppercase;
+      display: block; margin-bottom: 0.55rem;
+    }
+    .hv-q { font-size: 15px; font-style: italic; color: rgba(255,255,255,0.82); line-height: 1.5; }
+    .hv-lose { border-color: rgba(198,59,26,0.30); }
+    .hv-lose .hv-tag { color: var(--rust); }
+    .hv-name { font-size: 15px; font-weight: 700; color: rgba(255,255,255,0.55); }
+    .hv-sub { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 0.25rem; }
+    .hv-win { border-color: rgba(23,184,196,0.40); background: rgba(23,184,196,0.04); }
+    .hv-win .hv-tag { color: var(--tl); }
+    .hv-win .hv-name { color: #fff; }
+    .hv-checks { display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.7rem; }
+    .hv-check { display: flex; align-items: center; gap: 0.55rem; font-size: 12.5px; color: rgba(255,255,255,0.65); }
+    .hv-check svg { width: 14px; height: 14px; flex-shrink: 0; }
+    .hv-notify {
+      background: #fff; border-radius: 12px; padding: 0.95rem 1.1rem;
+      display: flex; align-items: center; gap: 0.85rem;
+      box-shadow: 0 14px 32px -10px rgba(0,0,0,0.5);
+    }
+    .hv-notify-ico {
+      width: 38px; height: 38px; border-radius: 50%; background: rgba(23,184,196,0.16);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .hv-notify-ico svg { width: 18px; height: 18px; stroke: var(--tl-dk); fill: none; stroke-width: 2; }
+    .hv-notify-title { font-size: 13.5px; font-weight: 700; color: var(--ink); }
+    .hv-notify-sub { font-size: 12px; color: var(--mid); display: flex; align-items: center; gap: 0.4rem; margin-top: 0.15rem; }
+    .live-dot { width: 7px; height: 7px; border-radius: 50%; background: #22C55E; }
+
+    @media (max-width: 900px) {
+      .hero { padding: 92px 0 64px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-visual { display: none; }
+    }
+
+    /* ============================================================
+       STATS BAR
+       ============================================================ */
+    .stats {
+      background: var(--dk3); border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); max-width: 1180px; margin: 0 auto; }
+    .stat { padding: 1.7rem 1.8rem; border-right: 1px solid rgba(255,255,255,0.06); }
+    .stat:last-child { border-right: 0; }
+    .stat-n {
+      font-size: 2.1rem; font-weight: 800; color: var(--tl); line-height: 1;
+      letter-spacing: -0.02em; display: block; margin-bottom: 0.4rem;
+      font-variant-numeric: tabular-nums;
+    }
+    .stat-l { font-size: 12.5px; color: rgba(255,255,255,0.42); line-height: 1.55; }
+
+    @media (max-width: 900px) {
+      .stats-row { grid-template-columns: 1fr 1fr; }
+      .stat { padding: 1.4rem 1.4rem; border-right: 1px solid rgba(255,255,255,0.06); }
+      .stat:nth-child(2) { border-right: 0; }
+      .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.06); }
+    }
+
+    /* ============================================================
+       CATEGORY STATEMENT
+       ============================================================ */
+    .category { background: var(--lt); padding: 76px 0; text-align: center; }
+    .category h2 {
+      font-size: clamp(2rem, 3.6vw, 2.8rem); font-weight: 800;
+      color: var(--ink); letter-spacing: -0.025em; line-height: 1.1;
+      max-width: 880px; margin: 0 auto 1.3rem;
+    }
+    .category p {
+      font-size: 16px; color: var(--mid); max-width: 620px;
+      margin: 0 auto; line-height: 1.75;
+    }
+
+    /* ============================================================
+       SYSTEM PIPELINE
+       ============================================================ */
+    .system { background: var(--lt); padding: 88px 0 96px; }
+    .system-head { max-width: 760px; margin: 0 auto 3.5rem; text-align: center; }
+    .system-head .sec-tag { justify-content: center; }
+    .system-head h2 {
+      font-size: clamp(1.9rem, 3.5vw, 2.6rem); font-weight: 800;
+      color: var(--ink); letter-spacing: -0.025em; line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .system-head p { font-size: 16px; color: var(--mid); line-height: 1.75; }
+
+    .pipeline-wrap { position: relative; }
+    .pipeline-wrap::before {
+      content: ''; position: absolute; top: 58px; left: 10%; right: 10%;
+      height: 1.5px;
+      background: linear-gradient(to right, transparent, rgba(23,184,196,0.30), rgba(23,184,196,0.55), rgba(23,184,196,0.30), transparent);
+      z-index: 0;
+    }
+    .pipeline { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; position: relative; z-index: 1; }
+    .pipe {
+      background: #fff; border: 1px solid var(--bd-lt);
+      border-radius: 12px; padding: 1.75rem 1.4rem;
+      transition: all 240ms var(--ease);
+      display: flex; flex-direction: column;
+    }
+    .pipe:hover { transform: translateY(-4px); box-shadow: 0 22px 44px -16px rgba(11,31,38,0.20); border-color: rgba(23,184,196,0.30); }
+    .pipe.anchor { border-top: 3px solid var(--tl); }
+    .pipe-num {
+      font-family: var(--m); font-size: 10px; letter-spacing: 0.18em;
+      color: var(--dim); margin-bottom: 0.85rem;
+    }
+    .pipe-ico {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: rgba(23,184,196,0.08);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 0.95rem;
+    }
+    .pipe.anchor .pipe-ico { background: rgba(23,184,196,0.18); }
+    .pipe-ico svg { width: 22px; height: 22px; stroke: var(--tl-dk); fill: none; stroke-width: 1.5; }
+    .pipe-name { font-size: 1.05rem; font-weight: 700; color: var(--ink); margin-bottom: 0.35rem; letter-spacing: -0.01em; }
+    .pipe-q { font-size: 12.5px; font-weight: 600; color: var(--tl-dk); margin-bottom: 0.55rem; line-height: 1.4; }
+    .pipe-desc { font-size: 13px; color: var(--mid); line-height: 1.65; }
+
+    .system-cta { text-align: center; margin-top: 3.5rem; }
+
+    @media (max-width: 900px) {
+      .pipeline-wrap::before { display: none; }
+      .pipeline { grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+      .pipe:last-child { grid-column: 1 / -1; }
+    }
+
+    /* ============================================================
+       THE GAP
+       ============================================================ */
+    .gap-sec { background: var(--dk); color: #fff; padding: 88px 0 96px; }
+    .gap-head { max-width: 760px; margin: 0 auto 3rem; text-align: center; }
+    .gap-head .sec-tag { justify-content: center; }
+    .gap-head h2 {
+      font-size: clamp(1.9rem, 3.5vw, 2.6rem); font-weight: 800;
+      color: #fff; letter-spacing: -0.025em; line-height: 1.15;
+      margin-bottom: 0.85rem;
+    }
+    .gap-head .italic { font-size: 17px; font-style: italic; color: rgba(255,255,255,0.55); line-height: 1.6; }
+
+    .gap-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px; overflow: hidden;
+    }
+    .gap-card {
+      background: var(--dk); padding: 2rem 1.85rem;
+      display: flex; flex-direction: column; gap: 0.7rem;
+    }
+    .gap-num {
+      font-family: var(--m); font-size: 10px; letter-spacing: 0.2em;
+      color: var(--rust);
+    }
+    .gap-card h3 { font-size: 1.1rem; font-weight: 700; color: #fff; letter-spacing: -0.01em; line-height: 1.3; }
+    .gap-card p { font-size: 13.5px; color: rgba(255,255,255,0.55); line-height: 1.7; }
+    .gap-fix {
+      font-size: 12px; font-weight: 600; color: var(--tl);
+      margin-top: auto; padding-top: 0.4rem;
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+
+    .gap-cta { text-align: center; margin-top: 3rem; }
+    .gap-cta-label {
+      display: block; font-style: italic; font-size: 14px;
+      color: rgba(255,255,255,0.45); margin-bottom: 1rem;
+    }
+
+    @media (max-width: 900px) {
+      .gap-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ============================================================
+       HOW WE HELP
+       ============================================================ */
+    .help { background: var(--lt); padding: 88px 0 96px; }
+    .help-head { max-width: 720px; margin: 0 auto 3.2rem; text-align: center; }
+    .help-head .sec-tag { justify-content: center; }
+    .help-head h2 {
+      font-size: clamp(1.9rem, 3.5vw, 2.6rem); font-weight: 800;
+      color: var(--ink); letter-spacing: -0.025em; line-height: 1.15;
+      margin-bottom: 0.95rem;
+    }
+    .help-head p { font-size: 16px; color: var(--mid); line-height: 1.75; }
+
+    .help-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
+    .help-card {
+      background: #fff; border: 1px solid var(--bd-lt);
+      border-radius: 12px; padding: 2rem 1.85rem;
+      display: flex; flex-direction: column;
+      transition: all 220ms var(--ease);
+    }
+    .help-card:hover { transform: translateY(-2px); box-shadow: 0 20px 40px -16px rgba(11,31,38,0.16); border-color: rgba(23,184,196,0.30); }
+    .help-tag {
+      font-family: var(--m); font-size: 10px; letter-spacing: 0.18em;
+      color: var(--tl-dk); margin-bottom: 0.9rem;
+    }
+    .help-name {
+      font-size: 1.3rem; font-weight: 800; color: var(--ink);
+      letter-spacing: -0.015em; margin-bottom: 0.55rem; line-height: 1.2;
+    }
+    .help-hook { font-size: 14px; color: var(--mid); line-height: 1.7; margin-bottom: 1.2rem; }
+    .help-list { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; margin-bottom: 1.5rem; }
+    .help-list li {
+      font-size: 13.5px; color: var(--mid); line-height: 1.55;
+      display: flex; gap: 0.5rem; align-items: flex-start;
+    }
+    .help-list li::before {
+      content: '—'; font-family: var(--m); color: var(--dim);
+      flex-shrink: 0; margin-top: 0.05em;
+    }
+    .help-price {
+      font-size: 1.3rem; font-weight: 800; color: var(--ink);
+      letter-spacing: -0.015em; margin-bottom: 0.15rem;
+    }
+    .help-price-sub {
+      font-family: var(--m); font-size: 10.5px; letter-spacing: 0.1em;
+      color: var(--dim); margin-bottom: 1.4rem;
+    }
+    .help-card .btn { margin-top: auto; align-self: stretch; justify-content: center; }
+
+    .help-callout {
+      background: #fff; border-left: 3px solid var(--tl);
+      border-radius: 8px; padding: 1.2rem 1.5rem;
+      margin-top: 2.5rem; max-width: 880px; margin-left: auto; margin-right: auto;
+      box-shadow: 0 4px 16px -8px rgba(11,31,38,0.10);
+    }
+    .help-callout p { font-size: 14.5px; color: var(--mid); line-height: 1.7; }
+    .help-callout strong { color: var(--ink); font-weight: 600; }
+
+    @media (max-width: 900px) {
+      .help-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ============================================================
+       PROOF
+       ============================================================ */
+    .proof { background: var(--dk2); color: #fff; padding: 88px 0 96px; }
+    .proof-head { text-align: center; margin-bottom: 3.5rem; }
+    .proof-label {
+      display: block; font-family: var(--m); font-size: 11px;
+      letter-spacing: 0.22em; color: var(--tl); margin-bottom: 1rem;
+    }
+    .proof h2 {
+      font-size: clamp(2rem, 3.8vw, 2.9rem); font-weight: 800;
+      color: #fff; letter-spacing: -0.025em; line-height: 1.1;
+      max-width: 820px; margin: 0 auto;
+    }
+    .proof h2 .italic { font-style: italic; color: var(--tl); font-weight: 700; }
+    .proof-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 4.5rem; align-items: center; }
+
+    .proof-quote {
+      font-size: clamp(1.2rem, 2.4vw, 1.55rem); font-weight: 400;
+      line-height: 1.55; color: #fff;
+      padding-left: 1.5rem; border-left: 3px solid var(--tl);
+      margin-bottom: 1.75rem;
+    }
+    .proof-attr { display: flex; align-items: center; gap: 0.95rem; }
+    .proof-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: rgba(23,184,196,0.16); color: var(--tl);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 14px; flex-shrink: 0;
+    }
+    .proof-name { font-size: 14.5px; font-weight: 700; color: #fff; }
+    .proof-role { font-size: 12.5px; color: rgba(255,255,255,0.45); margin-top: 0.1rem; }
+
+    .proof-stats { display: flex; flex-direction: column; }
+    .ps { padding: 1.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.10); }
+    .ps:last-child { border-bottom: 0; }
+    .ps-n {
+      font-size: 2.5rem; font-weight: 800; color: var(--tl);
+      letter-spacing: -0.025em; line-height: 1; margin-bottom: 0.35rem;
+      font-variant-numeric: tabular-nums;
+    }
+    .ps-l { font-size: 13px; color: rgba(255,255,255,0.42); line-height: 1.55; }
+
+    @media (max-width: 900px) {
+      .proof-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+
+    /* ============================================================
+       BUILT FOR
+       ============================================================ */
+    .builtfor { background: var(--lt); padding: 76px 0; }
+    .builtfor-head { max-width: 680px; margin: 0 auto 2.8rem; text-align: center; }
+    .builtfor-head .sec-tag { justify-content: center; }
+    .builtfor-head h2 {
+      font-size: clamp(1.7rem, 3.2vw, 2.3rem); font-weight: 800;
+      color: var(--ink); letter-spacing: -0.02em; line-height: 1.2;
+      margin-bottom: 0.85rem;
+    }
+    .builtfor-head p { font-size: 15px; color: var(--mid); line-height: 1.7; max-width: 580px; margin: 0 auto; }
+    .verticals { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; max-width: 980px; margin: 0 auto; }
+    .vert {
+      background: #fff; border: 1px solid var(--bd-lt);
+      border-radius: 10px; padding: 1.3rem 1rem; text-align: center;
+      display: flex; flex-direction: column; align-items: center; gap: 0.7rem;
+      transition: all 200ms var(--ease);
+    }
+    .vert:hover { transform: translateY(-2px); border-color: rgba(23,184,196,0.30); }
+    .vert-ico {
+      width: 36px; height: 36px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .vert-ico svg { width: 24px; height: 24px; stroke: var(--tl-dk); fill: none; stroke-width: 1.5; }
+    .vert-name { font-size: 13px; font-weight: 600; color: var(--ink); line-height: 1.35; }
+
+    .also-serving {
+      text-align: center; margin-top: 2rem;
+      font-size: 13px; color: var(--mid); opacity: 0.65;
+      max-width: 720px; margin-left: auto; margin-right: auto;
+    }
+
+    @media (max-width: 1100px) {
+      .verticals { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .verticals { grid-template-columns: 1fr; }
+    }
+
+    /* ============================================================
+       HOW IT WORKS
+       ============================================================ */
+    .how { background: var(--lt); padding: 88px 0 96px; }
+    .how-head { text-align: center; margin-bottom: 3rem; }
+    .how-head .sec-tag { justify-content: center; }
+    .how-head h2 {
+      font-size: clamp(1.9rem, 3.5vw, 2.6rem); font-weight: 800;
+      color: var(--ink); letter-spacing: -0.025em; line-height: 1.15;
+    }
+    .how-steps {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--bd-lt); border-radius: 12px; overflow: hidden;
+      background: var(--bd-lt);
+    }
+    .step {
+      background: #fff; padding: 2.4rem 2rem;
+      display: flex; flex-direction: column; gap: 0.65rem;
+    }
+    .step-num {
+      font-family: var(--m); font-size: 10px; letter-spacing: 0.2em;
+      color: var(--tl-dk); display: inline-flex; align-items: center; gap: 0.5rem;
+    }
+    .step-num::after { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--tl); }
+    .step h3 { font-size: 1.15rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; }
+    .step p { font-size: 13.5px; color: var(--mid); line-height: 1.7; }
+
+    @media (max-width: 900px) {
+      .how-steps { grid-template-columns: 1fr; }
+    }
+
+    /* ============================================================
+       PACKAGES
+       ============================================================ */
+    .packages { background: #fff; padding: 88px 0 96px; }
+    .pkg-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: end; margin-bottom: 3rem; }
+    .pkg-intro h2 {
+      font-size: clamp(1.9rem, 3.5vw, 2.6rem); font-weight: 800;
+      color: var(--ink); letter-spacing: -0.025em; line-height: 1.15;
+    }
+    .pkg-note {
+      background: var(--lt); border-left: 3px solid var(--tl);
+      border-radius: 8px; padding: 1.15rem 1.4rem;
+    }
+    .pkg-note p { font-size: 14.5px; color: var(--mid); line-height: 1.7; }
+    .pkg-note strong { color: var(--ink); font-weight: 700; }
+
+    .pkg-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    .pkg {
+      background: var(--lt); border: 1px solid var(--bd-lt);
+      border-radius: 14px; padding: 2.1rem 1.85rem;
+      display: flex; flex-direction: column;
+    }
+    .pkg.feat { background: var(--dk); border-color: transparent; color: #fff; box-shadow: 0 24px 56px -18px rgba(11,31,38,0.45); }
+    .pkg-tag {
+      font-family: var(--m); font-size: 10px; letter-spacing: 0.18em;
+      color: var(--tl-dk); margin-bottom: 1rem;
+    }
+    .pkg.feat .pkg-tag { color: var(--tl); }
+    .pkg-name {
+      font-size: 1.4rem; font-weight: 800; color: var(--ink);
+      letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 1.4rem;
+    }
+    .pkg.feat .pkg-name { color: #fff; }
+    .pkg-list { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; flex: 1; margin-bottom: 1.4rem; }
+    .pkg-list li {
+      font-size: 13.5px; color: var(--mid); line-height: 1.5;
+      display: flex; gap: 0.55rem; align-items: flex-start;
+    }
+    .pkg.feat .pkg-list li { color: rgba(255,255,255,0.55); }
+    .pkg-list li::before {
+      content: '—'; font-family: var(--m); color: var(--dim);
+      flex-shrink: 0; margin-top: 0.05em;
+    }
+    .pkg.feat .pkg-list li::before { color: rgba(255,255,255,0.30); }
+    .pkg-list li.anchor::before { content: '✦'; color: var(--tl); margin-top: 0.15em; }
+    .pkg-list li.anchor { font-weight: 700; color: var(--ink); }
+    .pkg.feat .pkg-list li.anchor { color: #fff; }
+    .pkg-free {
+      display: inline-block; font-family: var(--m); font-size: 9.5px;
+      letter-spacing: 0.16em; padding: 1px 7px; margin-left: 4px;
+      border-radius: 4px;
+      background: rgba(23,184,196,0.16); color: var(--tl-dk);
+    }
+    .pkg.feat .pkg-free { background: rgba(23,184,196,0.22); color: var(--tl); }
+    .pkg-feat-note {
+      font-size: 13px; font-style: italic; color: rgba(255,255,255,0.55);
+      line-height: 1.65; margin-bottom: 0.9rem;
+    }
+    .pkg-price {
+      font-size: 1.3rem; font-weight: 800; color: var(--ink);
+      letter-spacing: -0.015em; margin-bottom: 0.15rem;
+    }
+    .pkg.feat .pkg-price { color: #fff; }
+    .pkg-monthly {
+      font-family: var(--m); font-size: 10.5px; letter-spacing: 0.1em;
+      color: var(--dim); margin-bottom: 1.3rem;
+    }
+    .pkg.feat .pkg-monthly { color: rgba(255,255,255,0.30); }
+    .pkg .btn { align-self: stretch; justify-content: center; }
+    .pkg.feat .btn-ghost { background: var(--tl); color: var(--dk); border-color: transparent; }
+    .pkg.feat .btn-ghost:hover { background: var(--tl-dk); color: #fff; }
+
+    .pkg-support {
+      text-align: center; font-size: 13px; font-style: italic;
+      color: var(--mid); opacity: 0.75; margin-top: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .pkg-intro { grid-template-columns: 1fr; gap: 1.4rem; }
+      .pkg-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ============================================================
+       HOW WE WORK (standards)
+       ============================================================ */
+    .standards { background: var(--dk); color: #fff; padding: 88px 0 96px; }
+    .standards-head { max-width: 720px; margin: 0 auto 3rem; text-align: center; }
+    .standards-head .sec-tag { justify-content: center; }
+    .standards-head h2 {
+      font-size: clamp(1.9rem, 3.5vw, 2.6rem); font-weight: 800;
+      color: #fff; letter-spacing: -0.025em; line-height: 1.15;
+      margin-bottom: 0.85rem;
+    }
+    .standards-head p { font-size: 15.5px; color: rgba(255,255,255,0.60); line-height: 1.7; max-width: 560px; margin: 0 auto; }
+    .standards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .std {
+      background: var(--dk2); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px; padding: 1.75rem;
+    }
+    .std h3 { font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.55rem; letter-spacing: -0.01em; }
+    .std p { font-size: 13.5px; color: rgba(255,255,255,0.55); line-height: 1.7; }
+    @media (max-width: 600px) {
+      .standards-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ============================================================
+       FAQ
+       ============================================================ */
+    .faq { background: var(--lt); padding: 88px 0 96px; }
+    .faq-head { max-width: 740px; margin: 0 auto 2.5rem; text-align: center; }
+    .faq-head .sec-tag { justify-content: center; }
+    .faq-head h2 {
+      font-size: clamp(1.9rem, 3.5vw, 2.5rem); font-weight: 800;
+      color: var(--ink); letter-spacing: -0.025em; line-height: 1.2;
+    }
+    .faq-wrap { max-width: 740px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.6rem; }
+    .faq-item {
+      background: #fff; border: 1px solid var(--bd-lt);
+      border-radius: 10px; overflow: hidden;
+      transition: border-color 180ms ease;
+    }
+    .faq-item.open { border-color: rgba(23,184,196,0.40); }
+    .faq-q {
+      width: 100%; text-align: left;
+      padding: 1.15rem 1.4rem;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; font-size: 15px; font-weight: 600; color: var(--ink);
+      transition: background 160ms ease;
+    }
+    .faq-q:hover { background: rgba(23,184,196,0.04); }
+    .faq-chev {
+      width: 22px; height: 22px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      transition: transform 240ms var(--ease);
+    }
+    .faq-chev svg { width: 18px; height: 18px; stroke: var(--mid); fill: none; stroke-width: 2; }
+    .faq-item.open .faq-chev { transform: rotate(180deg); }
+    .faq-a {
+      max-height: 0; overflow: hidden;
+      transition: max-height 320ms var(--ease);
+    }
+    .faq-a-inner { padding: 0 1.4rem 1.3rem; font-size: 14px; color: var(--mid); line-height: 1.75; }
+
+    /* ============================================================
+       CLOSE CTA
+       ============================================================ */
+    .close-cta { background: var(--dk); color: #fff; padding: 100px 0; text-align: center; position: relative; overflow: hidden; }
+    .close-cta::after {
+      content: ''; position: absolute; bottom: -200px; left: 50%; transform: translateX(-50%);
+      width: 740px; height: 420px;
+      background: radial-gradient(ellipse, rgba(23,184,196,0.10) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .close-cta-inner { position: relative; z-index: 1; }
+    .close-star {
+      width: 48px; height: 48px; margin: 0 auto 1.4rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .close-star svg { width: 48px; height: 48px; fill: var(--tl); opacity: 0.60; }
+    .close-cta h2 {
+      font-size: clamp(2.5rem, 6vw, 4.2rem); font-weight: 800;
+      color: #fff; letter-spacing: -0.03em; line-height: 1.05;
+      max-width: 880px; margin: 0 auto 1.1rem;
+    }
+    .close-cta-body {
+      font-size: 16px; color: rgba(255,255,255,0.55);
+      max-width: 480px; margin: 0 auto 2rem; line-height: 1.75;
+    }
+    .close-cta .btn-teal { padding: 1rem 2.5rem; font-size: 15px; }
+    .close-cta-note {
+      font-family: var(--m); font-size: 10.5px; letter-spacing: 0.14em;
+      color: rgba(255,255,255,0.30); margin-top: 1.4rem;
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    footer.site-footer { background: var(--dk4); color: #fff; padding: 4rem 0 2rem; }
+    .ft-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+    .ft-brand { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.8rem; }
+    .ft-mark {
+      width: 28px; height: 28px; border-radius: 7px;
+      background: rgba(23,184,196,0.18);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .ft-mark svg { width: 16px; height: 16px; fill: var(--tl); }
+    .ft-name { font-size: 14px; font-weight: 700; color: #fff; letter-spacing: -0.01em; }
+    .ft-tag { font-size: 13px; color: rgba(255,255,255,0.40); line-height: 1.65; max-width: 240px; }
+    .ft-col-h {
+      font-family: var(--m); font-size: 10.5px; letter-spacing: 0.18em;
+      color: rgba(255,255,255,0.28); margin-bottom: 1rem; display: block;
+    }
+    .ft-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .ft-list a {
+      font-size: 13.5px; color: rgba(255,255,255,0.55);
+      transition: color 150ms ease;
+    }
+    .ft-list a:hover { color: var(--tl); }
+    .ft-mono { font-family: var(--m); font-size: 11px; letter-spacing: 0.12em; color: rgba(255,255,255,0.30); line-height: 1.65; }
+
+    .ft-bot {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .ft-copy { font-family: var(--m); font-size: 11px; letter-spacing: 0.10em; color: rgba(255,255,255,0.30); }
+    .ft-motto { font-size: 13px; font-style: italic; color: rgba(255,255,255,0.45); }
+
+    @media (max-width: 900px) {
+      .ft-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .ft-grid > div:first-child { grid-column: 1 / -1; }
+      .ft-bot { flex-direction: column; text-align: center; gap: 0.6rem; }
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- ============ NAV ============ -->
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a href="/" class="nav-brand">
-        <img src="assets/logo-mark-small.svg" width="32" height="32" alt="">
-        <span class="nav-brand-name">A Light in the Sky</span>
-      </a>
-      <div class="nav-links">
-        <div class="nav-dropdown">
-          <a href="#work" class="nav-dropdown-trigger">How we help</a>
-          <div class="nav-dropdown-menu">
-            <div class="nav-dropdown-inner">
-              <a href="/services/websites" class="nav-mega-item">
-                <span class="nav-mega-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
-                <span class="nav-mega-text">
-                  <span class="nav-mega-title">Website</span>
-                  <span class="nav-mega-desc">Hand-built, fast, and structured for Google and AI from day one.</span>
-                </span>
-              </a>
-              <a href="/services/ai-receptionist" class="nav-mega-item">
-                <span class="nav-mega-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span>
-                <span class="nav-mega-text">
-                  <span class="nav-mega-title">AI Bot on Website</span>
-                  <span class="nav-mega-desc">Your website answers visitors and books appointments while you sleep.</span>
-                </span>
-              </a>
-              <a href="/services/ai-seo" class="nav-mega-item">
-                <span class="nav-mega-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg></span>
-                <span class="nav-mega-text">
-                  <span class="nav-mega-title">GEO: Generative Engine Optimization</span>
-                  <span class="nav-mega-desc">Be the name ChatGPT, Claude, and Perplexity give when customers ask.</span>
-                </span>
-              </a>
-              <a href="/services/seo" class="nav-mega-item">
-                <span class="nav-mega-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
-                <span class="nav-mega-text">
-                  <span class="nav-mega-title">SEO</span>
-                  <span class="nav-mega-desc">Get found on Google by the customers who are already looking for you.</span>
-                </span>
-              </a>
-              <a href="/services/analysis" class="nav-mega-item">
-                <span class="nav-mega-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></span>
-                <span class="nav-mega-text">
-                  <span class="nav-mega-title">Marketing Audit</span>
-                  <span class="nav-mega-desc">A full picture of your online presence before anyone touches anything.</span>
-                </span>
-              </a>
-              <a href="/services/automations" class="nav-mega-item">
-                <span class="nav-mega-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></span>
-                <span class="nav-mega-text">
-                  <span class="nav-mega-title">AI Agents &amp; Automation</span>
-                  <span class="nav-mega-desc">A digital workforce that handles the work you keep putting off.</span>
-                </span>
-              </a>
-              <a href="/services/crm" class="nav-mega-item">
-                <span class="nav-mega-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-                <span class="nav-mega-text">
-                  <span class="nav-mega-title">HubSpot CRM Buildout</span>
-                  <span class="nav-mega-desc">Every lead captured, every client tracked, every follow-up sent on time.</span>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <a href="#how">How it works</a>
-        <a href="#proof">Proof</a>
-        <a href="/about">About</a>
-      </div>
-      <a href="/contact" class="btn btn-primary nav-cta">Talk to us</a>
+<!-- ============== NAV ============== -->
+<nav class="site-nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <span class="nav-mark">
+        <svg viewBox="0 0 16 16" aria-hidden="true">
+          <path d="M8 1l1.5 4.5L14 3l-2.5 4 3.5.5-3 2.5 1.5 4-3.5-2L7 16l-1.5-3.5L2 14l1.5-4L0 7.5l3.5-.5L1 3l4.5 2.5z"/>
+        </svg>
+      </span>
+      <span class="nav-name">A Light in the Sky</span>
+    </a>
+    <div class="nav-links">
+      <a href="#system">The System</a>
+      <a href="#proof">Results</a>
+      <a href="#packages">Packages</a>
+      <a href="#faq">FAQ</a>
     </div>
-  </nav>
+    <a href="#audit" class="nav-cta">Get your free Marketing Audit</a>
+  </div>
+</nav>
 
-  <!-- ============ HERO ============ -->
-  <section class="hero">
-    <div class="container hero-grid">
+<!-- ============== HERO ============== -->
+<section class="hero" aria-labelledby="hero-h">
+  <div class="wrap">
+    <div class="hero-grid">
       <div>
-        <span class="eyebrow">For the people who build the real things</span>
-        <h1>
-          You built<br>something<br>real.<br>
-          <em>We make sure<br>the world can<br>find it.</em>
-        </h1>
-        <p class="lede">
-          Good businesses fail because they are invisible. That is the only problem we came here
-          to solve — with websites, AI receptionists, and the quiet automations that let you get
-          back to the work you were made for.
+        <p class="hero-eyebrow">For the people who build the real things</p>
+        <h1 id="hero-h">You built something real.</h1>
+        <h2 class="rust">We make sure the world can find it.</h2>
+        <p class="hero-body">
+          Every day, people in your city open ChatGPT and Google AI and ask for the best business in your category.
+          <strong>The AI gives them a name. That business gets the call.</strong> We build the system that makes sure that name is yours — and keeps it there.
         </p>
         <div class="hero-ctas">
-          <a href="/audit" class="btn btn-primary btn-lg">
-            Get your Marketing Audit for free
-            <span style="opacity:0.85">→</span>
+          <a href="#audit" class="btn btn-dark">
+            Get your free Marketing Audit
+            <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#system" class="btn btn-ghost-dk">
+            How it works
+            <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
-        <p class="hero-subact">One honest conversation. No pitch until we know what you need.</p>
+        <p class="hero-proof">No pitch until we know what you need · Free audit delivered in 72 hours · Plain English. Always.</p>
       </div>
 
-      <div class="hero-visual">
-        <img src="assets/logo-mark-reverse.svg" alt="" class="hero-star">
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ STATS STRIP (dark) ============ -->
-  <section class="stats-strip">
-    <div class="stats-strip-row">
-      <div class="stats-strip-item">
-        <span class="stats-strip-val"><span class="count" data-target="800" data-format="int" data-duration="1500" data-snap="800M+" data-delay="0">0</span></span>
-        <span class="stats-strip-label">ChatGPT weekly users searching for local businesses</span>
-      </div>
-      <div class="stats-strip-item">
-        <span class="stats-strip-val"><span class="count" data-target="60" data-format="int" data-duration="1200" data-snap="60%" data-delay="150">0</span></span>
-        <span class="stats-strip-label">Google searches now show AI-generated answers first</span>
-      </div>
-      <div class="stats-strip-item">
-        <span class="stats-strip-val"><span class="count" data-target="8" data-format="int" data-duration="1000" data-snap="4–8wk" data-delay="300">1</span></span>
-        <span class="stats-strip-label">Average time to appear in AI answers after GEO is built</span>
-      </div>
-      <div class="stats-strip-item">
-        <span class="stats-strip-val"><span class="count" data-target="1" data-format="int" data-duration="800" data-snap="1 name" data-delay="450">0</span></span>
-        <span class="stats-strip-label">What AI gives per category per city, make it yours</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ GEO ANCHOR ============ -->
-  <section class="section ink anchor-section" id="anchor">
-    <div class="container">
-      <div class="anchor-label">The anchor service · Start here</div>
-
-      <div class="anchor-grid">
-
-        <!-- LEFT: headline, body, urgency block, CTAs -->
-        <div class="anchor-left">
-          <h2 class="anchor-headline">Right now, AI is recommending someone in your city.</h2>
-          <p class="anchor-subline">It is probably not you.</p>
-          <p class="anchor-body">
-            When someone asks ChatGPT, Perplexity, or Google AI for the best business in your
-            category, the AI names a specific business. That business gets the call. GEO is the work
-            that makes sure that name is yours, and keeps it there.
-          </p>
-
-          <div class="anchor-urgency">
-            <p>Most of your local competitors have not done this yet. <strong>That is the window.</strong> We do not know how long it stays open. The audit tells you exactly where you stand today.</p>
-          </div>
-
-          <div class="anchor-ctas">
-            <a href="/audit" class="btn btn-light-on-dark btn-lg">Get your Marketing Audit for free →</a>
-            <a href="#work" class="btn btn-outline-light btn-lg">How it works</a>
-          </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hv-card">
+          <span class="hv-tag">ChatGPT · live query</span>
+          <p class="hv-q">"Who is the best [your service] near me?"</p>
         </div>
-
-        <!-- RIGHT: query card + named-business card + without-GEO card -->
-        <div class="anchor-right">
-          <div class="anchor-card">
-            <div class="anchor-card-label">Live query · ChatGPT · "best sushi in Denver CO"</div>
-            <p class="anchor-card-quote">"What is the best sushi restaurant in Denver, Colorado for a date night?"</p>
-          </div>
-          <div class="anchor-card anchor-card-good">
-            <div class="anchor-card-label">✦ ChatGPT recommended this business</div>
-            <div class="anchor-card-business">Matsuhisa Denver</div>
-            <ul class="anchor-card-checks">
-              <li>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                Well-structured site · AI can read it
-              </li>
-              <li>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                Schema complete · Bing indexed · Google verified
-              </li>
-              <li>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                GEO active · appears in 4 of 5 test queries
-              </li>
-            </ul>
-          </div>
-          <div class="anchor-card anchor-card-bad">
-            <div class="anchor-card-label anchor-card-label-muted">Your restaurant without GEO</div>
-            <p class="anchor-card-business-muted">Not mentioned. Matsuhisa got the table.</p>
-            <p class="anchor-card-fine">This is what most local restaurants look like to AI right now.</p>
-          </div>
+        <div class="hv-card hv-lose">
+          <span class="hv-tag">Result</span>
+          <p class="hv-name">Not mentioned.</p>
+          <p class="hv-sub">Competitor got the recommendation.</p>
         </div>
-
-      </div>
-
-      <!-- 4-STEP ROW -->
-      <div class="anchor-steps">
-        <div class="anchor-step">
-          <div class="anchor-step-num">STEP 01</div>
-          <h4>Unlock the crawlers</h4>
-          <p>GPTBot, ClaudeBot, PerplexityBot. Most sites block them by default. We open the door so AI can find you.</p>
-        </div>
-        <div class="anchor-step">
-          <div class="anchor-step-num">STEP 02</div>
-          <h4>Speak AI's language</h4>
-          <p>Schema markup, Bing submission, answer-first content. AI cannot recommend what it cannot read. We make you readable.</p>
-        </div>
-        <div class="anchor-step">
-          <div class="anchor-step-num">STEP 03</div>
-          <h4>Enter the index</h4>
-          <p>ChatGPT sources from Bing. Most businesses are not there. We submit, verify, and confirm your presence.</p>
-        </div>
-        <div class="anchor-step">
-          <div class="anchor-step-num">STEP 04</div>
-          <h4>Monitor every month</h4>
-          <p>We test your top queries every month. Track appearance. Adjust. Report. GEO is not set-and-forget. And neither are we.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ============ BRIDGE LINE ============ -->
-  <section class="anchor-bridge">
-    <div class="container">
-      <p class="anchor-bridge-text">GEO gets you the call.</p>
-      <p class="anchor-bridge-question">But what happens next?</p>
-      <div class="anchor-bridge-body">
-        <p>Someone asks AI for the best business in your city. Your name comes up. They click through.</p>
-        <p>Now your website has 3 seconds to keep them. Your phone has one ring to answer them. Your follow-up system has one chance not to lose them.</p>
-        <p>GEO is the entry point. What you have built around it is what turns that recommendation into revenue. Everything below exists to make sure you do not waste the opportunity GEO creates.</p>
-      </div>
-      <a href="#work" class="anchor-bridge-tag">The complete system ↓</a>
-    </div>
-  </section>
-
-  <!-- ============ HOW WE HELP (accordion) ============ -->
-  <section class="section" id="work">
-    <div class="container">
-      <div class="section-head">
-        <h2>How we help.</h2>
-        <p>Seven things that turn AI visibility into a business that actually runs.</p>
-      </div>
-
-      <div class="service-list">
-
-        <!-- 1. GEO: Generative Engine Optimization -->
-        <div class="service-row service-row-featured">
-          <button class="service-row-head" type="button" aria-expanded="false" aria-controls="svc-1-panel">
-            <div class="service-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
+        <div class="hv-card hv-win">
+          <span class="hv-tag">✦ With the system</span>
+          <p class="hv-name">Your Business Name</p>
+          <div class="hv-checks">
+            <div class="hv-check">
+              <svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="7" fill="rgba(23,184,196,0.20)"/><path d="M4 7l2 2 4-4" stroke="#17B8C4" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              AI crawlers unblocked — ChatGPT sees you
             </div>
-            <div class="service-row-text">
-              <span class="service-row-badge">Recommended first step</span>
-              <h3>GEO: Generative Engine Optimization</h3>
-              <p>Be the name ChatGPT, Claude, and Perplexity give when customers ask.</p>
-            </div>
-            <div class="service-row-toggle">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-            </div>
-          </button>
-          <div class="service-expand" id="svc-1-panel">
-            <div class="service-expand-inner">
-              <p class="service-copy">When someone asks AI for the best business in your category, AI names a specific business. That business gets the call. GEO is the work that makes sure that name is yours, across ChatGPT, Perplexity, Gemini, and Google AI Overviews. Every month we test your top queries, document what changed, and report back.</p>
-              <ul class="service-bullets">
-                <li>AI crawler access enabled, GPTBot, ClaudeBot, PerplexityBot unblocked</li>
-                <li>Schema markup installed: LocalBusiness, FAQPage, Service structured data</li>
-                <li>Bing Webmaster Tools submission, ChatGPT sources from Bing's index</li>
-                <li>Answer-first content restructuring on all key service pages</li>
-                <li>Monthly monitoring, your top queries tested, tracked, and reported every month</li>
-              </ul>
-              <div class="service-foot">
-                <div class="service-pricing">$799 one-time · $250–$500/mo retainer</div>
-                <a href="/audit" class="service-audit-link">Get your Marketing Audit for free →</a>
-              </div>
+            <div class="hv-check">
+              <svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="7" fill="rgba(23,184,196,0.20)"/><path d="M4 7l2 2 4-4" stroke="#17B8C4" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Recommended in 4 of 5 queries
             </div>
           </div>
         </div>
-
-        <!-- 2. Website -->
-        <div class="service-row">
-          <button class="service-row-head" type="button" aria-expanded="false" aria-controls="svc-2-panel">
-            <div class="service-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-            </div>
-            <div class="service-row-text">
-              <h3>Website</h3>
-              <p>Hand-built, fast, and structured for Google and AI from day one.</p>
-            </div>
-            <div class="service-row-toggle">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-            </div>
-          </button>
-          <div class="service-expand" id="svc-2-panel">
-            <div class="service-expand-inner">
-              <p class="service-copy">No page builders. No bloated themes. No template shared by a thousand other businesses in your category. Every site we deliver loads in under two seconds on a phone, is structured so Google and AI can both read and recommend it, and converts visitors into enquiries. GEO without a fast, well-built site is a road leading to a locked door.</p>
-              <ul class="service-bullets">
-                <li>AI crawler access and schema markup installed at build, GEO-ready from day one</li>
-                <li>Mobile-first, under 2 seconds load time, Core Web Vitals passing</li>
-                <li>Copy written and designed to convert the visitor GEO sends</li>
-                <li>Free marketing audit included, we know what to build before we write a line</li>
-                <li>Monthly retainer covers updates, edits, hosting support, and site monitoring</li>
-                <li>Full e-commerce and online retail stores built for businesses ready to sell online: products, payments, inventory, and shipping, ready to take orders from day one</li>
-              </ul>
-              <div class="service-foot">
-                <div class="service-pricing">$800–$2,000 one-time · $150–$200/mo retainer</div>
-                <a href="/audit" class="service-audit-link">Get your Marketing Audit for free →</a>
-              </div>
-            </div>
+        <div class="hv-notify">
+          <div class="hv-notify-ico">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           </div>
-        </div>
-
-        <!-- 3. AI Receptionist -->
-        <div class="service-row">
-          <button class="service-row-head" type="button" aria-expanded="false" aria-controls="svc-3-panel">
-            <div class="service-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            </div>
-            <div class="service-row-text">
-              <h3>AI Receptionist</h3>
-              <p>Your website answers visitors and books appointments while you work.</p>
-            </div>
-            <div class="service-row-toggle">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-            </div>
-          </button>
-          <div class="service-expand" id="svc-3-panel">
-            <div class="service-expand-inner">
-              <p class="service-copy">A visitor who cannot get an immediate answer does not wait, they go back and click the next result. An AI receptionist embedded on your site answers your ten most common questions, qualifies the visitor, and routes them to a booking link without you touching it. It works at 11pm when you are asleep and at 6am when you are on a job.</p>
-              <ul class="service-bullets">
-                <li>Conversational flows built around your specific services and questions</li>
-                <li>Qualifying logic, filters serious enquiries from casual browsers</li>
-                <li>Booking link routing, connects directly to your calendar</li>
-                <li>All conversations logged to your CRM automatically</li>
-                <li>Monthly review of conversation logs to improve performance</li>
-              </ul>
-              <div class="service-foot">
-                <div class="service-pricing">$500–$1,200 one-time · $150–$300/mo retainer</div>
-                <a href="/audit" class="service-audit-link">Get your Marketing Audit for free →</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. SEO -->
-        <div class="service-row">
-          <button class="service-row-head" type="button" aria-expanded="false" aria-controls="svc-4-panel">
-            <div class="service-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-            </div>
-            <div class="service-row-text">
-              <h3>SEO</h3>
-              <p>Get found on Google by the customers who are already looking for you.</p>
-            </div>
-            <div class="service-row-toggle">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-            </div>
-          </button>
-          <div class="service-expand" id="svc-4-panel">
-            <div class="service-expand-inner">
-              <p class="service-copy">SEO covers the customers who type. GEO covers the customers who ask AI. They use different signals and produce different outcomes. Businesses that do both own the full picture, ranked links in Google and recommended names in AI answers. Neither replaces the other and both are in every package we build.</p>
-              <ul class="service-bullets">
-                <li>Keyword research for primary and local intent terms</li>
-                <li>Meta titles, descriptions, and on-page structure across all pages</li>
-                <li>Google Search Console setup and ongoing monitoring</li>
-                <li>Google Business Profile optimisation for traditional search ranking</li>
-                <li>Local citation audit, consistent business information across all directories</li>
-              </ul>
-              <div class="service-foot">
-                <div class="service-pricing">$500–$1,200 one-time · $150–$300/mo retainer</div>
-                <a href="/audit" class="service-audit-link">Get your Marketing Audit for free →</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. Marketing Audit -->
-        <div class="service-row">
-          <button class="service-row-head" type="button" aria-expanded="false" aria-controls="svc-5-panel">
-            <div class="service-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
-            </div>
-            <div class="service-row-text">
-              <h3>Marketing Audit</h3>
-              <p>A full picture of your online presence before anyone touches anything.</p>
-            </div>
-            <div class="service-row-toggle">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-            </div>
-          </button>
-          <div class="service-expand" id="svc-5-panel">
-            <div class="service-expand-inner">
-              <p class="service-copy">We look at your business the way your next customer will, and the way AI does. We test your category and city across ChatGPT, Perplexity, and Gemini. Document who appears. Document who does not. Most business owners have never typed their own category into ChatGPT. When the audit shows a competitor appearing where they do not, the conversation changes.</p>
-              <ul class="service-bullets">
-                <li>AI visibility test, documented with screenshots across all three major platforms</li>
-                <li>Competitor comparison, who AI recommends instead of you right now</li>
-                <li>GEO readiness score, crawler access, schema status, Bing index status</li>
-                <li>Lead capture gap analysis, what you are losing and how</li>
-                <li>Prioritised action list, what to fix first and the revenue impact of each item</li>
-              </ul>
-              <div class="service-foot">
-                <div class="service-pricing">Free with any build · $297 standalone · delivered in 72 hours</div>
-                <a href="/audit" class="service-audit-link">Get your Marketing Audit for free →</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6. AI Agents & Automation -->
-        <div class="service-row">
-          <button class="service-row-head" type="button" aria-expanded="false" aria-controls="svc-6-panel">
-            <div class="service-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2M12 12v4M10 14h4"/></svg>
-            </div>
-            <div class="service-row-text">
-              <h3>AI Agents &amp; Automation</h3>
-              <p>Specific systems built for your business, already running when we hand them over.</p>
-            </div>
-            <div class="service-row-toggle">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-            </div>
-          </button>
-          <div class="service-expand" id="svc-6-panel">
-            <div class="service-expand-inner">
-              <p class="service-copy">Not software. Not a platform you have to learn. Specific workflows built for your business, connected to your existing tools, tested, and running before we leave. Every automation targets one specific gap: the lead that came in Tuesday and got a reply Thursday, the follow-up that never goes out, the review request you keep forgetting to send.</p>
-              <ul class="service-bullets">
-                <li>Lead response, every enquiry gets a personalised reply in under 2 minutes</li>
-                <li>Follow-up sequences, Day 3 and Day 7 for leads who did not book</li>
-                <li>Review requests, fires automatically after satisfaction is confirmed</li>
-                <li>Estimate generator, job details in, professional proposal out in minutes</li>
-                <li>Post-project workflow, satisfaction check, review request, all automated</li>
-              </ul>
-              <div class="service-foot">
-                <div class="service-pricing">$500–$1,000 per workflow · $150–$500/mo management</div>
-                <a href="/audit" class="service-audit-link">Get your Marketing Audit for free →</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 7. HubSpot CRM Buildout -->
-        <div class="service-row">
-          <button class="service-row-head" type="button" aria-expanded="false" aria-controls="svc-7-panel">
-            <div class="service-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <div class="service-row-text">
-              <h3>HubSpot CRM Buildout</h3>
-              <p>Every lead captured, every client tracked, every follow-up sent on time.</p>
-            </div>
-            <div class="service-row-toggle">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-            </div>
-          </button>
-          <div class="service-expand" id="svc-7-panel">
-            <div class="service-expand-inner">
-              <p class="service-copy">Most local businesses run on memory, text messages, and a spreadsheet they stopped trusting two years ago. When GEO starts bringing in volume, that breaks fast. A properly built CRM means every lead is captured, every client is tracked, and every invoice goes out on time. HoneyBook or HubSpot, we assess which fits your business in the audit.</p>
-              <ul class="service-bullets">
-                <li>HoneyBook: for service businesses, proposals, contracts, payments, client portal in one place</li>
-                <li>HubSpot: for businesses with a true sales pipeline and email sequences</li>
-                <li>All new leads from your website and automations flow in automatically</li>
-                <li>Pipeline stages built to match your actual sales process</li>
-                <li>Onboarding session, you leave knowing how to use it from day one</li>
-              </ul>
-              <div class="service-foot">
-                <div class="service-pricing">$800–$2,000 one-time · $200–$400/mo retainer</div>
-                <a href="/audit" class="service-audit-link">Get your Marketing Audit for free →</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ============ PACKAGES ============ -->
-  <section class="section packages-section" id="packages">
-    <div class="container">
-      <div class="packages-head">
-        <div>
-          <span class="eyebrow">Or skip straight to the complete build</span>
-          <h2>GEO is in every package. Pick where you start.</h2>
-        </div>
-        <div class="packages-note">
-          <p>Most clients start with GEO. Most come back for the rest within 60 days. <strong>The ones who take the complete build from day one pay less and grow faster. Every time.</strong></p>
-        </div>
-      </div>
-
-      <div class="bundle-grid">
-
-        <!-- Package 1: Visibility (entry point) -->
-        <div class="bundle-card">
-          <span class="bundle-tag">Entry point</span>
-          <h3>The Visibility Package</h3>
-          <p class="bundle-tagline">Be found on Google and by AI. Own the answer in your city before a competitor does.</p>
-          <ul class="bundle-includes">
-            <li class="bundle-anchor">GEO, the reason this package exists</li>
-            <li>Marketing Audit <span class="bundle-free">Free</span></li>
-            <li>Website, built for AI from day one</li>
-            <li>SEO, covers the typed search too</li>
-            <li>Monthly AI monitoring and reporting</li>
-          </ul>
-          <div class="bundle-price-main">$2,000–$4,500</div>
-          <div class="bundle-price-sub">One-time · $450–$750/mo ongoing</div>
-          <a href="/audit" class="bundle-btn">Start here</a>
-        </div>
-
-        <!-- Package 2: Visibility + Conversion (featured) -->
-        <div class="bundle-card featured">
-          <span class="bundle-tag">Most complete entry point</span>
-          <h3>The Visibility + Conversion Package</h3>
-          <p class="bundle-tagline">Visible on AI. Every lead caught and responded to automatically. Nothing falls through the cracks.</p>
-          <ul class="bundle-includes">
-            <li class="bundle-anchor">GEO, the anchor of everything</li>
-            <li>Marketing Audit <span class="bundle-free">Free</span></li>
-            <li>Website</li>
-            <li>SEO</li>
-            <li>AI Receptionist, answers while you work</li>
-            <li>AI Agents &amp; Automation, lead response and follow-up</li>
-            <li>Monthly AI monitoring and reporting</li>
-          </ul>
-          <div class="bundle-price-main">$4,000–$7,500</div>
-          <div class="bundle-price-sub">One-time · $650–$1,100/mo ongoing</div>
-          <a href="/audit" class="bundle-btn">This is the build</a>
-        </div>
-
-        <!-- Package 3: Complete Operating System -->
-        <div class="bundle-card">
-          <span class="bundle-tag">The complete build</span>
-          <h3>The Complete Operating System</h3>
-          <p class="bundle-tagline">Everything. Built once. Runs forever. For business owners who are done doing this piece by piece.</p>
-          <ul class="bundle-includes">
-            <li class="bundle-anchor">GEO, the foundation</li>
-            <li>Marketing Audit <span class="bundle-free">Free</span></li>
-            <li>Website</li>
-            <li>SEO</li>
-            <li>AI Receptionist</li>
-            <li>Full AI Agents &amp; Automation stack</li>
-            <li>CRM, HoneyBook or HubSpot configured</li>
-            <li>Monthly monitoring across everything</li>
-          </ul>
-          <div class="bundle-price-main">$5,500–$10,000</div>
-          <div class="bundle-price-sub">One-time · $900–$1,500/mo ongoing</div>
-          <a href="/audit" class="bundle-btn">Build the whole thing</a>
-        </div>
-
-      </div>
-
-      <p class="support-line">Post-delivery support after the included 7-day window: $75/hour, agreed in writing before work begins.</p>
-    </div>
-  </section>
-
-  <!-- ============ CASE STUDY ============ -->
-  <section class="section ink" id="proof">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">What happens when all of it works together</span>
-        <h2>Good businesses fail because they are invisible.</h2>
-      </div>
-      <div class="case-grid">
-        <div>
-          <p class="case-quote">
-            <span class="case-quote-mark">&ldquo;</span>
-            I used to come home and the voicemail was full. Now the calendar's full, and the
-            voicemail is empty. Same hours. More work, less stress.
-          </p>
-          <div class="case-attr">
-            <div class="case-avatar">MD</div>
-            <div>
-              <div class="case-name">Mike Donato</div>
-              <div class="case-role">Owner · Coastal Plumbing &amp; Heating · Denver, CO</div>
-            </div>
-          </div>
-        </div>
-        <div class="case-numbers">
-          <div class="case-stat">
-            <div class="case-stat-val">
-              <span class="count" data-target="40" data-format="int" data-duration="1400">0</span>
-              <span class="case-stat-arrow">→</span>
-              <span class="count" data-target="4" data-format="int" data-duration="1400">0</span>
-            </div>
-            <div class="case-stat-label">Missed calls per week, before vs after</div>
-          </div>
-          <div class="case-stat">
-            <div class="case-stat-val"><span class="count" data-target="1.4" data-format="decimal-1" data-duration="1600">0.0</span>s</div>
-            <div class="case-stat-label">New homepage load time on 4G</div>
-          </div>
-          <div class="case-stat">
-            <div class="case-stat-val"><span class="count" data-target="3" data-format="int" data-duration="1200">0</span> weeks</div>
-            <div class="case-stat-label">From kickoff to launch</div>
+          <div>
+            <div class="hv-notify-title">New booking confirmed</div>
+            <div class="hv-notify-sub"><span class="live-dot"></span> Tuesday 9am · Booked from AI search</div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============ HOW IT WORKS ============ -->
-  <section class="section surface" id="how">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">How it works</span>
-        <h2>Three steps. No theatrics.</h2>
-      </div>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">STEP 01</div>
-          <div class="step-line"></div>
-          <h3>We sit down and listen.</h3>
-          <p>A 45-minute call. You talk about the work, the headaches, the calls you keep missing. We listen. No pitch until we know what you need.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">STEP 02</div>
-          <div class="step-line"></div>
-          <h3>We build your system.</h3>
-          <p>One week. We design, build, and configure the website, the receptionist, the automations, whatever the audit said to build. You review before anything goes live.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">STEP 03</div>
-          <div class="step-line"></div>
-          <h3>It just runs.</h3>
-          <p>Monthly check-ins. A short report. Small tweaks. You get back to the job. We handle the rest.</p>
-        </div>
-      </div>
+<!-- ============== STATS BAR ============== -->
+<section class="stats" aria-label="By the numbers">
+  <div class="stats-row">
+    <div class="stat fade">
+      <span class="stat-n" data-count="800" data-suffix="M+" data-fmt="int">0M+</span>
+      <span class="stat-l">ChatGPT weekly users searching for local businesses</span>
     </div>
-  </section>
-
-  <!-- ============ CTA ============ -->
-  <section class="cta" id="contact">
-    <div class="container cta-inner">
-      <img src="assets/logo-mark-reverse.svg" alt="" width="64" height="64" class="cta-mark">
-      <h2>Find out where your business stands before your competitor does.</h2>
-      <p>We look at your AI visibility, your website, your online presence, and tell you exactly what is costing you jobs right now. Plain English. No pitch until we know what you need.</p>
-      <a href="/audit" class="btn btn-primary btn-lg">Get your Marketing Audit for free →</a>
-      <p class="cta-fine">Takes 2 minutes to fill in · We review within 24 hours · Plain English. Always.</p>
+    <div class="stat fade">
+      <span class="stat-n" data-count="60" data-suffix="%" data-fmt="int">0%</span>
+      <span class="stat-l">Google searches now show AI-generated answers first</span>
     </div>
-  </section>
+    <div class="stat fade">
+      <span class="stat-n">4–8wk</span>
+      <span class="stat-l">Average time to appear in AI answers after optimization</span>
+    </div>
+    <div class="stat fade">
+      <span class="stat-n">1 name</span>
+      <span class="stat-l">What AI gives per category per city — make it yours</span>
+    </div>
+  </div>
+</section>
 
-  <!-- ============ FOOTER ============ -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand">
-            <img src="assets/logo-mark-small.svg" width="28" height="28" alt="">
-            <span class="footer-brand-name">A Light in the Sky</span>
+<!-- ============== CATEGORY STATEMENT ============== -->
+<section class="category" aria-labelledby="category-h">
+  <div class="wrap fade">
+    <p class="sec-tag dark" style="justify-content:center">The category we own</p>
+    <h2 id="category-h">AI Client Capture Systems for Service Businesses.</h2>
+    <p>
+      Not an SEO agency. Not a chatbot builder. Not an automation freelancer.
+      We build the system that connects all five — and we name it so your business knows what it owns.
+      The category is new. The window for owning it closes as the market matures.
+    </p>
+  </div>
+</section>
+
+<!-- ============== SYSTEM PIPELINE ============== -->
+<section class="system" id="system" aria-labelledby="system-h">
+  <div class="wrap">
+    <div class="system-head fade">
+      <p class="sec-tag dark">The AI Client Capture System™</p>
+      <h2 id="system-h">Five connected layers. One complete system.</h2>
+      <p>
+        This is not a menu of services. Each layer feeds the next. Visibility brings people. Conversion keeps them.
+        Intake captures them. Memory organizes them. Execution follows up automatically. Missing one layer means the system leaks.
+      </p>
+    </div>
+
+    <div class="pipeline-wrap fade">
+      <div class="pipeline">
+        <div class="pipe anchor">
+          <div class="pipe-num">Layer 01</div>
+          <div class="pipe-ico">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
           </div>
-          <p class="footer-tag">
-            You built something real. We make sure the world can find it.
-          </p>
+          <div class="pipe-name">Visibility</div>
+          <div class="pipe-q">Is AI recommending you?</div>
+          <div class="pipe-desc">GEO and AEO optimization so ChatGPT, Perplexity, and Google AI name your business when someone asks.</div>
         </div>
-        <div class="footer-col">
-          <h4>How we help</h4>
-          <ul>
-            <li><a href="/services/websites">Websites</a></li>
-            <li><a href="/services/ai-receptionist">AI Receptionists &amp; Chatbots</a></li>
-            <li><a href="/services/ai-seo">GEO: Generative Engine Optimization</a></li>
-            <li><a href="/services/seo">SEO</a></li>
-            <li><a href="/services/analysis">Marketing Audit</a></li>
-            <li><a href="/services/automations">AI Agents &amp; Automation</a></li>
-            <li><a href="/services/crm">HubSpot CRM Buildout</a></li>
-          </ul>
+
+        <div class="pipe">
+          <div class="pipe-num">Layer 02</div>
+          <div class="pipe-ico">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <div class="pipe-name">Conversion</div>
+          <div class="pipe-q">Are visitors becoming leads?</div>
+          <div class="pipe-desc">Website built to convert the visitor AI sends — fast, structured, and designed to turn curiosity into contact.</div>
         </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/case-studies">Case studies</a></li>
-            <li><a href="/pricing">Pricing</a></li>
-            <li><a href="/audit">Contact</a></li>
-          </ul>
+
+        <div class="pipe">
+          <div class="pipe-num">Layer 03</div>
+          <div class="pipe-ico">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="pipe-name">Intake</div>
+          <div class="pipe-q">Are leads getting an instant response?</div>
+          <div class="pipe-desc">AI receptionist that answers, qualifies, and routes visitors to your booking calendar at any hour.</div>
         </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="mailto:info@alitsky.com">info@alitsky.com</a></li>
-            <li>Denver, Colorado</li>
-          </ul>
+
+        <div class="pipe">
+          <div class="pipe-num">Layer 04</div>
+          <div class="pipe-ico">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></svg>
+          </div>
+          <div class="pipe-name">Memory</div>
+          <div class="pipe-q">Is every lead tracked and organized?</div>
+          <div class="pipe-desc">CRM built around how your business actually works — every lead captured, every client followed, nothing forgotten.</div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <div>© 2026 A Light in the Sky · All rights reserved</div>
-        <div class="footer-motto">We do not sell what we cannot build.</div>
+
+        <div class="pipe">
+          <div class="pipe-num">Layer 05</div>
+          <div class="pipe-ico">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <div class="pipe-name">Execution</div>
+          <div class="pipe-q">Is follow-up happening automatically?</div>
+          <div class="pipe-desc">Automations that reply within 2 minutes, follow up on Day 3 and Day 7, and run the sequences while you work.</div>
+        </div>
       </div>
     </div>
-  </footer>
 
-  <script src="count-up.js" defer></script>
-  <script src="services-accordion.js" defer></script>
-  <script src="/nav-dropdown.js" defer></script>
-  <script src="/chatbot.js" defer></script>
+    <div class="system-cta fade">
+      <a href="#audit" class="btn btn-dark">
+        Get your free Marketing Audit
+        <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== THE GAP ============== -->
+<section class="gap-sec" aria-labelledby="gap-h">
+  <div class="wrap">
+    <div class="gap-head fade">
+      <p class="sec-tag">Where the money leaks out</p>
+      <h2 id="gap-h">Good businesses fail because they are invisible.</h2>
+      <p class="italic">Not invisible to Google. Invisible to the conversation happening right now.</p>
+    </div>
+
+    <div class="gap-grid">
+      <div class="gap-card fade">
+        <span class="gap-num">Leak 01</span>
+        <h3>The midnight enquiry</h3>
+        <p>Someone visits your site at 9pm. Asks a question. Gets silence. By morning they have booked with someone who replied. You never knew they came.</p>
+        <span class="gap-fix">→ Fixed by the intake layer</span>
+      </div>
+      <div class="gap-card fade">
+        <span class="gap-num">Leak 02</span>
+        <h3>The AI recommendation</h3>
+        <p>Every day people in your city ask ChatGPT who to call. The AI names your competitor. You are not in the answer because no one has ever introduced you to it.</p>
+        <span class="gap-fix">→ Fixed by the visibility layer</span>
+      </div>
+      <div class="gap-card fade">
+        <span class="gap-num">Leak 03</span>
+        <h3>The forgotten follow-up</h3>
+        <p>You meant to follow up on Tuesday. Life happened. The lead is now cold. This happens to every lead you do not have an automated sequence for.</p>
+        <span class="gap-fix">→ Fixed by the execution layer</span>
+      </div>
+      <div class="gap-card fade">
+        <span class="gap-num">Leak 04</span>
+        <h3>The lost lead data</h3>
+        <p>A lead came in three months ago. You cannot remember their name, what they needed, or whether you ever replied. The business has no memory.</p>
+        <span class="gap-fix">→ Fixed by the memory layer</span>
+      </div>
+      <div class="gap-card fade">
+        <span class="gap-num">Leak 05</span>
+        <h3>The invisible website</h3>
+        <p>You have a website but it is not structured for how AI reads content. The crawlers that feed ChatGPT are blocked by default. No one told you.</p>
+        <span class="gap-fix">→ Fixed by the conversion layer</span>
+      </div>
+      <div class="gap-card fade">
+        <span class="gap-num">Leak 06</span>
+        <h3>The 3-second exit</h3>
+        <p>A visitor clicks through from AI search, lands on your site, cannot immediately see what they need, and leaves in under three seconds. The system worked. The website did not.</p>
+        <span class="gap-fix">→ Fixed by the conversion layer</span>
+      </div>
+    </div>
+
+    <div class="gap-cta fade">
+      <span class="gap-cta-label">The audit shows you exactly which of these apply to your business today.</span>
+      <a href="#audit" class="btn btn-teal">
+        Find out exactly what you're losing
+        <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== HOW WE HELP ============== -->
+<section class="help" id="services" aria-labelledby="help-h">
+  <div class="wrap">
+    <div class="help-head fade">
+      <p class="sec-tag dark">How we help</p>
+      <h2 id="help-h">Start with one layer. Build the system.</h2>
+      <p>Every layer is available as a standalone service. Most clients start with the audit — the audit tells you which layer to build first.</p>
+    </div>
+
+    <div class="help-grid">
+      <div class="help-card fade">
+        <span class="help-tag">Entry point · Diagnostic</span>
+        <h3 class="help-name">AI Visibility Audit</h3>
+        <p class="help-hook">We test your business across ChatGPT, Perplexity, and Google AI. No jargon. No pitch until you have seen the numbers.</p>
+        <ul class="help-list">
+          <li>AI query testing across 3 platforms</li>
+          <li>Competitor comparison</li>
+          <li>Website gap analysis</li>
+          <li>Prioritized fix list</li>
+          <li>Delivered in 72 hours</li>
+        </ul>
+        <div class="help-price">$97 – $297</div>
+        <div class="help-price-sub">one-time</div>
+        <a href="#audit" class="btn btn-ghost">Start with the audit</a>
+      </div>
+
+      <div class="help-card fade">
+        <span class="help-tag">Layer 01 · Visibility</span>
+        <h3 class="help-name">GEO / AEO Optimization</h3>
+        <p class="help-hook">Makes your business discoverable in AI-generated search. ChatGPT starts naming you when someone asks for the best in your city.</p>
+        <ul class="help-list">
+          <li>Schema.org JSON-LD implementation</li>
+          <li>Bing Webmaster Tools setup</li>
+          <li>Entity optimization</li>
+          <li>AI crawler unblocking</li>
+          <li>Google Search Console</li>
+          <li>Before/after visibility report</li>
+        </ul>
+        <div class="help-price">$190 – $750</div>
+        <div class="help-price-sub">one-time</div>
+        <a href="#audit" class="btn btn-ghost">Get the GEO build</a>
+      </div>
+
+      <div class="help-card fade">
+        <span class="help-tag">Layer 03 · Intake</span>
+        <h3 class="help-name">AI Receptionist</h3>
+        <p class="help-hook">Catches every visitor who has a question at 9pm. Qualifies them, routes them to a booking link, logs them to the CRM.</p>
+        <ul class="help-list">
+          <li>Claude API direct integration</li>
+          <li>FAQ response layer</li>
+          <li>Lead qualification flow</li>
+          <li>Booking calendar routing</li>
+          <li>CRM logging</li>
+          <li>Direct API, fully controllable</li>
+        </ul>
+        <div class="help-price">$147 – $497</div>
+        <div class="help-price-sub">one-time</div>
+        <a href="#audit" class="btn btn-ghost">Build the chatbot</a>
+      </div>
+
+      <div class="help-card fade">
+        <span class="help-tag">Layer 04 · Memory</span>
+        <h3 class="help-name">CRM Setup</h3>
+        <p class="help-hook">Every lead captured, every client tracked, every follow-up logged. The system that makes your business remember.</p>
+        <ul class="help-list">
+          <li>HoneyBook or HubSpot setup</li>
+          <li>Pipeline configuration</li>
+          <li>Lead capture mapping</li>
+          <li>Contact organization</li>
+          <li>Deal tracking</li>
+          <li>Team walkthrough</li>
+        </ul>
+        <div class="help-price">$197 – $597</div>
+        <div class="help-price-sub">one-time</div>
+        <a href="#audit" class="btn btn-ghost">Set up the CRM</a>
+      </div>
+
+      <div class="help-card fade">
+        <span class="help-tag">Layer 05 · Execution</span>
+        <h3 class="help-name">Business Automations</h3>
+        <p class="help-hook">The workflows that run your follow-up, fire your client sequences, send invoice reminders, populate the CRM — while you are on the job.</p>
+        <ul class="help-list">
+          <li>Make.com workflow build</li>
+          <li>Lead response automation</li>
+          <li>Follow-up sequences (Day 1 / 3 / 7)</li>
+          <li>Invoice follow-up</li>
+          <li>CRM auto-population</li>
+          <li>Delivery + walkthrough</li>
+        </ul>
+        <div class="help-price">$150 – $550</div>
+        <div class="help-price-sub">one-time</div>
+        <a href="#audit" class="btn btn-ghost">Build the automations</a>
+      </div>
+
+      <div class="help-card fade">
+        <span class="help-tag">Ongoing · All layers</span>
+        <h3 class="help-name">Monthly Monitoring</h3>
+        <p class="help-hook">Monthly AI query testing, lead flow audit, automation health check. We handle the watch so you do not have to.</p>
+        <ul class="help-list">
+          <li>Monthly AI visibility testing</li>
+          <li>Competitor tracking</li>
+          <li>Automation health check</li>
+          <li>CRM audit</li>
+          <li>Plain-English report</li>
+          <li>Priority action for next month</li>
+        </ul>
+        <div class="help-price">$450 – $750</div>
+        <div class="help-price-sub">per month</div>
+        <a href="#audit" class="btn btn-ghost">Start the retainer</a>
+      </div>
+    </div>
+
+    <div class="help-callout fade">
+      <p>Every service is built to the same standard whether sold individually or as part of the full system. <strong>The audit determines the right entry point for your specific situation.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PROOF ============== -->
+<section class="proof" id="proof" aria-labelledby="proof-h">
+  <div class="wrap">
+    <div class="proof-head fade">
+      <span class="proof-label">What happens when the system is complete</span>
+      <h2 id="proof-h">Good businesses fail because they are invisible. <span class="italic">Not anymore.</span></h2>
+    </div>
+    <div class="proof-grid">
+      <div class="fade">
+        <blockquote class="proof-quote">"I used to come home and the voicemail was full. Now the calendar's full, and the voicemail is empty. Same hours. More work, less stress."</blockquote>
+        <div class="proof-attr">
+          <div class="proof-avatar">MD</div>
+          <div>
+            <div class="proof-name">Mike Donato</div>
+            <div class="proof-role">Owner · Coastal Plumbing &amp; Heating · Salem, MA</div>
+          </div>
+        </div>
+      </div>
+      <div class="proof-stats fade">
+        <div class="ps">
+          <div class="ps-n">
+            <span data-count="40" data-suffix="" data-fmt="int">0</span> → <span data-count="4" data-suffix="" data-fmt="int">0</span>
+          </div>
+          <div class="ps-l">Missed calls per week, before vs after</div>
+        </div>
+        <div class="ps">
+          <div class="ps-n"><span data-count="1.4" data-suffix="s" data-fmt="dec1">0.0s</span></div>
+          <div class="ps-l">New homepage load time on 4G</div>
+        </div>
+        <div class="ps">
+          <div class="ps-n">3 weeks</div>
+          <div class="ps-l">From kickoff to full system live</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== BUILT FOR ============== -->
+<section class="builtfor" aria-labelledby="builtfor-h">
+  <div class="wrap">
+    <div class="builtfor-head fade">
+      <p class="sec-tag dark">Built for</p>
+      <h2 id="builtfor-h">If you run one of these, the system is built for you.</h2>
+      <p>We work with service businesses where the owner delivers the work and needs leads coming in consistently. These are the verticals where the system pays for itself fastest.</p>
+    </div>
+    <div class="verticals fade">
+      <div class="vert">
+        <div class="vert-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <div class="vert-name">Wellness brands &amp; med spas</div>
+      </div>
+      <div class="vert">
+        <div class="vert-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <div class="vert-name">Coaches &amp; consultants</div>
+      </div>
+      <div class="vert">
+        <div class="vert-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="vert-name">Real estate agents</div>
+      </div>
+      <div class="vert">
+        <div class="vert-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div>
+        <div class="vert-name">Salons &amp; beauty</div>
+      </div>
+      <div class="vert">
+        <div class="vert-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5l11 11M21 21l-1-1M3 3l1 1M18 22l4-4M2 6l4-4M3 10l7-7M14 21l7-7"/></svg></div>
+        <div class="vert-name">Fitness studios</div>
+      </div>
+    </div>
+    <p class="also-serving fade">Also serving: mental health practitioners · contractors and trades · restaurants and hospitality · financial advisors · legal professionals</p>
+  </div>
+</section>
+
+<!-- ============== HOW IT WORKS ============== -->
+<section class="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <div class="how-head fade">
+      <p class="sec-tag dark" style="justify-content:center">How it works</p>
+      <h2 id="how-h">Three steps. No theatrics.</h2>
+    </div>
+    <div class="how-steps fade">
+      <div class="step">
+        <span class="step-num">Step 01</span>
+        <h3>We sit down and listen.</h3>
+        <p>A 45-minute call. You talk about the work, the headaches, the calls you keep missing. We listen. No pitch until we know what you need.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">Step 02</span>
+        <h3>We build your system.</h3>
+        <p>One week. We build and configure the layers your audit identified — visibility, website, intake, CRM, automation. You review before anything goes live.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">Step 03</span>
+        <h3>It just runs.</h3>
+        <p>Monthly check-ins. A short report. Small tweaks. You get back to the job you built the business to do. We handle the rest.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PACKAGES ============== -->
+<section class="packages" id="packages" aria-labelledby="pkg-h">
+  <div class="wrap">
+    <div class="pkg-intro fade">
+      <div>
+        <p class="sec-tag dark">Packages</p>
+        <h2 id="pkg-h">Start where it hurts most. Build from there.</h2>
+      </div>
+      <div class="pkg-note">
+        <p>Most clients start with the audit. Most add the full system within 60 days. <strong>The businesses that build the complete system from day one pay less and grow faster. Every time.</strong></p>
+      </div>
+    </div>
+
+    <div class="pkg-grid">
+      <div class="pkg fade">
+        <span class="pkg-tag">Entry point</span>
+        <h3 class="pkg-name">Visibility</h3>
+        <ul class="pkg-list">
+          <li class="anchor">GEO — the reason this package exists</li>
+          <li>Marketing Audit <span class="pkg-free">FREE</span></li>
+          <li>Website — built for AI from day one</li>
+          <li>SEO — covers the typed search too</li>
+          <li>Monthly AI monitoring and reporting</li>
+        </ul>
+        <div class="pkg-price">$2,000–$4,500 one-time</div>
+        <div class="pkg-monthly">$450–$750/mo ongoing</div>
+        <a href="#audit" class="btn btn-ghost">Start here</a>
+      </div>
+
+      <div class="pkg fade">
+        <span class="pkg-tag">Conversion focused</span>
+        <h3 class="pkg-name">Conversion</h3>
+        <ul class="pkg-list">
+          <li class="anchor">GEO — the anchor of everything</li>
+          <li>Marketing Audit <span class="pkg-free">FREE</span></li>
+          <li>Website</li>
+          <li>SEO</li>
+          <li>AI Receptionist — answers while you work</li>
+          <li>Business Automations — lead response, follow-up</li>
+          <li>Monthly monitoring and reporting</li>
+        </ul>
+        <div class="pkg-price">$4,000–$7,500 one-time</div>
+        <div class="pkg-monthly">$650–$1,100/mo ongoing</div>
+        <a href="#audit" class="btn btn-ghost">This is the build</a>
+      </div>
+
+      <div class="pkg feat fade">
+        <span class="pkg-tag">Complete system</span>
+        <h3 class="pkg-name">AI Client Capture System™</h3>
+        <ul class="pkg-list">
+          <li class="anchor">All five layers — the complete system</li>
+          <li>Marketing Audit <span class="pkg-free">FREE</span></li>
+          <li>GEO + AI Visibility</li>
+          <li>Website + SEO</li>
+          <li>AI Receptionist</li>
+          <li>Full Automation stack</li>
+          <li>CRM — HoneyBook or HubSpot</li>
+          <li>Monthly monitoring across everything</li>
+        </ul>
+        <p class="pkg-feat-note">You come out the other side with a business that runs without you holding it together — and that your competitors cannot touch online.</p>
+        <div class="pkg-price">$5,500–$10,000 one-time</div>
+        <div class="pkg-monthly">$900–$1,500/mo ongoing</div>
+        <a href="#audit" class="btn btn-ghost">Build the whole thing</a>
+      </div>
+    </div>
+
+    <p class="pkg-support">Post-delivery support after the included 7-day window: $75/hour, agreed in writing before work begins.</p>
+  </div>
+</section>
+
+<!-- ============== HOW WE WORK ============== -->
+<section class="standards" aria-labelledby="std-h">
+  <div class="wrap">
+    <div class="standards-head fade">
+      <p class="sec-tag">How we work</p>
+      <h2 id="std-h">Operating standards. Non-negotiable.</h2>
+      <p>These are not features. They are the floor. The minimum standard for any business that builds systems other businesses depend on.</p>
+    </div>
+    <div class="standards-grid">
+      <div class="std fade">
+        <h3>You own everything.</h3>
+        <p>Every account, every credential, every workflow is set up in your name. We are added as admin. Never as owner. You can fire us tomorrow and the system keeps running.</p>
+      </div>
+      <div class="std fade">
+        <h3>NDA before credentials.</h3>
+        <p>Signed before any password or access is shared. Non-negotiable regardless of project size. Your data is your data.</p>
+      </div>
+      <div class="std fade">
+        <h3>1Password Teams. Always.</h3>
+        <p>All credentials stored in a dedicated client vault. Never in email. Never in plain text. Never in a shared doc.</p>
+      </div>
+      <div class="std fade">
+        <h3>Plain English. Always.</h3>
+        <p>Every report, every walkthrough, every monthly check-in. If you cannot explain it to your spouse over dinner, we have not done our job.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FAQ ============== -->
+<section class="faq" id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="faq-head fade">
+      <p class="sec-tag dark" style="justify-content:center">Questions</p>
+      <h2 id="faq-h">The questions most people ask before they reach out.</h2>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item fade">
+        <button class="faq-q" aria-expanded="false" type="button">
+          <span>What is GEO and how is it different from SEO?</span>
+          <span class="faq-chev"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">SEO gets your business ranked in Google's list of links when someone types a search. GEO — Generative Engine Optimization — gets your business named in AI-generated answers when someone asks ChatGPT, Perplexity, or Google AI a question. They use different signals and reach different moments in a buyer's decision. Businesses that do both own the full picture. Neither replaces the other.</div></div>
+      </div>
+      <div class="faq-item fade">
+        <button class="faq-q" aria-expanded="false" type="button">
+          <span>How long does it take to appear in AI search results?</span>
+          <span class="faq-chev"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Typically 4 to 8 weeks after implementation. AI search indexes update on their own schedule. We document your visibility before and after so you can see the exact change. The audit shows where you are today. The implementation changes what AI can see. The monthly monitoring tracks and reports the movement.</div></div>
+      </div>
+      <div class="faq-item fade">
+        <button class="faq-q" aria-expanded="false" type="button">
+          <span>What does the free Marketing Audit actually show me?</span>
+          <span class="faq-chev"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">We test your business across ChatGPT, Perplexity, and Google AI for the queries your customers are actually typing — your category, your city, your specific services. We document who AI recommends instead of you, where your website is losing people, and what your lead capture system is missing. The report is delivered in plain English, with a prioritized list of what to fix first and the revenue impact of each item. No jargon. No pitch until you have seen the numbers.</div></div>
+      </div>
+      <div class="faq-item fade">
+        <button class="faq-q" aria-expanded="false" type="button">
+          <span>Do I need to know anything technical to work with you?</span>
+          <span class="faq-chev"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">No. Every system is built, configured, and tested before we hand it over. You receive a walkthrough of what was built and how to use it. Monthly monitoring is handled on your behalf and reported back in plain English. The goal is that the system runs without you needing to understand how it works — only that it works.</div></div>
+      </div>
+      <div class="faq-item fade">
+        <button class="faq-q" aria-expanded="false" type="button">
+          <span>What kinds of businesses does this work best for?</span>
+          <span class="faq-chev"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Service businesses, appointment-based businesses, and practice-based businesses where the owner delivers the service and needs leads coming in consistently. Wellness brands, med spas, coaches, consultants, contractors, real estate agents, salons, fitness studios, mental health practitioners, and local service businesses with an existing client base. If people search for what you do in your city, this system is built for you.</div></div>
+      </div>
+      <div class="faq-item fade">
+        <button class="faq-q" aria-expanded="false" type="button">
+          <span>What is the difference between the packages?</span>
+          <span class="faq-chev"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">The Visibility Package gets you found in AI search and ensures the website converts the traffic. The Conversion Package adds the intake and automation layers — so leads get an instant response and a follow-up sequence whether or not you are available. The AI Client Capture System™ includes all five layers working together: visibility, website conversion, AI intake, CRM memory, and execution automation. The audit determines which entry point makes the most sense for your specific situation before anything is built.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQPage JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What is GEO and how is it different from SEO?", "acceptedAnswer": { "@type": "Answer", "text": "SEO gets your business ranked in Google's list of links when someone types a search. GEO — Generative Engine Optimization — gets your business named in AI-generated answers when someone asks ChatGPT, Perplexity, or Google AI a question. They use different signals and reach different moments in a buyer's decision. Businesses that do both own the full picture. Neither replaces the other." } },
+    { "@type": "Question", "name": "How long does it take to appear in AI search results?", "acceptedAnswer": { "@type": "Answer", "text": "Typically 4 to 8 weeks after implementation. AI search indexes update on their own schedule. We document your visibility before and after so you can see the exact change. The audit shows where you are today. The implementation changes what AI can see. The monthly monitoring tracks and reports the movement." } },
+    { "@type": "Question", "name": "What does the free Marketing Audit actually show me?", "acceptedAnswer": { "@type": "Answer", "text": "We test your business across ChatGPT, Perplexity, and Google AI for the queries your customers are actually typing — your category, your city, your specific services. We document who AI recommends instead of you, where your website is losing people, and what your lead capture system is missing. The report is delivered in plain English, with a prioritized list of what to fix first and the revenue impact of each item. No jargon. No pitch until you have seen the numbers." } },
+    { "@type": "Question", "name": "Do I need to know anything technical to work with you?", "acceptedAnswer": { "@type": "Answer", "text": "No. Every system is built, configured, and tested before we hand it over. You receive a walkthrough of what was built and how to use it. Monthly monitoring is handled on your behalf and reported back in plain English. The goal is that the system runs without you needing to understand how it works — only that it works." } },
+    { "@type": "Question", "name": "What kinds of businesses does this work best for?", "acceptedAnswer": { "@type": "Answer", "text": "Service businesses, appointment-based businesses, and practice-based businesses where the owner delivers the service and needs leads coming in consistently. Wellness brands, med spas, coaches, consultants, contractors, real estate agents, salons, fitness studios, mental health practitioners, and local service businesses with an existing client base. If people search for what you do in your city, this system is built for you." } },
+    { "@type": "Question", "name": "What is the difference between the packages?", "acceptedAnswer": { "@type": "Answer", "text": "The Visibility Package gets you found in AI search and ensures the website converts the traffic. The Conversion Package adds the intake and automation layers — so leads get an instant response and a follow-up sequence whether or not you are available. The AI Client Capture System™ includes all five layers working together: visibility, website conversion, AI intake, CRM memory, and execution automation. The audit determines which entry point makes the most sense for your specific situation before anything is built." } }
+  ]
+}
+</script>
+
+<!-- ============== CLOSE CTA ============== -->
+<section class="close-cta" id="audit" aria-labelledby="close-h">
+  <div class="wrap close-cta-inner fade">
+    <div class="close-star">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 3l4.5 13.5L44 12l-7.5 12.5 11 1.5-9.5 7.5 4.5 12.5L31 39 24 50l-7-11L7 46l4.5-12.5L2 26l11-1.5L4 12l15.5 4.5z"/></svg>
+    </div>
+    <h2 id="close-h">Find out where your business stands before your competitor does.</h2>
+    <p class="close-cta-body">We look at your AI visibility, your website, and your lead flow — and tell you exactly what is costing you clients right now. No pitch until we know what you need.</p>
+    <a href="mailto:hey@alitsky.com?subject=Marketing Audit Request" class="btn btn-teal">
+      Get your free Marketing Audit
+      <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <p class="close-cta-note">Takes 2 minutes to fill in · We review within 24 hours · Plain English. Always.</p>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div>
+        <div class="ft-brand">
+          <span class="ft-mark"><svg viewBox="0 0 16 16"><path d="M8 1l1.5 4.5L14 3l-2.5 4 3.5.5-3 2.5 1.5 4-3.5-2L7 16l-1.5-3.5L2 14l1.5-4L0 7.5l3.5-.5L1 3l4.5 2.5z"/></svg></span>
+          <span class="ft-name">A Light in the Sky</span>
+        </div>
+        <p class="ft-tag">You built something real. We make sure the world can find it.</p>
+      </div>
+      <div>
+        <span class="ft-col-h">What we build</span>
+        <ul class="ft-list">
+          <li><a href="#system">GEO &amp; AI Visibility</a></li>
+          <li><a href="#system">Websites</a></li>
+          <li><a href="#system">AI Receptionists</a></li>
+          <li><a href="#system">Business Automations</a></li>
+          <li><a href="#system">CRM Setup</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="ft-col-h">Company</span>
+        <ul class="ft-list">
+          <li><a href="/about">About</a></li>
+          <li><a href="/proof">Case studies</a></li>
+          <li><a href="#packages">Pricing</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="ft-col-h">Contact</span>
+        <ul class="ft-list">
+          <li><a href="mailto:hey@alitsky.com">hey@alitsky.com</a></li>
+          <li><a href="#audit">Get the free audit</a></li>
+        </ul>
+        <p class="ft-mono" style="margin-top:1rem">Indianapolis, Indiana<br>Serving businesses nationwide</p>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <span class="ft-copy">© 2026 A Light in the Sky · All rights reserved</span>
+      <span class="ft-motto">We do not sell what we cannot build.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  // ===== Nav scroll shadow =====
+  var nav = document.getElementById('nav');
+  function onScroll() {
+    if (window.scrollY > 40) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // ===== Counting animation =====
+  // Uses requestAnimationFrame + easeOutQuart over 1800ms.
+  // Numbers with data-fmt="int" render as integers throughout.
+  // Numbers with data-fmt="dec1" render with one decimal throughout.
+  // Suffix string (data-suffix) is concatenated after the formatted number.
+  var DURATION = 1800;
+  function easeOutQuart(t) { return 1 - Math.pow(1 - t, 4); }
+  function fmt(value, mode) {
+    if (mode === 'dec1') return (Math.round(value * 10) / 10).toFixed(1);
+    return String(Math.round(value));
+  }
+  function animateCount(el) {
+    if (el.dataset.counted === '1') return;
+    el.dataset.counted = '1';
+    var target = parseFloat(el.dataset.count || '0');
+    var suffix = el.dataset.suffix || '';
+    var mode = el.dataset.fmt || 'int';
+    var start = performance.now();
+    function tick(now) {
+      var t = Math.min((now - start) / DURATION, 1);
+      var v = target * easeOutQuart(t);
+      el.textContent = fmt(v, mode) + suffix;
+      if (t < 1) requestAnimationFrame(tick);
+      else el.textContent = fmt(target, mode) + suffix;
+    }
+    requestAnimationFrame(tick);
+  }
+
+  // ===== IntersectionObserver: fade + count =====
+  var fadeEls = document.querySelectorAll('.fade');
+  var countEls = document.querySelectorAll('[data-count]');
+
+  if ('IntersectionObserver' in window) {
+    // Fade reveal with light stagger by source order within a batch
+    var fadeObs = new IntersectionObserver(function (entries) {
+      var batch = entries.filter(function (e) { return e.isIntersecting; });
+      batch.forEach(function (entry, i) {
+        var el = entry.target;
+        setTimeout(function () { el.classList.add('in'); }, i * 80);
+        fadeObs.unobserve(el);
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    fadeEls.forEach(function (el) { fadeObs.observe(el); });
+
+    // Count animation — fires on first viewport entry
+    var countObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          animateCount(entry.target);
+          countObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    countEls.forEach(function (el) { countObs.observe(el); });
+  } else {
+    // Fallback: show everything, snap counts to final value
+    fadeEls.forEach(function (el) { el.classList.add('in'); });
+    countEls.forEach(function (el) {
+      var mode = el.dataset.fmt || 'int';
+      var suffix = el.dataset.suffix || '';
+      el.textContent = fmt(parseFloat(el.dataset.count || '0'), mode) + suffix;
+    });
+  }
+
+  // ===== FAQ accordion (single-open) =====
+  var faqButtons = document.querySelectorAll('.faq-q');
+  faqButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.parentElement;
+      var panel = item.querySelector('.faq-a');
+      var isOpen = item.classList.contains('open');
+
+      // Close all
+      document.querySelectorAll('.faq-item.open').forEach(function (other) {
+        other.classList.remove('open');
+        var p = other.querySelector('.faq-a');
+        if (p) p.style.maxHeight = '0px';
+        var b = other.querySelector('.faq-q');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      });
+
+      // Toggle this one
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // Recalculate open FAQ height on resize (text reflow can change scrollHeight)
+  var resizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () {
+      var open = document.querySelector('.faq-item.open .faq-a');
+      if (open) open.style.maxHeight = open.scrollHeight + 'px';
+    }, 120);
+  });
+})();
+</script>
+
 </body>
 </html>
