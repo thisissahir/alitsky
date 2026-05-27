@@ -19,30 +19,18 @@
 
   <!-- Logo mark (scaled from 200x200 viewBox to 240px centred at x=200, y=315) -->
   <g transform="translate(80, 195) scale(1.2)" filter="url(#star-glow)">
-    <path d="M100 24 L109 53 L100 82 L91 53 Z" fill="#FFFFFF"/>
-    <path d="M138 34.18 L131.29 63.8 L109 84.41 L115.71 54.8 Z" fill="#FFFFFF"/>
-    <path d="M165.82 62 L145.2 84.29 L115.59 91 L136.2 68.71 Z" fill="#FFFFFF"/>
-    <path d="M176 100 L147 109 L118 100 L147 91 Z" fill="#FFFFFF"/>
-    <path d="M165.82 138 L136.2 131.29 L115.59 109 L145.2 115.71 Z" fill="#FFFFFF"/>
-    <path d="M138 165.82 L115.71 145.2 L109 115.59 L131.29 136.2 Z" fill="#FFFFFF"/>
-    <path d="M100 176 L91 147 L100 118 L109 147 Z" fill="#FFFFFF"/>
-    <path d="M62 165.82 L68.71 136.2 L91 115.59 L84.29 145.2 Z" fill="#FFFFFF"/>
-    <path d="M34.18 138 L54.8 115.71 L84.41 109 L63.8 131.29 Z" fill="#FFFFFF"/>
-    <path d="M24 100 L53 91 L82 100 L53 109 Z" fill="#FFFFFF"/>
-    <path d="M34.18 62 L63.8 68.71 L84.41 91 L54.8 84.29 Z" fill="#FFFFFF"/>
-    <path d="M62 34.18 L84.29 54.8 L91 84.41 L68.71 63.8 Z" fill="#FFFFFF"/>
-    <line x1="106.73" y1="74.89" x2="122.78" y2="15" stroke="#FFFFFF" stroke-width="2"/>
-    <line x1="118.38" y1="81.62" x2="162.23" y2="37.77" stroke="#FFFFFF" stroke-width="2"/>
-    <line x1="125.11" y1="93.27" x2="185" y2="77.22" stroke="#FFFFFF" stroke-width="2"/>
-    <line x1="125.11" y1="106.73" x2="185" y2="122.78" stroke="#FFFFFF" stroke-width="2"/>
-    <line x1="118.38" y1="118.38" x2="162.23" y2="162.23" stroke="#FFFFFF" stroke-width="2"/>
-    <line x1="106.73" y1="125.11" x2="122.78" y2="185" stroke="#FFFFFF" stroke-width="2"/>
-    <line x1="93.27" y1="125.11" x2="77.22" y2="185" stroke="#FFFFFF" stroke-width="2"/>
-    <line x1="81.62" y1="118.38" x2="37.77" y2="162.23" stroke="#FFFFFF" stroke-width="2"/>
-    <line x1="74.89" y1="106.73" x2="15" y2="122.78" stroke="#FFFFFF" stroke-width="2"/>
-    <line x1="74.89" y1="93.27" x2="15" y2="77.22" stroke="#FFFFFF" stroke-width="2"/>
-    <line x1="81.62" y1="81.62" x2="37.77" y2="37.77" stroke="#FFFFFF" stroke-width="2"/>
-    <line x1="93.27" y1="74.89" x2="77.22" y2="15" stroke="#FFFFFF" stroke-width="2"/>
+    <path d="M100 20 L112 52 L100 84 L88 52 Z" fill="#FFFFFF"/>
+    <path d="M140 30.72 L134.39 64.43 L108 86.14 L113.61 52.43 Z" fill="#FFFFFF"/>
+    <path d="M169.28 60 L147.57 86.39 L113.86 92 L135.57 65.61 Z" fill="#FFFFFF"/>
+    <path d="M180 100 L148 112 L116 100 L148 88 Z" fill="#FFFFFF"/>
+    <path d="M169.28 140 L135.57 134.39 L113.86 108 L147.57 113.61 Z" fill="#FFFFFF"/>
+    <path d="M140 169.28 L113.61 147.57 L108 113.86 L134.39 135.57 Z" fill="#FFFFFF"/>
+    <path d="M100 180 L88 148 L100 116 L112 148 Z" fill="#FFFFFF"/>
+    <path d="M60 169.28 L65.61 135.57 L92 113.86 L86.39 147.57 Z" fill="#FFFFFF"/>
+    <path d="M30.72 140 L52.43 113.61 L86.14 108 L64.43 134.39 Z" fill="#FFFFFF"/>
+    <path d="M20 100 L52 88 L84 100 L52 112 Z" fill="#FFFFFF"/>
+    <path d="M30.72 60 L64.43 65.61 L86.14 92 L52.43 86.39 Z" fill="#FFFFFF"/>
+    <path d="M60 30.72 L86.39 52.43 L92 86.14 L65.61 64.43 Z" fill="#FFFFFF"/>
   </g>
 
   <!-- Brand wordmark -->
