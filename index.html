@@ -219,6 +219,20 @@
 
     /* Hero visual stack */
     .hero-visual { display: flex; flex-direction: column; gap: 0.85rem; }
+    .hv-logo {
+      display: flex; align-items: center; justify-content: center;
+      padding: 0.4rem 0 0.6rem; color: #fff;
+      filter: drop-shadow(0 0 28px rgba(23,184,196,0.45));
+      animation: hv-logo-spin 4s cubic-bezier(0.22,1,0.36,1) 0.2s 1 both;
+    }
+    .hv-logo svg { width: 76px; height: 76px; }
+    @keyframes hv-logo-spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hv-logo { animation: none; }
+    }
     .hv-card {
       background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.10);
       border-radius: 12px; padding: 1.1rem 1.25rem;
@@ -851,6 +865,22 @@
       </div>
 
       <div class="hero-visual" aria-hidden="true">
+        <div class="hv-logo">
+          <svg viewBox="0 0 200 200" fill="currentColor" aria-hidden="true">
+            <path d="M100 20 L112 52 L100 84 L88 52 Z"/>
+            <path d="M140 30.72 L134.39 64.43 L108 86.14 L113.61 52.43 Z"/>
+            <path d="M169.28 60 L147.57 86.39 L113.86 92 L135.57 65.61 Z"/>
+            <path d="M180 100 L148 112 L116 100 L148 88 Z"/>
+            <path d="M169.28 140 L135.57 134.39 L113.86 108 L147.57 113.61 Z"/>
+            <path d="M140 169.28 L113.61 147.57 L108 113.86 L134.39 135.57 Z"/>
+            <path d="M100 180 L88 148 L100 116 L112 148 Z"/>
+            <path d="M60 169.28 L65.61 135.57 L92 113.86 L86.39 147.57 Z"/>
+            <path d="M30.72 140 L52.43 113.61 L86.14 108 L64.43 134.39 Z"/>
+            <path d="M20 100 L52 88 L84 100 L52 112 Z"/>
+            <path d="M30.72 60 L64.43 65.61 L86.14 92 L52.43 86.39 Z"/>
+            <path d="M60 30.72 L86.39 52.43 L92 86.14 L65.61 64.43 Z"/>
+          </svg>
+        </div>
         <div class="hv-card">
           <span class="hv-tag">ChatGPT · live query</span>
           <p class="hv-q">"Who is the best [your service] near me?"</p>
