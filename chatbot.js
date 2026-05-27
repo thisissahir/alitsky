@@ -12,7 +12,7 @@
 
   // -------- Configuration --------
   const OPENING_MESSAGE =
-    "Hi — I am the AI assistant for A Light in the Sky. What kind of business do you run?";
+    "Hi — I'm Sky, the AI assistant for A Light in the Sky. What kind of business do you run?";
   const ERROR_MESSAGE =
     "Something went wrong. Email us at hey@alitsky.com";
   const RATE_LIMIT_PREFIX = "You have reached the message limit";
@@ -37,6 +37,83 @@
     floatFg: "#ffffff",
     unreadDot: "#DC4413",
   };
+
+  // -------- Safe HTML formatting for assistant messages --------
+  // Escapes HTML, then re-applies a tiny subset of markdown plus auto-linking
+  // for bare URLs (https://..., alitsky.com/...) and email addresses.
+  function escapeHtml(s) {
+    return String(s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function safeHref(url) {
+    var u = String(url).trim();
+    if (/^javascript:/i.test(u) || /^data:/i.test(u) || /^vbscript:/i.test(u)) return "#";
+    if (/^(https?:\/\/|mailto:|tel:|\/)/i.test(u)) return u;
+    return "https://" + u;
+  }
+
+  function formatAssistantMessage(rawText) {
+    var text = escapeHtml(rawText);
+
+    // Markdown link: [label](url)
+    text = text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, function (_, label, url) {
+      return (
+        '<a href="' +
+        safeHref(url) +
+        '" target="_blank" rel="noopener noreferrer">' +
+        label +
+        "</a>"
+      );
+    });
+
+    // Bold: **text**
+    text = text.replace(/\*\*([^*\n]+)\*\*/g, "<strong>$1</strong>");
+
+    // Italic: *text* (avoid matching inside ** already replaced)
+    text = text.replace(
+      /(^|[^*<])\*([^*\n<]+)\*(?!\*)/g,
+      "$1<em>$2</em>"
+    );
+
+    // Emails: foo@bar.com → mailto link
+    text = text.replace(
+      /\b([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})\b/g,
+      '<a href="mailto:$1">$1</a>'
+    );
+
+    // Plain URLs: https://... or alitsky.com[/path]
+    text = text.replace(
+      /\b((?:https?:\/\/[^\s<]+)|(?:alitsky\.com(?:\/[^\s<]*)?))/gi,
+      function (match) {
+        // Skip if already inside an <a>...> (rough check: preceded by href=)
+        // The regex won't match inside an attribute because we restrict on \s<
+        // but trailing punctuation should not be part of the URL.
+        var trail = match.match(/[.,;:!?)\]}]+$/);
+        var url = match;
+        var tail = "";
+        if (trail) {
+          url = match.slice(0, -trail[0].length);
+          tail = trail[0];
+        }
+        var href = /^https?:\/\//i.test(url) ? url : "https://" + url;
+        return (
+          '<a href="' +
+          href +
+          '" target="_blank" rel="noopener noreferrer">' +
+          url +
+          "</a>" +
+          tail
+        );
+      }
+    );
+
+    return text;
+  }
 
   // -------- State --------
   const state = {
@@ -138,6 +215,27 @@
       background: ${COLOR.botBubble}; color: ${COLOR.botText};
       border-bottom-left-radius: 6px;
     }
+    .alsy-chat-bubble a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-thickness: 1px;
+      transition: color 120ms;
+    }
+    .alsy-chat-row.user .alsy-chat-bubble a {
+      color: #ffffff;
+      text-decoration-color: rgba(255,255,255,0.6);
+    }
+    .alsy-chat-row.bot .alsy-chat-bubble a {
+      color: ${COLOR.userBubble};
+      font-weight: 600;
+      text-decoration-color: rgba(14,72,88,0.45);
+    }
+    .alsy-chat-row.bot .alsy-chat-bubble a:hover {
+      text-decoration-color: ${COLOR.userBubble};
+    }
+    .alsy-chat-bubble strong { font-weight: 700; }
+    .alsy-chat-bubble em { font-style: italic; }
     .alsy-chat-time {
       font-size: 10px; color: ${COLOR.timestamp};
       margin-top: 4px; padding: 0 4px;
@@ -276,7 +374,11 @@
     row.className = `alsy-chat-row ${role === "user" ? "user" : "bot"}`;
     const bubble = document.createElement("div");
     bubble.className = "alsy-chat-bubble";
-    bubble.textContent = content;
+    if (role === "user") {
+      bubble.textContent = content; // user input rendered as plain text
+    } else {
+      bubble.innerHTML = formatAssistantMessage(content); // markdown + autolink
+    }
     const time = document.createElement("div");
     time.className = "alsy-chat-time";
     time.textContent = ts || nowStr();
@@ -284,7 +386,7 @@
     row.appendChild(time);
     messagesEl.appendChild(row);
     scrollToBottom();
-    return bubble; // caller can append streamed text
+    return bubble; // caller can re-render streamed text
   }
 
   function showTyping() {
@@ -391,13 +493,13 @@
           if (done) break;
           const chunk = decoder.decode(value, { stream: true });
           assistantText += chunk;
-          bubble.textContent = assistantText;
+          bubble.innerHTML = formatAssistantMessage(assistantText);
           scrollToBottom();
         }
       } else {
         // Fallback: no streaming support, read whole body
         assistantText = await response.text();
-        bubble.textContent = assistantText;
+        bubble.innerHTML = formatAssistantMessage(assistantText);
         scrollToBottom();
       }
 
