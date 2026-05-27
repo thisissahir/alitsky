@@ -177,6 +177,15 @@ module.exports = async (req, res) => {
       } catch (_) {}
       return;
     }
-    return res.status(500).json({ error: "Something went wrong" });
+    // Temporary verbose error for debugging — strip back to generic later.
+    return res.status(500).json({
+      error: "Something went wrong",
+      debug: {
+        name: err && err.name,
+        message: err && err.message,
+        status: err && err.status,
+        type: err && err.error && err.error.type,
+      },
+    });
   }
 };
