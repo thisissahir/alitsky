@@ -447,30 +447,53 @@
   const sendBtn = panel.querySelector(".alsy-chat-send");
   const peekCloseBtn = peekEl.querySelector(".alsy-chat-peek-close");
 
-  // -------- Peek bubble (auto-prompts the visitor) --------
-  const PEEK_DELAY_MS = 12000;
+  // -------- Auto-greeting (peek then pop) --------
+  // Timeline once per session, only if visitor hasn't opened or dismissed the chat:
+  //   ~7s   → peek bubble appears: "Hey — how can I help?"
+  //   ~14s  → full chat panel auto-opens with Sky's greeting
+  const PEEK_DELAY_MS = 7000;
+  const AUTO_OPEN_DELAY_MS = 14000;
+  // New session key (v2) so any older dismissals from previous code don't block.
+  const SESSION_KEY = "alitskyChatGreeted_v2";
   let peekTimer = null;
-  let peekDismissed = false;
+  let autoOpenTimer = null;
+  let greetingDone = false;
   try {
-    peekDismissed = sessionStorage.getItem("alitskyPeekDismissed") === "1";
+    greetingDone = sessionStorage.getItem(SESSION_KEY) === "1";
   } catch (_) { /* sessionStorage might be blocked */ }
 
+  function markGreetingDone() {
+    greetingDone = true;
+    try { sessionStorage.setItem(SESSION_KEY, "1"); } catch (_) {}
+  }
+
   function showPeek() {
-    if (peekDismissed || state.open) return;
+    if (greetingDone || state.open) return;
     peekEl.classList.add("is-visible");
   }
   function hidePeek(dismiss) {
     peekEl.classList.remove("is-visible");
     if (peekTimer) { clearTimeout(peekTimer); peekTimer = null; }
     if (dismiss) {
-      peekDismissed = true;
-      try { sessionStorage.setItem("alitskyPeekDismissed", "1"); } catch (_) {}
+      // Permanently mark the auto-greet flow as completed for this session
+      if (autoOpenTimer) { clearTimeout(autoOpenTimer); autoOpenTimer = null; }
+      markGreetingDone();
     }
   }
 
-  if (!peekDismissed) {
+  function scheduleAutoGreet() {
+    if (greetingDone) return;
     peekTimer = setTimeout(showPeek, PEEK_DELAY_MS);
+    autoOpenTimer = setTimeout(() => {
+      // Only auto-pop if the visitor still hasn't engaged
+      if (greetingDone || state.open) return;
+      hidePeek(false);          // tuck the peek bubble back
+      openPanel();              // pop the panel (which renders Sky's greeting)
+      markGreetingDone();       // never again this session
+    }, AUTO_OPEN_DELAY_MS);
   }
+
+  scheduleAutoGreet();
 
   // -------- Helpers --------
   function nowStr() {
