@@ -2,46 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Let's talk | A Light in the Sky</title>
+  <title>Talk to us | A Light in the Sky</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Leave your details. We will be in touch within 24 hours. No pitch until we know what you need.">
+  <meta name="description" content="Book a 45-minute strategy call or leave your details. We will be in touch within 24 hours. No pitch until we know what you need.">
   <meta name="theme-color" content="#051a23">
   <link rel="canonical" href="https://www.alitsky.com/contact">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="A Light in the Sky">
   <meta property="og:url" content="https://www.alitsky.com/contact">
-  <meta property="og:title" content="Let's talk | A Light in the Sky">
-  <meta property="og:description" content="Leave your details. We will be in touch within 24 hours. No pitch until we know what you need.">
+  <meta property="og:title" content="Talk to us | A Light in the Sky">
+  <meta property="og:description" content="Book a 45-minute strategy call or leave your details. We will be in touch within 24 hours.">
   <meta property="og:image" content="https://www.alitsky.com/assets/og-card.svg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Let's talk | A Light in the Sky">
-  <meta name="twitter:description" content="Leave your details. We will be in touch within 24 hours. No pitch until we know what you need.">
+  <meta name="twitter:title" content="Talk to us | A Light in the Sky">
+  <meta name="twitter:description" content="Book a 45-minute strategy call or leave your details. We will be in touch within 24 hours.">
   <meta name="twitter:image" content="https://www.alitsky.com/assets/og-card.svg">
   <link rel="icon" type="image/svg+xml" href="/assets/logo-mark-small.svg">
   <link rel="stylesheet" href="/colors_and_type.css">
   <link rel="stylesheet" href="/kit.css">
   <style>
-    /* /contact page — minimal centered form */
+    /* /contact page — unified Talk-to-us card: book a call + message form together */
     .contact-shell {
       min-height: calc(100vh - 58px);
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 80px 24px;
+      padding: 72px 24px;
       background: var(--bg);
     }
     .contact-card {
       width: 100%;
-      max-width: 480px;
+      max-width: 520px;
       text-align: center;
+    }
+    .contact-eyebrow {
+      display: inline-block;
+      font-family: var(--font-mono, var(--font-body));
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--teal-700);
+      margin-bottom: 14px;
     }
     .contact-h1 {
       font-family: var(--font-display);
-      font-size: clamp(40px, 5.4vw, 56px);
-      line-height: 1.0;
-      letter-spacing: -0.03em;
+      font-size: clamp(36px, 5vw, 52px);
+      line-height: 1.05;
+      letter-spacing: -0.025em;
       font-weight: 500;
       color: var(--ink-900);
       margin: 0 0 14px;
@@ -51,20 +61,83 @@
       font-size: 16px;
       line-height: 1.6;
       color: var(--ink-700);
-      margin: 0 0 36px;
+      margin: 0 auto 36px;
+      max-width: 420px;
       text-wrap: pretty;
+    }
+
+    /* Book-a-call block (primary) */
+    .contact-call {
+      margin-bottom: 28px;
+    }
+    .contact-call-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      height: 56px;
+      padding: 0 22px;
+      font: 600 16px/1 var(--font-body);
+      color: #fff;
+      background: var(--teal-700);
+      border: 0;
+      border-radius: 999px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 160ms var(--ease-out), transform 160ms var(--ease-out);
+    }
+    .contact-call-btn:hover { background: var(--teal-800); }
+    .contact-call-btn:active { transform: translateY(1px); }
+    .contact-call-meta {
+      margin: 12px 0 0;
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: var(--ink-500);
+      letter-spacing: 0.01em;
+    }
+
+    /* "or" divider */
+    .contact-divider {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 6px 0 24px;
+    }
+    .contact-divider::before,
+    .contact-divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .contact-divider span {
+      font-family: var(--font-mono, var(--font-body));
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-500);
+    }
+
+    /* Message form */
+    .contact-message-intro {
+      font-size: 14px;
+      color: var(--ink-500);
+      margin: 0 0 14px;
+      line-height: 1.5;
     }
     .contact-form {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
       text-align: left;
     }
     .contact-input {
       width: 100%;
-      height: 56px;
-      padding: 0 22px;
-      font: 500 16px/1 var(--font-body);
+      height: 52px;
+      padding: 0 20px;
+      font: 500 15.5px/1 var(--font-body);
       color: var(--ink-900);
       background: #fff;
       border: 1.5px solid var(--border);
@@ -81,42 +154,47 @@
     }
     .contact-submit {
       width: 100%;
-      height: 56px;
+      height: 52px;
       padding: 0 22px;
-      font: 600 16px/1 var(--font-body);
-      color: #fff;
-      background: var(--teal-700);
-      border: 0;
+      font: 600 15.5px/1 var(--font-body);
+      color: var(--teal-700);
+      background: transparent;
+      border: 1.5px solid var(--teal-700);
       border-radius: 999px;
       cursor: pointer;
-      transition: background 160ms var(--ease-out), transform 160ms var(--ease-out);
-      margin-top: 8px;
+      margin-top: 4px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
+      transition: background 160ms var(--ease-out), color 160ms, transform 160ms;
     }
-    .contact-submit:hover { background: var(--teal-800); }
+    .contact-submit:hover { background: var(--teal-700); color: #fff; }
     .contact-submit:active { transform: translateY(1px); }
-    .contact-submit[aria-busy="true"] { background: var(--teal-800); cursor: progress; }
-    .contact-fineprint {
-      margin: 22px 0 0;
-      font-size: 13px;
-      line-height: 1.5;
-      color: var(--ink-500);
-    }
+    .contact-submit[aria-busy="true"] { background: var(--teal-800); color: #fff; cursor: progress; }
     .contact-status {
-      margin: 18px 0 0;
-      font-size: 14px;
+      margin: 12px 0 0;
+      font-size: 13.5px;
       line-height: 1.5;
       color: var(--ink-700);
-      min-height: 1.5em;
+      min-height: 1.4em;
+      text-align: center;
     }
     .contact-status.error { color: var(--ember-700); }
-    @media (max-width: 640px) {
-      .contact-shell { padding: 48px 20px; }
-      .contact-h1 { font-size: clamp(36px, 9vw, 44px); }
+
+    .contact-fineprint {
+      margin: 32px 0 0;
+      font-size: 12.5px;
+      line-height: 1.55;
+      color: var(--ink-500);
     }
+
+    @media (max-width: 640px) {
+      .contact-shell { padding: 48px 20px; min-height: auto; }
+      .contact-h1 { font-size: clamp(30px, 9vw, 40px); }
+      .contact-sub { font-size: 15px; margin-bottom: 28px; }
+    }
+
     /* Visually hidden for screen-reader-only labels */
     .visually-hidden {
       position: absolute;
@@ -148,15 +226,31 @@
     </div>
   </nav>
 
-  <!-- ============ CONTACT ============ -->
+  <!-- ============ TALK TO US ============ -->
   <main class="contact-shell">
     <div class="contact-card">
-      <h1 class="contact-h1">Let's talk.</h1>
+      <span class="contact-eyebrow">Talk to us</span>
+      <h1 class="contact-h1">One honest conversation.</h1>
       <p class="contact-sub">
-        Leave your details. We will be in touch within 24 hours.
+        Book a 45-minute strategy call, or leave your details and we will be in touch within 24 hours.
         No pitch until we know what you need.
       </p>
 
+      <!-- Book a call -->
+      <div class="contact-call">
+        <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="contact-call-btn">
+          Book a 45-minute strategy call →
+        </a>
+        <p class="contact-call-meta">Mon–Fri · 9am–4pm · 45 min · Google Meet</p>
+      </div>
+
+      <div class="contact-divider"><span>or</span></div>
+
+      <!-- Message form -->
+      <p class="contact-message-intro">Leave your details and we will reach out.</p>
       <form class="contact-form" data-contact-form novalidate>
         <label class="visually-hidden" for="contact-email">Email address</label>
         <input
@@ -188,14 +282,12 @@
       </form>
 
       <p class="contact-fineprint">
-        Plain English. Always.<br>
-        No pitch until we know what you need.
+        Plain English. Always.
       </p>
     </div>
   </main>
 
   <script src="/contact-form.js" defer></script>
-  <script src="/nav-dropdown.js" defer></script>
   <script src="/chatbot.js" defer></script>
 </body>
 </html>

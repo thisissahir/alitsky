@@ -802,6 +802,33 @@
       .ft-grid > div:first-child { grid-column: 1 / -1; }
       .ft-bot { flex-direction: column; text-align: center; gap: 0.6rem; }
     }
+
+    /* "or book a call directly →" secondary link under primary CTAs */
+    .cta-book-link {
+      display: block;
+      margin-top: 14px;
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: var(--tl-dk);
+      text-decoration: none;
+      font-style: italic;
+      border-bottom: 1px solid transparent;
+      transition: color 150ms ease, border-color 150ms ease;
+    }
+    .cta-book-link:hover {
+      color: var(--tl);
+      border-bottom-color: var(--tl);
+    }
+    /* Dark-section variant (close-cta, dark backgrounds) */
+    .close-cta .cta-book-link {
+      color: var(--tl);
+      display: block;
+      margin-top: 16px;
+    }
+    .close-cta .cta-book-link:hover {
+      color: #fff;
+      border-bottom-color: var(--tl);
+    }
   </style>
 </head>
 
@@ -861,6 +888,7 @@
             <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
+        <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="cta-book-link">or book a call directly →</a>
       </div>
 
       <div class="hero-visual" aria-hidden="true">
@@ -1023,6 +1051,7 @@
         Get your free Marketing Audit
         <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
+      <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="cta-book-link">or book a call directly →</a>
     </div>
   </div>
 </section>
@@ -1081,6 +1110,7 @@
         Find out exactly what you're losing
         <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
+      <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="cta-book-link">or book a call directly →</a>
     </div>
   </div>
 </section>
@@ -1496,6 +1526,7 @@
       Get your free Marketing Audit
       <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
+    <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="cta-book-link">or book a call directly →</a>
     <p class="close-cta-note">Takes 2 minutes to fill in · We review within 24 hours · Plain English. Always.</p>
   </div>
 </section>
