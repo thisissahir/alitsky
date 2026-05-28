@@ -449,14 +449,12 @@
 
   // -------- Auto-greeting (peek then pop) --------
   // Timeline once per session, only if visitor hasn't opened or dismissed the chat:
-  //   ~1.5s → peek bubble appears: "Hey — how can I help?"
-  //   ~3.5s → full chat panel auto-opens with Sky's greeting
-  // Short enough that Sky greets effectively on landing, but staggered enough
-  // that the page paints first and the panel doesn't jarringly appear pre-paint.
-  const PEEK_DELAY_MS = 1500;
-  const AUTO_OPEN_DELAY_MS = 3500;
-  // New session key (v3) so older dismissals don't block the new behavior.
-  const SESSION_KEY = "alitskyChatGreeted_v3";
+  //   ~7s  → peek bubble appears: "Hey — how can I help?"
+  //   ~10s → full chat panel auto-opens with Sky's greeting
+  const PEEK_DELAY_MS = 7000;
+  const AUTO_OPEN_DELAY_MS = 10000;
+  // New session key (v4) so older dismissals don't block the new behavior.
+  const SESSION_KEY = "alitskyChatGreeted_v4";
   let peekTimer = null;
   let autoOpenTimer = null;
   let greetingDone = false;
