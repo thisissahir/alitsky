@@ -1512,6 +1512,17 @@ img { max-width: 100%; height: auto; }
 
 /* ---------- Footer ---------- */
 .footer { background: var(--bg-surface); padding: 64px 0 32px; }
+.footer-slogan {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 9vw, 5.5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--teal-700);
+  margin: 0 0 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+}
 .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 56px; }
 .footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
 .footer-brand-name { font-family: var(--font-display); font-size: 17px; font-weight: 500; }

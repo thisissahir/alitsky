@@ -748,6 +748,11 @@
       display: flex; align-items: center; justify-content: center;
     }
     .close-star svg { width: 48px; height: 48px; fill: var(--tl); opacity: 0.60; }
+    .close-cta-mantra {
+      font-family: var(--m); font-size: 12px; font-weight: 500;
+      letter-spacing: 0.32em; text-transform: uppercase;
+      color: var(--tl); margin: 0 0 1.25rem;
+    }
     .close-cta h2 {
       font-size: clamp(2.5rem, 6vw, 4.2rem); font-weight: 800;
       color: #fff; letter-spacing: -0.03em; line-height: 1.05;
@@ -767,6 +772,17 @@
        FOOTER
        ============================================================ */
     footer.site-footer { background: var(--dk4); color: #fff; padding: 4rem 0 2rem; }
+    .ft-slogan {
+      font-family: var(--f);
+      font-size: clamp(3rem, 9vw, 6rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: var(--tl);
+      margin: 0 0 3rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+    }
     .ft-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
     .ft-brand { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.8rem; }
     .ft-mark {
@@ -1520,6 +1536,7 @@
         <path d="M60 30.72 L86.39 52.43 L92 86.14 L65.61 64.43 Z"/>
       </svg>
     </div>
+    <p class="close-cta-mantra">Be found.</p>
     <h2 id="close-h">Find out where your business stands before your competitor does.</h2>
     <p class="close-cta-body">We look at your AI visibility, your website, and your lead flow — and tell you exactly what is costing you clients right now. No pitch until we know what you need.</p>
     <a href="/audit" class="btn btn-teal">
@@ -1534,6 +1551,7 @@
 <!-- ============== FOOTER ============== -->
 <footer class="site-footer">
   <div class="wrap">
+    <p class="ft-slogan">Be found.</p>
     <div class="ft-grid">
       <div>
         <div class="ft-brand">
