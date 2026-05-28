@@ -1,9 +1,9 @@
 // /api/audit — Vercel Serverless Function
-// Receives the audit-form POST, validates it, and emails it to hey@alitsky.com via Resend.
+// Receives the audit-form POST, validates it, and emails it to admin@alitsky.com via Resend.
 //
 // Environment variables (set in Vercel project settings → Environment Variables):
 //   RESEND_API_KEY     required — get one from https://resend.com after signup
-//   AUDIT_TO_EMAIL     optional — recipient (default: hey@alitsky.com)
+//   AUDIT_TO_EMAIL     optional — recipient (default: admin@alitsky.com)
 //   AUDIT_FROM_EMAIL   optional — sender (default: onboarding@resend.dev until you verify alitsky.com)
 
 const { Resend } = require("resend");
@@ -71,7 +71,7 @@ module.exports = async (req, res) => {
   }
 
   const resend = new Resend(process.env.RESEND_API_KEY);
-  const to = process.env.AUDIT_TO_EMAIL || "hey@alitsky.com";
+  const to = process.env.AUDIT_TO_EMAIL || "admin@alitsky.com";
   const from = process.env.AUDIT_FROM_EMAIL || "A Light in the Sky <onboarding@resend.dev>";
 
   const subject = "New business analysis request — " + businessName;

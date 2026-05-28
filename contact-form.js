@@ -63,7 +63,7 @@
       } catch (err) {
         setBusy(false);
         setStatus(
-          "Something went wrong sending that. Please try again, or email hey@alitsky.com directly.",
+          "Something went wrong sending that. Please try again, or email admin@alitsky.com directly.",
           true
         );
         if (window.console) console.error("Contact form submit failed:", err);

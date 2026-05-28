@@ -75,7 +75,7 @@
       } catch (err) {
         setBusy(false);
         setStatus(
-          "Something went wrong sending that. Please try again, or email hey@alitsky.com directly.",
+          "Something went wrong sending that. Please try again, or email admin@alitsky.com directly.",
           true
         );
         // Log for debugging in the browser console.

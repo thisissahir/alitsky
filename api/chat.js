@@ -23,7 +23,7 @@ ABOUT ALITSKY:
 A Light in the Sky helps local businesses get found online and run more efficiently. The core belief: good businesses fail because they are invisible. ALITSKY fixes that.
 
 Website: alitsky.com
-Contact: hey@alitsky.com
+Contact: admin@alitsky.com
 Location: Denver, Colorado
 Audit page: alitsky.com/audit
 
@@ -99,7 +99,7 @@ function isRateLimited(ip) {
 
 // ---- Summary-email logic ----
 // After every chat response we may want to email a conversation summary to
-// the team at hey@alitsky.com. Two triggers (either is enough):
+// the team at admin@alitsky.com. Two triggers (either is enough):
 //   1. The total conversation reaches a multiple of 8 messages (one summary
 //      per "8 message exchange milestone" — 8, 16, 24, ...)
 //   2. The user's last message contains a goodbye-ish signal
@@ -251,7 +251,7 @@ async function sendChatSummary(client, fullConversation) {
 
   // 3. Send via Resend (reuses existing env vars from /api/audit + /api/contact).
   const resend = new Resend(process.env.RESEND_API_KEY);
-  const to = process.env.AUDIT_TO_EMAIL || "hey@alitsky.com";
+  const to = process.env.AUDIT_TO_EMAIL || "admin@alitsky.com";
   const from =
     process.env.AUDIT_FROM_EMAIL ||
     "A Light in the Sky <onboarding@resend.dev>";
@@ -278,7 +278,7 @@ module.exports = async (req, res) => {
   if (isRateLimited(clientIp(req))) {
     return res.status(429).json({
       error:
-        "You have reached the message limit. Email us directly at hey@alitsky.com",
+        "You have reached the message limit. Email us directly at admin@alitsky.com",
     });
   }
 
@@ -348,7 +348,7 @@ module.exports = async (req, res) => {
     }
     res.end();
 
-    // Background: maybe send a conversation summary to hey@alitsky.com.
+    // Background: maybe send a conversation summary to admin@alitsky.com.
     // The user's response has already streamed back; this only affects how
     // long the serverless function stays alive. Wrapped in try/catch so any
     // failure here is silent and can't impact the chat UX.

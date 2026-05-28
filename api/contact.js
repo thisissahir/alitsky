@@ -1,10 +1,10 @@
 // /api/contact — Vercel Serverless Function
 // Receives the "Talk to us" contact form (email + phone), emails it to
-// hey@alitsky.com via Resend. Pairs with the form on /contact.
+// admin@alitsky.com via Resend. Pairs with the form on /contact.
 //
 // Reuses the same Resend env vars as /api/audit:
 //   RESEND_API_KEY     required
-//   AUDIT_TO_EMAIL     optional — recipient (default: hey@alitsky.com)
+//   AUDIT_TO_EMAIL     optional — recipient (default: admin@alitsky.com)
 //   AUDIT_FROM_EMAIL   optional — sender   (default: onboarding@resend.dev)
 
 const { Resend } = require("resend");
@@ -61,7 +61,7 @@ module.exports = async (req, res) => {
   }
 
   const resend = new Resend(process.env.RESEND_API_KEY);
-  const to = process.env.AUDIT_TO_EMAIL || "hey@alitsky.com";
+  const to = process.env.AUDIT_TO_EMAIL || "admin@alitsky.com";
   const from = process.env.AUDIT_FROM_EMAIL || "A Light in the Sky <onboarding@resend.dev>";
 
   const subject = "New contact — " + email;

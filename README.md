@@ -64,7 +64,7 @@ The form will return 500 until you set these in Vercel
 | Variable | Required | Default | Notes |
 | --- | --- | --- | --- |
 | `RESEND_API_KEY` | yes | — | Sign up free at https://resend.com, create an API key, paste here. |
-| `AUDIT_TO_EMAIL` | no | `hey@alitsky.com` | Where audit submissions are delivered. |
+| `AUDIT_TO_EMAIL` | no | `admin@alitsky.com` | Where audit submissions are delivered. |
 | `AUDIT_FROM_EMAIL` | no | `A Light in the Sky <onboarding@resend.dev>` | Sender. Use `onboarding@resend.dev` until you verify the `alitsky.com` domain in Resend. After verification, set this to `A Light in the Sky <audit@alitsky.com>`. |
 
 After setting/changing env vars, **redeploy** so the new values take effect

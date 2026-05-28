@@ -14,7 +14,7 @@
   const OPENING_MESSAGE =
     "Hi — I'm Sky, the AI assistant for A Light in the Sky. What kind of business do you run?";
   const ERROR_MESSAGE =
-    "Something went wrong. Email us at hey@alitsky.com";
+    "Something went wrong. Email us at admin@alitsky.com";
   const RATE_LIMIT_PREFIX = "You have reached the message limit";
 
   // Brand-aligned palette (matches the rest of the site)
