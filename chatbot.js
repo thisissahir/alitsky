@@ -12,7 +12,7 @@
 
   // -------- Configuration --------
   const OPENING_MESSAGE =
-    "Hi — I'm Sky, the assistant for A Light in the Sky. What kind of business do you run?";
+    "Hi — I'm Gloria, the assistant for A Light in the Sky. What kind of business do you run?";
   const ERROR_MESSAGE =
     "Something went wrong. Email us at admin@alitsky.com";
   const RATE_LIMIT_PREFIX = "You have reached the message limit";
@@ -421,11 +421,11 @@
   peekEl.className = "alsy-chat-peek";
   peekEl.setAttribute("role", "button");
   peekEl.setAttribute("tabindex", "0");
-  peekEl.setAttribute("aria-label", "Open chat — Sky says: how can I help?");
+  peekEl.setAttribute("aria-label", "Open chat — Gloria says: how can I help?");
   peekEl.innerHTML = `
     <div class="alsy-chat-peek-text">
       <strong>Hey — how can I help?</strong>
-      I'm Sky, the assistant for A Light in the Sky.
+      I'm Gloria, the assistant for A Light in the Sky.
     </div>
     <button class="alsy-chat-peek-close" type="button" aria-label="Dismiss">
       <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
@@ -450,7 +450,7 @@
   // -------- Auto-greeting (peek then pop) --------
   // Timeline once per session, only if visitor hasn't opened or dismissed the chat:
   //   ~7s  → peek bubble appears: "Hey — how can I help?"
-  //   ~10s → full chat panel auto-opens with Sky's greeting
+  //   ~10s → full chat panel auto-opens with Gloria's greeting
   const PEEK_DELAY_MS = 7000;
   const AUTO_OPEN_DELAY_MS = 10000;
   // New session key (v4) so older dismissals don't block the new behavior.
@@ -488,7 +488,7 @@
       // Only auto-pop if the visitor still hasn't engaged
       if (greetingDone || state.open) return;
       hidePeek(false);          // tuck the peek bubble back
-      openPanel();              // pop the panel (which renders Sky's greeting)
+      openPanel();              // pop the panel (which renders Gloria's greeting)
       markGreetingDone();       // never again this session
     }, AUTO_OPEN_DELAY_MS);
   }
