@@ -885,6 +885,38 @@
 
     /* Three-point capability summary */
     .capabilities { background: #fff; padding: 80px 0; border-top: 1px solid var(--bl); }
+
+    /* Industry testimonials — what specific verticals tell us */
+    .voices { background: #F0FAFA; padding: 80px 0; }
+    .voices-head { max-width: 740px; margin: 0 auto 3rem; padding: 0 2rem; text-align: center; }
+    .voices-h {
+      font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800;
+      color: var(--ink); letter-spacing: -0.025em; line-height: 1.2; margin: 0;
+      text-wrap: balance;
+    }
+    .voices-grid {
+      max-width: 1140px; margin: 0 auto; padding: 0 2rem;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+    }
+    .voice {
+      background: #fff; border: 1px solid var(--bl);
+      border-left: 3px solid var(--tl);
+      border-radius: 2px; padding: 1.75rem 1.75rem 2rem;
+    }
+    .voice-who {
+      font-family: var(--m); font-size: 10.5px; font-weight: 500;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--tl-dk); margin: 0 0 1rem;
+    }
+    .voice-text {
+      font-size: 14.5px; line-height: 1.75; color: var(--ink);
+      margin: 0; font-style: italic;
+    }
+    @media (max-width: 900px) {
+      .voices { padding: 56px 0; }
+      .voices-grid { grid-template-columns: 1fr; gap: 1rem; padding: 0 1.5rem; }
+      .voice { padding: 1.4rem 1.4rem 1.6rem; }
+    }
     .cap-grid {
       max-width: 1140px; margin: 0 auto; padding: 0 2rem;
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem;
@@ -1157,6 +1189,27 @@
       <span class="cap-num">03</span>
       <h3 class="cap-name">Respond and Organize</h3>
       <p class="cap-desc">Every enquiry answered the moment it arrives. Every customer tracked. Every follow-up handled without you touching it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== INDUSTRY VOICES ============== -->
+<section class="voices" aria-labelledby="voices-h">
+  <div class="voices-head fade">
+    <h2 id="voices-h" class="voices-h">Businesses we help feel more organized online.</h2>
+  </div>
+  <div class="voices-grid fade">
+    <div class="voice">
+      <p class="voice-who">What salon owners tell us</p>
+      <p class="voice-text">"Messages came in from Instagram, email, and text at the same time with no way to keep track. Customers who messaged at night never heard back until the next day. We were losing bookings without knowing it."</p>
+    </div>
+    <div class="voice">
+      <p class="voice-who">What coaches tell us</p>
+      <p class="voice-text">"I had a booking tool, an email system, and a follow-up process that did not connect. Every week I pieced it together manually and still missed people who had reached out."</p>
+    </div>
+    <div class="voice">
+      <p class="voice-who">What contractors tell us</p>
+      <p class="voice-text">"We miss calls while we are on the job. By the time we call back the job has gone to whoever picked up first. We were losing work we could not see losing."</p>
     </div>
   </div>
 </section>
