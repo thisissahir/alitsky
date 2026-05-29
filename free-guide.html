@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Free Guide — The Small Business Survival Guide for the Search Era | A Light in the Sky</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A plain-English guide to what is actually changing in how customers find local businesses — what to ignore, and the three things your business actually needs right now.">
+  <meta name="theme-color" content="#0B1F26">
+  <link rel="canonical" href="https://www.alitsky.com/free-guide">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="A Light in the Sky">
+  <meta property="og:url" content="https://www.alitsky.com/free-guide">
+  <meta property="og:title" content="The Small Business Survival Guide for the Search Era | A Light in the Sky">
+  <meta property="og:description" content="What is actually changing. What to ignore. What your business actually needs right now.">
+  <meta property="og:image" content="https://www.alitsky.com/assets/og-card.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Small Business Survival Guide for the Search Era">
+  <meta name="twitter:description" content="What is actually changing. What to ignore. What your business actually needs right now.">
+  <meta name="twitter:image" content="https://www.alitsky.com/assets/og-card.svg">
+  <link rel="icon" type="image/svg+xml" href="/assets/logo-mark-small.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dk:#0B1F26; --tl:#17B8C4; --tl-dk:#0C9BAA; --rust:#C63B1A;
+      --ink:#192A2D; --mid:#4A6268; --dim:#7A9298;
+      --bl:rgba(0,0,0,0.08); --bl2:rgba(0,0,0,0.16);
+      --f:'Plus Jakarta Sans',system-ui,sans-serif; --m:'DM Mono',monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--f); color: var(--ink); background: #fff; -webkit-font-smoothing: antialiased; line-height: 1.6; }
+    a { color: inherit; }
+    .wrap { max-width: 1140px; margin: 0 auto; padding: 0 2rem; }
+
+    /* Nav */
+    nav.site-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 58px;
+      display: flex; align-items: center; background: rgba(11,31,38,0.95);
+      backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav-inner { width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { display: flex; align-items: center; gap: 0.55rem; text-decoration: none; }
+    .nav-mark { width: 26px; height: 26px; border-radius: 6px; background: rgba(23,184,196,0.14); display: flex; align-items: center; justify-content: center; }
+    .nav-mark svg { width: 15px; height: 15px; fill: var(--tl); }
+    .nav-name { font-size: 14px; font-weight: 700; color: #fff; letter-spacing: -0.01em; }
+    .nav-links { display: flex; gap: 0.15rem; }
+    .nav-links a { font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.55); text-decoration: none; padding: 0.4rem 0.85rem; border-radius: 6px; transition: color .15s, background .15s; }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.06); }
+    .nav-cta {
+      font-size: 13px; font-weight: 700; padding: 0.5rem 1.1rem; border-radius: 8px;
+      border: 1.5px solid var(--tl); background: var(--tl); color: var(--dk);
+      text-decoration: none; transition: all .18s ease;
+    }
+    .nav-cta:hover { background: var(--tl-dk); border-color: var(--tl-dk); color: #fff; }
+
+    /* Guide */
+    .guide { background: #F0FAFA; padding: 8rem 0 6rem; min-height: 100vh; }
+    .guide-inner { max-width: 640px; margin: 0 auto; text-align: center; }
+    .guide-tag { font-family: var(--m); font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--tl-dk); margin-bottom: 1rem; }
+    .guide-inner h1 {
+      font-size: clamp(2rem, 4vw, 2.9rem); font-weight: 800; letter-spacing: -0.025em;
+      line-height: 1.1; color: var(--ink); margin-bottom: 0.85rem; text-wrap: balance;
+    }
+    .guide-sub { font-size: 1.1rem; font-weight: 500; color: var(--ink); margin-bottom: 1.5rem; line-height: 1.5; }
+    .guide-body { font-size: 15.5px; line-height: 1.75; color: var(--mid); margin-bottom: 2rem; }
+    .guide-inside { background: #fff; border: 1px solid var(--bl); border-radius: 12px; padding: 1.5rem 1.75rem; text-align: left; margin-bottom: 2rem; }
+    .guide-inside-h { display: block; font-family: var(--m); font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--tl-dk); margin-bottom: 0.85rem; }
+    .guide-inside-list { font-size: 14.5px; line-height: 2; color: var(--ink); margin: 0; }
+    .guide-form { display: flex; flex-direction: column; gap: 0.7rem; max-width: 420px; margin: 0 auto; }
+    .guide-input {
+      width: 100%; height: 54px; padding: 0 20px; font: 500 15.5px/1 var(--f);
+      color: var(--ink); background: #fff; border: 1.5px solid var(--bl2); border-radius: 999px;
+      outline: none; transition: border-color .16s, box-shadow .16s; -webkit-appearance: none; appearance: none;
+    }
+    .guide-input::placeholder { color: var(--dim); }
+    .guide-input:focus { border-color: var(--tl-dk); box-shadow: 0 0 0 4px rgba(12,155,170,0.12); }
+    .guide-submit {
+      width: 100%; height: 54px; padding: 0 22px; font: 700 15.5px/1 var(--f);
+      color: var(--dk); background: var(--tl); border: 0; border-radius: 999px; cursor: pointer;
+      transition: background .16s, transform .16s;
+    }
+    .guide-submit:hover { background: var(--tl-dk); color: #fff; }
+    .guide-submit:active { transform: translateY(1px); }
+    .guide-submit[aria-busy="true"] { background: var(--tl-dk); color: #fff; cursor: progress; }
+    .guide-status { font-size: 13.5px; color: var(--ink); min-height: 1.4em; margin: 0.4rem 0 0; }
+    .guide-status.error { color: var(--rust); }
+    .guide-fine { font-size: 12.5px; color: var(--dim); line-height: 1.6; margin: 1.4rem auto 0; max-width: 460px; }
+    .guide-secondary { font-size: 14px; color: var(--mid); margin-top: 1.75rem; }
+    .guide-secondary a { color: var(--tl-dk); font-weight: 600; text-decoration: none; }
+    .guide-secondary a:hover { text-decoration: underline; }
+
+    /* Footer */
+    footer { background: #0B1F26; padding: 2.5rem 0; }
+    .ft-bot { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .ft-copy { font-family: var(--m); font-size: 12px; color: rgba(255,255,255,0.4); }
+    .ft-motto { font-size: 12px; font-style: italic; color: rgba(255,255,255,0.4); }
+
+    @media (max-width: 900px) { .nav-links { display: none; } }
+    @media (max-width: 640px) {
+      .guide { padding: 6rem 0 4rem; }
+      .ft-bot { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <span class="nav-mark"><svg viewBox="0 0 200 200" aria-hidden="true"><path d="M100 20 L112 52 L100 84 L88 52 Z"/><path d="M140 30.72 L134.39 64.43 L108 86.14 L113.61 52.43 Z"/><path d="M169.28 60 L147.57 86.39 L113.86 92 L135.57 65.61 Z"/><path d="M180 100 L148 112 L116 100 L148 88 Z"/><path d="M169.28 140 L135.57 134.39 L113.86 108 L147.57 113.61 Z"/><path d="M140 169.28 L113.61 147.57 L108 113.86 L134.39 135.57 Z"/><path d="M100 180 L88 148 L100 116 L112 148 Z"/><path d="M60 169.28 L65.61 135.57 L92 113.86 L86.39 147.57 Z"/><path d="M30.72 140 L52.43 113.61 L86.14 108 L64.43 134.39 Z"/><path d="M20 100 L52 88 L84 100 L52 112 Z"/><path d="M30.72 60 L64.43 65.61 L86.14 92 L52.43 86.39 Z"/><path d="M60 30.72 L86.39 52.43 L92 86.14 L65.61 64.43 Z"/></svg></span>
+        <span class="nav-name">A Light in the Sky</span>
+      </a>
+      <div class="nav-links">
+        <a href="/#how-it-works">How It Works</a>
+        <a href="/#results">Results</a>
+        <a href="/#packages">Packages</a>
+        <a href="/free-guide">Free Guide</a>
+      </div>
+      <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="nav-cta">Book a Free Call</a>
+    </div>
+  </nav>
+
+  <section class="guide">
+    <div class="wrap">
+      <div class="guide-inner">
+        <p class="guide-tag">Free Guide</p>
+        <h1>The Small Business Survival Guide for the Search Era</h1>
+        <p class="guide-sub">What is actually changing. What to ignore. What your business actually needs right now.</p>
+        <p class="guide-body">Most business owners are hearing the same things. You need automation. You need to move faster. Most of it creates more noise than clarity. This guide cuts through it. No hype. No pressure. Just a plain-English explanation of what is shifting, what it means for businesses like yours, and what actually makes the difference right now.</p>
+        <div class="guide-inside">
+          <span class="guide-inside-h">What is inside</span>
+          <p class="guide-inside-list">
+            What customers now expect when they find a business online.<br>
+            What is actually changing for small businesses and what is not.<br>
+            The three things most businesses need. Not fifteen. Three.<br>
+            What to ignore completely.<br>
+            What the businesses winning right now are doing differently.
+          </p>
+        </div>
+        <form class="guide-form" data-guide-form novalidate>
+          <input class="guide-input" type="email" name="email" placeholder="Your email address" inputmode="email" autocomplete="email" required aria-label="Your email address">
+          <button class="guide-submit" type="submit">Download the Free Guide</button>
+          <p class="guide-status" data-form-status role="status" aria-live="polite"></p>
+        </form>
+        <p class="guide-fine">We send the guide immediately. Two follow-up emails over the next week. Nothing after that unless you reach out.</p>
+        <p class="guide-secondary">Already ready to talk? <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer">Book a Free 45-Minute Call →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="ft-bot">
+        <span class="ft-copy">© 2026 A Light in the Sky · All rights reserved</span>
+        <span class="ft-motto">Be found.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/guide-form.js" defer></script>
+  <script src="/chatbot.js" defer></script>
+</body>
+</html>

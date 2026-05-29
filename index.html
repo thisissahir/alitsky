@@ -171,11 +171,11 @@
     .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.05); }
     .nav-cta {
       font-size: 13px; font-weight: 700; padding: 0.5rem 1.1rem;
-      border-radius: 8px; border: 1.5px solid rgba(255,255,255,0.20);
-      color: #fff; transition: all 180ms ease;
+      border-radius: 8px; border: 1.5px solid var(--tl);
+      background: var(--tl); color: var(--dk); transition: all 180ms ease;
       display: inline-flex; align-items: center; gap: 0.4rem;
     }
-    .nav-cta:hover { background: var(--tl); border-color: var(--tl); color: var(--dk); }
+    .nav-cta:hover { background: var(--tl-dk); border-color: var(--tl-dk); color: #fff; }
 
     @media (max-width: 900px) {
       nav.site-nav { padding: 0 1.2rem; }
@@ -854,6 +854,103 @@
       color: #fff;
       border-bottom-color: var(--tl);
     }
+
+    /* ===== Section update additions ===== */
+    /* Hero audit note */
+    .hero-audit-note { font-size: 13px; color: var(--mid); margin: 0.85rem 0 0.4rem; font-weight: 500; }
+
+    /* Stats sub-line */
+    .stat-sub { font-size: 11.5px; color: var(--tl); margin-top: 0.45rem; line-height: 1.45; font-weight: 500; }
+
+    /* Front door section */
+    .frontdoor { background: #F9FAFB; padding: 5.5rem 0; }
+    .frontdoor .wrap { max-width: 720px; margin: 0 auto; text-align: center; padding: 0 2rem; }
+    .frontdoor h2 {
+      font-size: clamp(1.7rem, 3.4vw, 2.4rem); font-weight: 800;
+      letter-spacing: -0.025em; line-height: 1.15; color: var(--ink);
+      margin-bottom: 1.5rem; text-wrap: balance;
+    }
+    .frontdoor p { font-size: 1.05rem; line-height: 1.75; color: var(--mid); margin-bottom: 1.2rem; }
+    .frontdoor p:last-child { margin-bottom: 0; }
+
+    /* How it works CTA */
+    .how-cta { text-align: center; margin-top: 3rem; }
+    .how-cta-note { font-size: 13px; color: var(--mid); margin-top: 0.85rem; font-weight: 500; }
+
+    /* Proof — expanded testimonial */
+    .proof-biz { margin-bottom: 1.1rem; }
+    .proof-biz-name { font-size: 1.15rem; font-weight: 800; color: #fff; letter-spacing: -0.01em; }
+    .proof-biz-loc { font-size: 13px; color: rgba(255,255,255,0.45); margin-top: 0.15rem; }
+    .proof-story { font-size: 15px; line-height: 1.8; color: rgba(255,255,255,0.62); margin-bottom: 1.75rem; }
+    .proof-stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 1.75rem; }
+    .proof-stats-row .ps { padding: 0; border-bottom: 0; }
+    .proof-stats-row .ps-n { font-size: 1.9rem; }
+    .proof-attr-simple { font-size: 13.5px; font-weight: 600; color: rgba(255,255,255,0.7); margin-top: 1rem; }
+    .proof-numbers h3 {
+      font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 1.4rem;
+      letter-spacing: -0.01em;
+    }
+    .proof-num-list { list-style: none; padding: 0; margin: 0 0 1.5rem; display: flex; flex-direction: column; gap: 1.1rem; }
+    .proof-num-list li {
+      font-size: 14.5px; line-height: 1.65; color: rgba(255,255,255,0.7);
+      padding-left: 1.1rem; border-left: 2px solid rgba(23,184,196,0.4);
+    }
+    .proof-sources { font-size: 11px; color: rgba(255,255,255,0.3); line-height: 1.6; }
+    .proof-cta { text-align: center; margin-top: 3.5rem; }
+    .proof-cta-note { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 0.85rem; font-weight: 500; }
+
+    /* Free guide section */
+    .guide { background: #F0FAFA; padding: 6rem 0; }
+    .guide .wrap { padding: 0 2rem; }
+    .guide-inner { max-width: 640px; margin: 0 auto; text-align: center; }
+    .guide-inner h2 {
+      font-size: clamp(1.8rem, 3.6vw, 2.6rem); font-weight: 800;
+      letter-spacing: -0.025em; line-height: 1.12; color: var(--ink);
+      margin: 0.5rem 0 0.85rem; text-wrap: balance;
+    }
+    .guide-sub { font-size: 1.05rem; font-weight: 500; color: var(--ink); margin-bottom: 1.5rem; line-height: 1.5; }
+    .guide-body { font-size: 15.5px; line-height: 1.75; color: var(--mid); margin-bottom: 2rem; }
+    .guide-inside {
+      background: #fff; border: 1px solid var(--bl); border-radius: 12px;
+      padding: 1.5rem 1.75rem; text-align: left; margin-bottom: 2rem;
+    }
+    .guide-inside-h {
+      display: block; font-family: var(--m); font-size: 10.5px;
+      letter-spacing: 0.16em; text-transform: uppercase; color: var(--tl-dk);
+      margin-bottom: 0.85rem;
+    }
+    .guide-inside-list { font-size: 14.5px; line-height: 2; color: var(--ink); margin: 0; }
+    .guide-form { display: flex; flex-direction: column; gap: 0.7rem; max-width: 420px; margin: 0 auto; }
+    .guide-input {
+      width: 100%; height: 54px; padding: 0 20px;
+      font: 500 15.5px/1 var(--f); color: var(--ink);
+      background: #fff; border: 1.5px solid var(--bl2); border-radius: 999px;
+      outline: none; transition: border-color 160ms, box-shadow 160ms;
+      -webkit-appearance: none; appearance: none;
+    }
+    .guide-input::placeholder { color: var(--dim); }
+    .guide-input:focus { border-color: var(--tl-dk); box-shadow: 0 0 0 4px rgba(12,155,170,0.12); }
+    .guide-submit {
+      width: 100%; height: 54px; padding: 0 22px;
+      font: 700 15.5px/1 var(--f); color: var(--dk);
+      background: var(--tl); border: 0; border-radius: 999px; cursor: pointer;
+      transition: background 160ms, transform 160ms;
+    }
+    .guide-submit:hover { background: var(--tl-dk); color: #fff; }
+    .guide-submit:active { transform: translateY(1px); }
+    .guide-submit[aria-busy="true"] { background: var(--tl-dk); color: #fff; cursor: progress; }
+    .guide-status { font-size: 13.5px; color: var(--ink); min-height: 1.4em; margin: 0.4rem 0 0; }
+    .guide-status.error { color: var(--rust); }
+    .guide-fine { font-size: 12.5px; color: var(--dim); line-height: 1.6; margin: 1.4rem auto 0; max-width: 460px; }
+    .guide-secondary { font-size: 14px; color: var(--mid); margin-top: 1.75rem; }
+    .guide-secondary a { color: var(--tl-dk); font-weight: 600; text-decoration: none; }
+    .guide-secondary a:hover { text-decoration: underline; }
+
+    @media (max-width: 760px) {
+      .proof-stats-row { grid-template-columns: 1fr; gap: 1.1rem; }
+      .proof-stats-row .ps { padding: 0.8rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .proof-stats-row .ps:last-child { border-bottom: 0; }
+    }
   </style>
 </head>
 
@@ -882,12 +979,12 @@
       <span class="nav-name">A Light in the Sky</span>
     </a>
     <div class="nav-links">
-      <a href="#system">The System</a>
-      <a href="#proof">Results</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#results">Results</a>
       <a href="#packages">Packages</a>
-      <a href="#faq">FAQ</a>
+      <a href="/free-guide">Free Guide</a>
     </div>
-    <a href="/contact" class="nav-cta">Talk to us</a>
+    <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="nav-cta">Book a Free Call</a>
   </div>
 </nav>
 
@@ -900,20 +997,19 @@
         <h1 id="hero-h">You built something real.</h1>
         <h2 class="rust">We make sure the world can find it.</h2>
         <p class="hero-body">
-          Every day, people in your city search for the best business in your category.
-          <strong>Search gives them a name. That business gets the call.</strong> We build the system that makes sure that name is yours, and keeps it there.
+          Messages coming in from three different places with no system to catch them.
+          Enquiries sitting unanswered while you are doing the actual work. A website that
+          looks fine and does nothing useful. Follow-up that depends on memory. Everything
+          held together by effort instead of systems.
         </p>
         <div class="hero-ctas">
-          <a href="/audit" class="btn btn-dark">
-            Get your free Marketing Audit
-            <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a href="#system" class="btn btn-ghost-dk">
-            How it works
+          <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+            Book a Free 45-Minute Call
             <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
-        <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="cta-book-link">or book a call directly →</a>
+        <p class="hero-audit-note">Your $197 Marketing Audit is included at no charge.</p>
+        <a href="mailto:admin@alitsky.com" class="cta-book-link">or email us at admin@alitsky.com</a>
       </div>
 
       <div class="hero-visual" aria-hidden="true">
@@ -975,21 +1071,34 @@
 <section class="stats" aria-label="By the numbers">
   <div class="stats-row">
     <div class="stat fade">
-      <span class="stat-n" data-count="800" data-suffix="M+" data-fmt="int">0M+</span>
-      <span class="stat-l">ChatGPT weekly users searching for local businesses</span>
+      <span class="stat-n" data-count="45" data-suffix="%" data-fmt="int">0%</span>
+      <span class="stat-l">of people now find local businesses through tools like ChatGPT</span>
+      <span class="stat-sub">Up from 6% one year ago</span>
     </div>
     <div class="stat fade">
-      <span class="stat-n" data-count="60" data-suffix="%" data-fmt="int">0%</span>
-      <span class="stat-l">Google searches now show AI-generated answers first</span>
+      <span class="stat-n">1.2%</span>
+      <span class="stat-l">of eligible businesses actually appear in those results</span>
+      <span class="stat-sub">The rest are invisible to that search</span>
     </div>
     <div class="stat fade">
-      <span class="stat-n">4–8wk</span>
-      <span class="stat-l">Average time to appear in AI answers after optimization</span>
+      <span class="stat-n" data-count="5" data-suffix="x" data-fmt="int">0x</span>
+      <span class="stat-l">more likely to become a customer</span>
+      <span class="stat-sub">Recommendation traffic vs standard search</span>
     </div>
     <div class="stat fade">
-      <span class="stat-n">1 name</span>
-      <span class="stat-l">What AI gives per category per city — make it yours</span>
+      <span class="stat-n" data-count="14.2" data-suffix="%" data-fmt="dec1">0.0%</span>
+      <span class="stat-l">conversion rate from recommendation search</span>
+      <span class="stat-sub">vs 2.8% from standard Google search</span>
     </div>
+  </div>
+</section>
+
+<!-- ============== FRONT DOOR ============== -->
+<section class="frontdoor">
+  <div class="wrap fade">
+    <h2>Your business has a front door. Most of them are not working.</h2>
+    <p>The front door is everything that happens between a customer deciding they need what you do and actually reaching you. Search results. Your website. The response when they send a message. The follow-up when they do not book right away. The record that proves they ever contacted you.</p>
+    <p>When those five things work together, business feels easier. When they do not, everything depends on you being in the right place at the right time.</p>
   </div>
 </section>
 
@@ -1260,39 +1369,57 @@
 </section>
 
 <!-- ============== PROOF ============== -->
-<section class="proof" id="proof" aria-labelledby="proof-h">
+<section class="proof" id="results" aria-labelledby="proof-h">
   <div class="wrap">
     <div class="proof-head fade">
-      <span class="proof-label">What happens when the system is complete</span>
-      <h2 id="proof-h">Good businesses fail because they are invisible. <span class="italic">Not anymore.</span></h2>
+      <span class="proof-label">Results</span>
+      <h2 id="proof-h">What changes when the system works.</h2>
     </div>
     <div class="proof-grid">
+      <!-- LEFT: the story -->
       <div class="fade">
-        <blockquote class="proof-quote">"I used to come home and the voicemail was full. Now the calendar's full, and the voicemail is empty. Same hours. More work, less stress."</blockquote>
-        <div class="proof-attr">
-          <div class="proof-avatar">MD</div>
-          <div>
-            <div class="proof-name">Mike Donato</div>
-            <div class="proof-role">Owner · Coastal Plumbing &amp; Heating · Salem, MA</div>
+        <div class="proof-biz">
+          <div class="proof-biz-name">Midwest Plumbing and Heating</div>
+          <div class="proof-biz-loc">Indianapolis, IN</div>
+        </div>
+        <p class="proof-story">Mike Donato had a business his customers trusted. What was broken was invisible to him. Calls missed while he was on a job. Enquiries that went cold before anyone got back to them. A website that loaded slowly, said little, and captured nothing. No system for knowing who had contacted him, who had not heard back, or who to follow up with. He was doing everything right in the field. The systems around it were failing him.</p>
+        <div class="proof-stats-row">
+          <div class="ps">
+            <div class="ps-n"><span data-count="40" data-suffix="" data-fmt="int">0</span> → <span data-count="4" data-suffix="" data-fmt="int">0</span></div>
+            <div class="ps-l">Missed calls per week, before and after</div>
+          </div>
+          <div class="ps">
+            <div class="ps-n"><span data-count="1.4" data-suffix="s" data-fmt="dec1">0.0s</span></div>
+            <div class="ps-l">Website load time on a phone</div>
+          </div>
+          <div class="ps">
+            <div class="ps-n">3 weeks</div>
+            <div class="ps-l">From first call to live running system</div>
           </div>
         </div>
+        <blockquote class="proof-quote">"I used to come home and the voicemail was full. Now the calendar is full and the voicemail is empty. Same hours. More work, less stress."</blockquote>
+        <div class="proof-attr-simple">Mike Donato, Owner</div>
       </div>
-      <div class="proof-stats fade">
-        <div class="ps">
-          <div class="ps-n">
-            <span data-count="40" data-suffix="" data-fmt="int">0</span> → <span data-count="4" data-suffix="" data-fmt="int">0</span>
-          </div>
-          <div class="ps-l">Missed calls per week, before vs after</div>
-        </div>
-        <div class="ps">
-          <div class="ps-n"><span data-count="1.4" data-suffix="s" data-fmt="dec1">0.0s</span></div>
-          <div class="ps-l">New homepage load time on 4G</div>
-        </div>
-        <div class="ps">
-          <div class="ps-n">3 weeks</div>
-          <div class="ps-l">From kickoff to full system live</div>
-        </div>
+
+      <!-- RIGHT: the numbers -->
+      <div class="fade proof-numbers">
+        <h3>The numbers behind why this matters now</h3>
+        <ul class="proof-num-list">
+          <li>45% of people now use tools like ChatGPT to find local businesses. One year ago that number was 6%.</li>
+          <li>Of every local business eligible to appear in those recommendations, only 1.2% actually does.</li>
+          <li>Recommendation search traffic converts at 14.2%. Standard Google search traffic converts at 2.8%.</li>
+          <li>The person who finds you through a recommendation is five times more likely to become a customer.</li>
+        </ul>
+        <p class="proof-sources">Sources: BrightLocal Local Consumer Review Survey 2026 · SOCi Local Visibility Index 2026 · Exposure Ninja AI Search Statistics 2026</p>
       </div>
+    </div>
+
+    <div class="proof-cta fade">
+      <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="btn btn-teal">
+        Book a Free 45-Minute Call
+        <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <p class="proof-cta-note">Your $197 Marketing Audit is included at no charge.</p>
     </div>
   </div>
 </section>
@@ -1332,7 +1459,7 @@
 </section>
 
 <!-- ============== HOW IT WORKS ============== -->
-<section class="how" aria-labelledby="how-h">
+<section class="how" id="how-it-works" aria-labelledby="how-h">
   <div class="wrap">
     <div class="how-head fade">
       <p class="sec-tag dark" style="justify-content:center">How it works</p>
@@ -1341,19 +1468,26 @@
     <div class="how-steps fade">
       <div class="step">
         <span class="step-num">Step 01</span>
-        <h3>We sit down and listen.</h3>
-        <p>A 45-minute call. You talk about the work, the headaches, the calls you keep missing. We listen. No pitch until we know what you need.</p>
+        <h3>We review your setup.</h3>
+        <p>A free 45-minute call. We walk through exactly what your business is missing and where customers are leaving before they reach you. You receive the $197 Marketing Audit at no charge before we discuss anything else.</p>
       </div>
       <div class="step">
         <span class="step-num">Step 02</span>
-        <h3>We build your system.</h3>
-        <p>One week. We build and configure the layers your audit identified — visibility, website, intake, CRM, automation. You review before anything goes live.</p>
+        <h3>We build what is missing.</h3>
+        <p>One build. We construct and connect the systems your audit identified. You review everything before anything goes live.</p>
       </div>
       <div class="step">
         <span class="step-num">Step 03</span>
-        <h3>It just runs.</h3>
-        <p>Monthly check-ins. A short report. Small tweaks. You get back to the job you built the business to do. We handle the rest.</p>
+        <h3>Your business runs cleaner.</h3>
+        <p>Monthly monitoring. A plain-English report on the first of each month. You get back to the work you built the business to do.</p>
       </div>
+    </div>
+    <div class="how-cta fade">
+      <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+        Book a Free 45-Minute Call
+        <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <p class="how-cta-note">Your $197 Marketing Audit is included at no charge.</p>
     </div>
   </div>
 </section>
@@ -1367,7 +1501,7 @@
         <h2 id="pkg-h">Start where it hurts most. Build from there.</h2>
       </div>
       <div class="pkg-note">
-        <p>Most clients start with the audit. Most add the full system within 60 days. <strong>The businesses that build the complete system from day one pay less and grow faster. Every time.</strong></p>
+        <p>Every engagement starts with a free 45-minute call. We walk through your current setup and deliver your $197 Marketing Audit at no charge before anything is built. <strong>You see exactly what is missing before you decide anything.</strong></p>
       </div>
     </div>
 
@@ -1384,7 +1518,7 @@
         </ul>
         <div class="pkg-price">$2,000–$4,500 one-time</div>
         <div class="pkg-monthly">$450–$750/mo ongoing</div>
-        <a href="/audit" class="btn btn-ghost">Start here</a>
+        <a href="/contact" class="btn btn-ghost">Start here</a>
       </div>
 
       <div class="pkg fade">
@@ -1401,7 +1535,7 @@
         </ul>
         <div class="pkg-price">$4,000–$7,500 one-time</div>
         <div class="pkg-monthly">$650–$1,100/mo ongoing</div>
-        <a href="/audit" class="btn btn-ghost">This is the build</a>
+        <a href="/contact" class="btn btn-ghost">This is the build</a>
       </div>
 
       <div class="pkg feat fade">
@@ -1420,11 +1554,11 @@
         <p class="pkg-feat-note">You come out the other side with a business that runs without you holding it together — and that your competitors cannot touch online.</p>
         <div class="pkg-price">$5,500–$10,000 one-time</div>
         <div class="pkg-monthly">$900–$1,500/mo ongoing</div>
-        <a href="/audit" class="btn btn-ghost">Build the whole thing</a>
+        <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Build the whole thing</a>
       </div>
     </div>
 
-    <p class="pkg-support">Post-delivery support after the included 7-day window: $75/hour, agreed in writing before work begins.</p>
+    <p class="pkg-support">Post-delivery support beyond the included seven-day window: $75 per hour, agreed before work begins. Every account belongs to you. We hold admin access only.</p>
   </div>
 </section>
 
@@ -1548,13 +1682,41 @@
     </div>
     <p class="close-cta-mantra">Be found.</p>
     <h2 id="close-h">Find out where your business stands before your competitor does.</h2>
-    <p class="close-cta-body">We look at your AI visibility, your website, and your lead flow — and tell you exactly what is costing you clients right now. No pitch until we know what you need.</p>
-    <a href="/audit" class="btn btn-teal">
-      Get your free Marketing Audit
+    <p class="close-cta-body">On a free 45-minute call we show you exactly what your business is missing and where customers are leaving before they reach you. You receive the $197 Marketing Audit at no charge. No pitch until we know what you need.</p>
+    <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="btn btn-teal">
+      Book a Free 45-Minute Call
       <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
-    <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="cta-book-link">or book a call directly →</a>
-    <p class="close-cta-note">Takes 2 minutes to fill in · We review within 24 hours · Plain English. Always.</p>
+    <p class="close-cta-note">Your $197 Marketing Audit is included at no charge. Plain English. Always.</p>
+  </div>
+</section>
+
+<!-- ============== FREE GUIDE ============== -->
+<section class="guide" id="free-guide">
+  <div class="wrap">
+    <div class="guide-inner fade">
+      <p class="sec-tag dark" style="justify-content:center">Free Guide</p>
+      <h2>The Small Business Survival Guide for the Search Era</h2>
+      <p class="guide-sub">What is actually changing. What to ignore. What your business actually needs right now.</p>
+      <p class="guide-body">Most business owners are hearing the same things. You need automation. You need to move faster. Most of it creates more noise than clarity. This guide cuts through it. No hype. No pressure. Just a plain-English explanation of what is shifting, what it means for businesses like yours, and what actually makes the difference right now.</p>
+      <div class="guide-inside">
+        <span class="guide-inside-h">What is inside</span>
+        <p class="guide-inside-list">
+          What customers now expect when they find a business online.<br>
+          What is actually changing for small businesses and what is not.<br>
+          The three things most businesses need. Not fifteen. Three.<br>
+          What to ignore completely.<br>
+          What the businesses winning right now are doing differently.
+        </p>
+      </div>
+      <form class="guide-form" data-guide-form novalidate>
+        <input class="guide-input" type="email" name="email" placeholder="Your email address" inputmode="email" autocomplete="email" required aria-label="Your email address">
+        <button class="guide-submit" type="submit">Download the Free Guide</button>
+        <p class="guide-status" data-form-status role="status" aria-live="polite"></p>
+      </form>
+      <p class="guide-fine">We send the guide immediately. Two follow-up emails over the next week. Nothing after that unless you reach out.</p>
+      <p class="guide-secondary">Already ready to talk? <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer">Book a Free 45-Minute Call →</a></p>
+    </div>
   </div>
 </section>
 
@@ -1583,17 +1745,18 @@
       <div>
         <span class="ft-col-h">Company</span>
         <ul class="ft-list">
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#results">Results</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="/free-guide">Free Guide</a></li>
           <li><a href="/about">About</a></li>
-          <li><a href="/proof">Case studies</a></li>
-          <li><a href="#packages">Pricing</a></li>
-          <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
       <div>
         <span class="ft-col-h">Contact</span>
         <ul class="ft-list">
           <li><a href="mailto:admin@alitsky.com">admin@alitsky.com</a></li>
-          <li><a href="/audit">Get the free audit</a></li>
+          <li><a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer">Book a Free 45-Minute Call</a></li>
         </ul>
         <p class="ft-mono" style="margin-top:1rem">Indianapolis, Indiana<br>Serving businesses nationwide</p>
       </div>
@@ -1720,7 +1883,10 @@
 })();
 </script>
 
-<!-- On-site chatbot widget (Sky) — auto-prompts after ~12s -->
+<!-- Free Guide email capture -->
+<script src="/guide-form.js" defer></script>
+
+<!-- On-site chatbot widget (Sky) — auto-prompts after ~10s -->
 <script src="/chatbot.js" defer></script>
 
 </body>
