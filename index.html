@@ -296,7 +296,7 @@
       border-bottom: 1px solid rgba(255,255,255,0.06);
     }
     .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); max-width: 1180px; margin: 0 auto; }
-    .stat { padding: 1.7rem 1.8rem; border-right: 1px solid rgba(255,255,255,0.06); }
+    .stat { padding: 1.7rem 1.8rem; border-right: 1px solid rgba(255,255,255,0.06); text-align: center; }
     .stat:last-child { border-right: 0; }
     .stat-n {
       font-size: 2.1rem; font-weight: 800; color: var(--tl); line-height: 1;
@@ -1152,7 +1152,7 @@
       <span class="stat-sub">Up from 6% one year ago</span>
     </div>
     <div class="stat fade">
-      <span class="stat-n">1.2%</span>
+      <span class="stat-n" data-count="1.2" data-suffix="%" data-fmt="dec1">0.0%</span>
       <span class="stat-l">of eligible businesses actually appear in those results</span>
       <span class="stat-sub">The rest are invisible to that search</span>
     </div>
