@@ -1947,15 +1947,17 @@
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
     fadeEls.forEach(function (el) { fadeObs.observe(el); });
 
-    // Count animation — fires on first viewport entry
+    // Count animation — fires as the stats scroll into view. Stagger any
+    // counts that intersect together so the row reveals as a wave (180ms
+    // between each) instead of all firing at once.
     var countObs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          animateCount(entry.target);
-          countObs.unobserve(entry.target);
-        }
+      var visible = entries.filter(function (e) { return e.isIntersecting; });
+      visible.forEach(function (entry, i) {
+        var el = entry.target;
+        setTimeout(function () { animateCount(el); }, i * 180);
+        countObs.unobserve(el);
       });
-    }, { threshold: 0.4 });
+    }, { threshold: 0.2, rootMargin: '0px 0px -10% 0px' });
     countEls.forEach(function (el) { countObs.observe(el); });
   } else {
     // Fallback: show everything, snap counts to final value
