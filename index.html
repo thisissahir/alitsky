@@ -883,6 +883,32 @@
     .frontdoor p { font-size: 1.05rem; line-height: 1.75; color: var(--mid); margin-bottom: 1.2rem; }
     .frontdoor p:last-child { margin-bottom: 0; }
 
+    /* Three-point capability summary */
+    .capabilities { background: #fff; padding: 80px 0; border-top: 1px solid var(--bl); }
+    .cap-grid {
+      max-width: 1140px; margin: 0 auto; padding: 0 2rem;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem;
+    }
+    .cap-item { padding: 0; }
+    .cap-num {
+      font-family: var(--m); font-size: 11px; font-weight: 500;
+      color: var(--tl-dk); letter-spacing: 0.18em;
+      margin-bottom: 1rem; display: block;
+    }
+    .cap-name {
+      font-size: 1.4rem; font-weight: 800; color: var(--ink);
+      letter-spacing: -0.02em; line-height: 1.2;
+      margin: 0 0 0.85rem; padding-bottom: 0.85rem;
+      border-bottom: 2px solid var(--tl);
+      display: inline-block;
+    }
+    .cap-desc { font-size: 15.5px; line-height: 1.75; color: var(--mid); margin: 0; }
+    @media (max-width: 900px) {
+      .capabilities { padding: 56px 0; }
+      .cap-grid { grid-template-columns: 1fr; gap: 2rem; padding: 0 1.5rem; }
+      .cap-name { font-size: 1.25rem; }
+    }
+
     /* How it works CTA */
     .how-cta { text-align: center; margin-top: 3rem; }
     .how-cta-note { font-size: 13px; color: var(--mid); margin-top: 0.85rem; font-weight: 500; }
@@ -1111,6 +1137,27 @@
     <h2>Your business has a front door. Most of them are not working.</h2>
     <p>The front door is everything that happens between a customer deciding they need what you do and actually reaching you. Search results. Your website. The response when they send a message. The follow-up when they do not book right away. The record that proves they ever contacted you.</p>
     <p>When those five things work together, business feels easier. When they do not, everything depends on you being in the right place at the right time.</p>
+  </div>
+</section>
+
+<!-- ============== 3-POINT CAPABILITIES ============== -->
+<section class="capabilities" aria-label="What we do">
+  <div class="cap-grid fade">
+    <div class="cap-item">
+      <span class="cap-num">01</span>
+      <h3 class="cap-name">Search Visibility</h3>
+      <p class="cap-desc">You show up when people search for what you do — on Google and every tool people now use to find and choose local businesses.</p>
+    </div>
+    <div class="cap-item">
+      <span class="cap-num">02</span>
+      <h3 class="cap-name">Smart Website</h3>
+      <p class="cap-desc">A website that explains your services clearly, moves visitors toward booking, and connects to everything else in your system.</p>
+    </div>
+    <div class="cap-item">
+      <span class="cap-num">03</span>
+      <h3 class="cap-name">Respond and Organize</h3>
+      <p class="cap-desc">Every enquiry answered the moment it arrives. Every customer tracked. Every follow-up handled without you touching it.</p>
+    </div>
   </div>
 </section>
 
