@@ -728,7 +728,8 @@
        ============================================================ */
     .faq { background: var(--lt); padding: 88px 0 96px; }
     .faq-head { max-width: 740px; margin: 0 auto 2.5rem; text-align: center; }
-    .faq-head .sec-tag { justify-content: center; }
+    .faq-head .sec-tag { justify-content: center; font-size: 22px; letter-spacing: 0.2em; }
+    .faq-head .sec-tag::before { width: 40px; }
     .faq-head h2 {
       font-size: clamp(1.9rem, 3.5vw, 2.5rem); font-weight: 800;
       color: var(--ink); letter-spacing: -0.025em; line-height: 1.2;
@@ -1717,7 +1718,7 @@
 <section class="faq" id="faq" aria-labelledby="faq-h">
   <div class="wrap">
     <div class="faq-head fade">
-      <p class="sec-tag dark" style="justify-content:center">Questions</p>
+      <p class="sec-tag dark" style="justify-content:center">FAQ</p>
       <h2 id="faq-h">The questions most people ask before they reach out.</h2>
     </div>
     <div class="faq-wrap">
