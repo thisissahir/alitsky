@@ -71,15 +71,16 @@
     html { scroll-behavior: smooth; overflow-x: hidden; }
 
     :root {
-      --dk:  #0B1F26;
-      --dk2: #0D2230;
-      --dk3: #112A34;
-      --dk4: #1A3A46;
-      --lt:  #F2F5F4;
+      --dk:  #0A1018;
+      --dk2: #0E1622;
+      --dk3: #14202E;
+      --dk4: #1C2C3C;
+      --lt:  #F4F6F7;
       --lt2: #E6EEEC;
-      --tl:  #17B8C4;
-      --tl-dk: #0C9BAA;
-      --rust: #C63B1A;
+      --tl:  #19C2CE;
+      --tl-dk: #0FA3B0;
+      --rust: #EE5A2A;
+      --rust-dk: #D6481B;
       --ink: #192A2D;
       --mid: #4A6268;
       --dim: #7A9298;
@@ -129,10 +130,10 @@
       transition: all 200ms var(--ease); white-space: nowrap;
     }
     .btn svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; }
-    .btn-dark { background: var(--dk); color: #fff; }
-    .btn-dark:hover { background: var(--dk2); transform: translateY(-1px); box-shadow: 0 12px 24px -8px rgba(11,31,38,0.30); }
-    .btn-teal { background: var(--tl); color: var(--dk); }
-    .btn-teal:hover { background: var(--tl-dk); color: #fff; transform: translateY(-1px); box-shadow: 0 14px 28px -10px rgba(23,184,196,0.55); }
+    .btn-dark { background: var(--rust); color: #fff; box-shadow: 0 10px 24px -10px rgba(238,90,42,0.55); }
+    .btn-dark:hover { background: var(--rust-dk); transform: translateY(-1px); box-shadow: 0 16px 32px -10px rgba(238,90,42,0.6); }
+    .btn-teal { background: var(--rust); color: #fff; box-shadow: 0 10px 24px -10px rgba(238,90,42,0.5); }
+    .btn-teal:hover { background: var(--rust-dk); color: #fff; transform: translateY(-1px); box-shadow: 0 16px 32px -10px rgba(238,90,42,0.6); }
     .btn-ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--bd-lt2); }
     .btn-ghost:hover { border-color: var(--tl); color: var(--tl-dk); }
     .btn-ghost-dk {
@@ -170,12 +171,12 @@
     }
     .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.05); }
     .nav-cta {
-      font-size: 13px; font-weight: 700; padding: 0.5rem 1.1rem;
-      border-radius: 8px; border: 1.5px solid var(--tl);
-      background: var(--tl); color: var(--dk); transition: all 180ms ease;
+      font-size: 13px; font-weight: 700; padding: 0.55rem 1.2rem;
+      border-radius: 8px; border: 1.5px solid var(--rust);
+      background: var(--rust); color: #fff; transition: all 180ms ease;
       display: inline-flex; align-items: center; gap: 0.4rem;
     }
-    .nav-cta:hover { background: var(--tl-dk); border-color: var(--tl-dk); color: #fff; }
+    .nav-cta:hover { background: var(--rust-dk); border-color: var(--rust-dk); color: #fff; transform: translateY(-1px); }
 
     @media (max-width: 900px) {
       nav.site-nav { padding: 0 1.2rem; }
@@ -695,8 +696,8 @@
     }
     .pkg.feat .pkg-monthly { color: rgba(255,255,255,0.30); }
     .pkg .btn { align-self: stretch; justify-content: center; }
-    .pkg.feat .btn-ghost { background: var(--tl); color: var(--dk); border-color: transparent; }
-    .pkg.feat .btn-ghost:hover { background: var(--tl-dk); color: #fff; }
+    .pkg.feat .btn-ghost { background: var(--rust); color: #fff; border-color: transparent; }
+    .pkg.feat .btn-ghost:hover { background: var(--rust-dk); color: #fff; }
 
     .pkg-support {
       text-align: center; font-size: 13px; font-style: italic;

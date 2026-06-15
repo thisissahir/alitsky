@@ -15,7 +15,7 @@ img { max-width: 100%; height: auto; }
 /* ---------- Nav (matches the new single-file homepage nav) ---------- */
 .nav {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(11, 31, 38, 0.85);          /* matches homepage --dk */
+  background: rgba(10, 16, 24, 0.85);          /* matches homepage --dk (#0A1018) */
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
@@ -42,19 +42,20 @@ img { max-width: 100%; height: auto; }
 .nav-cta {
   display: inline-flex; align-items: center;
   font-size: 13px; font-weight: 700; letter-spacing: 0.01em;
-  padding: 0.5rem 1.1rem;
+  padding: 0.55rem 1.2rem;
   border-radius: 8px;
-  border: 1.5px solid rgba(255, 255, 255, 0.20);
-  background: transparent;
+  border: 1.5px solid #EE5A2A;
+  background: #EE5A2A;
   color: #fff !important;
   text-decoration: none;
   white-space: nowrap;
-  transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
+  transition: all 180ms ease;
 }
 .nav-cta:hover {
-  background: var(--cyan-400);
-  border-color: var(--cyan-400);
-  color: var(--ink-900) !important;
+  background: #D6481B;
+  border-color: #D6481B;
+  color: #fff !important;
+  transform: translateY(-1px);
 }
 
 /* ---------- Nav dropdown ---------- */
@@ -218,21 +219,22 @@ img { max-width: 100%; height: auto; }
 
 /* ---------- Buttons ---------- */
 .btn {
-  font-family: var(--font-body); font-size: 15px; font-weight: 500;
-  padding: 12px 22px; border-radius: 999px; border: 1.5px solid transparent;
-  cursor: pointer; transition: all 180ms var(--ease-out);
+  font-family: var(--font-body); font-size: 15px; font-weight: 700; letter-spacing: 0.01em;
+  padding: 13px 24px; border-radius: 10px; border: 1.5px solid transparent;
+  cursor: pointer; transition: all 200ms var(--ease-out);
   display: inline-flex; align-items: center; gap: 8px; line-height: 1;
   text-decoration: none;
 }
-.btn-primary { background: #0E4858; color: #fff; }
-.btn-primary:hover { background: #082f3c; }
-.btn-secondary { background: #3FC1D4; color: #06303a; border-color: transparent; }
-.btn-secondary:hover { background: #7fd6e3; }
-.btn-accent { background: #DC4413; color: #fff; }
-.btn-accent:hover { background: #B5360D; }
-.btn-ghost { background: transparent; color: var(--fg); }
-.btn-ghost:hover { color: var(--teal-800); }
-.btn-lg { padding: 16px 28px; font-size: 16px; }
+/* Orange-forward primary CTA (matches the homepage redesign) */
+.btn-primary { background: #EE5A2A; color: #fff; box-shadow: 0 10px 24px -10px rgba(238,90,42,0.5); }
+.btn-primary:hover { background: #D6481B; transform: translateY(-1px); box-shadow: 0 16px 32px -10px rgba(238,90,42,0.6); }
+.btn-secondary { background: #19C2CE; color: #06303a; border-color: transparent; }
+.btn-secondary:hover { background: #0FA3B0; color: #fff; }
+.btn-accent { background: #EE5A2A; color: #fff; }
+.btn-accent:hover { background: #D6481B; }
+.btn-ghost { background: transparent; color: var(--fg); border-color: var(--border-strong); }
+.btn-ghost:hover { border-color: #EE5A2A; color: #D6481B; }
+.btn-lg { padding: 16px 30px; font-size: 16px; }
 
 /* ---------- Eyebrow ---------- */
 .eyebrow {
@@ -389,7 +391,7 @@ img { max-width: 100%; height: auto; }
 .section { padding: 96px 0; }
 .section.surface { background: var(--bg-surface); }
 .section.ink {
-  background: #051a23;
+  background: #0A1018;
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -1480,7 +1482,7 @@ img { max-width: 100%; height: auto; }
 
 /* ---------- CTA Section ---------- */
 .cta {
-  background: #051a23;
+  background: #0A1018;
   color: var(--paper);
   padding: 128px 0;
   text-align: center;
@@ -1694,7 +1696,7 @@ img { max-width: 100%; height: auto; }
 .page-section { padding: 72px 0; }
 .page-section.surface { background: var(--bg-surface); }
 .page-section.ink {
-  background: #051a23;
+  background: #0A1018;
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -2034,7 +2036,7 @@ img { max-width: 100%; height: auto; }
   color: var(--ink-700);
 }
 .callout.ink {
-  background: #051a23;
+  background: #0A1018;
   color: #fff;
 }
 .callout.ink h3 { color: #fff; }
