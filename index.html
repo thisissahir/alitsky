@@ -64,11 +64,13 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "What is an AI-ready website?", "acceptedAnswer": { "@type": "Answer", "text": "A website built so Google and AI search tools like ChatGPT can clearly understand your business — your services, your service area, your hours, and how to contact you. When they understand you, they can recommend you. When they cannot read your site, you are invisible to people asking AI who to call." } },
-      { "@type": "Question", "name": "Why start with a $397 Audit instead of just building?", "acceptedAnswer": { "@type": "Answer", "text": "Because you should see what is broken before you spend on a rebuild. The Audit shows exactly where your current site loses calls and whether AI search even knows you exist. Delivered in 2-3 business days, and the fee credits toward any build within 30 days. If it does not find at least three fixable issues, you pay nothing." } },
-      { "@type": "Question", "name": "Will this get me to the top of Google?", "acceptedAnswer": { "@type": "Answer", "text": "We do not promise rankings or a number of leads. We promise a correctly built, fast, AI-ready website with the technical pieces search engines and AI tools actually use. That is the work we control, and we deliver it." } },
-      { "@type": "Question", "name": "Do I own the website when it is done?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, completely. The domain, the code, the Vercel project, and every account are in your name, transferred to you in writing. We hold admin access to help, never ownership." } },
-      { "@type": "Question", "name": "Who is this for?", "acceptedAnswer": { "@type": "Answer", "text": "HVAC and local home-service businesses where the owner does great work but is losing calls online to slower, pricier, or lower-quality competitors who simply show up better." } }
+      { "@type": "Question", "name": "What is an AI-ready website?", "acceptedAnswer": { "@type": "Answer", "text": "It is a website built so Google, maps, and AI tools can clearly understand who you are, what you do, where you work, and why a customer should trust you. That makes your business easier to find and easier to evaluate." } },
+      { "@type": "Question", "name": "How does it help my business?", "acceptedAnswer": { "@type": "Answer", "text": "More of your customers now search on their phones and ask AI tools for recommendations. A site built for this is easier to find, loads fast, and makes the next step obvious: call, book, or ask for help. That gives more visitors a clear path to become booked jobs." } },
+      { "@type": "Question", "name": "What is included in the audit?", "acceptedAnswer": { "@type": "Answer", "text": "A plain-English review of where your website loses customers before they call, a check of whether AI search tools can understand your business, a competitor snapshot, and a prioritized fix list. Delivered in 2 to 3 business days with a short video walkthrough." } },
+      { "@type": "Question", "name": "Why does the audit say $197 and $397?", "acceptedAnswer": { "@type": "Answer", "text": "The standard audit is $397. Founding clients receive the audit for $197 while we build our first documented HVAC and home service case studies." } },
+      { "@type": "Question", "name": "Do I own the website after it is built?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You own the domain, the code, the hosting project, and every account, in writing. We hold access to help you, never to lock you in." } },
+      { "@type": "Question", "name": "How long does a custom website take?", "acceptedAnswer": { "@type": "Answer", "text": "Most builds take 10 to 21 business days from the time we have your information and access." } },
+      { "@type": "Question", "name": "Does this work for plumbing, roofing, and other trades?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We are starting with HVAC because we want to prove the work in one trade first. The same approach fits plumbing, roofing, electrical, and other home services." } }
     ]
   }
   </script>
@@ -1197,6 +1199,9 @@
     .compare-list li svg { width: 18px; height: 18px; flex: none; margin-top: 1px; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
     .compare-col.bad .compare-list li svg { stroke: var(--rust); opacity: 0.85; }
     .compare-col.good .compare-list li svg { stroke: var(--tl); }
+    .compare-close { margin: 1.4rem 0 0; padding-top: 1.2rem; border-top: 1px solid var(--bd); font-size: 14px; font-weight: 700; letter-spacing: 0.01em; }
+    .compare-close.bad { color: var(--rust); }
+    .compare-close.good { color: var(--tl); }
 
     @media (max-width: 760px) {
       .compare-grid { grid-template-columns: 1fr; gap: 1rem; }
@@ -1310,6 +1315,29 @@
     .faqq h3 { font-size: 1.1rem; font-weight: 800; color: #fff; margin: 0 0 0.6rem; letter-spacing: -0.01em; }
     .faqq p { font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.65); margin: 0; }
     @media (max-width: 760px) { .clarity, .founder, .faqs { padding: 56px 0; } .clarity-box { padding: 1.6rem 1.5rem; } }
+
+    /* How To Start (compact centered) */
+    .howstart { background: var(--dk2); padding: 72px 0; text-align: center; }
+    .howstart .sec-head-lg { color: #fff; max-width: 620px; margin: 0.6rem auto 1rem; }
+    .howstart p.lede { color: rgba(255,255,255,0.6); max-width: 560px; margin: 0 auto; font-size: 1.05rem; line-height: 1.7; }
+
+    /* How We Work checklist */
+    .howwork { background: var(--dk); padding: 84px 0; }
+    .work-grid { max-width: 920px; margin: 2.6rem auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem 2.4rem; }
+    .work-item { display: flex; gap: 0.85rem; align-items: flex-start; }
+    .work-item svg { width: 22px; height: 22px; flex: none; margin-top: 2px; fill: none; stroke: var(--tl); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .work-item b { display: block; font-size: 1.05rem; font-weight: 800; color: #fff; letter-spacing: -0.01em; margin-bottom: 0.3rem; }
+    .work-item span { display: block; font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.6); }
+
+    /* Built on a stack you own */
+    .stackown { background: var(--dk2); padding: 76px 0; }
+    .stackown .sec-lede { margin-bottom: 1.8rem; }
+    .stackown-chips { display: flex; flex-wrap: wrap; gap: 0.6rem; max-width: 720px; }
+    .stackown-chips .chip {
+      font-family: var(--m); font-size: 12px; letter-spacing: 0.04em; color: rgba(255,255,255,0.7);
+      padding: 0.5rem 0.9rem; border: 1px solid var(--bd2); border-radius: 6px; background: rgba(255,255,255,0.02);
+    }
+    @media (max-width: 760px) { .howstart, .howwork, .stackown { padding: 56px 0; } .work-grid { grid-template-columns: 1fr; gap: 1.6rem; } }
   </style>
 </head>
 
@@ -1395,137 +1423,122 @@
   </div>
 </section>
 
-<!-- ============== STATS BAR ============== -->
-<section class="stats" aria-label="By the numbers">
-  <div class="stats-row">
-    <div class="stat fade">
-      <span class="stat-n" data-count="45" data-suffix="%" data-fmt="int">0%</span>
-      <span class="stat-l">of people now find local businesses through tools like ChatGPT</span>
-      <span class="stat-sub">Up from 6% one year ago</span>
-    </div>
-    <div class="stat fade">
-      <span class="stat-n" data-count="1.2" data-suffix="%" data-fmt="dec1">0.0%</span>
-      <span class="stat-l">of eligible businesses actually appear in those results</span>
-      <span class="stat-sub">The rest are invisible to that search</span>
-    </div>
-    <div class="stat fade">
-      <span class="stat-n" data-count="5" data-suffix="x" data-fmt="int">0x</span>
-      <span class="stat-l">more likely to become a customer</span>
-      <span class="stat-sub">Recommendation traffic vs standard search</span>
-    </div>
-    <div class="stat fade">
-      <span class="stat-n" data-count="14.2" data-suffix="%" data-fmt="dec1">0.0%</span>
-      <span class="stat-l">conversion rate from recommendation search</span>
-      <span class="stat-sub">vs 2.8% from standard Google search</span>
-    </div>
-  </div>
-</section>
-
-<!-- ============== COMPARE: good vs bad website ============== -->
-<section class="compare" aria-labelledby="compare-h">
+<!-- ============== THE DIFFERENCE ============== -->
+<section class="compare" id="difference" aria-labelledby="diff-h">
   <div class="wrap fade">
-    <h2 class="compare-h" id="compare-h">A <span class="g">good</span> AI-ready website vs a <span class="b">bad</span> one.</h2>
+    <p class="sec-tag" style="justify-content:center">The Difference</p>
+    <h2 class="compare-h" id="diff-h">What loses jobs. <span class="g">What wins them.</span></h2>
+    <p class="sec-lede" style="text-align:center;margin:0 auto 2.5rem;color:rgba(255,255,255,0.6)">Most local service websites look fine and do nothing. Here is the difference between a site that sits there and a site that brings in calls.</p>
     <div class="compare-grid">
       <div class="compare-col bad">
         <div class="compare-col-h">
           <span class="badge"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
-          Typical template site
+          A typical template site
         </div>
         <ul class="compare-list">
-          <li><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Slow, bloated templates</li>
-          <li><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Weak structure &amp; unclear hierarchy</li>
-          <li><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Thin content that doesn't answer questions</li>
-          <li><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>No schema or AI-friendly markup</li>
-          <li><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Generic copy with no local intent</li>
-          <li><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Hard to find in search and AI answers</li>
-          <li><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Low leads. Missed opportunities.</li>
+          <li><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Loads slow on phones</li>
+          <li><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Hard to find your phone number</li>
+          <li><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Old design that does not build trust</li>
+          <li><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>No clear pages for what you actually do</li>
+          <li><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>No reviews, licenses, or proof</li>
+          <li><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Google cannot clearly read it</li>
+          <li><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>AI tools may not understand when your business is relevant</li>
         </ul>
+        <p class="compare-close bad">Fewer calls. Missed jobs.</p>
       </div>
       <div class="compare-col good">
         <div class="compare-col-h">
           <span class="badge"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-          AI-ready site built by <b>&nbsp;A Light in the Sky</b>
+          A site built by <b>&nbsp;A Light in the Sky</b>
         </div>
         <ul class="compare-list">
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Lightning-fast, Core Web Vitals optimized</li>
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Clear structure built for users and AI</li>
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Answer-ready content that builds trust</li>
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Schema markup for rich results &amp; AI visibility</li>
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Local intent throughout every page</li>
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Built to rank in search and appear in AI answers</li>
-          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>More calls, more jobs, more growth.</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Loads fast on every phone</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Clear call and book buttons up top</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Real pages for heating, cooling, and repair</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Pages for the cities and areas you serve</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Reviews, licenses, and warranties shown clearly</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Built so Google can read every page</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Structured so AI tools can understand when your business is relevant</li>
         </ul>
+        <p class="compare-close good">More calls. More booked jobs.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============== MARKET SPLIT ============== -->
-<section class="msplit sec-dark" aria-labelledby="msplit-h">
-  <div class="secwrap fade">
-    <p class="sec-tag">Why it matters</p>
-    <h2 class="sec-head-lg" id="msplit-h">The market split most HVAC owners never see</h2>
-    <p class="sec-lede">The local service website market divides into two products buyers constantly confuse. We only operate in one of them.</p>
-    <div style="margin-top:2.5rem">
-      <div class="tier">
-        <div class="tier-tag">Tier 01 — Commodity</div>
-        <h3 class="tier-name">WordPress &amp; Template Sites</h3>
-        <p class="tier-desc">$65 to $1,500. High supply, low trust, slow load times. The race to the bottom. Every agency you have already spoken to lives here. We do not compete here.</p>
-      </div>
-      <div class="tier feat">
-        <div class="tier-tag">Tier 02 — Custom / AI-Native</div>
-        <h3 class="tier-name">Purpose-Built. Fast. Conversion-First.</h3>
-        <p class="tier-desc">$2,500 to $12,000 by scope. Low supply. Custom-coded, structured for AI search, built to turn visitors into booked jobs. This is our lane — and most competitors cannot build here.</p>
-      </div>
-      <div class="tier">
-        <div class="tier-tag">What separates them</div>
-        <h3 class="tier-name">Speed. Structure. AI Readiness.</h3>
-        <p class="tier-desc">A commodity site loads slow, buries your phone number, and is invisible to ChatGPT. A custom-built site is optimized for the moment a buyer asks an AI tool who to call in your city.</p>
-      </div>
-      <div class="tier">
-        <div class="tier-tag">Our position</div>
-        <h3 class="tier-name">Lower-Middle of the Custom Tier</h3>
-        <p class="tier-desc">High enough to signal genuine quality to a buyer who has been burned before. Low enough to win against slower, pricier boutique agencies. We win on honest delivery — not overpromising.</p>
-      </div>
+<!-- ============== WHY WE EXIST ============== -->
+<section class="founder" aria-labelledby="why-h">
+  <div class="wrap fade">
+    <div class="founder-inner">
+      <p class="sec-tag" style="justify-content:center">Why we exist</p>
+      <p class="founder-mission" id="why-h">Built for the honest operator.</p>
+      <p class="founder-line" style="font-style:normal;color:rgba(255,255,255,0.72)">Good local service owners are losing online to companies with bigger budgets and worse service. The customer searches, the bigger name shows up first, and the better company never gets the call. A Light in the Sky exists to fix that — we help real operators become easier to find, easier to trust, and easier to book, so the quality of your work is what wins the job, not the size of your ad budget.</p>
+      <p class="founder-line">"I started this company because I watched good people do great work and still lose to worse companies online. That is the problem I want to solve, one honest business at a time."</p>
+      <p class="founder-sign">— A Light in the Sky · Indianapolis, IN</p>
     </div>
   </div>
 </section>
 
-<!-- ============== SERVICE LADDER ============== -->
+<!-- ============== HOW TO START ============== -->
+<section class="howstart" aria-labelledby="start-h">
+  <div class="wrap fade">
+    <p class="sec-tag" style="justify-content:center">How to start</p>
+    <h2 class="sec-head-lg" id="start-h">Start small.<br><span class="rust">Prove it before you spend.</span></h2>
+    <p class="lede">You do not have to commit to a full rebuild on day one. Start with the audit. See what is costing you calls. Then decide.</p>
+  </div>
+</section>
+
+<!-- ============== FOUNDING CLIENT OFFER LADDER ============== -->
 <section class="ladder-sec sec-dark" id="services" aria-labelledby="ladder-h">
   <div class="secwrap fade">
-    <p class="sec-tag">Service menu</p>
-    <h2 class="sec-head-lg" id="ladder-h">Five services.<br><span class="rust">One clear ladder.</span></h2>
-    <p class="sec-lede">Every engagement is scoped and priced transparently. No vague retainers. No hidden work. Early clients receive a time-bound Founding Client rate in exchange for a case study and honest review.</p>
+    <p class="sec-tag">The offer</p>
+    <h2 class="sec-head-lg" id="ladder-h">A clear first step,<br><span class="rust">then a build worth keeping.</span></h2>
+    <p class="sec-lede">Every engagement starts with the audit. Narrow, honest, and priced so you can prove the work before you commit to more.</p>
   </div>
   <div class="ladder fade">
     <div class="lad">
-      <div class="lad-tag">Service 01<br>Entry point</div>
+      <div class="lad-tag">Step 01<br>Start here</div>
       <div>
         <h3 class="lad-name">AI Visibility &amp; Lead Leak Audit</h3>
-        <p class="lad-desc">The front door. See exactly where your website loses customers before they call — and whether AI search tools like ChatGPT and Google AI even know your business exists. Delivered in 2–3 business days. Credits toward any build within 30 days.</p>
-        <div class="lad-price">$197 founding · $397 standard · 2–3 days</div>
+        <p class="lad-desc">We find what is costing you calls, clicks, and booked jobs, and whether AI search tools can clearly understand your business. Plain-English report and a short video walkthrough in 2 to 3 business days.</p>
+        <div class="lad-price">$197 founding client rate · standard audit $397</div>
       </div>
     </div>
     <div class="lad">
-      <div class="lad-tag">Service 02<br>Core offer · Most popular</div>
+      <div class="lad-tag">Step 02<br>The build</div>
       <div>
-        <h3 class="lad-name">Custom AI-Ready Website</h3>
-        <p class="lad-desc">A fast, conversion-first, AI-ready website built for HVAC and home service businesses. Not a template. Built with Claude Code, designed with Claude Design, deployed on Vercel — structured to be found and recommended by AI search.</p>
-        <div class="lad-price">$2,750 founding · $3,500 standard · 10–21 days</div>
+        <h3 class="lad-name">Founding Client Website</h3>
+        <p class="lad-desc">A fast, custom-coded website built for local search, AI readability, and turning visitors into calls. You own everything: the domain, the code, the hosting, and every account.</p>
+        <div class="lad-price">$2,750 founding client rate · standard build $3,500</div>
+      </div>
+    </div>
+    <div class="lad">
+      <div class="lad-tag">Step 03<br>Launch support</div>
+      <div>
+        <h3 class="lad-name">Setup &amp; Handoff</h3>
+        <p class="lad-desc">We connect your forms, calls, Search Console, Bing Webmaster Tools, and structured data, then hand you a clear walkthrough so you know exactly what you own and how it works.</p>
+        <div class="lad-price">Included with every build</div>
+      </div>
+    </div>
+    <div class="lad">
+      <div class="lad-tag">Step 04<br>The proof</div>
+      <div>
+        <h3 class="lad-name">Before &amp; After Review</h3>
+        <p class="lad-desc">We document what changed after launch: speed, structure, indexing, and lead path. You see the work, and we both learn what moved the needle.</p>
+        <div class="lad-price">Included with every build</div>
       </div>
     </div>
     <div class="lad lad-later">
       <div class="lad-tag">Later<br>By invitation</div>
       <div>
-        <h3 class="lad-name">Three more, when you are ready</h3>
-        <p class="lad-desc">Once your website is live and working, three more services open up — but only when you need them, never before: a <b>Lead Response System</b> (a receptionist that answers and books while you work), <b>Monthly Monitoring</b> (we keep watch so the site keeps producing), and <b>Implementation Rescue</b> (we fix broken setups). We do not sell these up front. We earn them by getting the first build right.</p>
+        <h3 class="lad-name">When your site is live and working</h3>
+        <p class="lad-desc">Available later, by invitation: <b>AI lead-response</b>, <b>monthly monitoring</b>, and <b>rescue work</b> for broken AI systems. We add these once your website is live and working, not before. We do not sell what we are not ready to deliver well.</p>
       </div>
     </div>
   </div>
   <div class="ladder-note fade">
-    <p><b style="color:#fff">Not sure where to start?</b> The Audit is the right first step. It shows you exactly what your business is missing and which service to build first.</p>
-    <a href="/audit" class="btn btn-dark">Get the Audit
+    <p><b style="color:#fff">Not sure where to start?</b> The Audit is the right first step. It shows you exactly what is costing you calls and which fix is worth making first.</p>
+    <a href="/audit" class="btn btn-dark">Start With the $197 Founding Audit
       <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
     <p class="email">or email <a href="mailto:admin@alitsky.com">admin@alitsky.com</a></p>
@@ -1537,230 +1550,90 @@
   <div class="wrap fade">
     <div class="clarity-box">
       <div class="clarity-tag">The Clarity Guarantee</div>
-      <h2 class="clarity-h" id="clarity-h">If the Audit doesn't find it, you don't pay for it.</h2>
+      <h2 class="clarity-h" id="clarity-h">A clear diagnosis, or your money back.</h2>
       <p>If your audit does not identify at least three specific, fixable issues affecting your website's visibility, trust, speed, or lead capture, we will refund the audit fee.</p>
       <p class="small">No ranking promises. No lead-volume promises. Just a clear, useful diagnosis before you spend money on a rebuild.</p>
     </div>
   </div>
 </section>
 
-<!-- ============== CORE OFFER DELIVERABLES ============== -->
-<section class="core sec-dark" aria-labelledby="core-h">
+<!-- ============== HOW WE WORK ============== -->
+<section class="howwork sec-dark" id="standards" aria-labelledby="work-h">
   <div class="secwrap fade">
-    <p class="sec-tag">What's inside the core offer</p>
-    <h2 class="sec-head-lg" id="core-h">Custom AI-Ready Website —<br><span class="rust">full deliverable</span></h2>
-    <p class="sec-lede">Every item below is included at the standard $3,500 rate. Nothing is an upsell. Nothing is vague.</p>
-    <ul class="core-list">
-      <li>Custom design (Claude Design), custom-coded (Claude Code), deployed on Vercel</li>
-      <li>Conversion-first homepage — call, book, contact above the fold</li>
-      <li>Service pages: heating, cooling, maintenance, install</li>
-      <li>Dedicated emergency HVAC page — highest-intent page in the vertical</li>
-      <li>Financing and trust section — licenses, certifications, warranties, reviews</li>
-      <li>Mobile-first build</li>
-      <li>Contact and booking flow wired to phone, email, or calendar</li>
-      <li>Base local SEO — title tags, meta, headers, local keyword targeting</li>
-      <li>Schema markup — LocalBusiness, Service, FAQ</li>
-      <li>Google Search Console + Bing Webmaster Tools setup and submission</li>
-      <li>Lead-form tracking</li>
-      <li>AI-readiness structure — question-formatted content, FAQ blocks</li>
-      <li>Loom walkthrough + written guide</li>
-      <li>7-day post-launch support</li>
-      <li>You own everything — domain, code, Vercel project, all accounts, in writing</li>
-    </ul>
-    <p class="core-excl"><b>Not included:</b> AI chatbot/receptionist (Service 3), ongoing monitoring (Service 4), paid ads, content or blog writing. This is the build. Everything else is a separate decision you make after seeing results.</p>
+    <p class="sec-tag">How we work</p>
+    <h2 class="sec-head-lg" id="work-h">We check the things that<br><span class="rust">actually win jobs.</span></h2>
+    <p class="sec-lede">Before any site goes live, we check every part of it against a real list. No guessing. No "looks good to me."</p>
+  </div>
+  <div class="work-grid fade">
+    <div class="work-item"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><div><b>Page speed</b><span>Fast load on every phone, where most of your customers are.</span></div></div>
+    <div class="work-item"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><div><b>Mobile experience</b><span>Easy to read, tap, and call on a small screen.</span></div></div>
+    <div class="work-item"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><div><b>Local SEO structure</b><span>Built so Google understands your service area.</span></div></div>
+    <div class="work-item"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><div><b>AI answer readiness</b><span>Structured so AI tools can understand when your business is relevant.</span></div></div>
+    <div class="work-item"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><div><b>Structured data</b><span>Schema markup so search engines read every page clearly.</span></div></div>
+    <div class="work-item"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><div><b>Lead capture path</b><span>A clear, working path from visitor to call or booking.</span></div></div>
   </div>
 </section>
 
-<!-- ============== HOW IT WORKS (4 step) ============== -->
-<section class="hiw sec-dark" id="how-it-works" aria-labelledby="hiw-h">
+<!-- ============== THE PATH ============== -->
+<section class="hiw sec-dark" id="how-it-works" aria-labelledby="path-h">
   <div class="secwrap fade">
-    <p class="sec-tag">How it works</p>
-    <h2 class="sec-head-lg" id="hiw-h">Audit → Website → Lead Response → <span class="rust">Monitoring</span></h2>
-    <p class="sec-lede">One vertical. One stack. One ladder. The engagement always starts with the Audit.</p>
+    <p class="sec-tag">The path</p>
+    <h2 class="sec-head-lg" id="path-h">Audit → Build → Launch → <span class="rust">Review</span></h2>
+    <p class="sec-lede">One vertical. One clear process. Every engagement starts with the audit.</p>
   </div>
   <div class="hiw-grid fade">
-    <div>
-      <div class="hstep-n">01</div>
-      <h3 class="hstep-t">Audit</h3>
-      <p class="hstep-b">2–3 days. Website crawl, AI query testing, competitor snapshot, lead-leak review. Plain-English report and Loom walkthrough.</p>
-    </div>
-    <div>
-      <div class="hstep-n">02</div>
-      <h3 class="hstep-t">Website Build</h3>
-      <p class="hstep-b">10–21 days. Design, build, QA, deploy. Mobile, speed, forms, schema — all checked before go-live.</p>
-    </div>
-    <div>
-      <div class="hstep-n">03</div>
-      <h3 class="hstep-t">Lead Response</h3>
-      <p class="hstep-b">15–30 days total. AI receptionist trained on your services, tested across 20 conversations before launch.</p>
-    </div>
-    <div>
-      <div class="hstep-n">04</div>
-      <h3 class="hstep-t">Monitoring</h3>
-      <p class="hstep-b">Monthly. AI visibility, website health, lead capture, chatbot QA. One report, one improvement.</p>
+    <div><div class="hstep-n">01</div><h3 class="hstep-t">Audit</h3><p class="hstep-b">2 to 3 days. We find what is costing you calls and show you in plain English.</p></div>
+    <div><div class="hstep-n">02</div><h3 class="hstep-t">Build</h3><p class="hstep-b">10 to 21 days. We design, build, check, and launch your custom site.</p></div>
+    <div><div class="hstep-n">03</div><h3 class="hstep-t">Launch</h3><p class="hstep-b">We connect forms, calls, and search tools, then hand it all to you.</p></div>
+    <div><div class="hstep-n">04</div><h3 class="hstep-t">Review</h3><p class="hstep-b">We document what changed, before and after, so the results are clear.</p></div>
+  </div>
+</section>
+
+<!-- ============== BUILT ON A STACK YOU OWN ============== -->
+<section class="stackown" aria-labelledby="stack-h">
+  <div class="secwrap fade">
+    <p class="sec-tag">Built on a stack you own</p>
+    <h2 class="sec-head-lg sec-dark" id="stack-h" style="color:#fff">The tools matter.<br><span class="rust">Ownership matters more.</span></h2>
+    <p class="sec-lede">Every build is structured so you own the domain, code, hosting project, search accounts, and documentation — handed to you in writing.</p>
+    <div class="stackown-chips">
+      <span class="chip">Claude Code</span>
+      <span class="chip">Claude Design</span>
+      <span class="chip">Vercel</span>
+      <span class="chip">Structured data</span>
+      <span class="chip">Google Search Console</span>
+      <span class="chip">Bing Webmaster Tools</span>
     </div>
   </div>
 </section>
 
-<!-- ============== OPERATING STANDARDS ============== -->
-<section class="standards" id="standards" aria-labelledby="std-h">
-  <div class="wrap">
-    <div class="standards-head fade">
-      <p class="sec-tag">Operating standards</p>
-      <h2 id="std-h">Non-negotiable. Every engagement.</h2>
-      <p>Custom code is premium revenue and premium responsibility. These are the floor — not features sold separately.</p>
-    </div>
-    <div class="standards-grid fade">
-      <div class="std"><h3>You own everything.</h3><p>Domain, code, Vercel project, all API accounts — transferred to you in writing. We hold admin access, never ownership.</p></div>
-      <div class="std"><h3>Version control on every build.</h3><p>Every project lives under Git. Every change is tracked. Any developer on earth can pick it up and continue.</p></div>
-      <div class="std"><h3>Staging before launch.</h3><p>Every build has a Vercel preview environment. Nothing goes live without your review and a full QA pass.</p></div>
-      <div class="std"><h3>Secure credentials only.</h3><p>All credentials stored in 1Password Teams. Never in email, plain text, or shared documents. Non-negotiable regardless of project size.</p></div>
-      <div class="std"><h3>No false guarantees.</h3><p>We never promise specific rankings, AI recommendations, or exact lead volume. We promise a correctly built system — and we deliver it.</p></div>
-      <div class="std"><h3>AI guardrails on every bot.</h3><p>No chatbot launches without forbidden-answer rules. Risky or urgent leads always route to a human. The AI never invents pricing or policies.</p></div>
-      <div class="std"><h3>Written scope on every project.</h3><p>Locked deliverables before work begins. No scope creep. No invoice surprises. You know what you are buying before you buy it.</p></div>
-      <div class="std"><h3>Documentation on every handoff.</h3><p>Loom walkthrough plus written guide ships with every build. You know how to use what was built — or how to hand it off to someone who does.</p></div>
-      <div class="std"><h3>7-day support on every build.</h3><p>Included in every project. Post-delivery support beyond that window is $75 per hour, agreed before work begins.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============== FOUNDER / MISSION ============== -->
-<section class="founder" aria-labelledby="founder-h">
-  <div class="wrap fade">
-    <div class="founder-inner">
-      <p class="sec-tag" style="justify-content:center">Why we exist</p>
-      <p class="founder-mission" id="founder-h">A good local business should not lose online to a company with a bigger budget and worse service.</p>
-      <p class="founder-line">"I started this company because I watched good people do great work and still lose to worse companies online. We make sure the honest operator gets found."</p>
-      <p class="founder-sign">— A Light in the Sky · Indianapolis, IN</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============== FAQ (AEO) ============== -->
-<section class="faqs" aria-labelledby="faqs-h">
+<!-- ============== COMMON QUESTIONS ============== -->
+<section class="faqs" id="faq" aria-labelledby="faqs-h">
   <div class="secwrap fade">
     <p class="sec-tag">Common questions</p>
-    <h2 class="sec-head-lg sec-dark" id="faqs-h" style="color:#fff">Plain answers, no jargon.</h2>
+    <h2 class="sec-head-lg sec-dark" id="faqs-h" style="color:#fff">Answers, in plain English.</h2>
     <div class="faqs-grid">
-      <div class="faqq">
-        <h3>What is an AI-ready website?</h3>
-        <p>It is a website built so Google and AI search tools like ChatGPT can clearly understand your business — your services, your service area, your hours, and how to contact you. When they understand you, they can recommend you. When they cannot read your site, you are invisible to the people now asking AI who to call.</p>
-      </div>
-      <div class="faqq">
-        <h3>Why start with a $397 Audit instead of just building?</h3>
-        <p>Because you should see what is broken before you spend on a rebuild. The Audit shows exactly where your current site loses calls and whether AI search even knows you exist. It is delivered in 2–3 business days, and the fee credits toward any build within 30 days. If it does not find at least three fixable issues, you pay nothing.</p>
-      </div>
-      <div class="faqq">
-        <h3>Will this get me to the top of Google?</h3>
-        <p>We do not promise rankings or a number of leads — anyone who does is guessing. We promise a correctly built, fast, AI-ready website with the technical pieces search engines and AI tools actually use. That is the work we control, and we deliver it.</p>
-      </div>
-      <div class="faqq">
-        <h3>Do I own the website when it is done?</h3>
-        <p>Yes — completely. The domain, the code, the Vercel project, and every account are in your name, transferred to you in writing. We hold admin access to help, never ownership. You can take it anywhere, any time.</p>
-      </div>
-      <div class="faqq">
-        <h3>Who is this for?</h3>
-        <p>HVAC and local home-service businesses where the owner does great work but is losing calls online — to slower, pricier, or lower-quality competitors who simply show up better. If customers cannot find you, trust you, or reach you fast enough, this is built for you.</p>
-      </div>
+      <div class="faqq"><h3>What is an AI-ready website?</h3><p>It is a website built so Google, maps, and AI tools can clearly understand who you are, what you do, where you work, and why a customer should trust you. That makes your business easier to find and easier to evaluate.</p></div>
+      <div class="faqq"><h3>How does it help my business?</h3><p>More of your customers now search on their phones and ask AI tools for recommendations. A site built for this is easier to find, loads fast, and makes the next step obvious: call, book, or ask for help. That gives more visitors a clear path to become booked jobs.</p></div>
+      <div class="faqq"><h3>What is included in the audit?</h3><p>A plain-English review of where your website loses customers before they call, a check of whether AI search tools can understand your business, a competitor snapshot, and a prioritized fix list. Delivered in 2 to 3 business days with a short video walkthrough.</p></div>
+      <div class="faqq"><h3>Why does the audit say $197 and $397?</h3><p>The standard audit is $397. Founding clients receive the audit for $197 while we build our first documented HVAC and home service case studies.</p></div>
+      <div class="faqq"><h3>Do I own the website after it is built?</h3><p>Yes. You own the domain, the code, the hosting project, and every account, in writing. We hold access to help you, never to lock you in.</p></div>
+      <div class="faqq"><h3>How long does a custom website take?</h3><p>Most builds take 10 to 21 business days from the time we have your information and access.</p></div>
+      <div class="faqq"><h3>Does this work for plumbing, roofing, and other trades?</h3><p>Yes. We are starting with HVAC because we want to prove the work in one trade first. The same approach fits plumbing, roofing, electrical, and other home services.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ============== FEATURE STRIP ============== -->
-<section class="perform" aria-label="Built to perform">
-  <div class="wrap">
-    <p class="perform-tag fade">Built to perform. Designed to grow.</p>
-    <div class="perform-grid fade">
-      <div class="perf">
-        <span class="perf-ico"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
-        <div class="perf-name">Fast by Design</div>
-        <div class="perf-sub">Core Web Vitals optimized</div>
-      </div>
-      <div class="perf">
-        <span class="perf-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-        <div class="perf-name">Local SEO Focused</div>
-        <div class="perf-sub">Dominate your service area</div>
-      </div>
-      <div class="perf">
-        <span class="perf-ico"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
-        <div class="perf-name">Schema &amp; Structured</div>
-        <div class="perf-sub">Ready for rich results &amp; AI answers</div>
-      </div>
-      <div class="perf">
-        <span class="perf-ico"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
-        <div class="perf-name">Conversion First</div>
-        <div class="perf-sub">Clear CTAs. More booked jobs.</div>
-      </div>
-      <div class="perf">
-        <span class="perf-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
-        <div class="perf-name">AI-Answer Ready</div>
-        <div class="perf-sub">Built to be cited by AI</div>
-      </div>
-      <div class="perf">
-        <span class="perf-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
-        <div class="perf-name">You Own It</div>
-        <div class="perf-sub">100% ownership &amp; easy hand-off</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============== CLOSE CTA ============== -->
+<!-- ============== FINAL CTA ============== -->
 <section class="close-cta" id="close" aria-labelledby="close-h">
   <div class="wrap close-cta-inner fade">
-    <div class="close-star">
-      <svg viewBox="0 0 200 200" fill="currentColor" aria-hidden="true">
-        <path d="M100 20 L112 52 L100 84 L88 52 Z"/>
-        <path d="M140 30.72 L134.39 64.43 L108 86.14 L113.61 52.43 Z"/>
-        <path d="M169.28 60 L147.57 86.39 L113.86 92 L135.57 65.61 Z"/>
-        <path d="M180 100 L148 112 L116 100 L148 88 Z"/>
-        <path d="M169.28 140 L135.57 134.39 L113.86 108 L147.57 113.61 Z"/>
-        <path d="M140 169.28 L113.61 147.57 L108 113.86 L134.39 135.57 Z"/>
-        <path d="M100 180 L88 148 L100 116 L112 148 Z"/>
-        <path d="M60 169.28 L65.61 135.57 L92 113.86 L86.39 147.57 Z"/>
-        <path d="M30.72 140 L52.43 113.61 L86.14 108 L64.43 134.39 Z"/>
-        <path d="M20 100 L52 88 L84 100 L52 112 Z"/>
-        <path d="M30.72 60 L64.43 65.61 L86.14 92 L52.43 86.39 Z"/>
-        <path d="M60 30.72 L86.39 52.43 L92 86.14 L65.61 64.43 Z"/>
-      </svg>
-    </div>
-    <p class="close-cta-mantra">Be found.</p>
-    <h2 id="close-h">Start with the Audit. <span class="rust">See what you're losing.</span></h2>
-    <p class="close-cta-body">The $397 Audit shows you exactly where your website loses leads and whether AI search tools know your business exists. The right first step before any build decision.</p>
+    <p class="sec-tag" style="justify-content:center">Start here</p>
+    <h2 id="close-h">Let's make sure you're <span class="rust">the answer.</span></h2>
+    <p class="close-cta-body">Get a clear audit of your website, your local search, and your AI visibility. See exactly what is working, what is missing, and how to win more jobs — before you spend money on a rebuild.</p>
     <a href="/audit" class="btn btn-teal">
-      Get the Audit
+      Start With the $197 Founding Audit
       <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
-    <p class="close-cta-note">or email <a href="mailto:admin@alitsky.com" style="color:var(--tl);text-decoration:none">admin@alitsky.com</a></p>
-  </div>
-</section>
-
-<!-- ============== FREE GUIDE ============== -->
-<section class="guide" id="free-guide">
-  <div class="wrap">
-    <div class="guide-inner fade">
-      <p class="sec-tag dark" style="justify-content:center">Free Guide</p>
-      <h2>The Small Business Survival Guide for the Search Era</h2>
-      <p class="guide-sub">What is actually changing. What to ignore. What your business actually needs right now.</p>
-      <p class="guide-body">Most business owners are hearing the same things. AI is replacing everything. You need automation. You need to move faster. Most of it creates more noise than clarity. This guide cuts through it. No hype. No pressure to become a tech company. A plain-English explanation of what is shifting, what it means for your business, and what actually makes the difference right now.</p>
-      <div class="guide-inside">
-        <span class="guide-inside-h">What is inside</span>
-        <p class="guide-inside-list">
-          What customers now expect when they find a business online.<br>
-          What is actually changing for small businesses and what is not.<br>
-          The three things most businesses need. Not fifteen. Three.<br>
-          What to ignore completely.<br>
-          What the businesses winning right now are doing differently.
-        </p>
-      </div>
-      <form class="guide-form" data-guide-form novalidate>
-        <input class="guide-input" type="email" name="email" placeholder="Your email address" inputmode="email" autocomplete="email" required aria-label="Your email address">
-        <button class="guide-submit" type="submit">Download the Free Guide</button>
-        <p class="guide-status" data-form-status role="status" aria-live="polite"></p>
-      </form>
-      <p class="guide-fine">We send the guide immediately. Two follow-up emails over the next week. Nothing after that unless you reach out.</p>
-      <p class="guide-secondary">Already ready to talk? <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer">Book a Free 45-Minute Call →</a></p>
-    </div>
+    <p class="close-cta-note">Founding rate: $197. Standard audit: $397. · <a href="mailto:admin@alitsky.com" style="color:var(--tl);text-decoration:none">admin@alitsky.com</a></p>
   </div>
 </section>
 
@@ -1772,40 +1645,37 @@
       <div>
         <div class="ft-brand">
           <span class="ft-mark"><svg viewBox="0 0 200 200" fill="currentColor" aria-hidden="true"><path d="M100 20 L112 52 L100 84 L88 52 Z"/><path d="M140 30.72 L134.39 64.43 L108 86.14 L113.61 52.43 Z"/><path d="M169.28 60 L147.57 86.39 L113.86 92 L135.57 65.61 Z"/><path d="M180 100 L148 112 L116 100 L148 88 Z"/><path d="M169.28 140 L135.57 134.39 L113.86 108 L147.57 113.61 Z"/><path d="M140 169.28 L113.61 147.57 L108 113.86 L134.39 135.57 Z"/><path d="M100 180 L88 148 L100 116 L112 148 Z"/><path d="M60 169.28 L65.61 135.57 L92 113.86 L86.39 147.57 Z"/><path d="M30.72 140 L52.43 113.61 L86.14 108 L64.43 134.39 Z"/><path d="M20 100 L52 88 L84 100 L52 112 Z"/><path d="M30.72 60 L64.43 65.61 L86.14 92 L52.43 86.39 Z"/><path d="M60 30.72 L86.39 52.43 L92 86.14 L65.61 64.43 Z"/></svg></span>
-          <span class="ft-name">A Light in the Sky</span>
+          <span class="ft-name">A LIGHT IN THE SKY</span>
         </div>
-        <p class="ft-tag">Custom AI-ready websites and lead-response systems for local service businesses. Starting with HVAC.</p>
-        <p class="ft-mono" style="margin-top:1rem">Indianapolis, Indiana<br>Serving businesses nationwide</p>
-      </div>
-      <div>
-        <span class="ft-col-h">Services</span>
-        <ul class="ft-list">
-          <li><a href="#services">AI Visibility Audit — $397</a></li>
-          <li><a href="#services">Custom AI-Ready Website — $3,500</a></li>
-          <li><a href="#services">Website + AI Lead Response — $6,500+</a></li>
-          <li><a href="#services">Monthly Monitoring — $750/mo</a></li>
-          <li><a href="#services">AI Implementation Rescue — $1,000+</a></li>
-        </ul>
+        <p class="ft-tag">Custom AI-ready websites for HVAC and home service businesses. Built to be found, trusted, and booked.</p>
+        <p class="ft-mono" style="margin-top:1rem">Indianapolis, Indiana · Serving businesses nationwide</p>
       </div>
       <div>
         <span class="ft-col-h">Company</span>
         <ul class="ft-list">
+          <li><a href="/about">About</a></li>
+          <li><a href="#services">Services</a></li>
           <li><a href="#how-it-works">How It Works</a></li>
-          <li><a href="#standards">Operating Standards</a></li>
-          <li><a href="/free-guide">Free Guide</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
       <div>
-        <span class="ft-col-h">Contact</span>
+        <span class="ft-col-h">Get Started</span>
         <ul class="ft-list">
-          <li><a href="mailto:admin@alitsky.com">admin@alitsky.com</a></li>
-          <li><a href="/audit">Start with the Audit</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/audit">Start the Audit</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="ft-col-h">Legal</span>
+        <ul class="ft-list">
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
         </ul>
       </div>
     </div>
     <div class="ft-bot">
-      <span class="ft-copy">© 2026 A Light in the Sky · All rights reserved</span>
+      <span class="ft-copy">© 2026 A LIGHT IN THE SKY · All rights reserved.</span>
       <span class="ft-motto">We do not sell what we cannot build.</span>
     </div>
   </div>
