@@ -71,16 +71,16 @@
     html { scroll-behavior: smooth; overflow-x: hidden; }
 
     :root {
-      --dk:  #0A1018;
-      --dk2: #0E1622;
-      --dk3: #14202E;
-      --dk4: #1C2C3C;
-      --lt:  #F4F6F7;
+      --dk:  #071B20;
+      --dk2: #0A2128;
+      --dk3: #0E2A32;
+      --dk4: #163B44;
+      --lt:  #F2F5F4;
       --lt2: #E6EEEC;
-      --tl:  #19C2CE;
-      --tl-dk: #0FA3B0;
-      --rust: #EE5A2A;
-      --rust-dk: #D6481B;
+      --tl:  #19D4D2;
+      --tl-dk: #10AFAD;
+      --rust: #F15A2A;
+      --rust-dk: #D8481C;
       --ink: #192A2D;
       --mid: #4A6268;
       --dim: #7A9298;
@@ -206,9 +206,13 @@
       font-size: clamp(2.8rem, 5.2vw, 4.4rem); font-weight: 800; line-height: 1.02;
       letter-spacing: -0.03em; color: var(--rust); margin-bottom: 1.6rem;
     }
+    .hero-pain {
+      font-size: 1.15rem; font-weight: 700; line-height: 1.5; color: #fff;
+      max-width: 500px; margin: 0 0 1.1rem; letter-spacing: -0.01em;
+    }
     .hero-body {
-      font-size: 17px; line-height: 1.75; color: rgba(255,255,255,0.72);
-      max-width: 460px; margin-bottom: 2rem;
+      font-size: 16px; line-height: 1.7; color: rgba(255,255,255,0.62);
+      max-width: 480px; margin-bottom: 2rem;
     }
     .hero-body strong { color: #fff; font-weight: 600; }
     .hero-ctas { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-bottom: 1.75rem; }
@@ -312,6 +316,12 @@
       font-family: var(--m); font-size: 11px; letter-spacing: 0.16em;
       text-transform: uppercase; color: rgba(255,255,255,0.5);
       margin-bottom: 1.1rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .dash-example {
+      font-size: 9px; letter-spacing: 0.14em; color: var(--rust);
+      border: 1px solid rgba(241,90,42,0.4); border-radius: 4px;
+      padding: 0.15rem 0.45rem; white-space: nowrap;
     }
     .dash-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; margin-bottom: 1.3rem; }
     .dash-tile {
@@ -1292,10 +1302,10 @@
         <p class="hero-eyebrow">For the people who build the real things</p>
         <h1 id="hero-h">You built a good business.</h1>
         <h2 class="rust">We make sure it runs like one online.</h2>
+        <p class="hero-pain">You are losing calls because customers cannot find you, cannot trust you, or cannot reach you fast enough.</p>
         <p class="hero-body">
-          Custom-coded, AI-built websites for HVAC and local service businesses. Built with
-          Claude Code, Claude Design, and Vercel — designed to load fast, capture leads, and
-          prepare your business for AI search.
+          We build fast, AI-ready websites for HVAC and home service businesses — built so Google
+          and AI search can find you, and built to turn visitors into booked calls.
         </p>
         <div class="hero-ctas">
           <a href="/audit" class="btn btn-dark">
@@ -1326,7 +1336,7 @@
       <div class="hero-visual" aria-hidden="true">
         <!-- AI Readiness dashboard mockup -->
         <div class="dash">
-          <div class="dash-head">AI Readiness Overview</div>
+          <div class="dash-head"><span>AI Readiness Overview</span><span class="dash-example">Example</span></div>
           <div class="dash-tiles">
             <div class="dash-tile">
               <div class="dash-tile-label">AI Visibility</div>
@@ -1397,7 +1407,7 @@
               <span class="a1">Book Service</span>
               <span class="a2">View Services</span>
             </div>
-            <div class="siteprev-rating"><span class="siteprev-stars">★★★★★</span> 5.0 · Trusted by 220+ clients in your area</div>
+            <div class="siteprev-rating">Sample build — an AI-ready site reads clean to Google and AI search</div>
           </div>
         </div>
       </div>
