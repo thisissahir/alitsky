@@ -211,7 +211,23 @@
       max-width: 460px; margin-bottom: 2rem;
     }
     .hero-body strong { color: #fff; font-weight: 600; }
-    .hero-ctas { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .hero-ctas { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-bottom: 1.75rem; }
+    /* Be found line */
+    .hero-found { display: flex; align-items: center; gap: 0.65rem; padding: 1.4rem 0; border-top: 1px solid var(--bd); }
+    .hero-found-ico { width: 22px; height: 22px; color: var(--tl); flex: none; }
+    .hero-found-ico svg { width: 100%; height: 100%; }
+    .hero-found-text { font-family: var(--m); font-size: 11px; letter-spacing: 0.06em; color: var(--dim); }
+    .hero-found-text b { color: var(--tl); font-weight: 700; }
+    /* Build stack chips */
+    .hero-stack { padding-top: 1.4rem; border-top: 1px solid var(--bd); }
+    .hero-stack-label { font-family: var(--m); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); display: block; margin-bottom: 0.85rem; }
+    .hero-stack-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .hero-stack-chips .chip {
+      font-family: var(--m); font-size: 11px; letter-spacing: 0.04em;
+      color: var(--tl); padding: 0.4rem 0.75rem;
+      border: 1px solid rgba(25,194,206,0.30); border-radius: 6px;
+      background: rgba(25,194,206,0.05);
+    }
     .hero-proof {
       font-family: var(--m); font-size: 11px; letter-spacing: 0.14em;
       color: rgba(255,255,255,0.38); padding-top: 1.4rem;
@@ -1198,12 +1214,14 @@
       <span class="nav-name">A Light in the Sky</span>
     </a>
     <div class="nav-links">
+      <a href="#services">Services</a>
       <a href="#how-it-works">How It Works</a>
-      <a href="#results">Results</a>
-      <a href="#packages">Packages</a>
+      <a href="#standards">Standards</a>
       <a href="/free-guide">Free Guide</a>
     </div>
-    <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="nav-cta">Book a Free Call</a>
+    <a href="/audit" class="nav-cta">Start With the Audit
+      <svg viewBox="0 0 16 16" style="width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
   </div>
 </nav>
 
@@ -1216,19 +1234,34 @@
         <h1 id="hero-h">You built a good business.</h1>
         <h2 class="rust">We make sure it runs like one online.</h2>
         <p class="hero-body">
-          Messages coming in from different places with no system to catch them.
-          Enquiries sitting unanswered while you are doing the actual work. A website that
-          looks fine and does nothing useful. Follow-up that depends on memory. Everything
-          held together by effort instead of systems.
+          Custom-coded, AI-built websites for HVAC and local service businesses. Built with
+          Claude Code, Claude Design, and Vercel — designed to load fast, capture leads, and
+          prepare your business for AI search.
         </p>
         <div class="hero-ctas">
-          <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
-            Book a Free 45-Minute Call
+          <a href="/audit" class="btn btn-dark">
+            Start With the $397 Audit
             <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
+          <a href="#services" class="btn btn-ghost-dk">See All Services</a>
         </div>
-        <p class="hero-audit-note">Your $197 Marketing Audit is included at no charge.</p>
-        <a href="mailto:admin@alitsky.com" class="cta-book-link">or email us at admin@alitsky.com</a>
+        <div class="hero-found">
+          <span class="hero-found-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg>
+          </span>
+          <span class="hero-found-text"><b>Be found.</b> In AI search. In your city. Before your competitor is.</span>
+        </div>
+        <div class="hero-stack">
+          <span class="hero-stack-label">Build Stack</span>
+          <div class="hero-stack-chips">
+            <span class="chip">Claude Code</span>
+            <span class="chip">Claude Design</span>
+            <span class="chip">Vercel</span>
+            <span class="chip">Custom JSON-LD Schema</span>
+            <span class="chip">Google Search Console</span>
+            <span class="chip">Claude API</span>
+          </div>
+        </div>
       </div>
 
       <div class="hero-visual" aria-hidden="true">
