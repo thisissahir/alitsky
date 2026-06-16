@@ -283,6 +283,68 @@
     .hv-notify-sub { font-size: 12px; color: var(--mid); display: flex; align-items: center; gap: 0.4rem; margin-top: 0.15rem; }
     .live-dot { width: 7px; height: 7px; border-radius: 50%; background: #22C55E; }
 
+    /* ---- Hero dashboard mockup (AI Readiness Overview) ---- */
+    .hero-visual { position: relative; }
+    .dash {
+      background: linear-gradient(160deg, #11202E 0%, #0C1722 100%);
+      border: 1px solid var(--bd2); border-radius: 16px;
+      padding: 1.4rem 1.5rem 1.6rem;
+      box-shadow: 0 40px 80px -30px rgba(0,0,0,0.7);
+      position: relative; z-index: 2;
+    }
+    .dash-head {
+      font-family: var(--m); font-size: 11px; letter-spacing: 0.16em;
+      text-transform: uppercase; color: rgba(255,255,255,0.5);
+      margin-bottom: 1.1rem;
+    }
+    .dash-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; margin-bottom: 1.3rem; }
+    .dash-tile {
+      background: rgba(255,255,255,0.03); border: 1px solid var(--bd);
+      border-radius: 10px; padding: 0.85rem 0.9rem;
+    }
+    .dash-tile-label { font-size: 11px; color: rgba(255,255,255,0.5); margin-bottom: 0.45rem; }
+    .dash-metric { font-size: 1.9rem; font-weight: 800; color: #fff; letter-spacing: -0.02em; line-height: 1; }
+    .dash-metric .unit { font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.4); }
+    .dash-metric.tl { color: var(--tl); }
+    .dash-status { font-size: 11px; color: var(--tl); margin-top: 0.5rem; display: flex; align-items: center; gap: 0.3rem; }
+    .dash-status svg { width: 11px; height: 11px; fill: none; stroke: var(--tl); stroke-width: 2.5; }
+    .dash-row { display: grid; grid-template-columns: 1.1fr 1fr; gap: 1rem; }
+    .dash-panel { background: rgba(255,255,255,0.03); border: 1px solid var(--bd); border-radius: 10px; padding: 0.85rem 0.9rem; }
+    .dash-panel-h { font-size: 11px; color: rgba(255,255,255,0.5); margin-bottom: 0.7rem; }
+    .dash-chart svg { width: 100%; height: 64px; display: block; }
+    .dash-xlabels { display: flex; justify-content: space-between; font-size: 9px; color: rgba(255,255,255,0.3); margin-top: 0.35rem; }
+    .chan { display: flex; flex-direction: column; gap: 0.65rem; }
+    .chan-row { font-size: 11px; }
+    .chan-top { display: flex; justify-content: space-between; color: rgba(255,255,255,0.7); margin-bottom: 0.3rem; }
+    .chan-top b { color: #fff; font-weight: 700; }
+    .chan-bar { height: 4px; border-radius: 999px; background: rgba(255,255,255,0.08); overflow: hidden; }
+    .chan-bar span { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--tl-dk), var(--tl)); }
+
+    /* Website preview card that overlaps below the dashboard */
+    .siteprev {
+      position: relative; z-index: 3;
+      margin: -2.2rem 1.4rem 0 auto; max-width: 92%;
+      background: #0E1A24; border: 1px solid var(--bd2); border-radius: 14px;
+      overflow: hidden; box-shadow: 0 30px 60px -24px rgba(0,0,0,0.75);
+    }
+    .siteprev-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.6rem 0.9rem; border-bottom: 1px solid var(--bd);
+      font-size: 10px; color: rgba(255,255,255,0.6);
+    }
+    .siteprev-brand { display: flex; align-items: center; gap: 0.4rem; font-weight: 700; color: #fff; font-size: 11px; }
+    .siteprev-brand svg { width: 14px; height: 14px; fill: var(--tl); }
+    .siteprev-nav { display: flex; gap: 0.7rem; font-size: 9px; color: rgba(255,255,255,0.4); }
+    .siteprev-nav .pill { background: var(--rust); color: #fff; padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 700; }
+    .siteprev-body { padding: 1.1rem 1.1rem 1.2rem; }
+    .siteprev-h { font-size: 1.15rem; font-weight: 800; color: #fff; line-height: 1.15; letter-spacing: -0.02em; }
+    .siteprev-p { font-size: 11px; color: rgba(255,255,255,0.55); line-height: 1.5; margin: 0.4rem 0 0.8rem; max-width: 80%; }
+    .siteprev-ctas { display: flex; gap: 0.5rem; align-items: center; }
+    .siteprev-ctas .a1 { background: var(--rust); color: #fff; font-size: 9.5px; font-weight: 700; padding: 0.4rem 0.7rem; border-radius: 5px; }
+    .siteprev-ctas .a2 { border: 1px solid var(--bd2); color: rgba(255,255,255,0.7); font-size: 9.5px; font-weight: 600; padding: 0.4rem 0.7rem; border-radius: 5px; }
+    .siteprev-rating { font-size: 9px; color: rgba(255,255,255,0.45); margin-top: 0.7rem; display: flex; align-items: center; gap: 0.35rem; }
+    .siteprev-stars { color: #F5A623; letter-spacing: 1px; }
+
     @media (max-width: 900px) {
       .hero { padding: 92px 0 64px; }
       .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -1103,53 +1165,80 @@
       </div>
 
       <div class="hero-visual" aria-hidden="true">
-        <div class="hv-logo">
-          <svg viewBox="0 0 200 200" fill="currentColor" aria-hidden="true">
-            <path d="M100 20 L112 52 L100 84 L88 52 Z"/>
-            <path d="M140 30.72 L134.39 64.43 L108 86.14 L113.61 52.43 Z"/>
-            <path d="M169.28 60 L147.57 86.39 L113.86 92 L135.57 65.61 Z"/>
-            <path d="M180 100 L148 112 L116 100 L148 88 Z"/>
-            <path d="M169.28 140 L135.57 134.39 L113.86 108 L147.57 113.61 Z"/>
-            <path d="M140 169.28 L113.61 147.57 L108 113.86 L134.39 135.57 Z"/>
-            <path d="M100 180 L88 148 L100 116 L112 148 Z"/>
-            <path d="M60 169.28 L65.61 135.57 L92 113.86 L86.39 147.57 Z"/>
-            <path d="M30.72 140 L52.43 113.61 L86.14 108 L64.43 134.39 Z"/>
-            <path d="M20 100 L52 88 L84 100 L52 112 Z"/>
-            <path d="M30.72 60 L64.43 65.61 L86.14 92 L52.43 86.39 Z"/>
-            <path d="M60 30.72 L86.39 52.43 L92 86.14 L65.61 64.43 Z"/>
-          </svg>
-        </div>
-        <p class="hv-slogan">Be found.</p>
-        <div class="hv-card">
-          <span class="hv-tag">GPT · live query</span>
-          <p class="hv-q">"Who is the best [your service] near me?"</p>
-        </div>
-        <div class="hv-card hv-lose">
-          <span class="hv-tag">A fact</span>
-          <p class="hv-name">45% of people searching for local services now use AI tools to find them.</p>
-          <p class="hv-sub">One year ago that number was 6%.</p>
-        </div>
-        <div class="hv-card hv-win">
-          <span class="hv-tag">✦ With the system</span>
-          <p class="hv-name">Your Business Name</p>
-          <div class="hv-checks">
-            <div class="hv-check">
-              <svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="7" fill="rgba(23,184,196,0.20)"/><path d="M4 7l2 2 4-4" stroke="#17B8C4" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Search engine crawlers unblocked — GPT sees you
+        <!-- AI Readiness dashboard mockup -->
+        <div class="dash">
+          <div class="dash-head">AI Readiness Overview</div>
+          <div class="dash-tiles">
+            <div class="dash-tile">
+              <div class="dash-tile-label">AI Visibility</div>
+              <div class="dash-metric tl">92<span class="unit"> /100</span></div>
+              <div class="dash-status"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.5 3.5L13 4"/></svg> Excellent</div>
             </div>
-            <div class="hv-check">
-              <svg viewBox="0 0 14 14"><circle cx="7" cy="7" r="7" fill="rgba(23,184,196,0.20)"/><path d="M4 7l2 2 4-4" stroke="#17B8C4" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Recommended in 5 of 5 queries
+            <div class="dash-tile">
+              <div class="dash-tile-label">Page Speed</div>
+              <div class="dash-metric tl">98<span class="unit"> /100</span></div>
+              <div class="dash-status"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.5 3.5L13 4"/></svg> Fast</div>
+            </div>
+            <div class="dash-tile">
+              <div class="dash-tile-label">Lead Potential</div>
+              <div class="dash-metric tl" style="font-size:1.4rem;padding-top:0.3rem">High</div>
+              <div class="dash-status"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.5 3.5L13 4"/></svg> Strong</div>
+            </div>
+          </div>
+          <div class="dash-row">
+            <div class="dash-panel">
+              <div class="dash-panel-h">Performance Over Time</div>
+              <div class="dash-chart">
+                <svg viewBox="0 0 200 64" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="dashfill" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="rgba(25,194,206,0.35)"/>
+                      <stop offset="100%" stop-color="rgba(25,194,206,0)"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,52 L33,46 L66,40 L100,30 L133,22 L166,12 L200,6 L200,64 L0,64 Z" fill="url(#dashfill)"/>
+                  <path d="M0,52 L33,46 L66,40 L100,30 L133,22 L166,12 L200,6" fill="none" stroke="var(--tl)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="dash-xlabels"><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span></div>
+            </div>
+            <div class="dash-panel">
+              <div class="dash-panel-h">Top Channels</div>
+              <div class="chan">
+                <div class="chan-row">
+                  <div class="chan-top">AI Search <b>68%</b></div>
+                  <div class="chan-bar"><span style="width:68%"></span></div>
+                </div>
+                <div class="chan-row">
+                  <div class="chan-top">Google Search <b>22%</b></div>
+                  <div class="chan-bar"><span style="width:22%"></span></div>
+                </div>
+                <div class="chan-row">
+                  <div class="chan-top">Direct <b>10%</b></div>
+                  <div class="chan-bar"><span style="width:10%"></span></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="hv-notify">
-          <div class="hv-notify-ico">
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+
+        <!-- Sample client website preview -->
+        <div class="siteprev">
+          <div class="siteprev-bar">
+            <span class="siteprev-brand">
+              <svg viewBox="0 0 200 200"><path d="M100 20 L112 52 L100 84 L88 52 Z"/><path d="M180 100 L148 112 L116 100 L148 88 Z"/><path d="M100 180 L88 148 L100 116 L112 148 Z"/><path d="M20 100 L52 88 L84 100 L52 112 Z"/></svg>
+              Northside Wellness
+            </span>
+            <span class="siteprev-nav"><span>Services</span><span>About</span><span>Reviews</span><span class="pill">Book Now</span></span>
           </div>
-          <div>
-            <div class="hv-notify-title">New booking confirmed</div>
-            <div class="hv-notify-sub"><span class="live-dot"></span> Tuesday 9am · Booked from AI search</div>
+          <div class="siteprev-body">
+            <div class="siteprev-h">Care that shows up.<br>Booked in seconds.</div>
+            <p class="siteprev-p">Massage, recovery, and wellness — found by the people searching for it right now.</p>
+            <div class="siteprev-ctas">
+              <span class="a1">Book Service</span>
+              <span class="a2">View Services</span>
+            </div>
+            <div class="siteprev-rating"><span class="siteprev-stars">★★★★★</span> 5.0 · Trusted by 220+ clients in your area</div>
           </div>
         </div>
       </div>
