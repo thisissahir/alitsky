@@ -1149,6 +1149,27 @@
       .compare-grid { grid-template-columns: 1fr; gap: 1rem; }
       .compare { padding: 60px 0 64px; }
     }
+
+    /* ============================================================
+       FEATURE STRIP — Built to perform. Designed to grow.
+       ============================================================ */
+    .perform { background: var(--dk); padding: 56px 0; border-top: 1px solid var(--bd); border-bottom: 1px solid var(--bd); }
+    .perform-tag {
+      text-align: center; font-family: var(--m); font-size: 11px; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--tl); margin-bottom: 2.2rem;
+    }
+    .perform-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.25rem; max-width: 1100px; margin: 0 auto; }
+    .perf { display: flex; flex-direction: column; gap: 0.5rem; }
+    .perf-ico { width: 26px; height: 26px; color: var(--tl); }
+    .perf-ico svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .perf-name { font-size: 13.5px; font-weight: 800; color: #fff; letter-spacing: -0.01em; line-height: 1.2; }
+    .perf-sub { font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.5; }
+    @media (max-width: 900px) {
+      .perform-grid { grid-template-columns: repeat(3, 1fr); gap: 1.6rem 1.25rem; }
+    }
+    @media (max-width: 560px) {
+      .perform-grid { grid-template-columns: repeat(2, 1fr); }
+    }
   </style>
 </head>
 
@@ -1966,6 +1987,45 @@
   ]
 }
 </script>
+
+<!-- ============== FEATURE STRIP ============== -->
+<section class="perform" aria-label="Built to perform">
+  <div class="wrap">
+    <p class="perform-tag fade">Built to perform. Designed to grow.</p>
+    <div class="perform-grid fade">
+      <div class="perf">
+        <span class="perf-ico"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>
+        <div class="perf-name">Fast by Design</div>
+        <div class="perf-sub">Core Web Vitals optimized</div>
+      </div>
+      <div class="perf">
+        <span class="perf-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <div class="perf-name">Local SEO Focused</div>
+        <div class="perf-sub">Dominate your service area</div>
+      </div>
+      <div class="perf">
+        <span class="perf-ico"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+        <div class="perf-name">Schema &amp; Structured</div>
+        <div class="perf-sub">Ready for rich results &amp; AI answers</div>
+      </div>
+      <div class="perf">
+        <span class="perf-ico"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+        <div class="perf-name">Conversion First</div>
+        <div class="perf-sub">Clear CTAs. More booked jobs.</div>
+      </div>
+      <div class="perf">
+        <span class="perf-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
+        <div class="perf-name">AI-Answer Ready</div>
+        <div class="perf-sub">Built to be cited by AI</div>
+      </div>
+      <div class="perf">
+        <span class="perf-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+        <div class="perf-name">You Own It</div>
+        <div class="perf-sub">100% ownership &amp; easy hand-off</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ============== CLOSE CTA ============== -->
 <section class="close-cta" id="close" aria-labelledby="close-h">
