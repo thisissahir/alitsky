@@ -1186,6 +1186,65 @@
     @media (max-width: 560px) {
       .perform-grid { grid-template-columns: repeat(2, 1fr); }
     }
+
+    /* ============================================================
+       PDF REBUILD SECTIONS
+       ============================================================ */
+    .secwrap { max-width: 920px; margin: 0 auto; padding: 0 2rem; }
+    .sec-head-lg { font-size: clamp(1.9rem, 4vw, 2.9rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; margin: 0 0 1.1rem; }
+    .sec-head-lg .rust { color: var(--rust); }
+    .sec-lede { font-size: 1.05rem; line-height: 1.7; color: var(--mid); max-width: 620px; margin: 0; }
+    .sec-dark .sec-head-lg { color: #fff; }
+    .sec-dark .sec-lede { color: rgba(255,255,255,0.55); }
+
+    /* Market split */
+    .msplit { background: var(--dk); padding: 84px 0; }
+    .tier { border-top: 1px solid var(--bd); padding: 2rem 0; }
+    .tier:last-child { border-bottom: 1px solid var(--bd); }
+    .tier.feat { background: rgba(25,194,206,0.04); border: 1px solid rgba(25,194,206,0.22); border-radius: 12px; padding: 1.6rem 1.8rem; margin: 0.5rem 0; }
+    .tier-tag { font-family: var(--m); font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 0.7rem; }
+    .tier.feat .tier-tag { color: var(--tl); }
+    .tier-name { font-size: 1.25rem; font-weight: 800; color: #fff; letter-spacing: -0.015em; margin: 0 0 0.6rem; }
+    .tier.feat .tier-name { color: var(--tl); }
+    .tier-desc { font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.6); margin: 0; max-width: 720px; }
+
+    /* Service ladder */
+    .ladder-sec { background: var(--dk2); padding: 84px 0; }
+    .ladder { max-width: 920px; margin: 2.5rem auto 0; padding: 0 2rem; }
+    .lad { border-top: 1px solid var(--bd); padding: 1.9rem 0; display: grid; grid-template-columns: 130px 1fr; gap: 1.5rem; }
+    .lad:last-child { border-bottom: 1px solid var(--bd); }
+    .lad-tag { font-family: var(--m); font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--tl); line-height: 1.5; }
+    .lad-name { font-size: 1.2rem; font-weight: 800; color: #fff; letter-spacing: -0.015em; margin: 0 0 0.55rem; }
+    .lad-desc { font-size: 14.5px; line-height: 1.7; color: rgba(255,255,255,0.6); margin: 0 0 0.85rem; }
+    .lad-price { font-family: var(--m); font-size: 13px; color: var(--rust); letter-spacing: 0.02em; }
+    .lad-founding { display: inline-block; font-family: var(--m); font-size: 10px; letter-spacing: 0.12em; color: var(--rust); border: 1px solid rgba(238,90,42,0.4); border-radius: 4px; padding: 0.2rem 0.5rem; margin-top: 0.7rem; }
+    .ladder-note { max-width: 920px; margin: 2.5rem auto 0; padding: 1.5rem 2rem; background: rgba(255,255,255,0.03); border: 1px solid var(--bd); border-left: 3px solid var(--tl); border-radius: 0 10px 10px 0; }
+    .ladder-note p { font-size: 14.5px; color: rgba(255,255,255,0.6); line-height: 1.7; margin: 0 0 1.1rem; }
+    .ladder-note .btn { font-size: 13px; }
+    .ladder-note .email { font-family: var(--m); font-size: 11px; color: var(--tl); margin-top: 0.9rem; }
+    .ladder-note .email a { color: var(--tl); text-decoration: none; }
+
+    /* Core offer deliverable */
+    .core { background: var(--dk); padding: 84px 0; }
+    .core-list { list-style: none; padding: 0; margin: 2.5rem 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0.95rem 2rem; max-width: 920px; }
+    .core-list li { display: flex; gap: 0.75rem; font-size: 15px; color: rgba(255,255,255,0.78); line-height: 1.5; }
+    .core-list li::before { content: '\2192'; color: var(--tl); font-weight: 700; flex: none; }
+    .core-excl { max-width: 920px; margin: 2.2rem auto 0; padding: 1.3rem 1.6rem; background: rgba(238,90,42,0.06); border-left: 3px solid var(--rust); border-radius: 0 10px 10px 0; font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.7; }
+    .core-excl b { color: #fff; font-weight: 700; }
+
+    /* 4-step how it works */
+    .hiw { background: var(--dk2); padding: 84px 0; }
+    .hiw-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 1100px; margin: 2.8rem auto 0; }
+    .hstep-n { width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--tl); color: var(--tl); display: flex; align-items: center; justify-content: center; font-family: var(--m); font-size: 12px; margin-bottom: 1.1rem; }
+    .hstep-t { font-size: 1.05rem; font-weight: 800; color: #fff; margin: 0 0 0.55rem; letter-spacing: -0.01em; }
+    .hstep-b { font-size: 13.5px; line-height: 1.65; color: rgba(255,255,255,0.55); margin: 0; }
+
+    @media (max-width: 760px) {
+      .msplit, .ladder-sec, .core, .hiw { padding: 60px 0; }
+      .lad { grid-template-columns: 1fr; gap: 0.6rem; }
+      .core-list { grid-template-columns: 1fr; }
+      .hiw-grid { grid-template-columns: 1fr 1fr; gap: 1.8rem; }
+    }
   </style>
 </head>
 
@@ -1411,615 +1470,174 @@
   </div>
 </section>
 
-<!-- ============== FRONT DOOR ============== -->
-<section class="frontdoor">
-  <div class="wrap fade">
-    <h2>Your business has a front door. Most of them are not working.</h2>
-    <p>The front door is everything that happens between a customer deciding they need what you do and actually reaching you. Search results. Your website. The response when they send a message. The follow-up when they do not book right away. The record that proves they ever contacted you.</p>
-    <p>When those five things work together, business feels easier. When they do not, everything depends on you being in the right place at the right time.</p>
-  </div>
-</section>
-
-<!-- ============== 3-POINT CAPABILITIES ============== -->
-<section class="capabilities" aria-label="What we do">
-  <div class="cap-grid fade">
-    <div class="cap-item">
-      <span class="cap-num">01</span>
-      <h3 class="cap-name">Search Visibility</h3>
-      <p class="cap-desc">You show up when people search for what you do — on Google and every tool people now use to find and choose local businesses.</p>
-    </div>
-    <div class="cap-item">
-      <span class="cap-num">02</span>
-      <h3 class="cap-name">Smart Website</h3>
-      <p class="cap-desc">A website that explains your services clearly, moves visitors toward booking, and connects to everything else in your system.</p>
-    </div>
-    <div class="cap-item">
-      <span class="cap-num">03</span>
-      <h3 class="cap-name">Respond and Organize</h3>
-      <p class="cap-desc">Every enquiry answered the moment it arrives. Every customer tracked. Every follow-up handled without you touching it.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============== INDUSTRY VOICES ============== -->
-<section class="voices" aria-labelledby="voices-h">
-  <div class="voices-head fade">
-    <h2 id="voices-h" class="voices-h">Businesses we help feel more organized online.</h2>
-  </div>
-  <div class="voices-grid fade">
-    <div class="voice">
-      <p class="voice-who">What salon owners tell us</p>
-      <p class="voice-text">"Messages came in from Instagram, email, and text at the same time with no way to keep track. Customers who messaged at night never heard back until the next day. We were losing bookings without knowing it."</p>
-    </div>
-    <div class="voice">
-      <p class="voice-who">What coaches tell us</p>
-      <p class="voice-text">"I had a booking tool, an email system, and a follow-up process that did not connect. Every week I pieced it together manually and still missed people who had reached out."</p>
-    </div>
-    <div class="voice">
-      <p class="voice-who">What contractors tell us</p>
-      <p class="voice-text">"We miss calls while we are on the job. By the time we call back the job has gone to whoever picked up first. We were losing work we could not see losing."</p>
+<!-- ============== MARKET SPLIT ============== -->
+<section class="msplit sec-dark" aria-labelledby="msplit-h">
+  <div class="secwrap fade">
+    <p class="sec-tag">Why it matters</p>
+    <h2 class="sec-head-lg" id="msplit-h">The market split most HVAC owners never see</h2>
+    <p class="sec-lede">The local service website market divides into two products buyers constantly confuse. We only operate in one of them.</p>
+    <div style="margin-top:2.5rem">
+      <div class="tier">
+        <div class="tier-tag">Tier 01 — Commodity</div>
+        <h3 class="tier-name">WordPress &amp; Template Sites</h3>
+        <p class="tier-desc">$65 to $1,500. High supply, low trust, slow load times. The race to the bottom. Every agency you have already spoken to lives here. We do not compete here.</p>
+      </div>
+      <div class="tier feat">
+        <div class="tier-tag">Tier 02 — Custom / AI-Native</div>
+        <h3 class="tier-name">Purpose-Built. Fast. Conversion-First.</h3>
+        <p class="tier-desc">$2,500 to $12,000 by scope. Low supply. Custom-coded, structured for AI search, built to turn visitors into booked jobs. This is our lane — and most competitors cannot build here.</p>
+      </div>
+      <div class="tier">
+        <div class="tier-tag">What separates them</div>
+        <h3 class="tier-name">Speed. Structure. AI Readiness.</h3>
+        <p class="tier-desc">A commodity site loads slow, buries your phone number, and is invisible to ChatGPT. A custom-built site is optimized for the moment a buyer asks an AI tool who to call in your city.</p>
+      </div>
+      <div class="tier">
+        <div class="tier-tag">Our position</div>
+        <h3 class="tier-name">Lower-Middle of the Custom Tier</h3>
+        <p class="tier-desc">High enough to signal genuine quality to a buyer who has been burned before. Low enough to win against slower, pricier boutique agencies. We win on honest delivery — not overpromising.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============== CATEGORY STATEMENT ============== -->
-<section class="category" aria-labelledby="category-h">
-  <div class="wrap fade">
-    <p class="sec-tag dark" style="justify-content:center">The category we own</p>
-    <h2 id="category-h">Client Capture Systems for Service Businesses.</h2>
-    <p>
-      Not an SEO agency. Not a chatbot builder. Not an automation freelancer.
-      We build the system that connects all five — and we name it so your business knows what it owns.
-      The category is new. The window for owning it closes as the market matures.
-    </p>
+<!-- ============== SERVICE LADDER ============== -->
+<section class="ladder-sec sec-dark" id="services" aria-labelledby="ladder-h">
+  <div class="secwrap fade">
+    <p class="sec-tag">Service menu</p>
+    <h2 class="sec-head-lg" id="ladder-h">Five services.<br><span class="rust">One clear ladder.</span></h2>
+    <p class="sec-lede">Every engagement is scoped and priced transparently. No vague retainers. No hidden work. Early clients receive a time-bound Founding Client rate in exchange for a case study and honest review.</p>
   </div>
-</section>
-
-<!-- ============== SYSTEM PIPELINE ============== -->
-<section class="system" id="system" aria-labelledby="system-h">
-  <div class="wrap">
-    <div class="system-head fade">
-      <p class="sec-tag dark">The Client Capture System™</p>
-      <h2 id="system-h">Five connected layers. One complete system.</h2>
-      <p>
-        This is not a menu of services. Each layer feeds the next. Visibility brings people. Conversion keeps them.
-        Intake captures them. Memory organizes them. Execution follows up automatically. Missing one layer means the system leaks.
-      </p>
-    </div>
-
-    <div class="pipeline-wrap fade">
-      <div class="pipeline">
-        <div class="pipe anchor">
-          <div class="pipe-num">Layer 01</div>
-          <div class="pipe-ico">
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-          </div>
-          <div class="pipe-name">Visibility</div>
-          <div class="pipe-q">Is AI recommending you?</div>
-          <div class="pipe-desc">GEO and AEO optimization so ChatGPT, Perplexity, and Google AI name your business when someone asks.</div>
-        </div>
-
-        <div class="pipe">
-          <div class="pipe-num">Layer 02</div>
-          <div class="pipe-ico">
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          </div>
-          <div class="pipe-name">Conversion</div>
-          <div class="pipe-q">Are visitors becoming leads?</div>
-          <div class="pipe-desc">Website built to convert the visitor AI sends — fast, structured, and designed to turn curiosity into contact.</div>
-        </div>
-
-        <div class="pipe">
-          <div class="pipe-num">Layer 03</div>
-          <div class="pipe-ico">
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          </div>
-          <div class="pipe-name">Intake</div>
-          <div class="pipe-q">Are leads getting an instant response?</div>
-          <div class="pipe-desc">A digital receptionist that answers, qualifies, and routes visitors to your booking calendar at any hour.</div>
-        </div>
-
-        <div class="pipe">
-          <div class="pipe-num">Layer 04</div>
-          <div class="pipe-ico">
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></svg>
-          </div>
-          <div class="pipe-name">Memory</div>
-          <div class="pipe-q">Is every lead tracked and organized?</div>
-          <div class="pipe-desc">CRM built around how your business actually works — every lead captured, every client followed, nothing forgotten.</div>
-        </div>
-
-        <div class="pipe">
-          <div class="pipe-num">Layer 05</div>
-          <div class="pipe-ico">
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-          </div>
-          <div class="pipe-name">Execution</div>
-          <div class="pipe-q">Is follow-up happening automatically?</div>
-          <div class="pipe-desc">Automations that reply within 2 minutes, follow up on Day 3 and Day 7, and run the sequences while you work.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="system-cta fade">
-      <a href="/audit" class="btn btn-dark">
-        Get your free Marketing Audit
-        <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="cta-book-link">or book a call directly →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============== THE GAP ============== -->
-<section class="gap-sec" aria-labelledby="gap-h">
-  <div class="wrap">
-    <div class="gap-head fade">
-      <p class="sec-tag">Where the money leaks out</p>
-      <h2 id="gap-h">Good businesses fail because they are invisible.</h2>
-      <p class="italic">Not invisible to Google. Invisible to the conversation happening right now.</p>
-    </div>
-
-    <div class="gap-grid">
-      <div class="gap-card fade">
-        <span class="gap-num">Leak 01</span>
-        <h3>The midnight enquiry</h3>
-        <p>Someone visits your site at 9pm. Asks a question. Gets silence. By morning they have booked with someone who replied. You never knew they came.</p>
-        <span class="gap-fix">→ Fixed by the intake layer</span>
-      </div>
-      <div class="gap-card fade">
-        <span class="gap-num">Leak 02</span>
-        <h3>The AI recommendation</h3>
-        <p>Every day people in your city ask ChatGPT who to call. The AI names your competitor. You are not in the answer because no one has ever introduced you to it.</p>
-        <span class="gap-fix">→ Fixed by the visibility layer</span>
-      </div>
-      <div class="gap-card fade">
-        <span class="gap-num">Leak 03</span>
-        <h3>The forgotten follow-up</h3>
-        <p>You meant to follow up on Tuesday. Life happened. The lead is now cold. This happens to every lead you do not have an automated sequence for.</p>
-        <span class="gap-fix">→ Fixed by the execution layer</span>
-      </div>
-      <div class="gap-card fade">
-        <span class="gap-num">Leak 04</span>
-        <h3>The lost lead data</h3>
-        <p>A lead came in three months ago. You cannot remember their name, what they needed, or whether you ever replied. The business has no memory.</p>
-        <span class="gap-fix">→ Fixed by the memory layer</span>
-      </div>
-      <div class="gap-card fade">
-        <span class="gap-num">Leak 05</span>
-        <h3>The invisible website</h3>
-        <p>You have a website but it is not structured for how AI reads content. The crawlers that feed ChatGPT are blocked by default. No one told you.</p>
-        <span class="gap-fix">→ Fixed by the conversion layer</span>
-      </div>
-      <div class="gap-card fade">
-        <span class="gap-num">Leak 06</span>
-        <h3>The 3-second exit</h3>
-        <p>A visitor clicks through from AI search, lands on your site, cannot immediately see what they need, and leaves in under three seconds. The system worked. The website did not.</p>
-        <span class="gap-fix">→ Fixed by the conversion layer</span>
-      </div>
-    </div>
-
-    <div class="gap-cta fade">
-      <span class="gap-cta-label">The audit shows you exactly which of these apply to your business today.</span>
-      <a href="/audit" class="btn btn-teal">
-        Find out exactly what you're losing
-        <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="cta-book-link">or book a call directly →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============== HOW WE HELP ============== -->
-<section class="help" id="services" aria-labelledby="help-h">
-  <div class="wrap">
-    <div class="help-head fade">
-      <p class="sec-tag dark">How we help</p>
-      <h2 id="help-h">Start with one layer. Build the system.</h2>
-      <p>Every layer is available as a standalone service. Most clients start with the audit — the audit tells you which layer to build first.</p>
-    </div>
-
-    <div class="help-grid">
-      <div class="help-card fade">
-        <span class="help-tag">Entry point · Diagnostic</span>
-        <h3 class="help-name">AI Visibility Audit</h3>
-        <p class="help-hook">We test your business across ChatGPT, Perplexity, and Google AI. No jargon. No pitch until you have seen the numbers.</p>
-        <ul class="help-list">
-          <li>AI query testing across 3 platforms</li>
-          <li>Competitor comparison</li>
-          <li>Website gap analysis</li>
-          <li>Prioritized fix list</li>
-          <li>Delivered in 72 hours</li>
-        </ul>
-        <div class="help-price">$97 – $297</div>
-        <div class="help-price-sub">one-time</div>
-        <a href="/audit" class="btn btn-ghost">Start with the audit</a>
-      </div>
-
-      <div class="help-card fade">
-        <span class="help-tag">Layer 01 · Visibility</span>
-        <h3 class="help-name">GEO / AEO Optimization</h3>
-        <p class="help-hook">Makes your business discoverable in AI-generated search. ChatGPT starts naming you when someone asks for the best in your city.</p>
-        <ul class="help-list">
-          <li>Schema.org JSON-LD implementation</li>
-          <li>Bing Webmaster Tools setup</li>
-          <li>Entity optimization</li>
-          <li>AI crawler unblocking</li>
-          <li>Google Search Console</li>
-          <li>Before/after visibility report</li>
-        </ul>
-        <div class="help-price">$190 – $750</div>
-        <div class="help-price-sub">one-time</div>
-        <a href="/audit" class="btn btn-ghost">Get the GEO build</a>
-      </div>
-
-      <div class="help-card fade">
-        <span class="help-tag">Layer 03 · Intake</span>
-        <h3 class="help-name">24/7 Digital Receptionist</h3>
-        <p class="help-hook">Every enquiry gets a response. Every lead gets followed up. Your business never goes dark.</p>
-        <ul class="help-list">
-          <li>Claude API direct integration</li>
-          <li>FAQ response layer</li>
-          <li>Lead qualification flow</li>
-          <li>Booking calendar routing</li>
-          <li>CRM logging</li>
-          <li>Direct API, fully controllable</li>
-        </ul>
-        <div class="help-price">$147 – $497</div>
-        <div class="help-price-sub">one-time</div>
-        <a href="/audit" class="btn btn-ghost">Build the chatbot</a>
-      </div>
-
-      <div class="help-card fade">
-        <span class="help-tag">Layer 04 · Memory</span>
-        <h3 class="help-name">CRM Setup</h3>
-        <p class="help-hook">Every lead captured, every client tracked, every follow-up logged. The system that makes your business remember.</p>
-        <ul class="help-list">
-          <li>HoneyBook or HubSpot setup</li>
-          <li>Pipeline configuration</li>
-          <li>Lead capture mapping</li>
-          <li>Contact organization</li>
-          <li>Deal tracking</li>
-          <li>Team walkthrough</li>
-        </ul>
-        <div class="help-price">$197 – $597</div>
-        <div class="help-price-sub">one-time</div>
-        <a href="/audit" class="btn btn-ghost">Set up the CRM</a>
-      </div>
-
-      <div class="help-card fade">
-        <span class="help-tag">Layer 05 · Execution</span>
-        <h3 class="help-name">Business Automations</h3>
-        <p class="help-hook">The workflows that run your follow-up, fire your client sequences, send invoice reminders, populate the CRM — while you are on the job.</p>
-        <ul class="help-list">
-          <li>Make.com workflow build</li>
-          <li>Lead response automation</li>
-          <li>Follow-up sequences (Day 1 / 3 / 7)</li>
-          <li>Invoice follow-up</li>
-          <li>CRM auto-population</li>
-          <li>Delivery + walkthrough</li>
-        </ul>
-        <div class="help-price">$150 – $550</div>
-        <div class="help-price-sub">one-time</div>
-        <a href="/audit" class="btn btn-ghost">Build the automations</a>
-      </div>
-
-      <div class="help-card fade">
-        <span class="help-tag">Ongoing · All layers</span>
-        <h3 class="help-name">Monthly Monitoring</h3>
-        <p class="help-hook">Monthly AI query testing, lead flow audit, automation health check. We handle the watch so you do not have to.</p>
-        <ul class="help-list">
-          <li>Monthly AI visibility testing</li>
-          <li>Competitor tracking</li>
-          <li>Automation health check</li>
-          <li>CRM audit</li>
-          <li>Plain-English report</li>
-          <li>Priority action for next month</li>
-        </ul>
-        <div class="help-price">$450 – $750</div>
-        <div class="help-price-sub">per month</div>
-        <a href="/audit" class="btn btn-ghost">Start the retainer</a>
-      </div>
-    </div>
-
-    <div class="help-callout fade">
-      <p>Every service is built to the same standard whether sold individually or as part of the full system. <strong>The audit determines the right entry point for your specific situation.</strong></p>
-    </div>
-  </div>
-</section>
-
-<!-- ============== PROOF ============== -->
-<section class="proof" id="results" aria-labelledby="proof-h">
-  <div class="wrap">
-    <div class="proof-head fade">
-      <span class="proof-label">Results</span>
-      <h2 id="proof-h">What changes when the system works.</h2>
-    </div>
-    <div class="proof-grid">
-      <!-- LEFT: the story -->
-      <div class="fade">
-        <div class="proof-biz">
-          <div class="proof-biz-name">Midwest Plumbing and Heating</div>
-          <div class="proof-biz-loc">Indianapolis, IN</div>
-        </div>
-        <p class="proof-story">Mike Donato had a business his customers trusted. What was broken was invisible. Calls missed while he was on a job. Enquiries that went cold before anyone got back. A website that said little and captured nothing. No system for knowing who had contacted him or when. He was doing everything right in the field. The systems around it were failing him.</p>
-        <p class="proof-built-line">We built the complete system. Eight weeks later:</p>
-        <div class="proof-stats-row">
-          <div class="ps">
-            <div class="ps-n"><span data-count="40" data-suffix="" data-fmt="int">0</span> → <span data-count="4" data-suffix="" data-fmt="int">0</span></div>
-            <div class="ps-l">Missed calls per week, before and after</div>
-          </div>
-          <div class="ps">
-            <div class="ps-n"><span data-count="1.4" data-suffix="s" data-fmt="dec1">0.0s</span></div>
-            <div class="ps-l">Website load time on a phone</div>
-          </div>
-          <div class="ps">
-            <div class="ps-n">3 weeks</div>
-            <div class="ps-l">From first call to live running system</div>
-          </div>
-        </div>
-        <blockquote class="proof-quote">"I used to come home and the voicemail was full. Now the calendar is full and the voicemail is empty. Same hours. More work, less stress."</blockquote>
-        <div class="proof-attr-simple">Mike Donato, Owner</div>
-        <p class="proof-closing">The work did not change. What changed was that his business stopped losing customers between the moment they decided to reach out and the moment they connected.</p>
-      </div>
-
-      <!-- RIGHT: the numbers -->
-      <div class="fade proof-numbers">
-        <h3>The numbers behind why this matters now</h3>
-        <ul class="proof-num-list">
-          <li>45% of people now use tools like ChatGPT to find local businesses. One year ago that number was 6%.</li>
-          <li>Of every local business eligible to appear in those recommendations, only 1.2% actually does.</li>
-          <li>Recommendation search traffic converts at 14.2%. Standard Google search traffic converts at 2.8%.</li>
-          <li>The person who finds you through a recommendation is five times more likely to become a customer.</li>
-        </ul>
-        <p class="proof-sources">Sources: BrightLocal Local Consumer Review Survey 2026 · SOCi Local Visibility Index 2026 · Exposure Ninja AI Search Statistics 2026</p>
-      </div>
-    </div>
-
-    <div class="proof-cta fade">
-      <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="btn btn-teal">
-        Book a Free 45-Minute Call
-        <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <p class="proof-cta-note">Your $197 Marketing Audit is included at no charge.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============== BUILT FOR ============== -->
-<section class="builtfor" aria-labelledby="builtfor-h">
-  <div class="wrap">
-    <div class="builtfor-head fade">
-      <p class="sec-tag dark">Built for</p>
-      <h2 id="builtfor-h">If you run one of these, the system is built for you.</h2>
-      <p>We work with service businesses where the owner delivers the work and needs leads coming in consistently. These are the verticals where the system pays for itself fastest.</p>
-    </div>
-    <div class="verticals fade">
-      <div class="vert">
-        <div class="vert-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg></div>
-        <div class="vert-name">Wellness brands &amp; med spas</div>
-      </div>
-      <div class="vert">
-        <div class="vert-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-        <div class="vert-name">Coaches &amp; consultants</div>
-      </div>
-      <div class="vert">
-        <div class="vert-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <div class="vert-name">Real estate agents</div>
-      </div>
-      <div class="vert">
-        <div class="vert-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div>
-        <div class="vert-name">Salons &amp; beauty</div>
-      </div>
-      <div class="vert">
-        <div class="vert-ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5l11 11M21 21l-1-1M3 3l1 1M18 22l4-4M2 6l4-4M3 10l7-7M14 21l7-7"/></svg></div>
-        <div class="vert-name">Fitness studios</div>
-      </div>
-    </div>
-    <p class="also-serving fade">Also serving: mental health practitioners · contractors and trades · restaurants and hospitality · financial advisors · legal professionals</p>
-  </div>
-</section>
-
-<!-- ============== HOW IT WORKS ============== -->
-<section class="how" id="how-it-works" aria-labelledby="how-h">
-  <div class="wrap">
-    <div class="how-head fade">
-      <p class="sec-tag dark" style="justify-content:center">How it works</p>
-      <h2 id="how-h">Three steps. No theatrics.</h2>
-    </div>
-    <div class="how-steps fade">
-      <div class="step">
-        <span class="step-num">Step 01</span>
-        <h3>We review your setup.</h3>
-        <p>A free 45-minute call. We walk through exactly what your business is missing and where customers are leaving before they reach you. You receive the $197 Marketing Audit at no charge before we discuss anything else.</p>
-      </div>
-      <div class="step">
-        <span class="step-num">Step 02</span>
-        <h3>We build what is missing.</h3>
-        <p>One build. We construct and connect the systems your audit identified. You review everything before anything goes live.</p>
-      </div>
-      <div class="step">
-        <span class="step-num">Step 03</span>
-        <h3>Your business runs cleaner.</h3>
-        <p>Monthly monitoring. A plain-English report on the first of each month. You get back to the work you built the business to do.</p>
-      </div>
-    </div>
-    <div class="how-cta fade">
-      <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
-        Book a Free 45-Minute Call
-        <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <p class="how-cta-note">Your $197 Marketing Audit is included at no charge.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============== PACKAGES ============== -->
-<section class="packages" id="packages" aria-labelledby="pkg-h">
-  <div class="wrap">
-    <div class="pkg-intro fade">
+  <div class="ladder fade">
+    <div class="lad">
+      <div class="lad-tag">Service 01<br>Entry point</div>
       <div>
-        <p class="sec-tag dark">Packages</p>
-        <h2 id="pkg-h">Start where it hurts most. Build from there.</h2>
-      </div>
-      <div class="pkg-note">
-        <p>Every engagement starts with a free 45-minute call. We walk through your current setup and deliver your $197 Marketing Audit at no charge before anything is built. <strong>You see exactly what is missing before you decide anything.</strong></p>
+        <h3 class="lad-name">AI Visibility &amp; Lead Leak Audit</h3>
+        <p class="lad-desc">The front door. See exactly where your website loses customers before they call — and whether AI search tools like ChatGPT and Google AI even know your business exists. Delivered in 2–3 business days. Credits toward any build within 30 days.</p>
+        <div class="lad-price">$197 founding · $397 standard · 2–3 days</div>
       </div>
     </div>
-
-    <div class="pkg-grid">
-      <div class="pkg fade">
-        <span class="pkg-tag">Entry point</span>
-        <h3 class="pkg-name">The Visibility Package</h3>
-        <p class="pkg-hook">For the business not showing up when people search.</p>
-        <p class="pkg-narrative">We fix how your business appears in search, rebuild your website to convert the visitors it generates, and monitor your visibility every month. You stop wondering whether a competitor is showing up instead of you.</p>
-        <ul class="pkg-list">
-          <li class="anchor">Free 45-minute call with $197 Marketing Audit</li>
-          <li>Search optimization (GEO + SEO)</li>
-          <li>Website rebuilt for clarity and conversion</li>
-          <li>Monthly monitoring and plain-English report</li>
-        </ul>
-        <div class="pkg-price">$2,000–$4,500 one-time</div>
-        <div class="pkg-monthly">$450–$750/mo ongoing</div>
-        <a href="/contact" class="btn btn-ghost">Start here</a>
-      </div>
-
-      <div class="pkg fade">
-        <span class="pkg-tag">Conversion focused</span>
-        <h3 class="pkg-name">The Conversion Package</h3>
-        <p class="pkg-hook">For the business being found but losing people before they book.</p>
-        <p class="pkg-narrative">Adds a 24/7 response system and automated follow-up to the visibility foundation. Every enquiry gets an answer within minutes. Day 3 and Day 7 follow-up runs automatically.</p>
-        <ul class="pkg-list">
-          <li class="anchor">Everything in The Visibility Package</li>
-          <li>Response system built to your services (Digital Receptionist / Chatbot)</li>
-          <li>Customer tracking connected to every part of the system</li>
-          <li>Monthly monitoring</li>
-        </ul>
-        <div class="pkg-price">$4,000–$7,500 one-time</div>
-        <div class="pkg-monthly">$650–$1,100/mo ongoing</div>
-        <a href="/contact" class="btn btn-ghost">This is the build</a>
-      </div>
-
-      <div class="pkg feat fade">
-        <span class="pkg-tag">Complete system</span>
-        <h3 class="pkg-name">The Complete System</h3>
-        <p class="pkg-hook">For the business owner done fixing this one piece at a time. And for the entrepreneur who has a clear vision and needs it built once, properly, from the beginning.</p>
-        <p class="pkg-narrative">All five systems. One engagement. Your business shows up in search, converts visitors, answers every enquiry, tracks every customer, and follows up automatically. Whether you are organizing what already exists or building something new from scratch, this is the engagement that gets it done right.</p>
-        <ul class="pkg-list">
-          <li class="anchor">Free 45-minute call with $197 Marketing Audit</li>
-          <li>All five systems built and connected</li>
-          <li>Search optimization, website, response system</li>
-          <li>HoneyBook or HubSpot + full follow-up automation</li>
-          <li>Monthly plain-English report on the 1st of each month</li>
-        </ul>
-        <div class="pkg-price">$5,500–$10,000 one-time</div>
-        <div class="pkg-monthly">$900–$1,500/mo ongoing</div>
-        <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Build the whole thing</a>
+    <div class="lad">
+      <div class="lad-tag">Service 02<br>Core offer · Most popular</div>
+      <div>
+        <h3 class="lad-name">Custom AI-Built Website</h3>
+        <p class="lad-desc">A fast, conversion-first, AI-ready website built for HVAC and home service businesses. Not a template. Built with Claude Code, designed with Claude Design, deployed on Vercel — structured to be found and recommended by AI search.</p>
+        <div class="lad-price">$2,750 founding · $3,500 standard · 10–21 days</div>
       </div>
     </div>
-
-    <p class="pkg-support">Post-delivery support beyond the included seven-day window: $75 per hour, agreed before work begins. Every account belongs to you. We hold admin access only.</p>
+    <div class="lad">
+      <div class="lad-tag">Service 03<br>Premium · Full system</div>
+      <div>
+        <h3 class="lad-name">Website + AI Lead Response System</h3>
+        <p class="lad-desc">The full machine. A custom AI-built website with an AI receptionist that answers questions, captures leads, routes emergencies to a human, and logs everything. No inquiry disappears at 9pm on a Saturday.</p>
+        <div class="lad-price">$6,500–$12,000 · 15–30 days · scoped per engagement</div>
+      </div>
+    </div>
+    <div class="lad">
+      <div class="lad-tag">Service 04<br>Ongoing · Retainer</div>
+      <div>
+        <h3 class="lad-name">AI Visibility &amp; Website Monitoring</h3>
+        <p class="lad-desc">Monthly AI query testing, website health checks, lead capture verification, and chatbot QA. One plain-English report. One approved improvement per month. We watch the system so it keeps producing and does not quietly fail.</p>
+        <div class="lad-price">$750–$1,500 per month · 30-day cancellation · starts after build</div>
+      </div>
+    </div>
+    <div class="lad">
+      <div class="lad-tag">Service 05<br>Recovery · Troubleshooting</div>
+      <div>
+        <h3 class="lad-name">AI Implementation Rescue</h3>
+        <p class="lad-desc">For broken AI systems that need fixing fast. Chatbots giving wrong answers, Make or Zapier workflows that stopped firing, HubSpot integrations that broke. Always quoted after a 15-minute diagnostic — never blind.</p>
+        <div class="lad-price">$1,000–$5,000 · 3–10 days · scoped per job</div>
+      </div>
+    </div>
+  </div>
+  <div class="ladder-note fade">
+    <p><b style="color:#fff">Not sure where to start?</b> The Audit is the right first step. It shows you exactly what your business is missing and which service to build first.</p>
+    <a href="/audit" class="btn btn-dark">Get the Audit
+      <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <p class="email">or email <a href="mailto:admin@alitsky.com">admin@alitsky.com</a></p>
   </div>
 </section>
 
-<!-- ============== HOW WE WORK ============== -->
-<section class="standards" aria-labelledby="std-h">
+<!-- ============== CORE OFFER DELIVERABLES ============== -->
+<section class="core sec-dark" aria-labelledby="core-h">
+  <div class="secwrap fade">
+    <p class="sec-tag">What's inside the core offer</p>
+    <h2 class="sec-head-lg" id="core-h">Custom AI-Built Website —<br><span class="rust">full deliverable</span></h2>
+    <p class="sec-lede">Every item below is included at the standard $3,500 rate. Nothing is an upsell. Nothing is vague.</p>
+    <ul class="core-list">
+      <li>Custom design (Claude Design), custom-coded (Claude Code), deployed on Vercel</li>
+      <li>Conversion-first homepage — call, book, contact above the fold</li>
+      <li>Service pages: heating, cooling, maintenance, install</li>
+      <li>Dedicated emergency HVAC page — highest-intent page in the vertical</li>
+      <li>Financing and trust section — licenses, certifications, warranties, reviews</li>
+      <li>Mobile-first build</li>
+      <li>Contact and booking flow wired to phone, email, or calendar</li>
+      <li>Base local SEO — title tags, meta, headers, local keyword targeting</li>
+      <li>Schema markup — LocalBusiness, Service, FAQ</li>
+      <li>Google Search Console + Bing Webmaster Tools setup and submission</li>
+      <li>Lead-form tracking</li>
+      <li>AI-readiness structure — question-formatted content, FAQ blocks</li>
+      <li>Loom walkthrough + written guide</li>
+      <li>7-day post-launch support</li>
+      <li>You own everything — domain, code, Vercel project, all accounts, in writing</li>
+    </ul>
+    <p class="core-excl"><b>Not included:</b> AI chatbot/receptionist (Service 3), ongoing monitoring (Service 4), paid ads, content or blog writing. This is the build. Everything else is a separate decision you make after seeing results.</p>
+  </div>
+</section>
+
+<!-- ============== HOW IT WORKS (4 step) ============== -->
+<section class="hiw sec-dark" id="how-it-works" aria-labelledby="hiw-h">
+  <div class="secwrap fade">
+    <p class="sec-tag">How it works</p>
+    <h2 class="sec-head-lg" id="hiw-h">Audit → Website → Lead Response → <span class="rust">Monitoring</span></h2>
+    <p class="sec-lede">One vertical. One stack. One ladder. The engagement always starts with the Audit.</p>
+  </div>
+  <div class="hiw-grid fade">
+    <div>
+      <div class="hstep-n">01</div>
+      <h3 class="hstep-t">Audit</h3>
+      <p class="hstep-b">2–3 days. Website crawl, AI query testing, competitor snapshot, lead-leak review. Plain-English report and Loom walkthrough.</p>
+    </div>
+    <div>
+      <div class="hstep-n">02</div>
+      <h3 class="hstep-t">Website Build</h3>
+      <p class="hstep-b">10–21 days. Design, build, QA, deploy. Mobile, speed, forms, schema — all checked before go-live.</p>
+    </div>
+    <div>
+      <div class="hstep-n">03</div>
+      <h3 class="hstep-t">Lead Response</h3>
+      <p class="hstep-b">15–30 days total. AI receptionist trained on your services, tested across 20 conversations before launch.</p>
+    </div>
+    <div>
+      <div class="hstep-n">04</div>
+      <h3 class="hstep-t">Monitoring</h3>
+      <p class="hstep-b">Monthly. AI visibility, website health, lead capture, chatbot QA. One report, one improvement.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== OPERATING STANDARDS ============== -->
+<section class="standards" id="standards" aria-labelledby="std-h">
   <div class="wrap">
     <div class="standards-head fade">
-      <p class="sec-tag">How we work</p>
-      <h2 id="std-h">Operating standards. Non-negotiable.</h2>
-      <p>These are not features. They are the floor. The minimum standard for any business that builds systems other businesses depend on.</p>
+      <p class="sec-tag">Operating standards</p>
+      <h2 id="std-h">Non-negotiable. Every engagement.</h2>
+      <p>Custom code is premium revenue and premium responsibility. These are the floor — not features sold separately.</p>
     </div>
-    <div class="standards-grid">
-      <div class="std fade">
-        <h3>You own everything.</h3>
-        <p>Every account, every credential, every workflow is set up in your name. We are added as admin. Never as owner. You can fire us tomorrow and the system keeps running.</p>
-      </div>
-      <div class="std fade">
-        <h3>NDA before credentials.</h3>
-        <p>Signed before any password or access is shared. Non-negotiable regardless of project size. Your data is your data.</p>
-      </div>
-      <div class="std fade">
-        <h3>1Password Teams. Always.</h3>
-        <p>All credentials stored in a dedicated client vault. Never in email. Never in plain text. Never in a shared doc.</p>
-      </div>
-      <div class="std fade">
-        <h3>Plain English. Always.</h3>
-        <p>Every report, every walkthrough, every monthly check-in. If you cannot explain it to your spouse over dinner, we have not done our job.</p>
-      </div>
+    <div class="standards-grid fade">
+      <div class="std"><h3>You own everything.</h3><p>Domain, code, Vercel project, all API accounts — transferred to you in writing. We hold admin access, never ownership.</p></div>
+      <div class="std"><h3>Version control on every build.</h3><p>Every project lives under Git. Every change is tracked. Any developer on earth can pick it up and continue.</p></div>
+      <div class="std"><h3>Staging before launch.</h3><p>Every build has a Vercel preview environment. Nothing goes live without your review and a full QA pass.</p></div>
+      <div class="std"><h3>Secure credentials only.</h3><p>All credentials stored in 1Password Teams. Never in email, plain text, or shared documents. Non-negotiable regardless of project size.</p></div>
+      <div class="std"><h3>No false guarantees.</h3><p>We never promise specific rankings, AI recommendations, or exact lead volume. We promise a correctly built system — and we deliver it.</p></div>
+      <div class="std"><h3>AI guardrails on every bot.</h3><p>No chatbot launches without forbidden-answer rules. Risky or urgent leads always route to a human. The AI never invents pricing or policies.</p></div>
+      <div class="std"><h3>Written scope on every project.</h3><p>Locked deliverables before work begins. No scope creep. No invoice surprises. You know what you are buying before you buy it.</p></div>
+      <div class="std"><h3>Documentation on every handoff.</h3><p>Loom walkthrough plus written guide ships with every build. You know how to use what was built — or how to hand it off to someone who does.</p></div>
+      <div class="std"><h3>7-day support on every build.</h3><p>Included in every project. Post-delivery support beyond that window is $75 per hour, agreed before work begins.</p></div>
     </div>
   </div>
 </section>
-
-<!-- ============== FAQ ============== -->
-<section class="faq" id="faq" aria-labelledby="faq-h">
-  <div class="wrap">
-    <div class="faq-head fade">
-      <p class="sec-tag dark" style="justify-content:center">FAQ</p>
-      <h2 id="faq-h">The questions most people ask before they reach out.</h2>
-    </div>
-    <div class="faq-wrap">
-      <div class="faq-item fade">
-        <button class="faq-q" aria-expanded="false" type="button">
-          <span>What is GEO and how is it different from SEO?</span>
-          <span class="faq-chev"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
-        </button>
-        <div class="faq-a"><div class="faq-a-inner">SEO gets your business ranked in Google's list of links when someone types a search. GEO — Generative Engine Optimization — gets your business named in AI-generated answers when someone asks ChatGPT, Perplexity, or Google AI a question. They use different signals and reach different moments in a buyer's decision. Businesses that do both own the full picture. Neither replaces the other.</div></div>
-      </div>
-      <div class="faq-item fade">
-        <button class="faq-q" aria-expanded="false" type="button">
-          <span>How long does it take to appear in AI search results?</span>
-          <span class="faq-chev"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
-        </button>
-        <div class="faq-a"><div class="faq-a-inner">Typically 4 to 8 weeks after implementation. AI search indexes update on their own schedule. We document your visibility before and after so you can see the exact change. The audit shows where you are today. The implementation changes what AI can see. The monthly monitoring tracks and reports the movement.</div></div>
-      </div>
-      <div class="faq-item fade">
-        <button class="faq-q" aria-expanded="false" type="button">
-          <span>What does the free Marketing Audit actually show me?</span>
-          <span class="faq-chev"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
-        </button>
-        <div class="faq-a"><div class="faq-a-inner">We test your business across ChatGPT, Perplexity, and Google AI for the queries your customers are actually typing — your category, your city, your specific services. We document who AI recommends instead of you, where your website is losing people, and what your lead capture system is missing. The report is delivered in plain English, with a prioritized list of what to fix first and the revenue impact of each item. No jargon. No pitch until you have seen the numbers.</div></div>
-      </div>
-      <div class="faq-item fade">
-        <button class="faq-q" aria-expanded="false" type="button">
-          <span>Do I need to know anything technical to work with you?</span>
-          <span class="faq-chev"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
-        </button>
-        <div class="faq-a"><div class="faq-a-inner">No. Every system is built, configured, and tested before we hand it over. You receive a walkthrough of what was built and how to use it. Monthly monitoring is handled on your behalf and reported back in plain English. The goal is that the system runs without you needing to understand how it works — only that it works.</div></div>
-      </div>
-      <div class="faq-item fade">
-        <button class="faq-q" aria-expanded="false" type="button">
-          <span>What kinds of businesses does this work best for?</span>
-          <span class="faq-chev"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
-        </button>
-        <div class="faq-a"><div class="faq-a-inner">Service businesses, appointment-based businesses, and practice-based businesses where the owner delivers the service and needs leads coming in consistently. Wellness brands, med spas, coaches, consultants, contractors, real estate agents, salons, fitness studios, mental health practitioners, and local service businesses with an existing client base. If people search for what you do in your city, this system is built for you.</div></div>
-      </div>
-      <div class="faq-item fade">
-        <button class="faq-q" aria-expanded="false" type="button">
-          <span>What is the difference between the packages?</span>
-          <span class="faq-chev"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
-        </button>
-        <div class="faq-a"><div class="faq-a-inner">The Visibility Package gets you found in AI search and ensures the website converts the traffic. The Conversion Package adds the intake and automation layers — so leads get an instant response and a follow-up sequence whether or not you are available. The Client Capture System™ includes all five layers working together: visibility, website conversion, AI intake, CRM memory, and execution automation. The audit determines which entry point makes the most sense for your specific situation before anything is built.</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQPage JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    { "@type": "Question", "name": "What is GEO and how is it different from SEO?", "acceptedAnswer": { "@type": "Answer", "text": "SEO gets your business ranked in Google's list of links when someone types a search. GEO — Generative Engine Optimization — gets your business named in AI-generated answers when someone asks ChatGPT, Perplexity, or Google AI a question. They use different signals and reach different moments in a buyer's decision. Businesses that do both own the full picture. Neither replaces the other." } },
-    { "@type": "Question", "name": "How long does it take to appear in AI search results?", "acceptedAnswer": { "@type": "Answer", "text": "Typically 4 to 8 weeks after implementation. AI search indexes update on their own schedule. We document your visibility before and after so you can see the exact change. The audit shows where you are today. The implementation changes what AI can see. The monthly monitoring tracks and reports the movement." } },
-    { "@type": "Question", "name": "What does the free Marketing Audit actually show me?", "acceptedAnswer": { "@type": "Answer", "text": "We test your business across ChatGPT, Perplexity, and Google AI for the queries your customers are actually typing — your category, your city, your specific services. We document who AI recommends instead of you, where your website is losing people, and what your lead capture system is missing. The report is delivered in plain English, with a prioritized list of what to fix first and the revenue impact of each item. No jargon. No pitch until you have seen the numbers." } },
-    { "@type": "Question", "name": "Do I need to know anything technical to work with you?", "acceptedAnswer": { "@type": "Answer", "text": "No. Every system is built, configured, and tested before we hand it over. You receive a walkthrough of what was built and how to use it. Monthly monitoring is handled on your behalf and reported back in plain English. The goal is that the system runs without you needing to understand how it works — only that it works." } },
-    { "@type": "Question", "name": "What kinds of businesses does this work best for?", "acceptedAnswer": { "@type": "Answer", "text": "Service businesses, appointment-based businesses, and practice-based businesses where the owner delivers the service and needs leads coming in consistently. Wellness brands, med spas, coaches, consultants, contractors, real estate agents, salons, fitness studios, mental health practitioners, and local service businesses with an existing client base. If people search for what you do in your city, this system is built for you." } },
-    { "@type": "Question", "name": "What is the difference between the packages?", "acceptedAnswer": { "@type": "Answer", "text": "The Visibility Package gets you found in AI search and ensures the website converts the traffic. The Conversion Package adds the intake and automation layers — so leads get an instant response and a follow-up sequence whether or not you are available. The Client Capture System™ includes all five layers working together: visibility, website conversion, AI intake, CRM memory, and execution automation. The audit determines which entry point makes the most sense for your specific situation before anything is built." } }
-  ]
-}
-</script>
 
 <!-- ============== FEATURE STRIP ============== -->
 <section class="perform" aria-label="Built to perform">
@@ -2080,13 +1698,13 @@
       </svg>
     </div>
     <p class="close-cta-mantra">Be found.</p>
-    <h2 id="close-h">Find out where your business stands before your competitor does.</h2>
-    <p class="close-cta-body">On a free 45-minute call we show you exactly what your business is missing and where customers are leaving before they reach you. You receive the $197 Marketing Audit at no charge. No pitch until we know what you need.</p>
-    <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="btn btn-teal">
-      Book a Free 45-Minute Call
+    <h2 id="close-h">Start with the Audit. <span class="rust">See what you're losing.</span></h2>
+    <p class="close-cta-body">The $397 Audit shows you exactly where your website loses leads and whether AI search tools know your business exists. The right first step before any build decision.</p>
+    <a href="/audit" class="btn btn-teal">
+      Get the Audit
       <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
-    <p class="close-cta-note">Your $197 Marketing Audit is included at no charge. Plain English. Always.</p>
+    <p class="close-cta-note">or email <a href="mailto:admin@alitsky.com" style="color:var(--tl);text-decoration:none">admin@alitsky.com</a></p>
   </div>
 </section>
 
@@ -2129,35 +1747,34 @@
           <span class="ft-mark"><svg viewBox="0 0 200 200" fill="currentColor" aria-hidden="true"><path d="M100 20 L112 52 L100 84 L88 52 Z"/><path d="M140 30.72 L134.39 64.43 L108 86.14 L113.61 52.43 Z"/><path d="M169.28 60 L147.57 86.39 L113.86 92 L135.57 65.61 Z"/><path d="M180 100 L148 112 L116 100 L148 88 Z"/><path d="M169.28 140 L135.57 134.39 L113.86 108 L147.57 113.61 Z"/><path d="M140 169.28 L113.61 147.57 L108 113.86 L134.39 135.57 Z"/><path d="M100 180 L88 148 L100 116 L112 148 Z"/><path d="M60 169.28 L65.61 135.57 L92 113.86 L86.39 147.57 Z"/><path d="M30.72 140 L52.43 113.61 L86.14 108 L64.43 134.39 Z"/><path d="M20 100 L52 88 L84 100 L52 112 Z"/><path d="M30.72 60 L64.43 65.61 L86.14 92 L52.43 86.39 Z"/><path d="M60 30.72 L86.39 52.43 L92 86.14 L65.61 64.43 Z"/></svg></span>
           <span class="ft-name">A Light in the Sky</span>
         </div>
-        <p class="ft-tag">You built something real. We make sure the world can find it.</p>
+        <p class="ft-tag">Custom AI-built websites and lead-response systems for local service businesses. Starting with HVAC.</p>
+        <p class="ft-mono" style="margin-top:1rem">Indianapolis, Indiana<br>Serving businesses nationwide</p>
       </div>
       <div>
-        <span class="ft-col-h">What we build</span>
+        <span class="ft-col-h">Services</span>
         <ul class="ft-list">
-          <li><a href="#system">GEO &amp; AI Visibility</a></li>
-          <li><a href="#system">Websites</a></li>
-          <li><a href="#system">24/7 Digital Receptionist</a></li>
-          <li><a href="#system">Business Automations</a></li>
-          <li><a href="#system">CRM Setup</a></li>
+          <li><a href="#services">AI Visibility Audit — $397</a></li>
+          <li><a href="#services">Custom AI-Built Website — $3,500</a></li>
+          <li><a href="#services">Website + AI Lead Response — $6,500+</a></li>
+          <li><a href="#services">Monthly Monitoring — $750/mo</a></li>
+          <li><a href="#services">AI Implementation Rescue — $1,000+</a></li>
         </ul>
       </div>
       <div>
         <span class="ft-col-h">Company</span>
         <ul class="ft-list">
           <li><a href="#how-it-works">How It Works</a></li>
-          <li><a href="#results">Results</a></li>
-          <li><a href="#packages">Packages</a></li>
+          <li><a href="#standards">Operating Standards</a></li>
           <li><a href="/free-guide">Free Guide</a></li>
-          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
       <div>
         <span class="ft-col-h">Contact</span>
         <ul class="ft-list">
           <li><a href="mailto:admin@alitsky.com">admin@alitsky.com</a></li>
-          <li><a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer">Book a Free 45-Minute Call</a></li>
+          <li><a href="/audit">Start with the Audit</a></li>
         </ul>
-        <p class="ft-mono" style="margin-top:1rem">Indianapolis, Indiana<br>Serving businesses nationwide</p>
       </div>
     </div>
     <div class="ft-bot">
