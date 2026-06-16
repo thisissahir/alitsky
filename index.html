@@ -1103,6 +1103,52 @@
       .proof-stats-row .ps { padding: 0.8rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
       .proof-stats-row .ps:last-child { border-bottom: 0; }
     }
+
+    /* ============================================================
+       COMPARE — good vs bad website (matches shared design file)
+       ============================================================ */
+    .compare { background: var(--dk2); padding: 84px 0 92px; }
+    .compare-h {
+      text-align: center; font-size: clamp(1.8rem, 3.4vw, 2.6rem); font-weight: 800;
+      color: #fff; letter-spacing: -0.025em; line-height: 1.15; margin: 0 auto 3rem;
+      max-width: 760px;
+    }
+    .compare-h .g { color: var(--tl); }
+    .compare-h .b { color: var(--rust); }
+    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 1080px; margin: 0 auto; }
+    .compare-col {
+      background: var(--dk); border: 1px solid var(--bd); border-radius: 16px;
+      padding: 1.9rem 1.9rem 2.1rem;
+    }
+    .compare-col.good { border-color: rgba(25,194,206,0.25); }
+    .compare-col.bad { border-color: rgba(238,90,42,0.22); }
+    .compare-col-h {
+      display: flex; align-items: center; gap: 0.65rem;
+      font-family: var(--m); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+      padding-bottom: 1.1rem; margin-bottom: 1.2rem; border-bottom: 1px solid var(--bd);
+    }
+    .compare-col.bad .compare-col-h { color: var(--rust); }
+    .compare-col.good .compare-col-h { color: var(--tl); }
+    .compare-col-h .badge {
+      width: 26px; height: 26px; border-radius: 50%; flex: none;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .compare-col.bad .badge { background: rgba(238,90,42,0.12); }
+    .compare-col.good .badge { background: rgba(25,194,206,0.14); }
+    .compare-col-h .badge svg { width: 13px; height: 13px; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+    .compare-col.bad .badge svg { stroke: var(--rust); }
+    .compare-col.good .badge svg { stroke: var(--tl); }
+    .compare-col-h b { color: #fff; font-weight: 700; }
+    .compare-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.95rem; }
+    .compare-list li { display: flex; align-items: flex-start; gap: 0.8rem; font-size: 15px; color: rgba(255,255,255,0.8); line-height: 1.45; }
+    .compare-list li svg { width: 18px; height: 18px; flex: none; margin-top: 1px; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .compare-col.bad .compare-list li svg { stroke: var(--rust); opacity: 0.85; }
+    .compare-col.good .compare-list li svg { stroke: var(--tl); }
+
+    @media (max-width: 760px) {
+      .compare-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .compare { padding: 60px 0 64px; }
+    }
   </style>
 </head>
 
@@ -1268,6 +1314,45 @@
       <span class="stat-n" data-count="14.2" data-suffix="%" data-fmt="dec1">0.0%</span>
       <span class="stat-l">conversion rate from recommendation search</span>
       <span class="stat-sub">vs 2.8% from standard Google search</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============== COMPARE: good vs bad website ============== -->
+<section class="compare" aria-labelledby="compare-h">
+  <div class="wrap fade">
+    <h2 class="compare-h" id="compare-h">A <span class="g">good</span> AI-ready website vs a <span class="b">bad</span> one.</h2>
+    <div class="compare-grid">
+      <div class="compare-col bad">
+        <div class="compare-col-h">
+          <span class="badge"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+          Typical template site
+        </div>
+        <ul class="compare-list">
+          <li><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Slow, bloated templates</li>
+          <li><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Weak structure &amp; unclear hierarchy</li>
+          <li><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Thin content that doesn't answer questions</li>
+          <li><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>No schema or AI-friendly markup</li>
+          <li><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Generic copy with no local intent</li>
+          <li><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Hard to find in search and AI answers</li>
+          <li><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Low leads. Missed opportunities.</li>
+        </ul>
+      </div>
+      <div class="compare-col good">
+        <div class="compare-col-h">
+          <span class="badge"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          AI-ready site built by <b>&nbsp;A Light in the Sky</b>
+        </div>
+        <ul class="compare-list">
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Lightning-fast, Core Web Vitals optimized</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Clear structure built for users and AI</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Answer-ready content that builds trust</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Schema markup for rich results &amp; AI visibility</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Local intent throughout every page</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Built to rank in search and appear in AI answers</li>
+          <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>More calls, more jobs, more growth.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
