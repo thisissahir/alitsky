@@ -225,9 +225,26 @@
       max-width: 480px; margin-bottom: 2rem;
     }
     .hero-body strong { color: #fff; font-weight: 600; }
-    .hero-ctas { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-bottom: 1.75rem; }
+    .hero-ctas { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-bottom: 0.9rem; }
+    .hero-microcopy { font-family: var(--m); font-size: 11px; letter-spacing: 0.04em; color: var(--dim); margin: 0 0 1.6rem; }
+    /* Hero checklist card (replaces the dashboard) */
+    .checkcard {
+      background: linear-gradient(160deg, #0C2A32 0%, #08222A 100%);
+      border: 1px solid var(--bd2); border-radius: 16px;
+      padding: 1.6rem 1.7rem 1.5rem; box-shadow: 0 40px 80px -30px rgba(0,0,0,0.7);
+    }
+    .checkcard-head {
+      font-family: var(--m); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--tl); margin-bottom: 1.25rem;
+    }
+    .checkcard-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; }
+    .checkcard-list li { display: flex; align-items: flex-start; gap: 0.85rem; }
+    .checkcard-list li svg { width: 20px; height: 20px; flex: none; margin-top: 1px; fill: none; stroke: var(--tl); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .checkcard-list li b { display: block; font-size: 14.5px; font-weight: 700; color: #fff; letter-spacing: -0.01em; }
+    .checkcard-list li span { display: block; font-size: 12.5px; color: rgba(255,255,255,0.5); margin-top: 0.15rem; }
+    .checkcard-foot { margin-top: 1.4rem; padding-top: 1.1rem; border-top: 1px solid var(--bd); font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.5; }
     /* Be found line */
-    .hero-found { display: flex; align-items: center; gap: 0.65rem; padding: 1.4rem 0; border-top: 1px solid var(--bd); }
+    .hero-found { display: flex; align-items: center; gap: 0.65rem; padding: 1.4rem 0 0; border-top: 1px solid var(--bd); }
     .hero-found-ico { width: 22px; height: 22px; color: var(--tl); flex: none; }
     .hero-found-ico svg { width: 100%; height: 100%; }
     .hero-found-text { font-family: var(--m); font-size: 11px; letter-spacing: 0.06em; color: var(--dim); }
@@ -1318,13 +1335,12 @@
           <path d="M60 30.72 L86.39 52.43 L92 86.14 L65.61 64.43 Z"/>
         </svg>
       </span>
-      <span class="nav-name">A Light in the Sky</span>
+      <span class="nav-name">A LIGHT IN THE SKY</span>
     </a>
     <div class="nav-links">
       <a href="#services">Services</a>
       <a href="#how-it-works">How It Works</a>
-      <a href="#standards">Standards</a>
-      <a href="/free-guide">Free Guide</a>
+      <a href="#faq">FAQ</a>
     </div>
     <a href="/audit" class="nav-cta">Start With the Audit
       <svg viewBox="0 0 16 16" style="width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -1337,116 +1353,42 @@
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <p class="hero-eyebrow">For the people who build the real things</p>
-        <h1 id="hero-h">You built a good business.</h1>
-        <h2 class="rust">We make sure it runs like one online.</h2>
+        <p class="hero-eyebrow">Websites for HVAC &amp; home service businesses</p>
         <p class="hero-pain">You are losing calls because customers cannot find you, cannot trust you, or cannot reach you fast enough.</p>
+        <h1 id="hero-h">Built to be found.<br><span class="rust">Built to get booked.</span></h1>
         <p class="hero-body">
-          We build fast, AI-ready websites for HVAC and home service businesses — built so Google
-          and AI search can find you, and built to turn visitors into booked calls.
+          We build fast, custom websites for HVAC and home service businesses. Your customers are
+          searching on Google, maps, and AI tools. We make your business easy to find, easy to
+          trust, and easy to call.
         </p>
         <div class="hero-ctas">
           <a href="/audit" class="btn btn-dark">
-            Start With the $397 Audit
+            Start With the $197 Founding Audit
             <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a href="#services" class="btn btn-ghost-dk">See All Services</a>
+          <a href="#services" class="btn btn-ghost-dk">Explore Services</a>
         </div>
+        <p class="hero-microcopy">Founding rate: $197. Standard audit: $397.</p>
         <div class="hero-found">
           <span class="hero-found-ico" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg>
           </span>
-          <span class="hero-found-text"><b>Be found.</b> In AI search. In your city. Before your competitor is.</span>
-        </div>
-        <div class="hero-stack">
-          <span class="hero-stack-label">Build Stack</span>
-          <div class="hero-stack-chips">
-            <span class="chip">Claude Code</span>
-            <span class="chip">Claude Design</span>
-            <span class="chip">Vercel</span>
-            <span class="chip">Custom JSON-LD Schema</span>
-            <span class="chip">Google Search Console</span>
-            <span class="chip">Claude API</span>
-          </div>
+          <span class="hero-found-text"><b>Be found.</b> In AI search. In your city. Before your competitor.</span>
         </div>
       </div>
 
       <div class="hero-visual" aria-hidden="true">
-        <!-- AI Readiness dashboard mockup -->
-        <div class="dash">
-          <div class="dash-head"><span>AI Readiness Overview</span><span class="dash-example">Example</span></div>
-          <div class="dash-tiles">
-            <div class="dash-tile">
-              <div class="dash-tile-label">AI Visibility</div>
-              <div class="dash-metric tl">92<span class="unit"> /100</span></div>
-              <div class="dash-status"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.5 3.5L13 4"/></svg> Excellent</div>
-            </div>
-            <div class="dash-tile">
-              <div class="dash-tile-label">Page Speed</div>
-              <div class="dash-metric tl">98<span class="unit"> /100</span></div>
-              <div class="dash-status"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.5 3.5L13 4"/></svg> Fast</div>
-            </div>
-            <div class="dash-tile">
-              <div class="dash-tile-label">Lead Potential</div>
-              <div class="dash-metric tl" style="font-size:1.4rem;padding-top:0.3rem">High</div>
-              <div class="dash-status"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.5 3.5L13 4"/></svg> Strong</div>
-            </div>
-          </div>
-          <div class="dash-row">
-            <div class="dash-panel">
-              <div class="dash-panel-h">Performance Over Time</div>
-              <div class="dash-chart">
-                <svg viewBox="0 0 200 64" preserveAspectRatio="none">
-                  <defs>
-                    <linearGradient id="dashfill" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stop-color="rgba(25,194,206,0.35)"/>
-                      <stop offset="100%" stop-color="rgba(25,194,206,0)"/>
-                    </linearGradient>
-                  </defs>
-                  <path d="M0,52 L33,46 L66,40 L100,30 L133,22 L166,12 L200,6 L200,64 L0,64 Z" fill="url(#dashfill)"/>
-                  <path d="M0,52 L33,46 L66,40 L100,30 L133,22 L166,12 L200,6" fill="none" stroke="var(--tl)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <div class="dash-xlabels"><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span></div>
-            </div>
-            <div class="dash-panel">
-              <div class="dash-panel-h">Top Channels</div>
-              <div class="chan">
-                <div class="chan-row">
-                  <div class="chan-top">AI Search <b>68%</b></div>
-                  <div class="chan-bar"><span style="width:68%"></span></div>
-                </div>
-                <div class="chan-row">
-                  <div class="chan-top">Google Search <b>22%</b></div>
-                  <div class="chan-bar"><span style="width:22%"></span></div>
-                </div>
-                <div class="chan-row">
-                  <div class="chan-top">Direct <b>10%</b></div>
-                  <div class="chan-bar"><span style="width:10%"></span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Sample client website preview -->
-        <div class="siteprev">
-          <div class="siteprev-bar">
-            <span class="siteprev-brand">
-              <svg viewBox="0 0 200 200"><path d="M100 20 L112 52 L100 84 L88 52 Z"/><path d="M180 100 L148 112 L116 100 L148 88 Z"/><path d="M100 180 L88 148 L100 116 L112 148 Z"/><path d="M20 100 L52 88 L84 100 L52 112 Z"/></svg>
-              Northside Wellness
-            </span>
-            <span class="siteprev-nav"><span>Services</span><span>About</span><span>Reviews</span><span class="pill">Book Now</span></span>
-          </div>
-          <div class="siteprev-body">
-            <div class="siteprev-h">Care that shows up.<br>Booked in seconds.</div>
-            <p class="siteprev-p">Massage, recovery, and wellness — found by the people searching for it right now.</p>
-            <div class="siteprev-ctas">
-              <span class="a1">Book Service</span>
-              <span class="a2">View Services</span>
-            </div>
-            <div class="siteprev-rating">Sample build — an AI-ready site reads clean to Google and AI search</div>
-          </div>
+        <div class="checkcard">
+          <div class="checkcard-head">Before launch, we check</div>
+          <ul class="checkcard-list">
+            <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><div><b>Page speed</b><span>Fast load on every phone</span></div></li>
+            <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><div><b>Mobile experience</b><span>Easy to read, tap, and call</span></div></li>
+            <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><div><b>Local SEO structure</b><span>Built so Google knows your area</span></div></li>
+            <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><div><b>AI answer readiness</b><span>Structured so AI tools can read you</span></div></li>
+            <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><div><b>Structured data</b><span>Schema on every page</span></div></li>
+            <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg><div><b>Lead capture path</b><span>A clear way from visitor to call</span></div></li>
+          </ul>
+          <div class="checkcard-foot">Every site is checked against this list before it goes live.</div>
         </div>
       </div>
     </div>
