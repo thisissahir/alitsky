@@ -31,6 +31,7 @@
     a.nl.active{color:#38bdd0;}
     a.cta{background:#e0531f;color:#fff;text-decoration:none;font-weight:700;letter-spacing:.05em;border-radius:8px;display:inline-flex;align-items:center;gap:8px;transition:background .15s,transform .15s;}
     a.cta:hover{background:#c8471a;transform:translateY(-1px);}
+    a.mcta{display:none;}
     a.ghost{background:rgba(8,25,43,.4);color:#f4f8f9;text-decoration:none;font-weight:600;letter-spacing:.04em;border-radius:8px;border:1px solid rgba(150,170,180,.45);display:inline-flex;align-items:center;transition:border-color .15s;}
     a.ghost:hover{border-color:rgba(190,210,220,.8);}
     a.fl{color:#c6d2d6;text-decoration:none;font-size:14px;transition:color .15s;}
@@ -38,6 +39,7 @@
     .strike{text-decoration:line-through;opacity:.65;margin-right:7px;font-weight:600;}
     @media(max-width:980px){
       .sv-nav-links{display:none!important;}
+      .mcta{display:inline-flex!important;}
       .sv-diff-grid{grid-template-columns:1fr!important;}
       .sv-check-grid{grid-template-columns:1fr 1fr!important;}
       .sv-path-grid{grid-template-columns:1fr 1fr!important;}
@@ -69,6 +71,7 @@
           <a href="/faq" class="nl">FAQ</a>
           <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="cta" style="font-size:13px;padding:13px 20px;">START WITH THE <span style="white-space:nowrap;"><span class="strike">$195</span>FREE</span> AUDIT <span style="font-size:15px;">&#8594;</span></a>
         </nav>
+        <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="cta mcta" style="font-size:12px;padding:11px 15px;letter-spacing:.04em;">FREE AUDIT <span style="font-size:14px;">&#8594;</span></a>
       </div>
     </header>
 
@@ -86,7 +89,7 @@
   <!-- ===== THE OFFER STEPS ===== -->
   <section id="offer" style="background-color:#0b1f2d;background-image:radial-gradient(125% 95% at 50% -8%,rgba(21,51,74,.9) 0%,transparent 52%),radial-gradient(circle at 18% 30%,rgba(205,224,228,.2) 0 1px,transparent 1.4px),radial-gradient(circle at 82% 64%,rgba(205,224,228,.16) 0 1px,transparent 1.4px),radial-gradient(circle at 46% 88%,rgba(205,224,228,.14) 0 1px,transparent 1.4px);">
     <div style="max-width:1160px;margin:0 auto;padding:88px 28px;">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(384px,1fr));gap:26px;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(384px,100%),1fr));gap:26px;">
         <div style="position:relative;background:#102836;border:1px solid rgba(120,180,210,.16);border-radius:18px;padding:42px 44px 38px;box-shadow:0 24px 60px -30px rgba(0,0,0,.7);display:flex;flex-direction:column;">
           <div style="width:60px;height:60px;border-radius:15px;background:rgba(30,58,138,.3);display:flex;align-items:center;justify-content:center;color:#5fd6e6;margin-bottom:28px;">
             <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6.6"/><line x1="14.9" y1="14.9" x2="20.6" y2="20.6"/></svg>

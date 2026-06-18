@@ -31,6 +31,7 @@
     a.nl.active{color:#38bdd0;}
     a.cta{background:#e0531f;color:#fff;text-decoration:none;font-weight:700;letter-spacing:.05em;border-radius:8px;display:inline-flex;align-items:center;gap:8px;transition:background .15s,transform .15s;}
     a.cta:hover{background:#c8471a;transform:translateY(-1px);}
+    a.mcta{display:none;}
     a.ghost{background:rgba(8,25,43,.4);color:#f4f8f9;text-decoration:none;font-weight:600;letter-spacing:.04em;border-radius:8px;border:1px solid rgba(150,170,180,.45);display:inline-flex;align-items:center;transition:border-color .15s;}
     a.ghost:hover{border-color:rgba(190,210,220,.8);}
     a.fl{color:#c6d2d6;text-decoration:none;font-size:14px;transition:color .15s;}
@@ -43,6 +44,7 @@
     @media (prefers-reduced-motion: reduce){[data-jig],[data-step]{animation:none !important;}}
     @media(max-width:980px){
       .hp-nav-links{display:none!important;}
+      .mcta{display:inline-flex!important;}
       .hp-why-grid{grid-template-columns:1fr!important;gap:40px!important;}
       .hp-believe-grid{grid-template-columns:1fr 1fr!important;}
       .hp-work-row{flex-direction:column!important;gap:36px!important;}
@@ -82,6 +84,7 @@
           <a href="/faq" class="nl">FAQ</a>
           <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="cta" style="font-size:13px;padding:13px 20px;">START WITH THE <span style="white-space:nowrap;"><span class="strike">$195</span>FREE</span> AUDIT <span style="font-size:15px;">&#8594;</span></a>
         </nav>
+        <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="cta mcta" style="font-size:12px;padding:11px 15px;letter-spacing:.04em;">FREE AUDIT <span style="font-size:14px;">&#8594;</span></a>
       </div>
     </header>
 
