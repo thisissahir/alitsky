@@ -2,186 +2,282 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>About | A Light in the Sky</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="We came here to solve one problem. Good businesses fail because they are invisible. That is the only problem we came here to solve.">
-  <meta name="theme-color" content="#051a23">
+  <title>About | A Light in the Sky</title>
+  <meta name="description" content="Hi, we are Sahir and Madysan Bell — the husband-and-wife team behind A Light in the Sky. We build fast, trustworthy websites and online systems for local businesses that need more calls, bookings, and quote requests.">
+  <meta name="theme-color" content="#0b1f31">
+  <link rel="icon" type="image/svg+xml" href="/assets/logo-mark-small.svg">
   <link rel="canonical" href="https://www.alitsky.com/about">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="A Light in the Sky">
   <meta property="og:url" content="https://www.alitsky.com/about">
   <meta property="og:title" content="About | A Light in the Sky">
-  <meta property="og:description" content="We came here to solve one problem. Good businesses fail because they are invisible. That is the only problem we came here to solve.">
+  <meta property="og:description" content="The husband-and-wife team behind A Light in the Sky. We help local businesses get found, trusted, and contacted online.">
   <meta property="og:image" content="https://www.alitsky.com/assets/og-card.svg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="About | A Light in the Sky">
-  <meta name="twitter:description" content="We came here to solve one problem. Good businesses fail because they are invisible. That is the only problem we came here to solve.">
+  <meta name="twitter:description" content="The husband-and-wife team behind A Light in the Sky. We help local businesses get found, trusted, and contacted online.">
   <meta name="twitter:image" content="https://www.alitsky.com/assets/og-card.svg">
-  <link rel="icon" type="image/svg+xml" href="/assets/logo-mark-small.svg">
-  <link rel="stylesheet" href="/colors_and_type.css">
-  <link rel="stylesheet" href="/kit.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;}
+    html,body{margin:0;padding:0;}
+    body{font-family:'Sora',system-ui,sans-serif;background:#0b1f31;-webkit-font-smoothing:antialiased;}
+    ::selection{background:rgba(224,83,31,.3);}
+    @keyframes alSpin{to{transform:rotate(360deg);}}
+    @keyframes alSpinR{to{transform:rotate(-360deg);}}
+    @keyframes alPulse{0%,100%{opacity:.45;}50%{opacity:.95;}}
+    @keyframes alSweep{0%,100%{transform:rotate(-24deg);}50%{transform:rotate(24deg);}}
+    @keyframes alNeedle{0%,100%{transform:rotate(-7deg);}50%{transform:rotate(7deg);}}
+    a.nl{color:#d3dde0;text-decoration:none;font-size:16px;transition:color .15s;}
+    a.nl:hover{color:#38bdd0;}
+    a.nl.active{color:#38bdd0;}
+    a.cta{background:#e0531f;color:#fff;text-decoration:none;font-weight:700;letter-spacing:.05em;border-radius:8px;display:inline-flex;align-items:center;gap:8px;transition:background .15s,transform .15s;}
+    a.cta:hover{background:#c8471a;transform:translateY(-1px);}
+    a.fl{color:#c6d2d6;text-decoration:none;font-size:14px;transition:color .15s;}
+    a.fl:hover{color:#38bdd0;}
+    .strike{text-decoration:line-through;opacity:.65;margin-right:7px;font-weight:600;}
+    @media(max-width:860px){
+      .ab-nav-links{display:none!important;}
+      .ab-mv-grid{grid-template-columns:1fr!important;}
+      .ab-val-grid{grid-template-columns:1fr!important;}
+      .ab-ft-grid{grid-template-columns:1fr 1fr!important;}
+      .ab-h1{font-size:40px!important;}
+      .ab-h2{font-size:30px!important;}
+    }
+  </style>
 </head>
 <body>
+<div style="width:100%;overflow:hidden;background:#0b1f31;color:#eaf1f3;">
 
-  <!-- ============ NAV ============ -->
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a href="/" class="nav-brand">
-        <img src="/assets/logo-mark-small.svg" width="32" height="32" alt="">
-        <span class="nav-brand-name">A Light in the Sky</span>
+  <!-- ===== TOP NAV ===== -->
+  <header style="position:relative;z-index:5;background:#0b1f31;border-bottom:1px solid rgba(120,180,210,.12);">
+    <div style="max-width:1180px;margin:0 auto;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+      <a href="/" style="display:flex;align-items:center;gap:13px;text-decoration:none;color:inherit;">
+        <img src="/assets/logo-mark-small-reverse.svg" alt="A Light in the Sky mark" style="width:30px;height:30px;display:block;" />
+        <span style="font-size:20px;font-weight:700;letter-spacing:.12em;">A LIGHT IN THE SKY</span>
       </a>
-      <div class="nav-links">
-        <a href="/#system">The System</a>
-        <a href="/#proof">Results</a>
-        <a href="/#packages">Packages</a>
-        <a href="/#faq">FAQ</a>
+      <nav class="ab-nav-links" style="display:flex;align-items:center;gap:38px;">
+        <a href="/#services" class="nl">Services</a>
+        <a href="/#how-it-works" class="nl">How It Works</a>
+        <a href="/about" class="nl active">About</a>
+        <a href="/#faq" class="nl">FAQ</a>
+        <a href="/audit" class="cta" style="font-size:13px;padding:13px 20px;">START WITH THE <span style="white-space:nowrap;"><span class="strike">$195</span>FREE</span> AUDIT <span style="font-size:15px;">&#8594;</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== FOUNDERS (dark starfield) ===== -->
+  <section style="background-color:#0b1f31;background-image:radial-gradient(ellipse 60% 45% at 70% 4%,rgba(110,175,200,.12),transparent 72%),repeating-radial-gradient(circle at 72% -34%,transparent 0 8px,rgba(190,216,226,.05) 8px 8.6px,transparent 8.6px 16px),radial-gradient(circle at 16% 26%,rgba(205,224,228,.32) 0 1px,transparent 1.4px),radial-gradient(circle at 40% 14%,rgba(205,224,228,.22) 0 1px,transparent 1.4px),radial-gradient(circle at 86% 60%,rgba(205,224,228,.26) 0 1px,transparent 1.4px),radial-gradient(circle at 60% 84%,rgba(205,224,228,.2) 0 1px,transparent 1.4px),radial-gradient(circle at 28% 70%,rgba(205,224,228,.18) 0 1px,transparent 1.4px);">
+    <div style="max-width:1120px;margin:0 auto;padding:96px 28px;">
+      <div style="text-align:center;color:#38bdd0;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-bottom:14px;">The founders</div>
+      <h2 class="ab-h2" style="text-align:center;font-size:40px;font-weight:600;letter-spacing:-.02em;margin:0 0 16px;color:#f4f8f9;">Hi, we are Sahir and Madysan Bell.</h2>
+      <p style="text-align:center;font-size:18px;line-height:1.6;color:#9fb2bd;margin:0 auto 56px;max-width:600px;">The husband-and-wife team behind A Light in the Sky. Sahir is the graphic designer. Madysan is the tech geek. Together, we build fast, trustworthy websites and online systems for local businesses that need more calls, bookings, and quote requests.</p>
+
+      <div style="width:280px;height:280px;margin:0 auto 48px;border-radius:50%;overflow:hidden;border:3px solid rgba(56,189,208,.35);box-shadow:0 30px 70px rgba(4,12,22,.55);position:relative;">
+        <img src="/assets/founders.jpg" alt="Sahir and Madysan Bell" style="display:block;width:100%;height:100%;object-fit:cover;object-position:50% 30%;" />
       </div>
-      <a href="/contact" class="nav-cta">Talk to us</a>
-    </div>
-  </nav>
 
-  <!-- ============ HERO ============ -->
-  <section class="page-hero">
-    <div class="container">
-      <span class="eyebrow">About</span>
-      <h1>We came here to solve one problem.</h1>
-      <p class="subhead">Good businesses fail because they are invisible. That is the only problem we came here to solve.</p>
-    </div>
-  </section>
-
-  <!-- ============ NARRATIVE ============ -->
-  <section class="page-section" style="padding-top: 24px;">
-    <div class="container">
-      <div class="narrative">
-        <p>It started with a simple observation. The best businesses we knew were losing to worse ones. Not because they were less skilled. Not because they cared less. Because they were invisible.</p>
-
-        <p>The plumber who has been in the same neighbourhood for twenty years, losing jobs to someone who just showed up with a better website. The restaurant that has fed the same families for a decade, buried under a competitor with more Google reviews. The contractor whose work speaks for itself, but only to the people who already found him.</p>
-
-        <p>That invisibility is not a technology problem. It is not a marketing problem. It is a fairness problem. And it is one we know how to fix.</p>
-
-        <p>Every business we touch gets built for where the world is going, not just where it is. That means websites that AI systems can read, understand, and recommend. It means infrastructure that grows as your business grows. It means making decisions today that do not need to be undone in two years. The digital world is moving faster than most businesses can track. We track it for you, so you never fall behind the curve you did not even know existed.</p>
-
-        <p>We do not sell what we cannot build. We do not pitch until we understand what you need. And we do not stop until your business is found. Today, and five years from now.</p>
+      <div style="background:#0c2336;border:1px solid rgba(56,189,208,.22);border-radius:16px;padding:40px 42px;box-shadow:0 22px 50px rgba(4,12,22,.4);">
+        <div style="font-size:60px;line-height:.5;color:#38bdd0;font-family:Georgia,serif;height:30px;">&ldquo;</div>
+        <p style="font-size:19px;line-height:1.7;color:#dfe7e8;margin:0 0 18px;max-width:820px;">We know how much heart it takes to run a real business. Long days, missed messages, late nights, early mornings, and the pressure to keep everything moving. We care about making sure that hard work is not hidden behind a website that does not help people find you, trust you, and contact you.</p>
+        <p style="font-size:19px;line-height:1.7;color:#dfe7e8;margin:0 0 22px;max-width:820px;">When we take on a project, we treat it with care. Clear communication, honest recommendations, thoughtful design, and work we are proud to put our name on.</p>
+        <div style="display:flex;align-items:center;gap:12px;"><span style="width:26px;height:1px;background:#38bdd0;display:block;"></span><span style="font-size:15px;color:#9fb2bd;">Sahir &amp; Madysan Bell, founders</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ============ MISSION / VISION ============ -->
-  <section class="page-section surface">
-    <div class="container">
-      <div class="mission-vision-grid">
-        <div class="mission-vision-item">
-          <span class="eyebrow">Mission</span>
-          <p class="mission-vision-text">To make every good business visible, today and in the world that is coming.</p>
+  <!-- ===== MISSION & VISION (cream) ===== -->
+  <section style="background:linear-gradient(155deg,#e4f1f6 0%,#eff7f9 46%,#ffffff 100%);color:#0B2030;">
+    <div style="max-width:1120px;margin:0 auto;padding:96px 28px;">
+      <div class="ab-mv-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:28px;">
+        <div style="position:relative;background:linear-gradient(180deg,#ffffff 0%,#fafdfe 100%);border:1px solid #d8e7ec;border-radius:20px;padding:46px 44px;box-shadow:0 34px 64px -20px rgba(11,32,48,.24),0 8px 20px rgba(11,32,48,.07),inset 0 1px 0 rgba(255,255,255,.9);">
+          <div style="position:relative;width:150px;height:150px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:radial-gradient(circle at 50% 36%,#f4faff 0%,#e9f3fc 56%,#dbeaf6 100%);box-shadow:inset 0 2px 6px rgba(255,255,255,.95),inset 0 -11px 22px rgba(46,131,230,.14),0 22px 40px -8px rgba(46,131,230,.30),0 5px 12px rgba(11,32,48,.10);border:1px solid rgba(46,131,230,.18);margin-bottom:30px;">
+            <div style="position:absolute;inset:11px;border-radius:50%;border:1px solid rgba(46,131,230,.12);pointer-events:none;"></div>
+            <svg width="108" height="108" viewBox="0 0 220 220" fill="none" style="overflow:visible;position:relative;">
+            <defs>
+              <linearGradient id="abMBeam" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#1f6fd6" stop-opacity="0"/><stop offset="1" stop-color="#2e83e6" stop-opacity=".5"/></linearGradient>
+              <radialGradient id="abMHub" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#3d8de8" stop-opacity=".85"/><stop offset="1" stop-color="#2e83e6" stop-opacity="0"/></radialGradient>
+            </defs>
+            <g style="transform-box:view-box;transform-origin:110px 110px;animation:alSpin 70s linear infinite;"><circle cx="110" cy="110" r="96" stroke="#2e83e6" stroke-opacity=".5" stroke-width="1.6" stroke-dasharray="1.6 11"/></g>
+            <g style="transform-box:view-box;transform-origin:110px 110px;animation:alSpinR 95s linear infinite;"><circle cx="110" cy="110" r="80" stroke="#2e83e6" stroke-opacity=".22" stroke-width="1.3"/><circle cx="110" cy="110" r="70" stroke="#2e83e6" stroke-opacity=".3" stroke-width="1.3" stroke-dasharray="1.6 19"/></g>
+            <g stroke="#2e83e6" stroke-opacity=".6" stroke-width="2.6" stroke-linecap="round"><line x1="110" y1="40" x2="110" y2="18"/><line x1="180" y1="110" x2="202" y2="110"/><line x1="110" y1="180" x2="110" y2="202"/><line x1="40" y1="110" x2="18" y2="110"/></g>
+            <g style="transform-box:view-box;transform-origin:110px 110px;animation:alSweep 7s ease-in-out infinite;"><path d="M110 110 L84 30 L136 30 Z" fill="url(#abMBeam)"/><line x1="110" y1="110" x2="84" y2="30" stroke="#3d8de8" stroke-opacity=".7" stroke-width="1.6" stroke-linecap="round"/><line x1="110" y1="110" x2="136" y2="30" stroke="#3d8de8" stroke-opacity=".7" stroke-width="1.6" stroke-linecap="round"/></g>
+            <g style="transform-box:view-box;transform-origin:110px 110px;animation:alNeedle 6s ease-in-out infinite;"><path d="M110 64 L118 110 L102 110 Z" fill="#2e83e6"/><path d="M110 156 L118 110 L102 110 Z" fill="#2e83e6" fill-opacity=".3"/></g>
+            <circle cx="110" cy="110" r="22" fill="url(#abMHub)"/><circle cx="110" cy="110" r="5.5" fill="#ffffff" stroke="#2e83e6" stroke-width="2.4"/>
+            <circle cx="110" cy="28" r="11" fill="#2e83e6" fill-opacity=".22" style="transform-box:view-box;transform-origin:110px 28px;animation:alPulse 2.6s ease-in-out infinite;"/><path d="M110 18 L112.5 25.5 L120 28 L112.5 30.5 L110 38 L107.5 30.5 L100 28 L107.5 25.5 Z" stroke="#2e83e6" stroke-width="1.8" stroke-linejoin="round" fill="#ffffff"/>
+          </svg></div>
+          <div style="color:#0E4858;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px;">Our mission</div>
+          <h3 style="font-size:28px;line-height:1.2;font-weight:600;letter-spacing:-.01em;margin:0 0 16px;color:#0B2030;">Help hard-working local businesses get found, trusted, and contacted online.</h3>
+          <p style="font-size:17px;line-height:1.65;color:#4a5f6b;margin:0;">We build websites, search structure, AI-readiness, and lead-capture systems that make it easier for real customers to find you on Google, understand you in AI search, trust what they see, and take the next step. So you can stop wondering whether your website is even working, and start knowing people can find you.</p>
         </div>
-        <div class="mission-vision-item">
-          <span class="eyebrow">Vision</span>
-          <p class="mission-vision-text">A world where the best business in the room is also the one that gets found first.</p>
+        <div style="position:relative;background:linear-gradient(180deg,#ffffff 0%,#fafdfe 100%);border:1px solid #d8e7ec;border-radius:20px;padding:46px 44px;box-shadow:0 34px 64px -20px rgba(11,32,48,.24),0 8px 20px rgba(11,32,48,.07),inset 0 1px 0 rgba(255,255,255,.9);">
+          <div style="position:relative;width:150px;height:150px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:radial-gradient(circle at 50% 36%,#f1fbfc 0%,#e1f4f7 56%,#d2ecf0 100%);box-shadow:inset 0 2px 6px rgba(255,255,255,.95),inset 0 -11px 22px rgba(23,168,191,.14),0 22px 40px -8px rgba(23,168,191,.30),0 5px 12px rgba(11,32,48,.10);border:1px solid rgba(23,168,191,.20);margin-bottom:30px;">
+            <div style="position:absolute;inset:11px;border-radius:50%;border:1px solid rgba(23,168,191,.12);pointer-events:none;"></div>
+            <svg width="108" height="108" viewBox="0 0 220 220" fill="none" style="overflow:visible;position:relative;">
+            <defs><radialGradient id="abVCore" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#17a8bf" stop-opacity=".8"/><stop offset="1" stop-color="#17a8bf" stop-opacity="0"/></radialGradient></defs>
+            <g style="transform-box:view-box;transform-origin:110px 110px;animation:alSpin 72s linear infinite;"><circle cx="110" cy="110" r="96" stroke="#17a8bf" stroke-opacity=".42" stroke-width="1.5" stroke-dasharray="1.6 12"/><circle cx="110" cy="110" r="86" stroke="#17a8bf" stroke-opacity=".22" stroke-width="3" stroke-dasharray="1.6 22" stroke-linecap="round"/></g>
+            <g style="transform-box:view-box;transform-origin:110px 110px;animation:alSpinR 94s linear infinite;"><circle cx="110" cy="110" r="72" stroke="#17a8bf" stroke-opacity=".2" stroke-width="1.3"/><circle cx="110" cy="110" r="64" stroke="#17a8bf" stroke-opacity=".28" stroke-width="1.3" stroke-dasharray="1.6 16"/></g>
+            <g style="transform-box:view-box;transform-origin:110px 110px;animation:alSpin 38s linear infinite;">
+              <g stroke="#17a8bf" stroke-linejoin="round" stroke-linecap="round">
+                <path d="M92 104 L176 96 Q184 95 184 101 L184 119 Q184 125 176 124 L92 116 Q86 115.5 86 110.5 Q86 104.5 92 104 Z" fill="#e0f3f6" stroke-width="2.4"/>
+                <line x1="120" y1="101" x2="120" y2="119" stroke="#17a8bf" stroke-opacity=".7" stroke-width="2"/><line x1="150" y1="98" x2="150" y2="122" stroke="#17a8bf" stroke-opacity=".7" stroke-width="2"/>
+                <ellipse cx="184" cy="110" rx="5" ry="18" fill="#ffffff" stroke="#17a8bf" stroke-width="2.6"/><ellipse cx="181" cy="110" rx="2.4" ry="10.5" fill="none" stroke="#17a8bf" stroke-opacity=".75" stroke-width="1.5"/>
+                <ellipse cx="86" cy="110" rx="2.6" ry="6.5" fill="#e0f3f6" stroke="#17a8bf" stroke-width="2"/><line x1="81" y1="106" x2="81" y2="114" stroke="#17a8bf" stroke-opacity=".8" stroke-width="2.6"/>
+              </g>
+              <circle cx="186" cy="110" r="11" fill="url(#abVCore)" style="animation:alPulse 3s ease-in-out infinite;"/>
+            </g>
+          </svg></div>
+          <div style="color:#0E4858;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px;">Our vision</div>
+          <h3 style="font-size:28px;line-height:1.2;font-weight:600;letter-spacing:-.01em;margin:0 0 16px;color:#0B2030;">A future where local businesses are never pushed aside by big brands or changing search engines.</h3>
+          <p style="font-size:17px;line-height:1.65;color:#4a5f6b;margin:0;">The AI era should not belong only to companies with huge budgets. It should belong to the salon owner, the plumber, the landscaper, and every owner who carries the business every day. We want to be the trusted husband-and-wife team local owners call when they are ready to stop guessing and finally get seen, chosen, and contacted.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ VALUES ============ -->
-  <section class="page-section">
-    <div class="container">
-      <div class="page-section-head center">
-        <span class="eyebrow">Principles</span>
-        <h2>How we work.</h2>
-      </div>
-      <div class="coverage-grid cols-3">
-
-        <div class="coverage-card">
-          <h3>We do not sell what we cannot build.</h3>
-          <p>Every service on this site is something we have built before and will build again. No promises we cannot keep.</p>
+  <!-- ===== VALUES (dark starfield) ===== -->
+  <section style="background-color:#07182a;background-image:radial-gradient(ellipse 70% 50% at 72% 2%,rgba(110,175,200,.14),transparent 70%),repeating-radial-gradient(circle at 74% -30%,transparent 0 8px,rgba(190,216,226,.055) 8px 8.6px,transparent 8.6px 16px),radial-gradient(circle at 14% 22%,rgba(205,224,228,.35) 0 1.1px,transparent 1.5px),radial-gradient(circle at 82% 16%,rgba(205,224,228,.30) 0 1px,transparent 1.4px),radial-gradient(circle at 64% 60%,rgba(205,224,228,.22) 0 1px,transparent 1.4px),radial-gradient(circle at 26% 78%,rgba(205,224,228,.26) 0 1px,transparent 1.4px),radial-gradient(circle at 92% 72%,rgba(205,224,228,.24) 0 1px,transparent 1.4px);">
+    <div style="max-width:1120px;margin:0 auto;padding:96px 28px;">
+      <div style="text-align:center;color:#38bdd0;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-bottom:14px;">What we stand on</div>
+      <h2 class="ab-h2" style="text-align:center;font-size:40px;font-weight:600;letter-spacing:-.02em;margin:0 0 56px;color:#f4f8f9;">Six commitments that shape every build.</h2>
+      <div class="ab-val-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+        <div style="background:rgba(12,35,54,.5);border:1px solid rgba(56,189,208,.16);border-radius:14px;padding:30px 28px;box-shadow:0 18px 40px rgba(4,12,22,.32);">
+          <div style="font-size:13px;font-weight:700;color:#38bdd0;margin-bottom:12px;">01</div>
+          <div style="font-size:19px;font-weight:700;margin-bottom:10px;color:#f4f8f9;">Customer-centric</div>
+          <p style="font-size:15px;line-height:1.55;color:#9fb2bd;margin:0;">Every decision starts with the person on the other side of the work.</p>
         </div>
-
-        <div class="coverage-card">
-          <h3>Plain English. Always.</h3>
-          <p>No jargon, no acronyms, no hiding behind complexity. You will always know exactly what we are doing and why.</p>
+        <div style="background:rgba(12,35,54,.5);border:1px solid rgba(56,189,208,.16);border-radius:14px;padding:30px 28px;box-shadow:0 18px 40px rgba(4,12,22,.32);">
+          <div style="font-size:13px;font-weight:700;color:#38bdd0;margin-bottom:12px;">02</div>
+          <div style="font-size:19px;font-weight:700;margin-bottom:10px;color:#f4f8f9;">Understanding first</div>
+          <p style="font-size:15px;line-height:1.55;color:#9fb2bd;margin:0;">We listen first. The audit, the questions, the quiet. That is where the real work begins.</p>
         </div>
-
-        <div class="coverage-card">
-          <h3>One honest conversation before anything else.</h3>
-          <p>We do not pitch until we understand your business. If we cannot help you, we will tell you that too.</p>
+        <div style="background:rgba(12,35,54,.5);border:1px solid rgba(56,189,208,.16);border-radius:14px;padding:30px 28px;box-shadow:0 18px 40px rgba(4,12,22,.32);">
+          <div style="font-size:13px;font-weight:700;color:#38bdd0;margin-bottom:12px;">03</div>
+          <div style="font-size:19px;font-weight:700;margin-bottom:10px;color:#f4f8f9;">Customization, not templates</div>
+          <p style="font-size:15px;line-height:1.55;color:#9fb2bd;margin:0;">Your business is not a category. What we build is shaped to your stage and your craft.</p>
         </div>
-
+        <div style="background:rgba(12,35,54,.5);border:1px solid rgba(56,189,208,.16);border-radius:14px;padding:30px 28px;box-shadow:0 18px 40px rgba(4,12,22,.32);">
+          <div style="font-size:13px;font-weight:700;color:#38bdd0;margin-bottom:12px;">04</div>
+          <div style="font-size:19px;font-weight:700;margin-bottom:10px;color:#f4f8f9;">Cohesion across the system</div>
+          <p style="font-size:15px;line-height:1.55;color:#9fb2bd;margin:0;">The site, the SEO, the automations. One connected layer. Nothing fights itself.</p>
+        </div>
+        <div style="background:rgba(12,35,54,.5);border:1px solid rgba(56,189,208,.16);border-radius:14px;padding:30px 28px;box-shadow:0 18px 40px rgba(4,12,22,.32);">
+          <div style="font-size:13px;font-weight:700;color:#38bdd0;margin-bottom:12px;">05</div>
+          <div style="font-size:19px;font-weight:700;margin-bottom:10px;color:#f4f8f9;">Quick to action</div>
+          <p style="font-size:15px;line-height:1.55;color:#9fb2bd;margin:0;">We move once we know what we are building. Weeks, not quarters. Decisions, not status meetings.</p>
+        </div>
+        <div style="background:rgba(12,35,54,.5);border:1px solid rgba(56,189,208,.16);border-radius:14px;padding:30px 28px;box-shadow:0 18px 40px rgba(4,12,22,.32);">
+          <div style="font-size:13px;font-weight:700;color:#38bdd0;margin-bottom:12px;">06</div>
+          <div style="font-size:19px;font-weight:700;margin-bottom:10px;color:#f4f8f9;">Quality you can feel</div>
+          <p style="font-size:15px;line-height:1.55;color:#9fb2bd;margin:0;">Built once, built well. The kind of work that holds up when it matters most.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ GLOBAL ============ -->
-  <section class="page-section">
-    <div class="container">
-      <div class="callout ink">
-        <span class="eyebrow">Global</span>
-        <h3>Built for local. Ready for the world.</h3>
-        <p>The businesses we love most are deeply rooted somewhere: in a neighbourhood, a city, a community. That rootedness is not a limitation. It is a strength we help amplify. But the tools we use, the systems we build, and the reach we create are not limited by geography. We have worked with businesses across the United States, in India, across Europe, and beyond. The problems are the same wherever you are. A great business that nobody can find is a problem we know how to solve, wherever in the world that business happens to be. If you found us, we can help you.</p>
+  <!-- ===== CTA ===== -->
+  <section style="background-color:#0b1f31;background-image:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(110,175,200,.12),transparent 72%),repeating-radial-gradient(circle at 50% -34%,transparent 0 8px,rgba(190,216,226,.05) 8px 8.6px,transparent 8.6px 16px),radial-gradient(circle at 18% 30%,rgba(205,224,228,.26) 0 1px,transparent 1.4px),radial-gradient(circle at 84% 26%,rgba(205,224,228,.22) 0 1px,transparent 1.4px),radial-gradient(circle at 66% 76%,rgba(205,224,228,.18) 0 1px,transparent 1.4px);">
+    <div style="max-width:1120px;margin:0 auto;padding:96px 28px;">
+      <div style="border:1px solid rgba(56,189,208,.3);border-radius:18px;background:#0c2336;padding:48px 48px;box-shadow:0 26px 60px rgba(4,12,22,.5),0 6px 16px rgba(4,12,22,.35);text-align:center;">
+        <img src="/assets/logo-mark-small-reverse.svg" alt="" style="width:52px;height:52px;margin:0 auto 22px;display:block;" />
+        <h2 class="ab-h2" style="font-size:40px;line-height:1.08;font-weight:700;letter-spacing:-.02em;margin:0 0 18px;color:#f4f8f9;">You built something real. We make sure the world can find it.</h2>
+        <p style="font-size:18px;line-height:1.6;color:#aebfc8;margin:0 auto 32px;max-width:560px;">Start with a clear audit of your website, your local search, and your AI visibility. No pressure. Just the truth.</p>
+        <a href="/audit" class="cta" style="font-size:15px;padding:18px 30px;">START WITH THE <span style="white-space:nowrap;"><span class="strike">$195</span>FREE</span> AUDIT <span style="font-size:17px;">&#8594;</span></a>
+        <div style="display:flex;align-items:center;gap:9px;justify-content:center;margin-top:18px;color:#9fb2bd;font-size:14px;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#38bdd0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="flex:none;display:block;"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6Z"/><path d="M9 11.5l2 2 4-4.5"/></svg><span>No obligation. Just a clear, useful report.</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ============ BOTTOM CTA ============ -->
-  <section class="cta">
-    <div class="container cta-inner">
-      <img src="/assets/logo-mark-reverse.svg" alt="" width="64" height="64" class="cta-mark">
-      <h2>Ready to talk?</h2>
-      <p>One honest conversation. No pitch until we know what you need.</p>
-      <a href="/audit" class="btn btn-primary btn-lg">See where your business stands →</a>
+  <!-- ===== OUR STORY (video lander) — LAST SECTION ===== -->
+  <section id="hero" style="position:relative;overflow:hidden;background:#08192b;min-height:620px;display:flex;flex-direction:column;">
+    <div id="heroMedia" style="position:absolute;inset:-8% 0;z-index:0;will-change:transform;">
+      <video id="heroVideo" src="/assets/hero-lighthouse.mp4" poster="/assets/lighthouse-final.jpg" autoplay loop muted playsinline preload="auto" style="width:100%;height:100%;object-fit:cover;display:block;"></video>
+    </div>
+    <div style="position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,#0b1f31 0%,rgba(8,25,43,.42) 32%,rgba(8,25,43,.55) 72%,rgba(8,25,43,.82) 100%);"></div>
+    <div style="position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(8,25,43,.6) 0%,rgba(8,25,43,.15) 50%,rgba(8,25,43,.5) 100%);"></div>
+
+    <div style="position:relative;z-index:3;flex:1;display:flex;align-items:center;">
+      <div style="max-width:1180px;margin:0 auto;padding:96px 28px;width:100%;">
+        <div style="max-width:680px;">
+          <div style="color:#38bdd0;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-bottom:24px;">Our story</div>
+          <h1 class="ab-h1" style="font-size:60px;line-height:1.04;font-weight:700;letter-spacing:-.02em;margin:0 0 26px;color:#f4f8f9;">A north star for the businesses that <span style="color:#38bdd0;">keep homes running</span>.</h1>
+          <p style="font-size:20px;line-height:1.6;color:#c3d0d2;margin:0;max-width:560px;">Good businesses fail because they are invisible. That is the only problem we came here to solve.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ============ FOOTER ============ -->
-  <footer class="footer">
-    <div class="container">
-      <p class="footer-slogan">Be found.</p>
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand">
-            <img src="/assets/logo-mark-small.svg" width="28" height="28" alt="">
-            <span class="footer-brand-name">A Light in the Sky</span>
-          </div>
-          <p class="footer-tag">
-            Custom AI-ready websites for HVAC and home service businesses. Built to be found, trusted, and booked.
-          </p>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/#services">Services</a></li>
-            <li><a href="/#how-it-works">How It Works</a></li>
-            <li><a href="/#faq">FAQ</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Get Started</h4>
-          <ul>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/audit">Start the Audit</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="mailto:admin@alitsky.com">admin@alitsky.com</a></li>
-            <li>Indianapolis, Indiana</li>
-          </ul>
+  <!-- ===== FOOTER ===== -->
+  <footer style="background-color:#081826;background-image:radial-gradient(ellipse 60% 60% at 78% -10%,rgba(110,175,200,.1),transparent 72%),repeating-radial-gradient(circle at 80% -40%,transparent 0 8px,rgba(190,216,226,.045) 8px 8.6px,transparent 8.6px 16px),radial-gradient(circle at 20% 30%,rgba(205,224,228,.24) 0 1px,transparent 1.4px),radial-gradient(circle at 88% 48%,rgba(205,224,228,.2) 0 1px,transparent 1.4px),radial-gradient(circle at 54% 18%,rgba(205,224,228,.16) 0 1px,transparent 1.4px);border-top:1px solid rgba(120,150,160,.14);">
+    <div class="ab-ft-grid" style="max-width:1120px;margin:0 auto;padding:56px 28px 28px;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;">
+      <div>
+        <div style="display:flex;align-items:center;gap:11px;margin-bottom:16px;"><img src="/assets/logo-mark-small-reverse.svg" alt="" style="width:26px;height:26px;" /><span style="font-weight:700;letter-spacing:.1em;font-size:15px;color:#eaf1f3;">A LIGHT IN THE SKY</span></div>
+        <div style="color:#7e919c;font-size:13px;line-height:1.6;max-width:280px;margin-bottom:14px;">Custom AI-ready websites for HVAC and home service businesses. Built to be found, trusted, and booked.</div>
+        <div style="color:#7e919c;font-size:13px;line-height:1.5;">Indianapolis, Indiana &middot; Serving businesses nationwide</div>
+      </div>
+      <div>
+        <div style="color:#38bdd0;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;">Company</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <a href="/about" class="fl">About</a>
+          <a href="/#services" class="fl">Services</a>
+          <a href="/#how-it-works" class="fl">How It Works</a>
+          <a href="/#faq" class="fl">FAQ</a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <div>© 2026 A Light in the Sky · All rights reserved</div>
-        <div class="footer-legal">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
+      <div>
+        <div style="color:#38bdd0;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;">Get started</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <a href="/contact" class="fl">Contact</a>
+          <a href="/audit" class="fl">Start the Audit</a>
         </div>
       </div>
+      <div>
+        <div style="color:#38bdd0;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;">Legal</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <a href="#" class="fl">Privacy</a>
+          <a href="#" class="fl">Terms</a>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1120px;margin:0 auto;padding:20px 28px 40px;border-top:1px solid rgba(120,150,160,.12);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+      <span style="color:#6f828d;font-size:13px;">&copy; 2026 A LIGHT IN THE SKY &middot; All rights reserved. We do not sell what we cannot build.</span>
+      <span style="display:inline-flex;align-items:center;gap:8px;color:#38bdd0;font-weight:700;font-size:14px;"><img src="/assets/logo-mark-small-reverse.svg" alt="" style="width:18px;height:18px;display:block;flex:none;" />Be found.</span>
     </div>
   </footer>
 
-  <script src="/nav-dropdown.js" defer></script>
-  <script src="/chatbot.js" defer></script>
+</div>
+
+<script>
+// Lighthouse hero: autoplay loop + subtle scroll parallax (vanilla port of the prototype script)
+(function () {
+  var v = document.getElementById('heroVideo');
+  if (v) {
+    v.muted = true; v.defaultMuted = true; v.volume = 0;
+    var tryPlay = function () { v.loop = true; v.muted = true; var p = v.play(); if (p && p.catch) p.catch(function () {}); };
+    v.addEventListener('ended', function () { try { v.currentTime = 0; tryPlay(); } catch (e) {} });
+    v.addEventListener('canplay', tryPlay, { once: true });
+    tryPlay();
+  }
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hero = document.getElementById('hero');
+  var media = document.getElementById('heroMedia');
+  var ticking = false;
+  function apply() {
+    ticking = false;
+    if (hero && media && !reduce) {
+      var h = hero.offsetHeight || 1;
+      var rectTop = hero.getBoundingClientRect().top;
+      var p = Math.min(1, Math.max(0, (window.innerHeight - rectTop) / (window.innerHeight + h)));
+      media.style.transform = 'translateY(' + (p * 60 - 20).toFixed(1) + 'px) scale(' + (1.06 + p * 0.06).toFixed(3) + ')';
+    }
+  }
+  window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(apply); } }, { passive: true });
+  apply();
+})();
+</script>
+<script src="/chatbot.js" defer></script>
 </body>
 </html>
