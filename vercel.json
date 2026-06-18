@@ -2,6 +2,15 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/audit", "destination": "https://calendar.app.google/Jm7Yz47gpb8VEpDr9", "permanent": false },
+    { "source": "/pricing", "destination": "/services", "permanent": true },
+    { "source": "/services/:path+", "destination": "/services", "permanent": true },
+    { "source": "/case-studies", "destination": "/", "permanent": true },
+    { "source": "/free-guide", "destination": "/", "permanent": true },
+    { "source": "/thank-you", "destination": "/", "permanent": true },
+    { "source": "/contact", "destination": "/", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",
