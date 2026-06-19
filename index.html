@@ -51,7 +51,7 @@
     .hpsc-btn:active:not(:disabled){transform:translateY(1px);}
     .hpsc-btn:disabled{opacity:.6;cursor:default;}
     .hpsc-err{color:#ffb59c;font-size:13.5px;min-height:1px;}
-    .hpsc-chip{font-size:12.5px;font-weight:600;color:#3a5560;background:rgba(14,72,88,.06);border:1px solid rgba(14,72,88,.16);border-radius:999px;padding:6px 12px;}
+    .hpsc-chip{font-size:12.5px;font-weight:600;color:#bcd0d6;background:rgba(56,189,208,.10);border:1px solid rgba(56,189,208,.26);border-radius:999px;padding:6px 12px;}
     @media(max-width:560px){.hpsc-2col{grid-template-columns:1fr!important;}}
     @media(max-width:980px){
       .hp-nav-links{display:none!important;}
@@ -152,15 +152,17 @@
   </section>
 
   <!-- ===== FREE AI VISIBILITY CHECK (tool) ===== -->
-  <section style="background:linear-gradient(180deg,#ffffff 0%,#eaf3f6 100%);color:#0B2030;">
-    <div style="max-width:860px;margin:0 auto;padding:76px 28px;">
+  <section style="position:relative;overflow:hidden;background-color:#08192b;">
+    <div style="position:absolute;inset:0;z-index:0;background-image:url('/assets/scan-lighthouse.jpg');background-size:cover;background-position:center 40%;"></div>
+    <div style="position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(8,25,43,.66) 0%,rgba(8,25,43,.5) 38%,rgba(8,25,43,.74) 80%,#0b1f31 100%);"></div>
+    <div style="position:relative;z-index:2;max-width:860px;margin:0 auto;padding:84px 28px;">
       <div style="text-align:center;margin-bottom:30px;">
-        <div style="color:#0E4858;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px;">Free AI visibility check</div>
-        <h2 style="font-size:clamp(28px,5vw,38px);line-height:1.12;font-weight:700;letter-spacing:-.02em;margin:0 0 14px;color:#0B2030;">See how <span style="color:#0E4858;">AI search</span> sees your business.</h2>
-        <p style="font-size:17px;line-height:1.6;color:#4a5f6b;margin:0 auto;max-width:540px;">Enter your website and we check whether ChatGPT, Google, and other AI tools can find, understand, and recommend you. Real signals, plain English, no vanity scores.</p>
+        <div style="color:#38bdd0;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px;">Free AI visibility check</div>
+        <h2 style="font-size:clamp(28px,5vw,38px);line-height:1.12;font-weight:700;letter-spacing:-.02em;margin:0 0 14px;color:#f4f8f9;">See how <span style="color:#38bdd0;">AI search</span> sees your business.</h2>
+        <p style="font-size:17px;line-height:1.6;color:#c3d3da;margin:0 auto;max-width:540px;">Enter your website and we check whether ChatGPT, Google, and other AI tools can find, understand, and recommend you. Real signals, plain English, no vanity scores.</p>
       </div>
 
-      <div style="max-width:560px;margin:0 auto;background:#0c2336;border:1px solid rgba(56,189,208,.28);border-radius:18px;padding:28px 28px 24px;box-shadow:0 26px 60px rgba(11,32,48,.22);">
+      <div style="max-width:560px;margin:0 auto;background:rgba(12,35,54,.82);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid rgba(56,189,208,.32);border-radius:18px;padding:28px 28px 24px;box-shadow:0 30px 64px rgba(4,12,22,.55);">
         <form id="hpscForm" autocomplete="on" novalidate style="display:flex;flex-direction:column;gap:12px;">
           <input id="hpscUrl" class="hpsc-input hpsc-url" type="text" name="url" inputmode="url" placeholder="https://yourwebsite.com" aria-label="Your website address" />
           <div class="hpsc-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
@@ -170,9 +172,9 @@
           <div id="hpscErr" class="hpsc-err" role="alert"></div>
           <button id="hpscBtn" class="hpsc-btn" type="submit">Check my AI visibility <span aria-hidden="true">&#8594;</span></button>
         </form>
-        <div style="display:flex;align-items:center;gap:8px;justify-content:center;margin-top:14px;color:#8aa0ab;font-size:13px;">
+        <div style="display:flex;align-items:center;gap:8px;justify-content:center;margin-top:14px;color:#9fb2bd;font-size:13px;">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38bdd0" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6Z"/><path d="M9 11.5l2 2 4-4.5"/></svg>
-          <span>Free &middot; We email your results &middot; About 20 seconds</span>
+          <span>Free &middot; We email your results</span>
         </div>
       </div>
 

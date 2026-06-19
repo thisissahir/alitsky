@@ -382,29 +382,70 @@ Top 3 fixes
 
 Rules: base everything ONLY on the findings given. Never invent numbers, scores, rankings, or guarantees. Never promise a position on Google or in ChatGPT. Plain words only — if you mention AEO or GEO, explain them in a few words. Be encouraging but honest. Keep the whole thing under about 180 words. End with one warm sentence inviting them to start the free audit, where we go deeper and can do the fixes for them.`;
 
-async function sendLead(business, email, url) {
-  if (!process.env.RESEND_API_KEY) return;
+function statusColor(s) { return s === "pass" ? "#1f9d57" : (s === "partial" ? "#c98a1e" : "#d8491f"); }
+function dimLineText(d) { return "- " + d.label + " [" + d.status.toUpperCase() + "]: " + d.detail; }
+
+// Email the full review (lead details + findings + Gloria's write-up) to the
+// team so they can forward it to the potential lead.
+async function sendReview(business, email, url, findings, reviewText) {
+  if (!process.env.RESEND_API_KEY) {
+    console.warn("scan: RESEND_API_KEY not set — skipping review email");
+    return;
+  }
   try {
     const resend = new Resend(process.env.RESEND_API_KEY);
     const to = process.env.AUDIT_TO_EMAIL || "admin@alitsky.com";
     const from = process.env.AUDIT_FROM_EMAIL || "A Light in the Sky <onboarding@resend.dev>";
+    const domain = findings.domain || url;
+    const reachable = !!findings.reachable;
+    const s = reachable ? summary(findings) : null;
+
+    let dimsHtml = "";
+    if (reachable && Array.isArray(findings.dimensions)) {
+      dimsHtml = findings.dimensions.map(function (d) {
+        return (
+          '<tr><td style="padding:6px 12px 6px 0;vertical-align:top;white-space:nowrap;">' +
+            '<span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;color:#fff;background:' + statusColor(d.status) + ';border-radius:5px;padding:2px 7px;">' + d.status.toUpperCase() + "</span></td>" +
+          '<td style="padding:6px 0;"><strong>' + escapeHtml(d.label) + "</strong><br>" +
+            '<span style="color:#5a6f7b;font-size:13px;">' + escapeHtml(d.detail) + "</span></td></tr>"
+        );
+      }).join("");
+    }
+    const reviewHtml = reviewText ? escapeHtml(reviewText).replace(/\n/g, "<br>") : "(The written review was not generated.)";
+
     const html =
-      '<div style="font-family:system-ui,sans-serif;color:#0B2030;font-size:15px;line-height:1.55;max-width:560px;">' +
-      '<h2 style="font-size:18px;margin:0 0 4px;">New AI-visibility check lead</h2>' +
-      '<div style="font-size:12px;color:#5d7382;margin-bottom:16px;">Ran the free AI-visibility check.</div>' +
-      '<table style="font-size:14px;border-collapse:collapse;">' +
-      '<tr><td style="padding:3px 14px 3px 0;color:#5d7382;">Business</td><td style="padding:3px 0;font-weight:600;">' + escapeHtml(business) + "</td></tr>" +
-      '<tr><td style="padding:3px 14px 3px 0;color:#5d7382;">Email</td><td style="padding:3px 0;"><a href="mailto:' + escapeHtml(email) + '">' + escapeHtml(email) + "</a></td></tr>" +
-      '<tr><td style="padding:3px 14px 3px 0;color:#5d7382;">Checked</td><td style="padding:3px 0;">' + escapeHtml(url) + "</td></tr>" +
-      "</table></div>";
+      '<div style="font-family:system-ui,sans-serif;color:#0B2030;font-size:15px;line-height:1.55;max-width:640px;">' +
+        '<h2 style="font-size:19px;margin:0 0 4px;">AI-visibility review — ' + escapeHtml(business) + "</h2>" +
+        '<div style="font-size:12px;color:#5d7382;margin-bottom:18px;">Ready to send to the lead.</div>' +
+        '<table style="font-size:14px;border-collapse:collapse;margin-bottom:18px;">' +
+          '<tr><td style="padding:3px 14px 3px 0;color:#5d7382;">Business</td><td style="padding:3px 0;font-weight:600;">' + escapeHtml(business) + "</td></tr>" +
+          '<tr><td style="padding:3px 14px 3px 0;color:#5d7382;">Email</td><td style="padding:3px 0;"><a href="mailto:' + escapeHtml(email) + '">' + escapeHtml(email) + "</a></td></tr>" +
+          '<tr><td style="padding:3px 14px 3px 0;color:#5d7382;">Checked</td><td style="padding:3px 0;">' + escapeHtml(url) + "</td></tr>" +
+          (s ? '<tr><td style="padding:3px 14px 3px 0;color:#5d7382;">Result</td><td style="padding:3px 0;">' + s.strong + " of " + s.total + " areas strong</td></tr>" : "") +
+        "</table>" +
+        (reachable
+          ? '<h3 style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#137F8E;margin:0 0 8px;">The checks</h3><table style="border-collapse:collapse;margin-bottom:20px;">' + dimsHtml + "</table>"
+          : '<p style="color:#b4521f;">We could not load the site: ' + escapeHtml((findings.facts && findings.facts.fetchError) || "unreachable") + "</p>") +
+        '<h3 style="font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#137F8E;margin:0 0 8px;">Gloria’s review (what the visitor saw)</h3>' +
+        '<div style="border-left:3px solid #eef6f8;padding:6px 0 6px 14px;white-space:pre-wrap;">' + reviewHtml + "</div>" +
+      "</div>";
+
+    const text =
+      "AI-VISIBILITY REVIEW — " + business + "\nReady to send to the lead.\n\n" +
+      "Business: " + business + "\nEmail: " + email + "\nChecked: " + url +
+      (s ? "\nResult: " + s.strong + " of " + s.total + " areas strong" : "") + "\n\n" +
+      (reachable && Array.isArray(findings.dimensions)
+        ? "THE CHECKS:\n" + findings.dimensions.map(dimLineText).join("\n") + "\n\n"
+        : "(Site could not be loaded.)\n\n") +
+      "GLORIA'S REVIEW:\n" + (reviewText || "(not generated)");
+
     await resend.emails.send({
       from, to: [to], replyTo: email,
-      subject: "New AI-visibility check lead — " + business,
-      text: "New AI-visibility check lead\nBusiness: " + business + "\nEmail: " + email + "\nChecked: " + url,
-      html,
+      subject: "AI-visibility review — " + business + " (" + domain + ")",
+      text, html,
     });
   } catch (e) {
-    console.error("scan: lead email failed:", e && e.message);
+    console.error("scan: review email failed:", e && e.message);
   }
 }
 
@@ -431,10 +472,7 @@ module.exports = async (req, res) => {
   try { await assertSafeUrl(url); }
   catch (e) { return res.status(400).json({ error: e.message || "That website address cannot be checked." }); }
 
-  // 1) capture the lead (don't fail the scan if email send fails)
-  await sendLead(business, email, url);
-
-  // 2) analyze
+  // analyze
   let findings;
   try { findings = await analyze(url); }
   catch (e) { findings = { reachable: false, url: url, domain: "", dimensions: [], facts: { fetchError: e.message || "error" } }; }
@@ -453,6 +491,7 @@ module.exports = async (req, res) => {
   };
   res.write("\x01" + JSON.stringify(clientFindings) + "\x01\n");
 
+  let reviewText = "";
   try {
     const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
     const stream = await client.messages.stream({
@@ -464,6 +503,7 @@ module.exports = async (req, res) => {
     for await (const event of stream) {
       if (event.type === "content_block_delta" && event.delta && event.delta.type === "text_delta") {
         res.write(event.delta.text);
+        reviewText += event.delta.text;
       }
     }
     res.end();
@@ -471,6 +511,10 @@ module.exports = async (req, res) => {
     console.error("scan: Claude error:", err && err.message);
     if (!res.writableEnded) { try { res.write("\n\nI could not finish the written summary, but your results above are real. Start the free audit and we will walk you through them."); res.end(); } catch (_) {} }
   }
+
+  // After the visitor has their results, email the full review (lead + findings
+  // + Gloria's write-up) to the team so they can forward it to the lead.
+  try { await sendReview(business, email, url, findings, reviewText); } catch (_) {}
 };
 
 module.exports.config = { maxDuration: 45 };
