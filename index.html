@@ -52,7 +52,18 @@
     .hpsc-btn:disabled{opacity:.6;cursor:default;}
     .hpsc-err{color:#ffb59c;font-size:13.5px;min-height:1px;}
     .hpsc-chip{font-size:12.5px;font-weight:600;color:#bcd0d6;background:rgba(56,189,208,.10);border:1px solid rgba(56,189,208,.26);border-radius:999px;padding:6px 12px;}
-    @media(max-width:560px){.hpsc-2col{grid-template-columns:1fr!important;}}
+    .shift-card{background:#0c2336;border:1px solid rgba(56,189,208,.22);border-radius:16px;padding:28px 26px;transition:transform .15s,box-shadow .15s,border-color .15s;}
+    .shift-card:hover{transform:translateY(-4px);box-shadow:0 22px 50px rgba(4,12,22,.5);border-color:rgba(56,189,208,.5);}
+    .shift-yr{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:baseline;padding:17px 18px;border-left:3px solid transparent;border-radius:0 10px 10px 0;cursor:pointer;transition:background .18s,border-color .18s;}
+    .shift-yr-year{font-size:18px;font-weight:700;letter-spacing:-.01em;color:#9fb2bd;transition:color .18s;}
+    .shift-yr-body{font-size:16.5px;line-height:1.6;color:#aebfc8;transition:color .18s;}
+    .shift-yr-active{border-left-color:#38bdd0;background:rgba(56,189,208,.07);}
+    .shift-yr-active .shift-yr-year{color:#5fd6e6;}
+    .shift-yr-active .shift-yr-body{color:#eaf1f3;}
+    @keyframes shiftRing{0%{transform:translate(-50%,-50%) scale(.7);opacity:.55;}70%{opacity:0;}100%{transform:translate(-50%,-50%) scale(2.1);opacity:0;}}
+    @keyframes shiftDrift{0%{transform:translate3d(0,0,0);}50%{transform:translate3d(0,-14px,0);}100%{transform:translate3d(0,0,0);}}
+    @media(prefers-reduced-motion:reduce){#shift *{animation:none!important;}}
+    @media(max-width:560px){.hpsc-2col{grid-template-columns:1fr!important;}.shift-yr{grid-template-columns:84px 1fr!important;gap:12px!important;}}
     @media(max-width:980px){
       .hp-nav-links{display:none!important;}
       .mcta{display:inline-flex!important;}
@@ -253,6 +264,67 @@
           <p style="font-size:14px;line-height:1.55;color:#9fb2bd;margin:0;">We test your top queries, track appearance, adjust, and report. GEO is not set-and-forget, and neither are we.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== THE SEARCH SHIFT (AI search data) ===== -->
+  <section id="shift" style="position:relative;overflow:hidden;background:radial-gradient(1100px 640px at 82% -8%,rgba(56,189,208,.12),transparent 60%),radial-gradient(900px 620px at 6% 116%,rgba(56,189,208,.07),transparent 60%),#0b1f31;color:#f4f8f9;">
+    <div style="position:absolute;top:-160px;right:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(56,189,208,.10),transparent 65%);filter:blur(8px);animation:shiftDrift 11s ease-in-out infinite;pointer-events:none;"></div>
+    <div style="position:relative;max-width:1080px;margin:0 auto;padding:88px 28px;">
+
+      <div style="color:#38bdd0;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-bottom:14px;">Why now</div>
+      <h2 style="margin:0;font-size:clamp(32px,5vw,54px);line-height:1.06;letter-spacing:-.02em;font-weight:700;color:#f4f8f9;">The search shift is <span style="color:#38bdd0;">real</span></h2>
+      <p style="margin:18px 0 0;max-width:760px;font-size:19px;line-height:1.6;color:#aebfc8;">People aren't leaving Google. They're adding AI as a second front door, and AI is eating all the growth.</p>
+
+      <div style="height:1px;background:rgba(120,150,160,.16);margin:36px 0 40px;"></div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;">
+        <div class="shift-card"><div data-shift-num data-target="37" data-dec="0" style="font-size:46px;font-weight:700;letter-spacing:-.02em;color:#5fd6e6;line-height:1;font-variant-numeric:tabular-nums;">37%</div><div style="margin-top:14px;font-size:15.5px;line-height:1.5;color:#aebfc8;">now start searches with AI, not Google</div></div>
+        <div class="shift-card"><div data-shift-num data-target="55" data-dec="0" style="font-size:46px;font-weight:700;letter-spacing:-.02em;color:#5fd6e6;line-height:1;font-variant-numeric:tabular-nums;">55%</div><div style="margin-top:14px;font-size:15.5px;line-height:1.5;color:#aebfc8;">use AI chat as a primary research tool</div></div>
+        <div class="shift-card"><div data-shift-num data-target="9.2" data-dec="1" style="font-size:46px;font-weight:700;letter-spacing:-.02em;color:#5fd6e6;line-height:1;font-variant-numeric:tabular-nums;">9.2%</div><div style="margin-top:14px;font-size:15.5px;line-height:1.5;color:#aebfc8;">of search traffic is now AI (up from 7.8%)</div></div>
+        <div class="shift-card"><div data-shift-num data-target="47" data-dec="0" style="font-size:46px;font-weight:700;letter-spacing:-.02em;color:#5fd6e6;line-height:1;font-variant-numeric:tabular-nums;">47%</div><div style="margin-top:14px;font-size:15.5px;line-height:1.5;color:#aebfc8;">have used AI to make a purchase decision</div></div>
+      </div>
+
+      <h3 style="margin:54px 0 22px;font-size:27px;font-weight:700;letter-spacing:-.01em;color:#f4f8f9;">Where the growth is going <span style="color:#9fb2bd;font-weight:600;">(YoY)</span></h3>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+        <span style="font-size:17px;color:#d3dde0;">AI search visits</span>
+        <span style="font-size:13px;font-weight:700;color:#7fe7b6;background:rgba(40,92,70,.45);border:1px solid rgba(95,205,155,.4);border-radius:999px;padding:4px 11px;white-space:nowrap;">&#8593; +42.8%</span>
+      </div>
+      <div style="height:16px;border-radius:999px;background:rgba(120,150,160,.12);border:1px solid rgba(120,150,160,.16);overflow:hidden;margin-bottom:26px;"><div id="shiftAiFill" style="height:100%;width:0;background:linear-gradient(90deg,#5be0a4,#7fe7b6);box-shadow:0 0 18px rgba(91,224,164,.45);transition:width 1.1s cubic-bezier(.3,.7,.3,1);"></div></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+        <span style="font-size:17px;color:#d3dde0;">Google visits</span>
+        <span style="font-size:13px;font-weight:600;color:#9fb2bd;background:rgba(120,150,160,.14);border:1px solid rgba(120,150,160,.16);border-radius:999px;padding:4px 11px;white-space:nowrap;">+2.4%</span>
+      </div>
+      <div style="height:16px;border-radius:999px;background:rgba(120,150,160,.12);border:1px solid rgba(120,150,160,.16);overflow:hidden;"><div id="shiftGFill" style="height:100%;width:0;background:linear-gradient(90deg,#6f828d,#9fb2bd);transition:width 1.1s cubic-bezier(.3,.7,.3,1) .12s;"></div></div>
+      <p style="margin:18px 0 0;font-size:15.5px;line-height:1.6;color:#9fb2bd;">Total search (engines + AI) grew <strong style="color:#d3dde0;font-weight:600;">26%</strong> worldwide. The pie got bigger, traditional search barely moved.</p>
+
+      <h3 style="margin:56px 0 8px;font-size:27px;font-weight:700;letter-spacing:-.01em;color:#f4f8f9;">Forecast: the crossover window</h3>
+      <p style="margin:0 0 26px;font-size:15.5px;color:#9fb2bd;">Drag the beam, or tap a year, to scrub the projected AI share.</p>
+      <div style="background:#102836;border:1px solid rgba(56,189,208,.22);border-radius:18px;padding:34px 32px 30px;box-shadow:0 26px 60px rgba(4,12,22,.5);">
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;">
+          <div id="shiftBig" style="font-size:clamp(48px,12vw,70px);font-weight:700;letter-spacing:-.03em;line-height:.9;color:#5fd6e6;font-variant-numeric:tabular-nums;">~10%</div>
+          <div style="text-align:right;"><div id="shiftCap" style="font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#9fb2bd;">Projected AI search share &middot; 2026</div></div>
+        </div>
+        <div id="shiftTrack" style="position:relative;height:18px;margin:30px 0 6px;border-radius:999px;background:rgba(120,150,160,.14);border:1px solid rgba(120,150,160,.16);cursor:pointer;touch-action:none;">
+          <div id="shiftFcFill" style="position:absolute;left:0;top:0;height:100%;width:0;background:linear-gradient(90deg,rgba(56,189,208,.18),#38bdd0);border-radius:999px;"></div>
+          <div id="shiftHandle" style="position:absolute;top:50%;left:0;transform:translate(-50%,-50%);width:24px;height:24px;border-radius:50%;background:#38bdd0;border:3px solid #08192b;box-shadow:0 0 0 4px rgba(56,189,208,.18),0 6px 14px rgba(0,0,0,.4);cursor:grab;">
+            <span style="position:absolute;left:50%;top:50%;width:22px;height:22px;border-radius:50%;border:2px solid #3fc1d4;transform:translate(-50%,-50%);animation:shiftRing 2.4s ease-out infinite;pointer-events:none;"></span>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:12.5px;font-weight:600;letter-spacing:.08em;color:#7e919c;"><span>2026</span><span>2027</span><span>2028</span><span>2029&#8211;30</span></div>
+        <div style="height:1px;background:rgba(120,150,160,.16);margin:24px 0 6px;"></div>
+        <div data-yr class="shift-yr shift-yr-active"><div class="shift-yr-year">2026</div><div class="shift-yr-body">Traditional search query volume drops 25% (Gartner). AI holds ~9&#8211;12% share but captures nearly all net-new search.</div></div>
+        <div data-yr class="shift-yr"><div class="shift-yr-year">2027</div><div class="shift-yr-body">AI matches Google's economic value &mdash; it converts 4&#8211;23&#215; harder. Coding &amp; research already 60%+ AI.</div></div>
+        <div data-yr class="shift-yr"><div class="shift-yr-year">2028</div><div class="shift-yr-body">Organic site traffic down 50% (Gartner). At least half of all queries shifting to AI.</div></div>
+        <div data-yr class="shift-yr"><div class="shift-yr-year">2029&#8211;2030</div><div class="shift-yr-body">AI search reaches 30&#8211;50%+ usage share and surpasses query-and-click search worldwide.</div></div>
+      </div>
+
+      <div style="margin-top:34px;background:linear-gradient(135deg,rgba(56,189,208,.12),rgba(56,189,208,.05));border:1px solid rgba(56,189,208,.22);border-radius:16px;padding:30px 32px;">
+        <div style="color:#38bdd0;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px;">The play</div>
+        <p style="margin:0;font-size:18.5px;line-height:1.6;color:#eaf1f3;">The next 18&#8211;24 months are a land grab. Get found inside <strong style="color:#5fd6e6;font-weight:600;">ChatGPT, Perplexity and AI Overviews</strong> now, the advantage compounds as the crossover hits. Honest framing: <strong style="color:#5fd6e6;font-weight:600;">61%</strong> still use AI and Google in tandem, so be findable in both.</p>
+      </div>
+
+      <p style="margin:28px 0 0;font-size:13.5px;line-height:1.6;color:#7e919c;">Sources: Botify/YouGov, Orbit Media, Wix AI Search Lab, G2, Gartner, Ahrefs, Semrush (2025&#8211;2026)</p>
     </div>
   </section>
 
@@ -613,6 +685,76 @@
     btn.disabled = true; btn.textContent = "Starting…";
     window.location.href = "/scan";
   });
+})();
+</script>
+<script>
+(function () {
+  var sec = document.getElementById("shift");
+  if (!sec) return;
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // ---- Count-up stats + growth bars (play once on scroll into view) ----
+  var nums = Array.prototype.slice.call(sec.querySelectorAll("[data-shift-num]"));
+  var aiFill = document.getElementById("shiftAiFill"), gFill = document.getElementById("shiftGFill");
+  function setStats(p) {
+    nums.forEach(function (el) {
+      var v = parseFloat(el.getAttribute("data-target")), dec = el.getAttribute("data-dec") === "1";
+      el.textContent = (dec ? (v * p).toFixed(1) : Math.round(v * p)) + "%";
+    });
+  }
+  function fillBars() { if (aiFill) aiFill.style.width = "96%"; if (gFill) gFill.style.width = "6%"; }
+  var played = false;
+  function play() {
+    if (played) return; played = true;
+    if (reduce) { setStats(1); fillBars(); return; }
+    var dur = 1300, start = 0;
+    function tick(now) {
+      if (!start) start = now;
+      var t = Math.min(1, (now - start) / dur), e = 1 - Math.pow(1 - t, 3);
+      setStats(e);
+      if (t < 1) requestAnimationFrame(tick); else fillBars();
+    }
+    requestAnimationFrame(tick);
+  }
+  function check() { var r = sec.getBoundingClientRect(); if (r.top < (window.innerHeight || 800) * 0.85 && r.bottom > 0) play(); }
+  window.addEventListener("scroll", check, { passive: true });
+  check();
+
+  // ---- Forecast scrubber ----
+  var track = document.getElementById("shiftTrack"), fcFill = document.getElementById("shiftFcFill"),
+      handle = document.getElementById("shiftHandle"), big = document.getElementById("shiftBig"),
+      cap = document.getElementById("shiftCap"), rows = Array.prototype.slice.call(sec.querySelectorAll("[data-yr]"));
+  var fr = [0, 0.34, 0.67, 1], sh = [10, 18, 30, 42], yrs = ["2026", "2027", "2028", "2029–2030"];
+  var scrub = 0, dragging = false;
+  function share(x) {
+    for (var i = 0; i < fr.length - 1; i++) {
+      if (x <= fr[i + 1]) { var t = (x - fr[i]) / (fr[i + 1] - fr[i]); return sh[i] + (sh[i + 1] - sh[i]) * t; }
+    }
+    return sh[sh.length - 1];
+  }
+  function idxOf(x) { return x < 0.17 ? 0 : x < 0.505 ? 1 : x < 0.835 ? 2 : 3; }
+  function render(animate) {
+    var i = idxOf(scrub), ease = "cubic-bezier(.3,.7,.3,1)";
+    big.textContent = "~" + Math.round(share(scrub)) + "%";
+    cap.textContent = "Projected AI search share · " + yrs[i];
+    handle.style.transition = animate ? "left .18s " + ease : "none";
+    fcFill.style.transition = animate ? "width .18s " + ease : "none";
+    handle.style.left = (scrub * 100) + "%";
+    fcFill.style.width = (scrub * 100) + "%";
+    rows.forEach(function (row, ri) { row.classList.toggle("shift-yr-active", ri === i); });
+  }
+  function setFromX(x) { var r = track.getBoundingClientRect(); scrub = Math.max(0, Math.min(1, (x - r.left) / r.width)); render(false); }
+  if (track) {
+    track.addEventListener("pointerdown", function (e) {
+      dragging = true;
+      try { track.setPointerCapture(e.pointerId); } catch (_) {}
+      setFromX(e.clientX);
+    });
+    window.addEventListener("pointermove", function (e) { if (dragging) setFromX(e.clientX); }, { passive: true });
+    window.addEventListener("pointerup", function () { dragging = false; });
+    rows.forEach(function (row, ri) { row.addEventListener("click", function () { scrub = fr[ri]; render(true); }); });
+    render(true);
+  }
 })();
 </script>
 <script src="/audit-modal.js" defer></script>
