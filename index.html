@@ -58,6 +58,8 @@
       .mcta{display:inline-flex!important;}
       .hp-why-grid{grid-template-columns:1fr!important;gap:40px!important;}
       .hp-check-grid{grid-template-columns:1fr!important;}
+      .geo-grid{grid-template-columns:1fr!important;gap:36px!important;}
+      .geo-steps{grid-template-columns:1fr 1fr!important;}
       .hp-believe-grid{grid-template-columns:1fr 1fr!important;}
       .hp-work-row{flex-direction:column!important;gap:36px!important;}
       .hp-work-arrow{display:none!important;}
@@ -71,6 +73,7 @@
       #radarRoot{height:auto!important;min-height:0!important;padding-bottom:8px;}
       #rdWrap{position:relative!important;}
     }
+    @media(max-width:560px){.geo-steps{grid-template-columns:1fr!important;}}
   </style>
 </head>
 <body>
@@ -185,6 +188,70 @@
         <span class="hpsc-chip">Local signals</span>
         <span class="hpsc-chip">Clear identity</span>
         <span class="hpsc-chip">Findability basics</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GEO ANCHOR (found in AI search) ===== -->
+  <section style="position:relative;overflow:hidden;background-color:#0b1f31;background-image:radial-gradient(ellipse 60% 45% at 30% 4%,rgba(110,175,200,.12),transparent 72%),repeating-radial-gradient(circle at 28% -34%,transparent 0 8px,rgba(190,216,226,.05) 8px 8.6px,transparent 8.6px 16px),radial-gradient(circle at 84% 24%,rgba(205,224,228,.3) 0 1px,transparent 1.4px),radial-gradient(circle at 58% 14%,rgba(205,224,228,.22) 0 1px,transparent 1.4px),radial-gradient(circle at 14% 58%,rgba(205,224,228,.24) 0 1px,transparent 1.4px),radial-gradient(circle at 70% 80%,rgba(205,224,228,.2) 0 1px,transparent 1.4px);color:#eaf1f3;">
+    <div style="max-width:1120px;margin:0 auto;padding:88px 28px;">
+      <div style="color:#38bdd0;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:28px;">Found in AI search</div>
+      <div class="geo-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;">
+        <div>
+          <h2 style="font-size:clamp(30px,4.4vw,46px);line-height:1.05;font-weight:700;letter-spacing:-.02em;margin:0 0 12px;color:#f4f8f9;">Right now, AI is recommending someone in your city.</h2>
+          <p style="font-size:21px;font-weight:600;color:#38bdd0;margin:0 0 22px;">It is probably not you.</p>
+          <p style="font-size:17px;line-height:1.65;color:#aebfc8;margin:0 0 24px;max-width:520px;">When someone asks ChatGPT, Perplexity, or Google AI for the best business in your category, the AI names a specific business. That business gets the call. The work that makes sure the name is yours, and keeps it there, is what we build into every site.</p>
+          <div style="border:1px solid rgba(56,189,208,.28);border-left:3px solid #38bdd0;border-radius:10px;background:rgba(12,35,54,.5);padding:18px 20px;margin-bottom:26px;max-width:520px;">
+            <p style="font-size:15.5px;line-height:1.6;color:#cdd9dd;margin:0;">Most of your local competitors have not done this yet. <strong style="color:#f4f8f9;">That is the window.</strong> We do not know how long it stays open. The audit tells you exactly where you stand today.</p>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+            <a href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer" class="cta" style="font-size:15px;padding:16px 26px;">START WITH THE FREE AUDIT <span style="font-size:17px;">&#8594;</span></a>
+            <a href="/services#how" class="ghost" style="font-size:15px;padding:16px 26px;">HOW IT WORKS</a>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div style="background:rgba(12,35,54,.55);border:1px solid rgba(120,160,180,.2);border-radius:14px;padding:20px 22px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#7e98a4;margin-bottom:10px;">Live query &middot; ChatGPT</div>
+            <p style="font-size:17px;line-height:1.5;font-style:italic;color:#eaf1f3;margin:0;">"Who is the best HVAC company near me for an emergency repair?"</p>
+          </div>
+          <div style="background:rgba(12,35,54,.7);border:1px solid rgba(56,189,208,.4);border-radius:14px;padding:20px 22px;box-shadow:0 18px 44px rgba(4,12,22,.4);">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#5BE0A4;margin-bottom:8px;">&#10022; ChatGPT recommended this business</div>
+            <div style="font-size:20px;font-weight:700;color:#f4f8f9;margin-bottom:14px;">Cool Breeze Heating &amp; Air</div>
+            <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;">
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:#cdd9dd;line-height:1.4;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#5BE0A4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px;"><polyline points="20 6 9 17 4 12"/></svg>Well-structured site &middot; AI can read it</li>
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:#cdd9dd;line-height:1.4;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#5BE0A4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px;"><polyline points="20 6 9 17 4 12"/></svg>Schema complete &middot; Bing indexed &middot; Google verified</li>
+              <li style="display:flex;align-items:flex-start;gap:10px;font-size:14px;color:#cdd9dd;line-height:1.4;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#5BE0A4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px;"><polyline points="20 6 9 17 4 12"/></svg>GEO active &middot; shows up across AI tools</li>
+            </ul>
+          </div>
+          <div style="background:rgba(10,24,38,.5);border:1px solid rgba(224,83,31,.3);border-radius:14px;padding:18px 22px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#9a8478;margin-bottom:8px;">Your business without GEO</div>
+            <p style="font-size:16px;font-weight:600;color:#c6b3a8;margin:0 0 6px;">Not mentioned. Cool Breeze got the call.</p>
+            <p style="font-size:13px;color:#7e8b92;margin:0;">Illustrative example. This is what most local service sites look like to AI right now.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="geo-steps" style="display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:56px;">
+        <div style="background:#0c2336;border:1px solid rgba(56,189,208,.18);border-radius:14px;padding:24px 22px;">
+          <div style="font-size:12px;font-weight:700;letter-spacing:.12em;color:#38bdd0;margin-bottom:12px;">STEP 01</div>
+          <div style="font-size:17px;font-weight:700;color:#f4f8f9;margin-bottom:8px;">Unlock the crawlers</div>
+          <p style="font-size:14px;line-height:1.55;color:#9fb2bd;margin:0;">GPTBot, ClaudeBot, PerplexityBot. Most sites block them by default. We open the door so AI can find you.</p>
+        </div>
+        <div style="background:#0c2336;border:1px solid rgba(56,189,208,.18);border-radius:14px;padding:24px 22px;">
+          <div style="font-size:12px;font-weight:700;letter-spacing:.12em;color:#38bdd0;margin-bottom:12px;">STEP 02</div>
+          <div style="font-size:17px;font-weight:700;color:#f4f8f9;margin-bottom:8px;">Speak AI's language</div>
+          <p style="font-size:14px;line-height:1.55;color:#9fb2bd;margin:0;">Schema markup, Bing submission, answer-first content. AI cannot recommend what it cannot read. We make you readable.</p>
+        </div>
+        <div style="background:#0c2336;border:1px solid rgba(56,189,208,.18);border-radius:14px;padding:24px 22px;">
+          <div style="font-size:12px;font-weight:700;letter-spacing:.12em;color:#38bdd0;margin-bottom:12px;">STEP 03</div>
+          <div style="font-size:17px;font-weight:700;color:#f4f8f9;margin-bottom:8px;">Enter the index</div>
+          <p style="font-size:14px;line-height:1.55;color:#9fb2bd;margin:0;">ChatGPT sources from Bing. Most businesses are not there. We submit, verify, and confirm your presence.</p>
+        </div>
+        <div style="background:#0c2336;border:1px solid rgba(56,189,208,.18);border-radius:14px;padding:24px 22px;">
+          <div style="font-size:12px;font-weight:700;letter-spacing:.12em;color:#38bdd0;margin-bottom:12px;">STEP 04</div>
+          <div style="font-size:17px;font-weight:700;color:#f4f8f9;margin-bottom:8px;">Monitor every month</div>
+          <p style="font-size:14px;line-height:1.55;color:#9fb2bd;margin:0;">We test your top queries, track appearance, adjust, and report. GEO is not set-and-forget, and neither are we.</p>
+        </div>
       </div>
     </div>
   </section>
