@@ -42,6 +42,17 @@
     [data-step].jumping{animation:stepJump 1.1s cubic-bezier(.3,.7,.3,1) both;}
     @keyframes alitsDrift{0%{transform:translate(0,0);opacity:0;}15%{opacity:var(--pmax,.7);}85%{opacity:calc(var(--pmax,.7) * .55);}100%{transform:translate(var(--dx,0),var(--dy,-60px));opacity:0;}}
     @media (prefers-reduced-motion: reduce){[data-jig],[data-step]{animation:none !important;}}
+    .hpsc-input{width:100%;font:400 16px/1.4 'Sora',system-ui,sans-serif;color:#eaf1f3;background:rgba(7,21,30,.55);border:1px solid rgba(120,160,180,.34);border-radius:11px;padding:14px 15px;outline:none;transition:border-color .15s,box-shadow .15s;}
+    .hpsc-input::placeholder{color:#6f8896;}
+    .hpsc-input:focus{border-color:#38bdd0;box-shadow:0 0 0 3px rgba(56,189,208,.18);}
+    .hpsc-url{font-size:17px;}
+    .hpsc-btn{width:100%;background:#e0531f;color:#fff;border:0;border-radius:11px;padding:16px 22px;font:700 16px 'Sora',system-ui,sans-serif;letter-spacing:.03em;cursor:pointer;transition:background .15s,transform .15s;}
+    .hpsc-btn:hover:not(:disabled){background:#c8471a;}
+    .hpsc-btn:active:not(:disabled){transform:translateY(1px);}
+    .hpsc-btn:disabled{opacity:.6;cursor:default;}
+    .hpsc-err{color:#ffb59c;font-size:13.5px;min-height:1px;}
+    .hpsc-chip{font-size:12.5px;font-weight:600;color:#3a5560;background:rgba(14,72,88,.06);border:1px solid rgba(14,72,88,.16);border-radius:999px;padding:6px 12px;}
+    @media(max-width:560px){.hpsc-2col{grid-template-columns:1fr!important;}}
     @media(max-width:980px){
       .hp-nav-links{display:none!important;}
       .mcta{display:inline-flex!important;}
@@ -136,6 +147,42 @@
         </ul>
         <div style="height:1px;background:rgba(120,150,160,.2);margin:24px 0 18px;"></div>
         <p style="font-size:15px;color:#9fb2bd;margin:0;">No fake scores. No ranking promises. Just a clear diagnosis.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FREE AI VISIBILITY CHECK (tool) ===== -->
+  <section style="background:linear-gradient(180deg,#ffffff 0%,#eaf3f6 100%);color:#0B2030;">
+    <div style="max-width:860px;margin:0 auto;padding:76px 28px;">
+      <div style="text-align:center;margin-bottom:30px;">
+        <div style="color:#0E4858;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px;">Free AI visibility check</div>
+        <h2 style="font-size:clamp(28px,5vw,38px);line-height:1.12;font-weight:700;letter-spacing:-.02em;margin:0 0 14px;color:#0B2030;">See how <span style="color:#0E4858;">AI search</span> sees your business.</h2>
+        <p style="font-size:17px;line-height:1.6;color:#4a5f6b;margin:0 auto;max-width:540px;">Enter your website and we check whether ChatGPT, Google, and other AI tools can find, understand, and recommend you. Real signals, plain English, no vanity scores.</p>
+      </div>
+
+      <div style="max-width:560px;margin:0 auto;background:#0c2336;border:1px solid rgba(56,189,208,.28);border-radius:18px;padding:28px 28px 24px;box-shadow:0 26px 60px rgba(11,32,48,.22);">
+        <form id="hpscForm" autocomplete="on" novalidate style="display:flex;flex-direction:column;gap:12px;">
+          <input id="hpscUrl" class="hpsc-input hpsc-url" type="text" name="url" inputmode="url" placeholder="https://yourwebsite.com" aria-label="Your website address" />
+          <div class="hpsc-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <input id="hpscBiz" class="hpsc-input" type="text" name="organization" placeholder="Business name" autocomplete="organization" aria-label="Business name" />
+            <input id="hpscEmail" class="hpsc-input" type="email" name="email" inputmode="email" placeholder="Email" autocomplete="email" aria-label="Email" />
+          </div>
+          <div id="hpscErr" class="hpsc-err" role="alert"></div>
+          <button id="hpscBtn" class="hpsc-btn" type="submit">Check my AI visibility <span aria-hidden="true">&#8594;</span></button>
+        </form>
+        <div style="display:flex;align-items:center;gap:8px;justify-content:center;margin-top:14px;color:#8aa0ab;font-size:13px;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38bdd0" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6Z"/><path d="M9 11.5l2 2 4-4.5"/></svg>
+          <span>Free &middot; We email your results &middot; About 20 seconds</span>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:24px;">
+        <span class="hpsc-chip">AI crawlability</span>
+        <span class="hpsc-chip">Structured data</span>
+        <span class="hpsc-chip">Answer-ready content</span>
+        <span class="hpsc-chip">Local signals</span>
+        <span class="hpsc-chip">Clear identity</span>
+        <span class="hpsc-chip">Findability basics</span>
       </div>
     </div>
   </section>
@@ -476,6 +523,27 @@
     window.addEventListener('resize', function () { if (!rTick) { rTick = true; requestAnimationFrame(check); } }, { passive: true });
     check();
   })();
+})();
+</script>
+<script>
+(function () {
+  var f = document.getElementById("hpscForm");
+  if (!f) return;
+  var url = document.getElementById("hpscUrl"), biz = document.getElementById("hpscBiz"),
+      em = document.getElementById("hpscEmail"), err = document.getElementById("hpscErr"),
+      btn = document.getElementById("hpscBtn");
+  var RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    err.textContent = "";
+    var u = url.value.trim(), b = biz.value.trim(), m = em.value.trim();
+    if (!u) { err.textContent = "Please add your website address."; url.focus(); return; }
+    if (!b) { err.textContent = "Please add your business name."; biz.focus(); return; }
+    if (!RE.test(m)) { err.textContent = "Please add a valid email."; em.focus(); return; }
+    try { sessionStorage.setItem("alitskyPendingScan", JSON.stringify({ url: u, business: b, email: m })); } catch (_) {}
+    btn.disabled = true; btn.textContent = "Starting…";
+    window.location.href = "/scan";
+  });
 })();
 </script>
 <script src="/audit-modal.js" defer></script>

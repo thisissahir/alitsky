@@ -376,6 +376,21 @@
       finishBusy();
     }
   }
+
+  // Auto-run when arriving from the homepage check tool.
+  try {
+    var pending = sessionStorage.getItem("alitskyPendingScan");
+    if (pending) {
+      sessionStorage.removeItem("alitskyPendingScan");
+      var p = JSON.parse(pending);
+      if (p && p.url) {
+        urlEl.value = p.url;
+        bizEl.value = p.business || "";
+        emailEl.value = p.email || "";
+        form.dispatchEvent(new Event("submit", { cancelable: true }));
+      }
+    }
+  } catch (_) {}
 })();
 </script>
 <script src="/audit-modal.js" defer></script>
