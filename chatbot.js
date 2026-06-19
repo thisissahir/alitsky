@@ -80,39 +80,45 @@
       "$1<em>$2</em>"
     );
 
-    // Emails: foo@bar.com → mailto link
-    text = text.replace(
-      /\b([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})\b/g,
-      '<a href="mailto:$1">$1</a>'
-    );
-
-    // Plain URLs: https://... or alitsky.com[/path]
-    text = text.replace(
-      /\b((?:https?:\/\/[^\s<]+)|(?:alitsky\.com(?:\/[^\s<]*)?))/gi,
-      function (match) {
-        // Skip if already inside an <a>...> (rough check: preceded by href=)
-        // The regex won't match inside an attribute because we restrict on \s<
-        // but trailing punctuation should not be part of the URL.
-        var trail = match.match(/[.,;:!?)\]}]+$/);
-        var url = match;
-        var tail = "";
-        if (trail) {
-          url = match.slice(0, -trail[0].length);
-          tail = trail[0];
+    // Auto-link emails and bare URLs in a SINGLE pass so an email's domain
+    // (e.g. the alitsky.com inside admin@alitsky.com) is never re-linked.
+    // Skip any text that is already inside an <a>...</a> from a markdown link.
+    var linkRe = /([A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})|(https?:\/\/[^\s<]+|alitsky\.com(?:\/[^\s<]*)?)/gi;
+    var parts = text.split(/(<a\b[^>]*>[\s\S]*?<\/a>)/gi);
+    for (var i = 0; i < parts.length; i++) {
+      if (/^<a\b/i.test(parts[i])) continue; // leave existing links untouched
+      parts[i] = parts[i].replace(linkRe, function (match, email, url) {
+        if (email) {
+          return '<a href="mailto:' + email + '">' + email + "</a>";
         }
-        var href = /^https?:\/\//i.test(url) ? url : "https://" + url;
+        // URL branch — don't swallow trailing sentence punctuation.
+        var trail = url.match(/[.,;:!?)\]}]+$/);
+        var u = url, tail = "";
+        if (trail) { u = url.slice(0, -trail[0].length); tail = trail[0]; }
+        var href = /^https?:\/\//i.test(u) ? u : "https://" + u;
         return (
-          '<a href="' +
-          href +
-          '" target="_blank" rel="noopener noreferrer">' +
-          url +
-          "</a>" +
-          tail
+          '<a href="' + href + '" target="_blank" rel="noopener noreferrer">' +
+          u + "</a>" + tail
         );
-      }
-    );
+      });
+    }
+    return parts.join("");
+  }
 
-    return text;
+  // Gloria can request an inline contact form by emitting a marker token in
+  // her reply. We strip it from what the visitor sees and render the form.
+  function stripMarkers(t) {
+    return String(t)
+      // Full marker.
+      .replace(/\[\[\s*CONTACT_FORM\s*\]\]/gi, "")
+      // Trailing partial marker still arriving mid-stream (e.g. "[[CONTACT_FOR").
+      .replace(/\[\[\s*C?O?N?T?A?C?T?_?F?O?R?M?\s*\]?\]?\s*$/i, "")
+      .replace(/[ \t]+\n/g, "\n")
+      .replace(/\n{3,}/g, "\n\n")
+      .trim();
+  }
+  function wantsContactForm(t) {
+    return /\[\[\s*CONTACT_FORM\s*\]\]/i.test(String(t));
   }
 
   // -------- State --------
@@ -356,6 +362,40 @@
     }
     .alsy-chat-peek-close:hover { opacity: 1; background: rgba(11,32,48,0.06); }
     .alsy-chat-peek-close svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+    /* Inline contact form (human handoff) */
+    .alsy-chat-row.formrow { max-width: 100%; width: 100%; align-self: stretch; }
+    .alsy-chat-formcard {
+      width: 100%; background: #ffffff; border: 1px solid #d8e7ec;
+      border-radius: 14px; padding: 14px;
+      box-shadow: 0 10px 26px rgba(11,32,48,0.10);
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .alsy-chat-formtitle { font-size: 13.5px; font-weight: 700; color: #0B2030; }
+    .alsy-cf {
+      width: 100%; font: 400 13.5px/1.4 'Sora', system-ui, sans-serif;
+      color: #0B2030; background: #F7FAFA; border: 1px solid #E5E7EB;
+      border-radius: 9px; padding: 9px 11px; outline: none;
+      transition: border-color 140ms, box-shadow 140ms;
+    }
+    textarea.alsy-cf { resize: none; }
+    .alsy-cf::placeholder { color: #9BB0BB; }
+    .alsy-cf:focus { border-color: #0E4858; box-shadow: 0 0 0 3px rgba(14,72,88,0.10); }
+    .alsy-cf-error { font-size: 12px; color: #c0392b; line-height: 1.4; }
+    .alsy-cf-submit {
+      margin-top: 2px; background: #e0531f; color: #ffffff; border: 0;
+      border-radius: 9px; padding: 11px 14px;
+      font: 700 13.5px 'Sora', system-ui, sans-serif; letter-spacing: 0.02em;
+      cursor: pointer; transition: background 140ms, transform 140ms;
+    }
+    .alsy-cf-submit:hover:not(:disabled) { background: #c8471a; }
+    .alsy-cf-submit:active:not(:disabled) { transform: scale(0.98); }
+    .alsy-cf-submit:disabled { opacity: 0.55; cursor: default; }
+    .alsy-cf-note { font-size: 11.5px; color: #7A9298; text-align: center; }
+    .alsy-cf-note a { color: #0E4858; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+    .alsy-cf-success { display: flex; align-items: flex-start; gap: 9px; font-size: 13.5px; color: #0B2030; line-height: 1.5; }
+    .alsy-cf-success svg { width: 19px; height: 19px; flex: none; margin-top: 1px; }
+    .alsy-cf-success strong { font-weight: 700; }
   `;
   document.head.appendChild(styleEl);
 
@@ -579,6 +619,98 @@
     floatBtn.classList.remove("is-open");
   }
 
+  // -------- Inline contact form (human handoff) --------
+  function renderContactForm() {
+    const row = document.createElement("div");
+    row.className = "alsy-chat-row bot formrow";
+    const card = document.createElement("div");
+    card.className = "alsy-chat-formcard";
+    card.innerHTML = `
+      <div class="alsy-chat-formtitle">Share your details and the team will reach out</div>
+      <input class="alsy-cf alsy-cf-name" type="text" placeholder="Your name" autocomplete="name" />
+      <input class="alsy-cf alsy-cf-email" type="email" placeholder="Email address" autocomplete="email" inputmode="email" />
+      <input class="alsy-cf alsy-cf-phone" type="tel" placeholder="Phone (optional)" autocomplete="tel" inputmode="tel" />
+      <textarea class="alsy-cf alsy-cf-msg" rows="2" placeholder="What can we help with? (optional)"></textarea>
+      <div class="alsy-cf-error" hidden></div>
+      <button class="alsy-cf-submit" type="button">Send to the team</button>
+      <div class="alsy-cf-note">Prefer email? <a href="mailto:admin@alitsky.com">admin@alitsky.com</a></div>
+    `;
+    row.appendChild(card);
+    messagesEl.appendChild(row);
+    scrollToBottom();
+
+    const nameEl = card.querySelector(".alsy-cf-name");
+    const emailEl = card.querySelector(".alsy-cf-email");
+    const phoneEl = card.querySelector(".alsy-cf-phone");
+    const msgEl = card.querySelector(".alsy-cf-msg");
+    const errEl = card.querySelector(".alsy-cf-error");
+    const submitEl = card.querySelector(".alsy-cf-submit");
+
+    setTimeout(() => { try { nameEl.focus(); } catch (_) {} }, 80);
+
+    function showErr(m) { errEl.textContent = m; errEl.hidden = false; scrollToBottom(); }
+    function clearErr() { errEl.hidden = true; }
+
+    async function submit() {
+      clearErr();
+      const name = nameEl.value.trim();
+      const email = emailEl.value.trim();
+      const phone = phoneEl.value.trim();
+      const message = msgEl.value.trim();
+      if (!name) { showErr("Please add your name."); nameEl.focus(); return; }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showErr("Please add a valid email."); emailEl.focus(); return; }
+
+      submitEl.disabled = true;
+      const prevLabel = submitEl.textContent;
+      submitEl.textContent = "Sending…";
+      try {
+        const resp = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            phone: phone,
+            message: message,
+            conversation: state.messages.map((m) => ({ role: m.role, content: m.content })),
+          }),
+        });
+        if (!resp.ok) {
+          let m = "Couldn't send that. Please email admin@alitsky.com.";
+          try { const b = await resp.json(); if (b && b.error) m = b.error; } catch (_) {}
+          showErr(m);
+          submitEl.disabled = false;
+          submitEl.textContent = prevLabel;
+          return;
+        }
+        // Success — turn the card into a quiet receipt…
+        card.innerHTML =
+          '<div class="alsy-cf-success">' +
+            '<svg viewBox="0 0 24 24" fill="none" stroke="#1f9d57" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.2"/><path d="M8.5 12.2l2.4 2.4 4.6-5"/></svg>' +
+            "<div>Sent — we'll be in touch with <strong>" + escapeHtml(email) + "</strong> shortly.</div>" +
+          "</div>";
+        // …and let Gloria follow up naturally.
+        const confirm =
+          "Thanks, " + name + " — your details are with the team and they'll reach out to " +
+          email + " within one business day. Anything else I can help with in the meantime?";
+        state.messages.push({ role: "assistant", content: confirm, ts: new Date() });
+        renderMessage("assistant", confirm);
+      } catch (err) {
+        if (window.console) console.error("Contact form error:", err);
+        showErr("Couldn't send that. Please email admin@alitsky.com.");
+        submitEl.disabled = false;
+        submitEl.textContent = prevLabel;
+      }
+    }
+
+    submitEl.addEventListener("click", submit);
+    [nameEl, emailEl, phoneEl].forEach((el) => {
+      el.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") { e.preventDefault(); submit(); }
+      });
+    });
+  }
+
   // -------- Sending logic --------
   async function sendMessage(text) {
     if (!text || state.sending) return;
@@ -636,21 +768,28 @@
           if (done) break;
           const chunk = decoder.decode(value, { stream: true });
           assistantText += chunk;
-          bubble.innerHTML = formatAssistantMessage(assistantText);
+          bubble.innerHTML = formatAssistantMessage(stripMarkers(assistantText));
           scrollToBottom();
         }
       } else {
         // Fallback: no streaming support, read whole body
         assistantText = await response.text();
-        bubble.innerHTML = formatAssistantMessage(assistantText);
+        bubble.innerHTML = formatAssistantMessage(stripMarkers(assistantText));
         scrollToBottom();
       }
 
+      // Gloria may request a contact form via a marker token in her reply.
+      const showForm = wantsContactForm(assistantText);
+      const cleanText = stripMarkers(assistantText);
+      bubble.innerHTML = formatAssistantMessage(cleanText); // ensure marker is gone
+
       state.messages.push({
         role: "assistant",
-        content: assistantText || ERROR_MESSAGE,
+        content: cleanText || ERROR_MESSAGE,
         ts: new Date(),
       });
+
+      if (showForm) renderContactForm();
 
       // 4. If chat is closed (rare since we just sent), flag unread
       if (!state.open) {
