@@ -40,15 +40,22 @@
     a.fl{color:#c6d2d6;text-decoration:none;font-size:14px;transition:color .15s;}
     a.fl:hover{color:#38bdd0;}
     .strike{text-decoration:line-through;opacity:.65;margin-right:7px;font-weight:600;}
+    .ac-card{transition:transform .18s cubic-bezier(.3,.7,.3,1),border-color .18s,box-shadow .18s;}
+    .ac-card:hover{transform:translateY(-6px);border-color:rgba(56,189,208,.4)!important;box-shadow:0 26px 60px rgba(4,12,22,.5),0 0 0 1px rgba(56,189,208,.12);}
+    .ac-icon{transition:transform .25s cubic-bezier(.3,.7,.3,1),background .25s;}
+    .ac-card:hover .ac-icon{transform:scale(1.08) rotate(-4deg);background:rgba(56,189,208,.18)!important;animation:acPulse 1.4s ease-out;}
+    @keyframes acPulse{0%{box-shadow:0 0 0 0 rgba(56,189,208,.35);}70%{box-shadow:0 0 0 12px rgba(56,189,208,0);}100%{box-shadow:0 0 0 0 rgba(56,189,208,0);}}
+    @media(prefers-reduced-motion:reduce){.ac-card,.ac-icon{transition:none!important;}.ac-card:hover .ac-icon{animation:none!important;}}
     @media(max-width:860px){
       .ab-nav-links{display:none!important;}
       .mcta{display:inline-flex!important;}
       .ab-mv-grid{grid-template-columns:1fr!important;}
-      .ab-val-grid{grid-template-columns:1fr!important;}
+      .ab-val-grid{grid-template-columns:1fr 1fr!important;}
       .ab-ft-grid{grid-template-columns:1fr 1fr!important;}
       .ab-h1{font-size:40px!important;}
       .ab-h2{font-size:30px!important;}
     }
+    @media(max-width:560px){.ab-val-grid{grid-template-columns:1fr!important;}}
   </style>
 </head>
 <body>
@@ -148,35 +155,65 @@
       <div style="text-align:center;color:#38bdd0;font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-bottom:14px;">What we stand on</div>
       <h2 class="ab-h2" style="text-align:center;font-size:40px;font-weight:600;letter-spacing:-.02em;margin:0 0 56px;color:#f4f8f9;">Six commitments that shape every build.</h2>
       <div class="ab-val-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
-        <div style="background:rgba(12,35,54,.5);border:1px solid rgba(56,189,208,.16);border-radius:14px;padding:30px 28px;box-shadow:0 18px 40px rgba(4,12,22,.32);">
-          <div style="font-size:13px;font-weight:700;color:#38bdd0;margin-bottom:12px;">01</div>
-          <div style="font-size:19px;font-weight:700;margin-bottom:10px;color:#f4f8f9;">Customer-centric</div>
-          <p style="font-size:15px;line-height:1.55;color:#9fb2bd;margin:0;">Every decision starts with the person on the other side of the work.</p>
+        <div class="ac-card" style="background:#0c2336;border:1px solid rgba(120,150,160,.16);border-radius:16px;padding:34px 32px;">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">
+            <div class="ac-icon" style="flex:0 0 auto;width:52px;height:52px;border-radius:13px;display:grid;place-items:center;background:rgba(56,189,208,.1);border:1px solid rgba(56,189,208,.22);color:#3fc1d4;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <div style="font-size:13px;font-weight:600;letter-spacing:.14em;color:#3fc1d4;">01</div>
+          </div>
+          <h3 style="font-size:21px;font-weight:700;letter-spacing:-.01em;line-height:1.15;color:#eaf4f7;margin:0 0 12px;">Customer-centric</h3>
+          <p style="font-size:16px;line-height:1.6;color:#9db4c0;margin:0;">Every decision starts with the person on the other side of the work.</p>
         </div>
-        <div style="background:rgba(12,35,54,.5);border:1px solid rgba(56,189,208,.16);border-radius:14px;padding:30px 28px;box-shadow:0 18px 40px rgba(4,12,22,.32);">
-          <div style="font-size:13px;font-weight:700;color:#38bdd0;margin-bottom:12px;">02</div>
-          <div style="font-size:19px;font-weight:700;margin-bottom:10px;color:#f4f8f9;">Understanding first</div>
-          <p style="font-size:15px;line-height:1.55;color:#9fb2bd;margin:0;">We listen first. The audit, the questions, the quiet. That is where the real work begins.</p>
+        <div class="ac-card" style="background:#0c2336;border:1px solid rgba(120,150,160,.16);border-radius:16px;padding:34px 32px;">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">
+            <div class="ac-icon" style="flex:0 0 auto;width:52px;height:52px;border-radius:13px;display:grid;place-items:center;background:rgba(56,189,208,.1);border:1px solid rgba(56,189,208,.22);color:#3fc1d4;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8.5a6 6 0 1 1 12 0c0 2-1 3-1 5a5 5 0 0 1-5 3"/><path d="M9 18.5a2.5 2.5 0 0 0 3 0"/><path d="M9 8.5a3 3 0 0 1 6 0"/></svg>
+            </div>
+            <div style="font-size:13px;font-weight:600;letter-spacing:.14em;color:#3fc1d4;">02</div>
+          </div>
+          <h3 style="font-size:21px;font-weight:700;letter-spacing:-.01em;line-height:1.15;color:#eaf4f7;margin:0 0 12px;">Understanding first</h3>
+          <p style="font-size:16px;line-height:1.6;color:#9db4c0;margin:0;">We listen first. The audit, the questions, the quiet. That is where the real work begins.</p>
         </div>
-        <div style="background:rgba(12,35,54,.5);border:1px solid rgba(56,189,208,.16);border-radius:14px;padding:30px 28px;box-shadow:0 18px 40px rgba(4,12,22,.32);">
-          <div style="font-size:13px;font-weight:700;color:#38bdd0;margin-bottom:12px;">03</div>
-          <div style="font-size:19px;font-weight:700;margin-bottom:10px;color:#f4f8f9;">Customization, not templates</div>
-          <p style="font-size:15px;line-height:1.55;color:#9fb2bd;margin:0;">Your business is not a category. What we build is shaped to your stage and your craft.</p>
+        <div class="ac-card" style="background:#0c2336;border:1px solid rgba(120,150,160,.16);border-radius:16px;padding:34px 32px;">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">
+            <div class="ac-icon" style="flex:0 0 auto;width:52px;height:52px;border-radius:13px;display:grid;place-items:center;background:rgba(56,189,208,.1);border:1px solid rgba(56,189,208,.22);color:#3fc1d4;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg>
+            </div>
+            <div style="font-size:13px;font-weight:600;letter-spacing:.14em;color:#3fc1d4;">03</div>
+          </div>
+          <h3 style="font-size:21px;font-weight:700;letter-spacing:-.01em;line-height:1.15;color:#eaf4f7;margin:0 0 12px;">Customization, not templates</h3>
+          <p style="font-size:16px;line-height:1.6;color:#9db4c0;margin:0;">Your business is not a category. What we build is shaped to your stage and your craft.</p>
         </div>
-        <div style="background:rgba(12,35,54,.5);border:1px solid rgba(56,189,208,.16);border-radius:14px;padding:30px 28px;box-shadow:0 18px 40px rgba(4,12,22,.32);">
-          <div style="font-size:13px;font-weight:700;color:#38bdd0;margin-bottom:12px;">04</div>
-          <div style="font-size:19px;font-weight:700;margin-bottom:10px;color:#f4f8f9;">Cohesion across the system</div>
-          <p style="font-size:15px;line-height:1.55;color:#9fb2bd;margin:0;">The site, the SEO, the automations. One connected layer. Nothing fights itself.</p>
+        <div class="ac-card" style="background:#0c2336;border:1px solid rgba(120,150,160,.16);border-radius:16px;padding:34px 32px;">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">
+            <div class="ac-icon" style="flex:0 0 auto;width:52px;height:52px;border-radius:13px;display:grid;place-items:center;background:rgba(56,189,208,.1);border:1px solid rgba(56,189,208,.22);color:#3fc1d4;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <div style="font-size:13px;font-weight:600;letter-spacing:.14em;color:#3fc1d4;">04</div>
+          </div>
+          <h3 style="font-size:21px;font-weight:700;letter-spacing:-.01em;line-height:1.15;color:#eaf4f7;margin:0 0 12px;">Cohesion across the system</h3>
+          <p style="font-size:16px;line-height:1.6;color:#9db4c0;margin:0;">The site, the SEO, the automations. One connected layer. Nothing fights itself.</p>
         </div>
-        <div style="background:rgba(12,35,54,.5);border:1px solid rgba(56,189,208,.16);border-radius:14px;padding:30px 28px;box-shadow:0 18px 40px rgba(4,12,22,.32);">
-          <div style="font-size:13px;font-weight:700;color:#38bdd0;margin-bottom:12px;">05</div>
-          <div style="font-size:19px;font-weight:700;margin-bottom:10px;color:#f4f8f9;">Quick to action</div>
-          <p style="font-size:15px;line-height:1.55;color:#9fb2bd;margin:0;">We move once we know what we are building. Weeks, not quarters. Decisions, not status meetings.</p>
+        <div class="ac-card" style="background:#0c2336;border:1px solid rgba(120,150,160,.16);border-radius:16px;padding:34px 32px;">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">
+            <div class="ac-icon" style="flex:0 0 auto;width:52px;height:52px;border-radius:13px;display:grid;place-items:center;background:rgba(56,189,208,.1);border:1px solid rgba(56,189,208,.22);color:#3fc1d4;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div style="font-size:13px;font-weight:600;letter-spacing:.14em;color:#3fc1d4;">05</div>
+          </div>
+          <h3 style="font-size:21px;font-weight:700;letter-spacing:-.01em;line-height:1.15;color:#eaf4f7;margin:0 0 12px;">Quick to action</h3>
+          <p style="font-size:16px;line-height:1.6;color:#9db4c0;margin:0;">We move once we know what we are building. Weeks, not quarters. Decisions, not status meetings.</p>
         </div>
-        <div style="background:rgba(12,35,54,.5);border:1px solid rgba(56,189,208,.16);border-radius:14px;padding:30px 28px;box-shadow:0 18px 40px rgba(4,12,22,.32);">
-          <div style="font-size:13px;font-weight:700;color:#38bdd0;margin-bottom:12px;">06</div>
-          <div style="font-size:19px;font-weight:700;margin-bottom:10px;color:#f4f8f9;">Quality you can feel</div>
-          <p style="font-size:15px;line-height:1.55;color:#9fb2bd;margin:0;">Built once, built well. The kind of work that holds up when it matters most.</p>
+        <div class="ac-card" style="background:#0c2336;border:1px solid rgba(120,150,160,.16);border-radius:16px;padding:34px 32px;">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">
+            <div class="ac-icon" style="flex:0 0 auto;width:52px;height:52px;border-radius:13px;display:grid;place-items:center;background:rgba(56,189,208,.1);border:1px solid rgba(56,189,208,.22);color:#3fc1d4;">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V5l-8-3z"/><polyline points="9 12 11 14 15 9.5"/></svg>
+            </div>
+            <div style="font-size:13px;font-weight:600;letter-spacing:.14em;color:#3fc1d4;">06</div>
+          </div>
+          <h3 style="font-size:21px;font-weight:700;letter-spacing:-.01em;line-height:1.15;color:#eaf4f7;margin:0 0 12px;">Quality you can feel</h3>
+          <p style="font-size:16px;line-height:1.6;color:#9db4c0;margin:0;">Built once, built well. The kind of work that holds up when it matters most.</p>
         </div>
       </div>
     </div>
