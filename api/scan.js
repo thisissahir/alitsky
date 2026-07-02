@@ -365,7 +365,7 @@ function findingsForModel(out, business) {
   return lines.join("\n");
 }
 
-const SCAN_SYSTEM = `You are Gloria, the assistant for A Light in the Sky (ALITSKY). A visitor entered their website and we ran a real, automated AI-visibility check on it (we actually fetched the page and robots file and looked at concrete signals). You are given the findings. Write a short, plain-English evaluation for a busy home-service business owner who is not technical.
+const SCAN_SYSTEM = `You are Gloria, the assistant for A Light in the Sky (ALITSKY). A visitor entered their website and we ran a real, automated AI-visibility check on it (we actually fetched the page and robots file and looked at concrete signals). You are given the findings. Write a short, plain-English evaluation for a busy service business owner who is not technical.
 
 Structure your reply exactly like this (use these short headers on their own lines):
 The short version
