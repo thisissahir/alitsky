@@ -13,11 +13,11 @@
   <meta property="og:url" content="https://www.alitsky.com/news">
   <meta property="og:title" content="News — A Light in the Sky">
   <meta property="og:description" content="Daily reads on the search shift: AI search, GEO, AEO, and SEO for service businesses. Plain English, real numbers, no hype.">
-  <meta property="og:image" content="https://www.alitsky.com/assets/news-search-shift-cover.png">
+  <meta property="og:image" content="https://www.alitsky.com/assets/news-google-ai-calls-cover.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="News — A Light in the Sky">
   <meta name="twitter:description" content="Daily reads on the search shift. Plain English, real numbers, no hype.">
-  <meta name="twitter:image" content="https://www.alitsky.com/assets/news-search-shift-cover.png">
+  <meta name="twitter:image" content="https://www.alitsky.com/assets/news-google-ai-calls-cover.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -43,10 +43,12 @@
     .nw-feature:hover .nw-read .nw-arrow{transform:translateX(5px);}
     .nw-arrow{transition:transform .2s cubic-bezier(.3,.7,.3,1);}
     .nw-tag{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#e0531f;background:rgba(224,83,31,.1);border:1px solid rgba(224,83,31,.3);border-radius:999px;padding:5px 12px;white-space:nowrap;}
+    .nw-archive{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
     @media(max-width:980px){
       .nw-nav-links{display:none!important;}
       .mcta{display:inline-flex!important;}
       .nw-ft-grid{grid-template-columns:1fr 1fr!important;}
+      .nw-archive{grid-template-columns:1fr!important;}
       .nw-h1{font-size:38px!important;}
       .nw-feature .nw-bar{padding:18px 20px;}
     }
@@ -92,27 +94,52 @@
         <span style="font-size:13.5px;color:#7e919c;">A new article every day.</span>
       </div>
 
-      <!-- Article: The Search Shift Is Here (July 7, 2026) -->
-      <a href="/news/search-shift" class="nw-feature" aria-label="Read: The search shift is here. Your customers moved. Did your website?">
-        <img src="/assets/news-search-shift-cover.png" alt="Chart of attention migration 2022 to 2028: AI search rising as traditional search clicks decline — the search shift is here" width="1920" height="1005" />
+      <!-- Article: Google Is About to Start Calling Local Businesses (July 8, 2026) -->
+      <a href="/news/google-ai-calls-local-businesses" class="nw-feature" aria-label="Read: Google is about to start calling local businesses for its users">
+        <img src="/assets/news-google-ai-calls-cover.png" alt="Diagram of Google AI placing a call and booking an HVAC business while other trades are skipped: agentic calling, summer 2026" width="1920" height="1030" />
         <div class="nw-bar">
           <div style="min-width:0;">
             <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;flex-wrap:wrap;">
-              <span class="nw-tag">The Search Shift</span>
-              <span style="font-size:13px;color:#7e919c;font-variant-numeric:tabular-nums;">July 7, 2026 &middot; 4 min read</span>
+              <span class="nw-tag">Agentic Calling</span>
+              <span style="font-size:13px;color:#7e919c;font-variant-numeric:tabular-nums;">July 8, 2026 &middot; 4 min read</span>
             </div>
-            <div style="font-size:19px;font-weight:700;letter-spacing:-.01em;color:#f4f8f9;line-height:1.3;">The search shift is here. Your customers moved. Did your website?</div>
+            <div style="font-size:19px;font-weight:700;letter-spacing:-.01em;color:#f4f8f9;line-height:1.3;">Google is about to start calling local businesses for its users</div>
           </div>
           <span class="nw-read">Read the article <span class="nw-arrow" aria-hidden="true">&#8594;</span></span>
         </div>
       </a>
 
+      <!-- ===== MORE READS (archive) ===== -->
+      <div style="margin-top:56px;">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap;">
+          <h2 style="font-size:22px;font-weight:700;letter-spacing:-.01em;color:#f4f8f9;margin:0;">More reads</h2>
+          <span style="font-size:13.5px;color:#7e919c;">The archive.</span>
+        </div>
+        <div class="nw-archive">
+
+          <!-- Article: The Search Shift Is Here (July 7, 2026) -->
+          <a href="/news/search-shift" class="nw-feature" aria-label="Read: The search shift is here. Your customers moved. Did your website?">
+            <img src="/assets/news-google-ai-calls-cover.png" alt="Chart of attention migration 2022 to 2028: AI search rising as traditional search clicks decline, the search shift is here" width="1920" height="1005" />
+            <div class="nw-bar">
+              <div style="min-width:0;">
+                <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;flex-wrap:wrap;">
+                  <span class="nw-tag">The Search Shift</span>
+                  <span style="font-size:13px;color:#7e919c;font-variant-numeric:tabular-nums;">July 7, 2026 &middot; 4 min read</span>
+                </div>
+                <div style="font-size:17px;font-weight:700;letter-spacing:-.01em;color:#f4f8f9;line-height:1.3;">The search shift is here. Your customers moved. Did your website?</div>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
       <!--
         DAILY WORKFLOW: to publish a new article —
-        1. Create news/<slug>.html (copy news/search-shift.html as the template).
-        2. Move the current featured card into the archive grid below (smaller card, same markup).
-        3. Put the new article's card in the "Today's read" slot above.
-        4. Add the new URL to sitemap.xml.
+        1. Create news/<slug>.html (copy an existing news/*.html as the template).
+        2. Put the new article's card in the "Today's read" slot above (big cover + bar).
+        3. Move the previous featured card into the "More reads" .nw-archive grid (drop its "Read the article" link, tighten the title to 17px).
+        4. Add the new URL to sitemap.xml and bump /news lastmod.
       -->
 
     </div>

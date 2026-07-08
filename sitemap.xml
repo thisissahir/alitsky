@@ -66,9 +66,16 @@
 
   <url>
     <loc>https://www.alitsky.com/news</loc>
-    <lastmod>2026-07-07</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.alitsky.com/news/google-ai-calls-local-businesses</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
