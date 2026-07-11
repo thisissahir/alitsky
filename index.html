@@ -53,6 +53,29 @@
     .hpsc-btn:disabled{opacity:.6;cursor:default;}
     .hpsc-err{color:#ffb59c;font-size:13.5px;min-height:1px;}
     .hpsc-chip{font-size:12.5px;font-weight:600;color:#bcd0d6;background:rgba(56,189,208,.10);border:1px solid rgba(56,189,208,.26);border-radius:999px;padding:6px 12px;}
+    .lp-overlay{position:fixed;inset:0;z-index:10000;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(7,21,30,.62);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);opacity:0;transition:opacity .18s ease;}
+    .lp-overlay.is-open{display:flex;opacity:1;}
+    .lp-card{width:100%;max-width:560px;max-height:90vh;overflow-y:auto;background:#ffffff;border-radius:18px;box-shadow:0 40px 80px -24px rgba(7,21,30,.55),0 8px 24px rgba(7,21,30,.18);padding:30px 30px 26px;position:relative;transform:translateY(14px) scale(.985);transition:transform .2s cubic-bezier(.22,1,.36,1);}
+    .lp-overlay.is-open .lp-card{transform:translateY(0) scale(1);}
+    .lp-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border:0;background:transparent;color:#7A9298;cursor:pointer;border-radius:8px;display:flex;align-items:center;justify-content:center;transition:background .12s,color .12s;}
+    .lp-close:hover{background:rgba(11,32,48,.06);color:#0B2030;}
+    .lp-label{display:block;font-size:12.5px;font-weight:600;color:#33424c;margin:0 0 5px;}
+    .lp-input,.lp-select,.lp-ta{width:100%;font:400 15px/1.4 'Sora',system-ui,sans-serif;color:#0B2030;background:#F7FAFA;border:1px solid #E5E7EB;border-radius:10px;padding:12px 13px;outline:none;transition:border-color .14s,box-shadow .14s;}
+    .lp-input:focus,.lp-select:focus,.lp-ta:focus{border-color:#0E4858;box-shadow:0 0 0 3px rgba(14,72,88,.10);}
+    .lp-input::placeholder,.lp-ta::placeholder{color:#9BB0BB;}
+    .lp-ta{resize:vertical;min-height:72px;}
+    .lp-field{margin-bottom:13px;}
+    .lp-2col{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+    .lp-file{display:flex;align-items:center;gap:12px;background:#F7FAFA;border:1px dashed #cfd9de;border-radius:10px;padding:12px 13px;cursor:pointer;transition:border-color .14s;}
+    .lp-file:hover{border-color:#0E4858;}
+    .lp-file input{display:none;}
+    .lp-err{font-size:12.5px;color:#c0392b;min-height:1px;margin:2px 0 8px;}
+    .lp-submit{width:100%;margin-top:4px;background:#e0531f;color:#fff;border:0;border-radius:10px;padding:15px 18px;font:700 15px 'Sora',system-ui,sans-serif;letter-spacing:.03em;cursor:pointer;transition:background .14s,transform .14s;}
+    .lp-submit:hover:not(:disabled){background:#c8471a;}
+    .lp-submit:disabled{opacity:.6;cursor:default;}
+    @media(max-width:520px){.lp-2col{grid-template-columns:1fr;}.lp-card{padding:26px 20px 22px;}}
+    .lp24-band{display:grid;grid-template-columns:1.25fr 1fr;gap:44px;align-items:center;}
+    @media(max-width:980px){.lp24-band{grid-template-columns:1fr;gap:28px;}}
     .shift-card{background:#0c2336;border:1px solid rgba(56,189,208,.22);border-radius:16px;padding:28px 26px;transition:transform .15s,box-shadow .15s,border-color .15s;}
     .shift-card:hover{transform:translateY(-4px);box-shadow:0 22px 50px rgba(4,12,22,.5);border-color:rgba(56,189,208,.5);}
     .shift-yr{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:baseline;padding:17px 18px;border-left:3px solid transparent;border-radius:0 10px 10px 0;cursor:pointer;transition:background .18s,border-color .18s;}
@@ -201,6 +224,26 @@
         </ul>
         <div style="height:1px;background:rgba(120,150,160,.2);margin:24px 0 18px;"></div>
         <p style="font-size:15px;color:#9fb2bd;margin:0;">No fake scores. No ranking promises. Just a clear diagnosis.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FREE LANDING PAGE IN 24 HOURS (offer) ===== -->
+  <section style="background-color:#0b1f2d;background-image:radial-gradient(125% 95% at 50% -8%,rgba(21,51,74,.9) 0%,transparent 52%),radial-gradient(circle at 18% 30%,rgba(205,224,228,.2) 0 1px,transparent 1.4px),radial-gradient(circle at 82% 64%,rgba(205,224,228,.16) 0 1px,transparent 1.4px),radial-gradient(circle at 46% 88%,rgba(205,224,228,.14) 0 1px,transparent 1.4px);border-top:1px solid rgba(120,150,160,.12);border-bottom:1px solid rgba(120,150,160,.12);">
+    <div style="max-width:1080px;margin:0 auto;padding:76px 28px;">
+      <div class="lp24-band" style="background:#0c2336;border:1px solid rgba(224,83,31,.38);border-radius:18px;padding:44px 46px;box-shadow:0 26px 60px rgba(4,12,22,.5);">
+        <div>
+          <div style="color:#e0531f;font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:14px;">Free &middot; 24 hours</div>
+          <h2 style="font-size:clamp(26px,4.5vw,34px);line-height:1.15;font-weight:700;letter-spacing:-.02em;margin:0 0 14px;color:#f4f8f9;">Get a free landing page for your business. <span style="color:#38bdd0;">In the next 24 hours.</span></h2>
+          <p style="font-size:16.5px;line-height:1.65;color:#aebfc8;margin:0;">Tell us what you do, where you work, and what the page should get you. We build one clean page for your business, phone number front and center, and send it within 24 hours. Yours to keep. No obligation.</p>
+        </div>
+        <div style="text-align:center;">
+          <button id="lp24Open" class="lp-submit" type="button" style="width:auto;padding:17px 30px;font-size:15px;letter-spacing:.04em;">GET MY FREE LANDING PAGE <span aria-hidden="true">&#8594;</span></button>
+          <div style="display:flex;align-items:center;gap:8px;justify-content:center;margin-top:14px;color:#9fb2bd;font-size:13px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38bdd0" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6Z"/><path d="M9 11.5l2 2 4-4.5"/></svg>
+            <span>One page &middot; Built for calls &middot; No card, no catch</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -758,6 +801,113 @@
     rows.forEach(function (row, ri) { row.addEventListener("click", function () { scrub = fr[ri]; render(true); }); });
     render(true);
   }
+})();
+</script>
+<!-- ===== FREE LANDING PAGE MODAL ===== -->
+<div id="lp24Overlay" class="lp-overlay" role="dialog" aria-modal="true" aria-label="Get your free landing page">
+  <div class="lp-card">
+    <button id="lp24Close" class="lp-close" type="button" aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div style="display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#0E4858;margin-bottom:12px;">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0E4858" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+      Free landing page &middot; 24 hours
+    </div>
+    <h2 style="font-size:23px;line-height:1.18;font-weight:700;letter-spacing:-.01em;color:#0B2030;margin:0 0 8px;">Your free landing page</h2>
+    <p style="font-size:14.5px;line-height:1.55;color:#4a5f6b;margin:0 0 20px;">Fill this in once. We build one clean page for your business and email it to you within 24 hours. Free, yours to keep, no obligation.</p>
+    <form id="lp24Form" autocomplete="on" novalidate>
+      <div class="lp-field"><label class="lp-label" for="lpBiz">Business name *</label><input id="lpBiz" class="lp-input" type="text" name="organization" placeholder="e.g. Cool Breeze HVAC" autocomplete="organization" /></div>
+      <div class="lp-2col lp-field" style="margin-bottom:13px;">
+        <div><label class="lp-label" for="lpEmail">Email *</label><input id="lpEmail" class="lp-input" type="email" name="email" placeholder="you@business.com" autocomplete="email" inputmode="email" /></div>
+        <div><label class="lp-label" for="lpPhone">Phone (goes on the page)</label><input id="lpPhone" class="lp-input" type="tel" name="tel" placeholder="(317) 555-0134" autocomplete="tel" inputmode="tel" /></div>
+      </div>
+      <div class="lp-field"><label class="lp-label" for="lpDoes">What does your business do? *</label><input id="lpDoes" class="lp-input" type="text" placeholder="e.g. HVAC repair, hair salon, caf&eacute;, plumbing" /></div>
+      <div class="lp-field"><label class="lp-label" for="lpArea">City and service area *</label><input id="lpArea" class="lp-input" type="text" placeholder="e.g. Indianapolis and 30 miles around" /></div>
+      <div class="lp-field"><label class="lp-label" for="lpServices">Top services or offers to feature *</label><textarea id="lpServices" class="lp-ta" placeholder="2 or 3 lines. e.g. AC repair, furnace install, seasonal tune-up special"></textarea></div>
+      <div class="lp-2col lp-field" style="margin-bottom:13px;">
+        <div><label class="lp-label" for="lpGoal">The page should get you</label><select id="lpGoal" class="lp-select"><option>Phone calls</option><option>Bookings</option><option>Quote requests</option><option>Walk-ins</option></select></div>
+        <div><label class="lp-label" for="lpSite">Current website or social (if any)</label><input id="lpSite" class="lp-input" type="text" inputmode="url" placeholder="yourwebsite.com or Instagram" /></div>
+      </div>
+      <div class="lp-field">
+        <span class="lp-label">Logo or symbol (if you have one)</span>
+        <label class="lp-file" for="lpLogo">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0E4858" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          <span id="lpLogoTxt" style="font-size:14px;color:#4a5f6b;">Upload PNG, JPG, SVG, or WebP &middot; up to 3 MB</span>
+          <input id="lpLogo" type="file" accept=".png,.jpg,.jpeg,.svg,.webp,image/png,image/jpeg,image/svg+xml,image/webp" />
+        </label>
+      </div>
+      <div class="lp-field"><label class="lp-label" for="lpNotes">Anything else we should know</label><textarea id="lpNotes" class="lp-ta" placeholder="Hours, license number, years in business, a tagline you like..."></textarea></div>
+      <div id="lpErr" class="lp-err" role="alert"></div>
+      <button id="lpSubmit" class="lp-submit" type="submit">SEND MY DETAILS <span aria-hidden="true">&#8594;</span></button>
+      <div style="display:flex;align-items:center;gap:8px;justify-content:center;margin-top:12px;color:#7A9298;font-size:12.5px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7A9298" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V8a5 5 0 0 1 10 0v3"/></svg>
+        <span>We email your page here. No spam, ever.</span>
+      </div>
+    </form>
+    <div id="lp24Done" style="display:none;text-align:center;padding:18px 4px 8px;">
+      <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#0E4858" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 14px;display:block;"><circle cx="12" cy="12" r="9.2"/><path d="M8.5 12.2l2.4 2.4 4.6-5"/></svg>
+      <h3 style="font-size:20px;font-weight:700;color:#0B2030;margin:0 0 8px;">Got it. The clock starts now.</h3>
+      <p style="font-size:14.5px;line-height:1.6;color:#4a5f6b;margin:0;">Your free landing page will be in your inbox within 24 hours. If anything is unclear we will reply from admin@alitsky.com first.</p>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var overlay = document.getElementById("lp24Overlay");
+  if (!overlay) return;
+  var openBtn = document.getElementById("lp24Open"),
+      closeBtn = document.getElementById("lp24Close"),
+      form = document.getElementById("lp24Form"),
+      done = document.getElementById("lp24Done"),
+      err = document.getElementById("lpErr"),
+      submit = document.getElementById("lpSubmit"),
+      logoInp = document.getElementById("lpLogo"),
+      logoTxt = document.getElementById("lpLogoTxt");
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  var MAX_LOGO = 3 * 1024 * 1024;
+  var logoData = null;
+
+  function open() { overlay.classList.add("is-open"); document.addEventListener("keydown", onKey, true); setTimeout(function(){ try{ document.getElementById("lpBiz").focus(); }catch(_){} }, 60); }
+  function close() { overlay.classList.remove("is-open"); document.removeEventListener("keydown", onKey, true); }
+  function onKey(e) { if (e.key === "Escape") { e.preventDefault(); close(); } }
+  if (openBtn) openBtn.addEventListener("click", open);
+  closeBtn.addEventListener("click", close);
+  overlay.addEventListener("mousedown", function (e) { if (e.target === overlay) close(); });
+
+  logoInp.addEventListener("change", function () {
+    err.textContent = ""; logoData = null;
+    var f = logoInp.files && logoInp.files[0];
+    if (!f) { logoTxt.textContent = "Upload PNG, JPG, SVG, or WebP · up to 3 MB"; return; }
+    if (f.size > MAX_LOGO) { logoInp.value = ""; logoTxt.textContent = "Upload PNG, JPG, SVG, or WebP · up to 3 MB"; err.textContent = "That file is over 3 MB. Please upload a smaller version."; return; }
+    var r = new FileReader();
+    r.onload = function () { logoData = { name: f.name, type: f.type || "application/octet-stream", b64: String(r.result).split(",")[1] || "" }; logoTxt.textContent = f.name + " · " + Math.max(1, Math.round(f.size / 1024)) + " KB"; };
+    r.onerror = function () { err.textContent = "Could not read that file. Try a different one."; };
+    r.readAsDataURL(f);
+  });
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    err.textContent = "";
+    var v = function (id) { return document.getElementById(id).value.trim(); };
+    var biz = v("lpBiz"), email = v("lpEmail"), does = v("lpDoes"), area = v("lpArea"), services = v("lpServices");
+    if (!biz) { err.textContent = "Please add your business name."; return; }
+    if (!EMAIL_RE.test(email)) { err.textContent = "Please add a valid email."; return; }
+    if (!does) { err.textContent = "Tell us what your business does."; return; }
+    if (!area) { err.textContent = "Tell us your city and service area."; return; }
+    if (!services) { err.textContent = "List the services or offers to feature."; return; }
+    submit.disabled = true; submit.textContent = "Sending…";
+    fetch("/api/landing-page", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        business: biz, email: email, phone: v("lpPhone"), does: does, area: area,
+        services: services, goal: document.getElementById("lpGoal").value,
+        website: v("lpSite"), notes: v("lpNotes"), logo: logoData, page: location.pathname
+      })
+    }).then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
+      .then(function () { form.style.display = "none"; done.style.display = "block"; })
+      .catch(function () { submit.disabled = false; submit.innerHTML = "SEND MY DETAILS <span aria-hidden=\"true\">&#8594;</span>"; err.textContent = "Something went wrong. Email admin@alitsky.com and we will take it from there."; });
+  });
 })();
 </script>
 <script src="/audit-modal.js" defer></script>
