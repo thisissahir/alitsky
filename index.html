@@ -102,6 +102,8 @@
       .hp-trades .tdiv{border-left:none!important;}
       .hp-ft-grid{grid-template-columns:1fr 1fr!important;}
       .hp-h1{font-size:42px!important;}
+      .hero-row{flex-direction:column!important;align-items:stretch!important;gap:30px!important;}
+      .hero-lp{align-self:stretch!important;max-width:100%!important;flex:none!important;}
       .hp-cta-card{flex-direction:column!important;align-items:flex-start!important;}
       .hp-cta-card>div{width:100%!important;align-items:flex-start!important;}
       .radar-wrap #stage{flex-direction:column!important;}
@@ -144,7 +146,8 @@
     </header>
 
     <div style="position:relative;z-index:3;max-width:1180px;margin:0 auto;padding:44px 28px 96px;">
-      <div style="max-width:540px;">
+      <div class="hero-row" style="display:flex;justify-content:space-between;align-items:flex-end;gap:48px;">
+      <div style="max-width:540px;flex:0 1 540px;">
         <div style="color:#38bdd0;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:22px;">Websites for service businesses</div>
         <h1 class="hp-h1" style="font-size:56px;line-height:1.06;font-weight:700;letter-spacing:-.02em;margin:0 0 26px;color:#f4f8f9;">Built to be <span style="color:#38bdd0;">found</span>.<br>Built to get <span style="color:#38bdd0;">booked</span>.</h1>
         <p style="font-size:18px;line-height:1.6;color:#aebfc8;margin:0 0 36px;max-width:470px;">We build fast, custom websites for service businesses. Your customers are searching on Google, maps, and AI tools. We make your business easy to find, easy to trust, and easy to call.</p>
@@ -160,6 +163,22 @@
           </div>
         </div>
       </div>
+
+      <aside class="hero-lp" style="flex:0 0 348px;max-width:360px;align-self:flex-end;">
+        <div style="background:rgba(11,32,48,.82);-webkit-backdrop-filter:blur(7px);backdrop-filter:blur(7px);border:1px solid rgba(224,83,31,.5);border-radius:16px;padding:26px 26px 22px;box-shadow:0 26px 60px rgba(4,12,22,.55);">
+          <div style="display:inline-flex;align-items:center;gap:8px;color:#e0531f;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px;">
+            <span style="width:7px;height:7px;border-radius:50%;background:#e0531f;display:block;"></span>Free &middot; 24 hours
+          </div>
+          <h2 style="font-size:23px;line-height:1.18;font-weight:700;letter-spacing:-.01em;margin:0 0 10px;color:#f4f8f9;">Get a free landing page. <span style="color:#38bdd0;">In the next 24 hours.</span></h2>
+          <p style="font-size:14.5px;line-height:1.55;color:#aebfc8;margin:0 0 18px;">Tell us what you do and where you work. We build one clean page, phone number front and center, and send it within 24 hours. Yours to keep.</p>
+          <button id="lp24Open" type="button" class="lp-submit" style="width:100%;padding:14px 18px;font-size:14px;letter-spacing:.03em;">GET MY FREE LANDING PAGE <span aria-hidden="true">&#8594;</span></button>
+          <div style="display:flex;align-items:center;gap:7px;justify-content:center;margin-top:12px;color:#9fb2bd;font-size:12px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#38bdd0" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6Z"/><path d="M9 11.5l2 2 4-4.5"/></svg>
+            <span>No card, no catch</span>
+          </div>
+        </div>
+      </aside>
+      </div><!-- /.hero-row -->
     </div>
   </section>
 
@@ -224,26 +243,6 @@
         </ul>
         <div style="height:1px;background:rgba(120,150,160,.2);margin:24px 0 18px;"></div>
         <p style="font-size:15px;color:#9fb2bd;margin:0;">No fake scores. No ranking promises. Just a clear diagnosis.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FREE LANDING PAGE IN 24 HOURS (offer) ===== -->
-  <section style="background-color:#0b1f2d;background-image:radial-gradient(125% 95% at 50% -8%,rgba(21,51,74,.9) 0%,transparent 52%),radial-gradient(circle at 18% 30%,rgba(205,224,228,.2) 0 1px,transparent 1.4px),radial-gradient(circle at 82% 64%,rgba(205,224,228,.16) 0 1px,transparent 1.4px),radial-gradient(circle at 46% 88%,rgba(205,224,228,.14) 0 1px,transparent 1.4px);border-top:1px solid rgba(120,150,160,.12);border-bottom:1px solid rgba(120,150,160,.12);">
-    <div style="max-width:1080px;margin:0 auto;padding:76px 28px;">
-      <div class="lp24-band" style="background:#0c2336;border:1px solid rgba(224,83,31,.38);border-radius:18px;padding:44px 46px;box-shadow:0 26px 60px rgba(4,12,22,.5);">
-        <div>
-          <div style="color:#e0531f;font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:14px;">Free &middot; 24 hours</div>
-          <h2 style="font-size:clamp(26px,4.5vw,34px);line-height:1.15;font-weight:700;letter-spacing:-.02em;margin:0 0 14px;color:#f4f8f9;">Get a free landing page for your business. <span style="color:#38bdd0;">In the next 24 hours.</span></h2>
-          <p style="font-size:16.5px;line-height:1.65;color:#aebfc8;margin:0;">Tell us what you do, where you work, and what the page should get you. We build one clean page for your business, phone number front and center, and send it within 24 hours. Yours to keep. No obligation.</p>
-        </div>
-        <div style="text-align:center;">
-          <button id="lp24Open" class="lp-submit" type="button" style="width:auto;padding:17px 30px;font-size:15px;letter-spacing:.04em;">GET MY FREE LANDING PAGE <span aria-hidden="true">&#8594;</span></button>
-          <div style="display:flex;align-items:center;gap:8px;justify-content:center;margin-top:14px;color:#9fb2bd;font-size:13px;">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#38bdd0" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6Z"/><path d="M9 11.5l2 2 4-4.5"/></svg>
-            <span>One page &middot; Built for calls &middot; No card, no catch</span>
-          </div>
-        </div>
       </div>
     </div>
   </section>
