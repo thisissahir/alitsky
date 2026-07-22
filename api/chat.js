@@ -179,8 +179,10 @@ async function sendChatSummary(client, fullConversation) {
   // 1. Ask Claude to summarize.
   let summaryText = "";
   try {
+    // Haiku per the OS model-routing law: extraction/summary work does not
+    // need Sonnet. 3x cheaper per token on an internal email nobody edits.
     const summaryResp = await client.messages.create({
-      model: "claude-sonnet-4-5",
+      model: "claude-haiku-4-5",
       max_tokens: 512,
       messages: [
         {
@@ -324,11 +326,25 @@ module.exports = async (req, res) => {
     res.setHeader("Cache-Control", "no-cache, no-transform");
     res.setHeader("X-Accel-Buffering", "no"); // disables proxy buffering
 
+    // Prompt caching: the ~2.5K-token system prompt is static, so mark it
+    // cacheable. First message writes the cache (1.25x), every following
+    // message in any conversation within the 5-min TTL reads it at ~0.1x.
+    // History cap: only the latest 16 turns go to the model — a sales chat
+    // doesn't need deeper context, and uncapped history grows cost per
+    // message quadratically. The summary email still sees the full thread.
+    const recentMessages = cleanMessages.slice(-16);
+
     const stream = await client.messages.stream({
       model: "claude-sonnet-4-5",
       max_tokens: 1024,
-      system: SYSTEM_PROMPT,
-      messages: cleanMessages,
+      system: [
+        {
+          type: "text",
+          text: SYSTEM_PROMPT,
+          cache_control: { type: "ephemeral" },
+        },
+      ],
+      messages: recentMessages,
     });
 
     // Capture the full assistant reply so we can summarize the conversation
