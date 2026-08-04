@@ -175,3 +175,18 @@
   .ft-grid{grid-template-columns:1fr}
   .ecard{padding:26px}
 }
+
+/* ============ shared responsive (nav, wrap, footer) ============ */
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media(max-width:980px){
+  .navlinks a:not(.nav-cta){display:none}
+  .ft-grid{grid-template-columns:1fr 1fr}
+  .final-ctas{justify-self:start}
+}
+@media(max-width:640px){
+  .wrap{width:min(100% - 28px,1400px)}
+  .brand span{display:none}
+  .navin{height:80px}
+  .ft-grid{grid-template-columns:1fr}
+  .phead h1{font-size:2.9rem}
+}
