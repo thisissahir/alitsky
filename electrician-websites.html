@@ -19,14 +19,14 @@
   <meta name="twitter:description" content="Websites for electrical contractors that win high ticket work: panel upgrades, EV chargers, rewiring. Built for Google and AI search. Free audit.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Space+Grotesk:wght@300..700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Electrician website design and AI visibility","serviceType":"Electrician website design and AI visibility","description":"Website design, SEO, and AI search visibility (GEO, AEO) for electrical contractors in the US.","url":"https://www.alitsky.com/electrician-websites","provider":{"@type":"ProfessionalService","@id":"https://www.alitsky.com/#business","name":"A Light in the Sky","url":"https://www.alitsky.com","email":"admin@alitsky.com","logo":"https://www.alitsky.com/assets/logo-mark-small.svg"},"areaServed":{"@type":"Country","name":"United States"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much does an electrician website cost?","acceptedAnswer":{"@type":"Answer","text":"Flat quote before work begins, sized to your services and coverage area. The free audit tells you what the current site is missing and what the fix costs, no obligation attached."}},{"@type":"Question","name":"Why do I need a separate page for EV chargers?","acceptedAnswer":{"@type":"Answer","text":"Because that is how people search. A homeowner types EV charger installation, not electrical services. A dedicated page can rank for it and gives AI engines a specific page to cite. A generic services list cannot."}},{"@type":"Question","name":"Can you show my license and certifications properly?","acceptedAnswer":{"@type":"Answer","text":"Yes, and in two layers: visible on the page where trust decisions happen, and inside the schema markup where engines read credentials. Both matter now."}},{"@type":"Question","name":"Do you write the content or do I?","acceptedAnswer":{"@type":"Answer","text":"We write it, from verified facts about your business. You review every word before it goes live. Nothing is invented, no fake reviews, no claims you cannot back."}},{"@type":"Question","name":"How long until the site is live?","acceptedAnswer":{"@type":"Answer","text":"Your quote comes with a dated timeline. Kit based builds mean most electrical contractor sites launch in weeks, not months."}}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.alitsky.com"},{"@type":"ListItem","position":2,"name":"Services","item":"https://www.alitsky.com/services"},{"@type":"ListItem","position":3,"name":"Electrical","item":"https://www.alitsky.com/electrician-websites"}]}</script>
   <style>
     *{box-sizing:border-box;}
     html,body{margin:0;padding:0;}
-    body{font-family:'Sora',system-ui,sans-serif;background:#0b1f31;-webkit-font-smoothing:antialiased;}
+    body{font-family:"Space Grotesk",system-ui,sans-serif;background:#0b1f31;-webkit-font-smoothing:antialiased;}
     ::selection{background:rgba(224,83,31,.3);}
     a.nl{color:#d3dde0;text-decoration:none;font-size:16px;white-space:nowrap;transition:color .15s;}
     a.nl:hover{color:#38bdd0;}
@@ -51,7 +51,19 @@
       .vp-ft-grid{grid-template-columns:1fr 1fr!important;}
       .vp-h1{font-size:38px!important;}
     }
-  </style>
+  
+  /* ---- type sync: match the shared editorial system ---- */
+  :root{
+    --serif:"Fraunces",Georgia,serif;
+    --sans:"Space Grotesk",system-ui,Arial,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+  }
+  /* weight is !important because legacy inline styles set 700; the light
+     display weight is the signature of the shared system. Size/colour untouched. */
+  h1,h2,.display{font-family:var(--serif)!important;font-weight:360!important;font-optical-sizing:auto;letter-spacing:-.035em!important;}
+  h3,h4{font-family:var(--serif);font-weight:400;letter-spacing:-.02em;}
+  .kicker,.eyebrow,.index{font-family:var(--mono);}
+</style>
 </head>
 <body>
 <div style="width:100%;overflow:hidden;background:#0b1f31;color:#eaf1f3;">

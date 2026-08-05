@@ -20,11 +20,11 @@
   <meta name="twitter:image" content="https://www.alitsky.com/assets/news-hvac-map-pack-cover.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Space+Grotesk:wght@300..700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     *{box-sizing:border-box;}
     html,body{margin:0;padding:0;}
-    body{font-family:'Sora',system-ui,sans-serif;background:#0b1f31;-webkit-font-smoothing:antialiased;}
+    body{font-family:"Space Grotesk",system-ui,sans-serif;background:#0b1f31;-webkit-font-smoothing:antialiased;}
     ::selection{background:rgba(224,83,31,.3);}
     a.nl{color:#d3dde0;text-decoration:none;font-size:16px;white-space:nowrap;transition:color .15s;}
     a.nl:hover{color:#38bdd0;}
@@ -45,10 +45,10 @@
     .nw-tag{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#e0531f;background:rgba(224,83,31,.1);border:1px solid rgba(224,83,31,.3);border-radius:999px;padding:5px 12px;white-space:nowrap;}
     .nw-archive{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
     .nl-row{display:flex;gap:10px;max-width:470px;margin:22px auto 0;}
-    .nl-input{flex:1;min-width:0;font:400 15px/1.4 'Sora',system-ui,sans-serif;color:#eaf1f3;background:rgba(7,21,30,.55);border:1px solid rgba(120,160,180,.34);border-radius:10px;padding:14px 15px;outline:none;transition:border-color .15s,box-shadow .15s;}
+    .nl-input{flex:1;min-width:0;font:400 15px/1.4 "Space Grotesk",system-ui,sans-serif;color:#eaf1f3;background:rgba(7,21,30,.55);border:1px solid rgba(120,160,180,.34);border-radius:10px;padding:14px 15px;outline:none;transition:border-color .15s,box-shadow .15s;}
     .nl-input::placeholder{color:#6f8896;}
     .nl-input:focus{border-color:#38bdd0;box-shadow:0 0 0 3px rgba(56,189,208,.18);}
-    .nl-btn{background:#e0531f;color:#fff;border:0;border-radius:10px;padding:14px 26px;font:700 15px 'Sora',system-ui,sans-serif;letter-spacing:.03em;cursor:pointer;white-space:nowrap;transition:background .15s,transform .15s;}
+    .nl-btn{background:#e0531f;color:#fff;border:0;border-radius:10px;padding:14px 26px;font:700 15px "Space Grotesk",system-ui,sans-serif;letter-spacing:.03em;cursor:pointer;white-space:nowrap;transition:background .15s,transform .15s;}
     .nl-btn:hover:not(:disabled){background:#c8471a;}
     .nl-btn:active:not(:disabled){transform:translateY(1px);}
     .nl-btn:disabled{opacity:.6;cursor:default;}
@@ -62,7 +62,19 @@
       .nw-h1{font-size:38px!important;}
       .nw-feature .nw-bar{padding:18px 20px;}
     }
-  </style>
+  
+  /* ---- type sync: match the shared editorial system ---- */
+  :root{
+    --serif:"Fraunces",Georgia,serif;
+    --sans:"Space Grotesk",system-ui,Arial,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,monospace;
+  }
+  /* weight is !important because legacy inline styles set 700; the light
+     display weight is the signature of the shared system. Size/colour untouched. */
+  h1,h2,.display{font-family:var(--serif)!important;font-weight:360!important;font-optical-sizing:auto;letter-spacing:-.035em!important;}
+  h3,h4{font-family:var(--serif);font-weight:400;letter-spacing:-.02em;}
+  .kicker,.eyebrow,.index{font-family:var(--mono);}
+</style>
 </head>
 <body>
 <div style="width:100%;overflow:hidden;background:#0b1f31;color:#eaf1f3;">
