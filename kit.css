@@ -35,7 +35,7 @@
   .wrap{width:min(1400px,calc(100% - 48px));margin:auto}
 
   /* type */
-  .display{font-family:var(--serif);font-weight:400;font-optical-sizing:auto;letter-spacing:-.018em;line-height:.88;margin:0}
+  .display{font-family:var(--serif);font-weight:400;font-optical-sizing:auto;letter-spacing:-.018em;line-height:1;margin:0}
   .kicker{font-family:var(--mono);font-size:14px;font-weight:500;letter-spacing:.22em;text-transform:uppercase}
   .index{font-family:var(--serif);font-style:italic;font-size:2.6rem;line-height:1;color:var(--copper)}
   .index.on-dark{color:var(--sky)}
@@ -93,7 +93,7 @@
   .final{background:var(--night-deep);color:var(--paper);padding:130px 0 0;position:relative;overflow:hidden}
   .final:before{content:"";position:absolute;right:-12vw;top:6vh;width:52vw;height:32vh;background:var(--copper);clip-path:polygon(0 26%,100% 0,82% 100%,9% 72%)}
   .final .wrap{position:relative;z-index:2}
-  .final h2{font-size:clamp(3.6rem,9.4vw,9.8rem);letter-spacing:-.06em;line-height:.8;max-width:1200px}
+  .final h2{font-size:clamp(3.6rem,9.4vw,9.8rem);letter-spacing:-.025em;line-height:.98;max-width:1200px}
   .final h2 em{display:block;color:var(--sky);margin-left:10vw}
   .final-bottom{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:end;margin-top:78px}
   .final-copy{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,2.2vw,1.9rem);line-height:1.3;max-width:560px}
@@ -108,7 +108,7 @@
   .final{background:var(--night-deep);color:var(--paper);padding:130px 0 0;position:relative;overflow:hidden}
   .final:before{content:"";position:absolute;right:-12vw;top:6vh;width:52vw;height:32vh;background:var(--copper);clip-path:polygon(0 26%,100% 0,82% 100%,9% 72%)}
   .final .wrap{position:relative;z-index:2}
-  .final h2{font-size:clamp(3.6rem,9.4vw,9.8rem);letter-spacing:-.06em;line-height:.8;max-width:1200px}
+  .final h2{font-size:clamp(3.6rem,9.4vw,9.8rem);letter-spacing:-.025em;line-height:.98;max-width:1200px}
   .final h2 em{display:block;color:var(--sky);margin-left:10vw}
   .final-bottom{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:end;margin-top:78px}
   .final-copy{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,2.2vw,1.9rem);line-height:1.3;max-width:560px}
@@ -153,7 +153,7 @@
 
 /* Numbered editorial section head (01 — Label) */
 .shead{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:baseline;margin-bottom:52px}
-.shead h2{font-family:var(--serif);font-weight:400;letter-spacing:-.04em;line-height:.95;font-size:clamp(2.4rem,5vw,4.4rem);margin:0}
+.shead h2{font-family:var(--serif);font-weight:400;letter-spacing:-.022em;line-height:1.04;font-size:clamp(2.4rem,5vw,4.4rem);margin:0}
 
 /* Card — flat, bordered, never shadow-decorated */
 .ecard{border:1px solid var(--line);padding:34px;background:transparent;transition:border-color .25s var(--ease),transform .25s var(--ease)}
