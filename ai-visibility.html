@@ -219,7 +219,7 @@
   .browser-top i{width:9px;height:9px;border-radius:50%;background:var(--night);display:block}
   .browser-top span{margin-left:10px;font-family:var(--mono);font-size:13px;letter-spacing:.06em;color:var(--ink);opacity:.7}
   .browser-body{padding:36px 38px 34px}
-  .q-label{font-family:var(--mono);font-size:14px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#7d8f98;margin:0 0 10px}
+  .q-label{font-family:var(--mono);font-size:14px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#55677a;margin:0 0 10px}
   .q-text{font-family:var(--serif);font-style:italic;font-size:clamp(1.5rem,2.2vw,2rem);line-height:1.2;margin:0 0 30px;letter-spacing:-.02em;min-height:2.4em}
   .a-block{border-top:1px solid var(--line);padding-top:24px}
   .a-label{font-family:var(--mono);font-size:14px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--copper);margin:0 0 10px}
@@ -268,11 +268,11 @@
   #shiftTrack{position:relative;height:16px;margin:36px 0 8px;background:rgba(244,238,226,.14);cursor:pointer;touch-action:none}
   #shiftFcFill{position:absolute;left:0;top:0;height:100%;width:0;background:var(--sky)}
   #shiftHandle{position:absolute;top:50%;left:0;transform:translate(-50%,-50%);width:26px;height:26px;background:var(--sky);border:3px solid var(--night);cursor:grab}
-  .fc-years{display:flex;justify-content:space-between;font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:.1em;color:#d5dfff}
+  .fc-years{display:flex;justify-content:space-between;font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:.1em;color:#f2f6ff}
   .fc-rows{margin-top:26px;border-top:1px solid var(--line-r)}
   .shift-yr{display:grid;grid-template-columns:130px 1fr;gap:24px;padding:17px 0 17px 18px;border-bottom:1px solid var(--line-r);border-left:3px solid transparent;cursor:pointer;transition:border-color .25s,padding-left .3s var(--ease)}
   .shift-yr:hover{padding-left:26px}
-  .shift-yr-year{font-family:var(--serif);font-size:1.45rem;color:#d5dfff;transition:color .18s}
+  .shift-yr-year{font-family:var(--serif);font-size:1.45rem;color:#f2f6ff;transition:color .18s}
   .shift-yr-body{font-size:17.5px;line-height:1.6;color:#e4ebff;transition:color .18s;align-self:center}
   .shift-yr-active{border-left-color:var(--sky)}
   .shift-yr-active .shift-yr-year{color:var(--sky)}
@@ -347,7 +347,7 @@
   .ft-col h4{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sky);margin:6px 0 20px}
   .ft-col a{display:block;font-size:18px;color:#ccd7dd;padding:6px 0;width:fit-content}
   .ft-col a:hover{color:var(--paper)}
-  .ft-base{border-top:1px solid var(--line-r);padding:22px 0 34px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#d5dfff;font-size:15px}
+  .ft-base{border-top:1px solid var(--line-r);padding:22px 0 34px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#f2f6ff;font-size:15px}
   .ft-base b{color:var(--sky);font-weight:600}
 
   /* landing-page modal */
@@ -355,7 +355,7 @@
   .lp-overlay.is-open{display:flex;opacity:1}
   .lp-card{width:100%;max-width:580px;max-height:90vh;overflow-y:auto;background:var(--paper);box-shadow:14px 16px 0 var(--copper);padding:38px 38px 30px;position:relative;transform:translateY(14px);transition:transform .2s var(--ease)}
   .lp-overlay.is-open .lp-card{transform:translateY(0)}
-  .lp-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border:0;background:transparent;color:#7d8f98;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .3s var(--ease),color .2s}
+  .lp-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border:0;background:transparent;color:#55677a;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .3s var(--ease),color .2s}
   .lp-close:hover{color:var(--ink);transform:rotate(90deg)}
   .lp-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--copper);margin-bottom:14px}
   .lp-title{font-family:var(--serif);font-weight:380;font-size:2.3rem;letter-spacing:-.03em;line-height:1;color:var(--ink);margin:0 0 10px}
@@ -831,8 +831,8 @@
       <div class="lp-field"><label class="lp-label" for="lpNotes">Anything else we should know</label><textarea id="lpNotes" class="lp-ta" placeholder="Hours, license number, years in business, a tagline you like..."></textarea></div>
       <div id="lpErr" class="lp-err" role="alert"></div>
       <button id="lpSubmit" class="lp-submit" type="submit">SEND MY DETAILS <span aria-hidden="true">&#8594;</span></button>
-      <div style="display:flex;align-items:center;gap:8px;justify-content:center;margin-top:14px;color:#7d8f98;font-size:14px;">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7d8f98" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V8a5 5 0 0 1 10 0v3"/></svg>
+      <div style="display:flex;align-items:center;gap:8px;justify-content:center;margin-top:14px;color:#55677a;font-size:14px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#55677a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V8a5 5 0 0 1 10 0v3"/></svg>
         <span>We email your page here. No spam, ever.</span>
       </div>
     </form>
