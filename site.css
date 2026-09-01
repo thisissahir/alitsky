@@ -171,3 +171,46 @@ details p{line-height:1.65;color:var(--muted);margin:14px 0 0;font-size:17px}
   .phead h1{font-size:44px}
   .button{min-width:100%}
 }
+
+/* ============================================================
+   SOFT SHAPE LAYER — matches the reference: pill buttons,
+   large-radius colour-filled panels, organic riso forms.
+   ============================================================ */
+:root{--r-card:26px;--r-sm:16px;--r-pill:999px}
+
+.button,.mini-cta{border-radius:var(--r-pill)}
+.tri span{border-radius:var(--r-pill)}
+
+/* cards become soft filled panels rather than a hairline grid */
+.cards{background:transparent;border:0;gap:16px}
+.card{border-radius:var(--r-card);background:#fff;box-shadow:0 16px 40px -30px rgba(18,51,91,.42)}
+.s-cobalt .card{background:rgba(255,255,255,.12);box-shadow:none}
+.cards .card:nth-child(6n+1){background:#ffe9ef}
+.cards .card:nth-child(6n+2){background:#e8f7f2}
+.cards .card:nth-child(6n+3){background:#fff4d9}
+.cards .card:nth-child(6n+4){background:#eceaff}
+.cards .card:nth-child(6n+5){background:#ffeade}
+.cards .card:nth-child(6n+6){background:#e6efff}
+.s-cobalt .cards .card{background:rgba(255,255,255,.12)}
+
+.rows li{border-top:0;background:#fff;border-radius:var(--r-sm);margin-bottom:10px;padding:18px 22px 18px 46px;box-shadow:0 10px 26px -24px rgba(18,51,91,.32)}
+.rows li:last-child{border-bottom:0}
+.rows li:before{left:20px}
+.s-cobalt .rows li{background:rgba(255,255,255,.12);box-shadow:none}
+
+.faq-list details{border-radius:var(--r-sm);background:#fff;border-top:0;margin-bottom:12px;padding:18px 22px;box-shadow:0 10px 26px -24px rgba(18,51,91,.3)}
+.faq-list details:last-child{border-bottom:0}
+
+.mv{background:transparent;border:0;gap:16px}
+.mv article{border-radius:var(--r-card);box-shadow:0 16px 40px -30px rgba(18,51,91,.42)}
+.mv article:nth-child(1){background:#ffe9ef}
+.mv article:nth-child(2){background:#e6efff}
+.founders img{border-radius:var(--r-card);border:0}
+
+/* organic riso forms in the page header */
+.phead-art .hz{border-radius:50%;filter:saturate(1.2) blur(.3px);opacity:.6}
+.phead-art .h1x{left:-14%;right:-14%;height:34%;bottom:-12%}
+.phead-art .h2x{left:-6%;right:24%;height:28%;bottom:4%}
+.phead-art .beam{filter:blur(2px);opacity:.34}
+
+@media(max-width:640px){:root{--r-card:20px}}
