@@ -3,1128 +3,308 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>A Light in the Sky — Websites for Service Businesses</title>
-  <meta name="description" content="We build fast, custom websites for service businesses. Found on Google, maps, and AI tools — easy to find, easy to trust, easy to call. Start with a free audit.">
-  <meta name="theme-color" content="#08192b">
+  <title>A Light in the Sky — Website Refresh</title>
+  <meta name="description" content="Custom websites for independent professionals whose work has outgrown their website. Strategic design, clearer copy, brand direction and an SEO-ready foundation.">
+  <meta name="theme-color" content="#2457ff">
   <link rel="icon" type="image/svg+xml" href="/assets/logo-mark-small.svg">
   <link rel="canonical" href="https://www.alitsky.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="A Light in the Sky">
   <meta property="og:url" content="https://www.alitsky.com/">
-  <meta property="og:title" content="A Light in the Sky — Websites for Service Businesses">
-  <meta property="og:description" content="Built to be found. Built to get booked. Fast custom websites for service businesses. Be found in AI search, in your city, before your competitor.">
+  <meta property="og:title" content="A Light in the Sky — Website Refresh">
+  <meta property="og:description" content="Your website deserves to bloom. Strategic design, clearer copy, brand direction and an SEO-ready foundation.">
   <meta property="og:image" content="https://www.alitsky.com/assets/og-card.svg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="A Light in the Sky — Websites for Service Businesses">
-  <meta name="twitter:description" content="Built to be found. Built to get booked. Fast custom websites for service businesses.">
+  <meta name="twitter:title" content="A Light in the Sky — Website Refresh">
+  <meta name="twitter:description" content="Your website deserves to bloom. Strategic design, clearer copy, and an SEO-ready foundation.">
   <meta name="twitter:image" content="https://www.alitsky.com/assets/og-card.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Space+Grotesk:wght@300..700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-  /* ============ A LIGHT IN THE SKY — editorial system v2 (no yellow) ============ */
-  :root{
-    --night:#08192b;
-    --night-2:#0b1f31;
-    --night-deep:#050f1c;
-    --cream:#f4eee2;
-    --paper:#fffaf2;
-    --sand:#d9c7a8;
-    --sky:#a7d9e8;
-    --sky-deep:#76bdd2;
-    --sky-pale:#d3ecf4;
-    --copper:#9e4b26;
-    --copper-deep:#7c3a1d;
-    --ink:#112834;
-    --ink-soft:#39525d;
-    --line:rgba(17,40,52,.26);
-    --line-r:rgba(244,238,226,.28);
-    --serif:"Newsreader",Georgia,serif;
-    --sans:"Space Grotesk",system-ui,Arial,sans-serif;
-    --mono:"IBM Plex Mono",ui-monospace,monospace;
-    --ease:cubic-bezier(.22,1,.36,1);
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{margin:0;background:var(--night-2);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-  a{color:inherit;text-decoration:none}
-  img{display:block;max-width:100%}
-  ::selection{background:var(--sky);color:var(--night)}
-  .wrap{width:min(1400px,calc(100% - 48px));margin:auto}
-
-  /* type */
-  /* Newsreader has taller ascenders and deeper descenders than the previous
-     display face, so .88 clipped caps and let descenders hit the next line. */
-  .display{font-family:var(--serif);font-weight:400;font-optical-sizing:auto;letter-spacing:-.018em;line-height:1;margin:0}
-  .kicker{font-family:var(--mono);font-size:14px;font-weight:500;letter-spacing:.22em;text-transform:uppercase}
-  .index{font-family:var(--serif);font-style:italic;font-size:2.6rem;line-height:1;color:var(--copper)}
-  .index.on-dark{color:var(--sky)}
-  em.tone{font-style:italic;font-weight:340}
-
-  /* scroll reveal */
-  .rv{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
-  .rv.in{opacity:1;transform:none}
-  @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
-
-  /* links & actions */
-  .action{display:inline-flex;align-items:center;gap:12px;border-bottom:1px solid currentColor;padding-bottom:7px;font-weight:600;font-size:18px;transition:opacity .15s,gap .25s var(--ease)}
-  .action:after{content:"↗"}
-  .action:hover{opacity:.72;gap:18px}
-  .btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:12px;background:var(--sky);color:var(--night);font:700 17px/1 var(--sans);letter-spacing:.04em;padding:19px 30px;border:0;cursor:pointer;overflow:hidden;transition:background .2s,transform .2s}
-  .btn .arr{display:inline-block;transition:transform .3s var(--ease)}
-  .btn:hover{background:var(--sky-pale)}
-  .btn:hover .arr{transform:translateX(7px)}
-  .btn:active{transform:translateY(1px)}
-  .btn.on-light{background:var(--night);color:var(--paper)}
-  .btn.on-light:hover{background:#143550}
-  .quiet{opacity:.78;font-weight:500;border-bottom:1px solid transparent;padding-bottom:7px;font-size:18px;transition:opacity .2s,border-color .2s}
-  .quiet:hover{border-color:currentColor;opacity:1}
-  .ul-link{background-image:linear-gradient(currentColor,currentColor);background-repeat:no-repeat;background-size:0% 1px;background-position:0 100%;transition:background-size .35s var(--ease)}
-  .ul-link:hover{background-size:100% 1px}
-
-  /* nav */
-  .nav{position:fixed;inset:0 0 auto;z-index:100;color:var(--paper);transition:transform .4s var(--ease),background .35s}
-  .nav.hide{transform:translateY(-101%)}
-  .nav.scrolled{background:rgba(8,25,43,.96)}
-  .navin{height:92px;display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line-r)}
-  .brand{display:flex;align-items:center;gap:14px}
-  .brand img{width:36px;height:36px;transition:transform .5s var(--ease)}
-  .brand:hover img{transform:rotate(22deg)}
-  .brand span{font-family:var(--serif);font-size:1.3rem;letter-spacing:.01em;white-space:nowrap}
-  .navlinks{display:flex;align-items:center;gap:30px;font-size:16px;font-weight:500}
-  .navlinks a:not(.nav-cta){padding-bottom:5px}
-  .navlinks .nav-cta{background:var(--sky);color:var(--night);font-weight:700;font-size:15px;letter-spacing:.06em;padding:14px 20px;transition:background .2s}
-  .navlinks .nav-cta:hover{background:var(--sky-pale)}
-  .mcta{display:none;background:var(--sky);color:var(--night);font-weight:700;font-size:14px;letter-spacing:.05em;padding:12px 16px}
-
-  /* hero */
-  .hero{position:relative;min-height:100vh;background:var(--night);color:var(--paper);overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}
-  #heroMedia{position:absolute;inset:-8% 0;z-index:0;will-change:transform}
-  #heroMedia video{width:100%;height:100%;object-fit:cover;display:block}
-  .hero-shade{position:absolute;inset:0;z-index:1;pointer-events:none}
-  .hero-shade.a{background:linear-gradient(90deg,rgba(8,25,43,.96) 0%,rgba(8,25,43,.88) 34%,rgba(8,25,43,.42) 62%,rgba(8,25,43,.12) 100%)}
-  .hero-shade.b{background:linear-gradient(180deg,rgba(8,25,43,.62) 0%,rgba(8,25,43,0) 26%,rgba(8,25,43,0) 60%,rgba(8,25,43,.85) 100%)}
-  #heroScrollVeil{position:absolute;inset:0;z-index:2;pointer-events:none;background:#050f1c;opacity:0}
-  .hero-inner{position:relative;z-index:3;display:grid;grid-template-columns:1.25fr .75fr;gap:64px;align-items:end;padding:170px 0 74px}
-  .hero-kicker{color:var(--sky);margin:0 0 34px;opacity:0;transition:opacity 1s var(--ease) .15s}
-  body.loaded .hero-kicker{opacity:1}
-  /* Measured: Newsreader's "g" descends .24em below baseline while the next
-     line's ink starts .75em above its own — at line-height 1 that left ~1.6px
-     between "get" and "booked." 1.06 opens it to a comfortable ~9px. */
-  .hero h1{font-size:clamp(3.6rem,9vw,9.4rem);line-height:1.06;color:var(--paper)}
-  /* The slide-up reveal needs overflow:hidden, but that mask was cutting the
-     caps and the "g" descender. Pad the mask, then pull the space back with a
-     matching negative margin so line rhythm is unchanged. */
-  .hero h1 .l{display:block;overflow:hidden;padding:.1em 0 .18em;margin:-.1em 0 -.18em}
-  .hero h1 .l>span{display:block;transform:translateY(115%);transition:transform 1.1s var(--ease)}
-  body.loaded .hero h1 .l>span{transform:none}
-  .hero h1 .l:nth-child(1)>span{transition-delay:.1s}
-  .hero h1 .l:nth-child(2)>span{transition-delay:.24s}
-  .hero h1 .l:nth-child(3)>span{transition-delay:.38s}
-  .hero h1 .two{margin-left:5vw}
-  .hero h1 .three{margin-left:11vw}
-  .hero h1 .three>span{font-style:italic;color:var(--sky)}
-  .hero-sub{margin:38px 0 0;max-width:560px;font-size:clamp(19px,1.5vw,22px);line-height:1.55;color:#cfdbe2;opacity:0;transform:translateY(20px);transition:opacity .9s var(--ease) .6s,transform .9s var(--ease) .6s}
-  body.loaded .hero-sub{opacity:1;transform:none}
-  .hero-actions{display:flex;align-items:center;gap:28px;flex-wrap:wrap;margin-top:36px;opacity:0;transform:translateY(20px);transition:opacity .9s var(--ease) .75s,transform .9s var(--ease) .75s}
-  body.loaded .hero-actions{opacity:1;transform:none}
-  .hero-actions .quiet{color:var(--sky)}
-
-  /* hero offer panel */
-  .offer{background:var(--paper);color:var(--ink);padding:36px 34px 30px;box-shadow:16px 20px 0 var(--copper);max-width:430px;justify-self:end;opacity:0;transform:translateY(30px);transition:opacity 1s var(--ease) .9s,transform 1s var(--ease) .9s,box-shadow .3s var(--ease)}
-  body.loaded .offer{opacity:1;transform:none}
-  .offer:hover{box-shadow:20px 26px 0 var(--copper)}
-  .offer .tag{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--copper);margin-bottom:16px}
-  .offer .tag i{width:8px;height:8px;background:var(--copper);border-radius:50%;display:block;animation:blink 2.2s ease-in-out infinite}
-  @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
-  .offer h2{font-family:var(--serif);font-weight:380;font-size:2.2rem;line-height:1.02;letter-spacing:-.03em;margin:0 0 14px}
-  .offer h2 em{color:var(--copper)}
-  .offer p{font-size:18px;line-height:1.55;color:var(--ink-soft);margin:0 0 22px}
-  .offer .fine{display:block;margin-top:14px;text-align:center;font-size:15px;color:#6b7f89}
-
-  /* ticker */
-  .ticker{position:relative;z-index:3;border-top:1px solid var(--line-r);overflow:hidden}
-  .ticker-inner{display:flex;width:max-content;animation:tick 34s linear infinite}
-  .ticker:hover .ticker-inner{animation-play-state:paused}
-  .ticker-inner span{display:inline-flex;align-items:center;padding:17px 0 17px 34px;font-family:var(--mono);font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,238,226,.8);white-space:nowrap}
-  .ticker-inner span:after{content:"✦";margin-left:34px;color:var(--sky);font-size:12px}
-  @keyframes tick{to{transform:translateX(-50%)}}
-  @media(prefers-reduced-motion:reduce){.ticker-inner{animation:none}}
-
-  /* color band */
-  .color-band{height:14px;display:grid;grid-template-columns:1.1fr .8fr .55fr .35fr}
-  .color-band div:nth-child(1){background:var(--night)}
-  .color-band div:nth-child(2){background:var(--sky)}
-  .color-band div:nth-child(3){background:var(--copper)}
-  .color-band div:nth-child(4){background:var(--sand)}
-
-  /* generic section head */
-  .sec-grid{display:grid;grid-template-columns:.34fr 1.66fr;gap:6vw}
-  .sec-h2{font-size:clamp(3rem,6.4vw,6.6rem)}
-  .sec-copy{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:44px;padding-top:28px;border-top:1px solid var(--line)}
-  .sec-copy p{margin:0;font-size:19px;line-height:1.7;color:var(--ink-soft)}
-
-  /* interactive rows (shared hover language) */
-  .hoverable{transition:padding-left .35s var(--ease),background .35s}
-  .hoverable:hover{padding-left:16px}
-
-  /* check (cream) */
-  .check{background:var(--cream);padding:120px 0 110px}
-  .check-head{display:grid;grid-template-columns:1.15fr .85fr;gap:6vw;align-items:end;margin-bottom:60px}
-  .check-head p{margin:0;font-size:20px;line-height:1.65;color:var(--ink-soft);max-width:480px}
-  .check-label{font-family:var(--mono);font-size:14px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--copper)}
-  .check-form-row{border-top:1px solid var(--line);padding-top:44px;display:grid;grid-template-columns:1.25fr .75fr;gap:6vw;align-items:start}
-  .field{display:flex;flex-direction:column;gap:8px;margin-bottom:26px}
-  .field label{font-family:var(--mono);font-size:14px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--copper)}
-  .u-input{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line);outline:0;font:400 22px/1.4 var(--sans);color:var(--ink);padding:10px 2px 12px;transition:border-color .2s}
-  .u-input::placeholder{color:#8fa0a8}
-  .u-input:focus{border-color:var(--copper)}
-  .check-2col{display:grid;grid-template-columns:1fr 1fr;gap:36px}
-  .form-err{color:#a03518;font-size:16px;min-height:22px;margin:4px 0 10px}
-  .check-side p{margin:0 0 18px;font-size:18px;line-height:1.7;color:var(--ink-soft)}
-  .check-list{list-style:none;margin:26px 0 0;padding:0;border-top:1px solid var(--line)}
-  .check-list li{display:flex;gap:18px;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--line);font-size:18px}
-  .check-list li span:first-child{font-family:var(--serif);font-style:italic;color:var(--copper);min-width:34px}
-
-  /* why (paper) */
-  .why{background:var(--paper);padding:120px 0}
-  .why h2 em{color:var(--copper)}
-  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;margin-top:64px;align-items:start}
-  .why-copy p{margin:0 0 20px;font-size:19px;line-height:1.72;color:var(--ink-soft)}
-  .why-copy .action{color:var(--copper)}
-  .audit-panel{background:var(--night);color:var(--paper);padding:44px 42px 36px;box-shadow:16px 20px 0 var(--sky);transition:box-shadow .3s var(--ease),transform .3s var(--ease)}
-  .audit-panel:hover{transform:translate(-3px,-3px);box-shadow:22px 26px 0 var(--sky)}
-  .audit-panel h3{font-family:var(--serif);font-weight:380;font-size:2.5rem;letter-spacing:-.03em;line-height:1;margin:0 0 10px}
-  .audit-panel .sub{font-size:18px;color:#a9bcc6;margin:0 0 26px}
-  .audit-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-r)}
-  .audit-list li{display:flex;gap:20px;align-items:baseline;padding:15px 0;border-bottom:1px solid var(--line-r);font-size:18px;line-height:1.45;color:#e7ecec}
-  .audit-list li span:first-child{font-family:var(--mono);font-size:14px;color:var(--sky);min-width:36px}
-  .audit-panel .note{font-size:18px;color:#a9bcc6;margin:22px 0 0}
-
-  /* geo (night) */
-  .geo{background:var(--night);color:var(--paper);padding:130px 0;position:relative;overflow:hidden}
-  .geo:before{content:"";position:absolute;right:-10vw;top:6vh;width:44vw;height:30vh;background:var(--copper);clip-path:polygon(0 26%,100% 0,84% 100%,8% 74%);opacity:.9}
-  .geo .wrap{position:relative;z-index:2}
-  .geo h2{font-size:clamp(3rem,6.6vw,6.8rem);color:var(--paper);max-width:1100px}
-  .geo h2 em{color:var(--sky)}
-  .geo-lede{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin:46px 0 0;padding-top:28px;border-top:1px solid var(--line-r)}
-  .geo-lede p{margin:0;font-size:19px;line-height:1.7;color:#c8d4da}
-  .geo-lede strong{color:var(--paper)}
-  .geo-stage{margin-top:70px;display:grid;grid-template-columns:.72fr 1.28fr;gap:48px;align-items:start}
-  .geo-side .kicker{color:var(--sky);margin-bottom:20px;display:block}
-  .geo-side p{font-size:18px;line-height:1.7;color:#c8d4da;margin:0 0 26px}
-  .window-note{border-left:3px solid var(--sky);padding:6px 0 6px 22px;margin:0 0 34px}
-  .window-note p{margin:0;font-size:18px;line-height:1.65;color:#dce4e8}
-  .geo-ctas{display:flex;flex-direction:column;align-items:flex-start;gap:20px}
-  .browser{background:var(--paper);color:var(--ink);box-shadow:18px 24px 0 var(--copper);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
-  .browser:hover{transform:translate(-4px,-4px);box-shadow:24px 30px 0 var(--copper)}
-  .browser-top{height:44px;background:var(--sand);display:flex;gap:8px;align-items:center;padding:0 16px}
-  .browser-top i{width:9px;height:9px;border-radius:50%;background:var(--night);display:block}
-  .browser-top span{margin-left:10px;font-family:var(--mono);font-size:13px;letter-spacing:.06em;color:var(--ink);opacity:.7}
-  .browser-body{padding:36px 38px 34px}
-  .q-label{font-family:var(--mono);font-size:14px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#7d8f98;margin:0 0 10px}
-  .q-text{font-family:var(--serif);font-style:italic;font-size:clamp(1.5rem,2.2vw,2rem);line-height:1.2;margin:0 0 30px;letter-spacing:-.02em;min-height:2.4em}
-  .a-block{border-top:1px solid var(--line);padding-top:24px}
-  .a-label{font-family:var(--mono);font-size:14px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--copper);margin:0 0 10px}
-  .a-name{font-family:var(--serif);font-weight:380;font-size:clamp(2.1rem,3.4vw,3.1rem);line-height:1.02;letter-spacing:-.03em;margin:0 0 20px}
-  .a-list{list-style:none;margin:0;padding:0}
-  .a-list li{display:flex;gap:14px;align-items:baseline;padding:9px 0;font-size:17px;color:var(--ink-soft);border-top:1px solid rgba(17,40,52,.12)}
-  .a-list li b{color:var(--copper);font-weight:400;font-family:var(--serif);font-style:italic}
-  .a-miss{margin:26px 0 0;padding:18px 20px;background:var(--cream);border-left:3px solid var(--copper)}
-  .a-miss p{margin:0;font-size:18px;line-height:1.55;color:var(--ink-soft)}
-  .a-miss strong{color:var(--ink)}
-  .geo-steps{margin-top:76px;border-top:1px solid var(--line-r)}
-  .gstep{display:grid;grid-template-columns:110px .9fr 1.5fr;gap:30px;padding:28px 0;border-bottom:1px solid var(--line-r);align-items:baseline}
-  .gstep span{font-family:var(--mono);font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--sky)}
-  .gstep h3{font-family:var(--serif);font-weight:380;font-size:clamp(1.8rem,2.6vw,2.5rem);letter-spacing:-.02em;line-height:1;margin:0;transition:color .3s}
-  .gstep:hover h3{color:var(--sky)}
-  .gstep p{margin:0;font-size:18px;line-height:1.65;color:#c8d4da;max-width:640px}
-
-  /* shift (copper) */
-  .shift{background:var(--copper);color:var(--paper);padding:120px 0 130px}
-  .shift .index{color:var(--cream)}
-  .shift-head{display:grid;grid-template-columns:.34fr 1.66fr;gap:6vw;align-items:start}
-  .shift h2{font-size:clamp(3rem,6.6vw,6.8rem);color:var(--paper)}
-  .shift h2 em{color:var(--sky)}
-  .shift-lede{margin:26px 0 0;max-width:720px;font-size:21px;line-height:1.6;color:#f3ddcf}
-  .stat-rows{margin-top:64px;border-top:1px solid rgba(244,238,226,.4)}
-  .stat-row{display:grid;grid-template-columns:90px .55fr 1fr;gap:30px;align-items:baseline;padding:24px 0;border-bottom:1px solid rgba(244,238,226,.4)}
-  .stat-row i{font-family:var(--mono);font-style:normal;font-size:14px;color:#f3ddcf}
-  .stat-row b{font-family:var(--serif);font-weight:340;font-size:clamp(3rem,5.6vw,5.6rem);line-height:.85;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
-  .stat-row p{margin:0;font-size:19px;line-height:1.55;max-width:520px;color:#faeee6}
-  .growth{margin-top:78px;display:grid;grid-template-columns:.55fr 1.45fr;gap:6vw;align-items:start}
-  .growth h3{font-family:var(--serif);font-weight:380;font-size:clamp(2.2rem,3.6vw,3.4rem);letter-spacing:-.03em;line-height:1.02;margin:0}
-  .gbar{margin-bottom:30px}
-  .gbar-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
-  .gbar-head span{font-size:19px;font-weight:600}
-  .gbar-head b{font-family:var(--serif);font-size:1.7rem;font-weight:400;letter-spacing:-.02em}
-  .gbar-track{height:20px;background:rgba(5,15,28,.25);overflow:hidden}
-  .gbar-track div{height:100%;width:0;background:var(--night);transition:width 1.1s var(--ease)}
-  .gbar-track div.lt{background:var(--sky)}
-  .growth .fine{margin:6px 0 0;font-size:18px;line-height:1.6;color:#f3ddcf}
-  .growth .fine strong{color:var(--paper)}
-  /* forecast panel */
-  .forecast{margin-top:74px;background:var(--night);color:var(--paper);padding:46px 46px 40px;box-shadow:18px 22px 0 var(--night-deep)}
-  .forecast-top{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
-  #shiftBig{font-family:var(--serif);font-weight:340;font-size:clamp(4rem,10vw,7.5rem);line-height:.8;letter-spacing:-.04em;color:var(--sky);font-variant-numeric:tabular-nums}
-  #shiftCap{font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#a9bcc6}
-  #shiftTrack{position:relative;height:16px;margin:36px 0 8px;background:rgba(244,238,226,.14);cursor:pointer;touch-action:none}
-  #shiftFcFill{position:absolute;left:0;top:0;height:100%;width:0;background:var(--sky)}
-  #shiftHandle{position:absolute;top:50%;left:0;transform:translate(-50%,-50%);width:26px;height:26px;background:var(--sky);border:3px solid var(--night);cursor:grab}
-  .fc-years{display:flex;justify-content:space-between;font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:.1em;color:#8ba0ac}
-  .fc-rows{margin-top:26px;border-top:1px solid var(--line-r)}
-  .shift-yr{display:grid;grid-template-columns:130px 1fr;gap:24px;padding:17px 0 17px 18px;border-bottom:1px solid var(--line-r);border-left:3px solid transparent;cursor:pointer;transition:border-color .25s,padding-left .3s var(--ease)}
-  .shift-yr:hover{padding-left:26px}
-  .shift-yr-year{font-family:var(--serif);font-size:1.45rem;color:#8ba0ac;transition:color .18s}
-  .shift-yr-body{font-size:17.5px;line-height:1.6;color:#a9bcc6;transition:color .18s;align-self:center}
-  .shift-yr-active{border-left-color:var(--sky)}
-  .shift-yr-active .shift-yr-year{color:var(--sky)}
-  .shift-yr-active .shift-yr-body{color:#f0f3f2}
-  .play{margin-top:64px;border-top:1px solid rgba(244,238,226,.4);padding-top:34px;display:grid;grid-template-columns:.34fr 1.66fr;gap:6vw}
-  .play .kicker{color:#f3ddcf}
-  .play p{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,2.5vw,2.2rem);line-height:1.25;letter-spacing:-.02em;max-width:980px}
-  .play p strong{font-weight:400;color:var(--sky)}
-  .sources{margin:44px 0 0;font-size:14px;line-height:1.6;color:#e5c8b5}
-
-  /* coverage (sky) */
-  .coverage{background:var(--sky);color:var(--ink);padding:120px 0}
-  .coverage-head{display:grid;grid-template-columns:1.2fr .8fr;gap:6vw;align-items:end;margin-bottom:64px}
-  .coverage h2{font-size:clamp(3rem,6.4vw,6.4rem)}
-  .coverage h2 em{color:var(--copper)}
-  .coverage-head p{margin:0 0 10px;font-size:20px;line-height:1.65;color:#1f3d49}
-  .cov-rows{border-top:1px solid rgba(17,40,52,.36)}
-  .cov-row{display:grid;grid-template-columns:.4fr 1.25fr .35fr;gap:34px;align-items:center;padding:22px 0;border-bottom:1px solid rgba(17,40,52,.36)}
-  .cov-row span{font-size:21px;font-weight:600}
-  .cov-track{height:18px;background:rgba(17,40,52,.14);overflow:hidden}
-  .cov-track div{height:100%;width:0;background:var(--night);transition:width 1.2s var(--ease)}
-  .cov-row b{font-family:var(--serif);font-weight:380;font-size:2.4rem;letter-spacing:-.02em;text-align:right;font-variant-numeric:tabular-nums}
-  .cov-note{margin:18px 0 0;font-size:17px;font-style:italic;color:#2b4a57}
-  .trades{margin-top:86px;border-top:1px solid rgba(17,40,52,.36);padding-top:44px;display:grid;grid-template-columns:.4fr 1.6fr;gap:6vw;align-items:start}
-  .trades h3{font-family:var(--serif);font-weight:380;font-size:clamp(2rem,3.4vw,3.2rem);letter-spacing:-.03em;line-height:1.02;margin:0}
-  .trade-words{display:flex;flex-wrap:wrap;gap:0 14px;font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4vw,3.6rem);line-height:1.16;letter-spacing:-.03em}
-  .trade-words span{transition:color .3s}
-  .trade-words span:hover{color:var(--copper)}
-  .trade-words i{font-style:italic;color:var(--copper)}
-  .trades p{grid-column:2;margin:24px 0 0;font-size:18px;color:#1f3d49;max-width:620px}
-
-  /* believe (cream) */
-  .believe{background:var(--cream);padding:120px 0}
-  .believe-grid{display:grid;grid-template-columns:.34fr 1.66fr;gap:6vw;align-items:start}
-  .believe h2{font-size:clamp(3rem,6vw,6rem);position:sticky;top:110px}
-  .b-rows{border-top:1px solid var(--line)}
-  .b-row{display:grid;grid-template-columns:90px .8fr 1.2fr;gap:30px;padding:30px 0;border-bottom:1px solid var(--line);align-items:baseline}
-  .b-row i{font-family:var(--mono);font-style:normal;font-size:14px;color:var(--copper)}
-  .b-row h3{font-family:var(--serif);font-weight:380;font-size:clamp(2rem,3.4vw,3.2rem);line-height:.9;letter-spacing:-.03em;margin:0;transition:color .3s}
-  .b-row:hover h3{color:var(--copper)}
-  .b-row p{margin:0;font-size:19px;line-height:1.6;color:var(--ink-soft);align-self:center}
-
-  /* how (paper) */
-  .how{background:var(--paper);padding:120px 0}
-  .how-grid{display:grid;grid-template-columns:1fr 1fr;gap:7vw}
-  .how h2{font-size:clamp(3rem,6vw,6rem);position:sticky;top:110px}
-  .how-intro{margin:28px 0 0;max-width:480px;font-size:19px;line-height:1.7;color:var(--ink-soft)}
-  .steps{border-top:1px solid var(--line)}
-  .step{display:grid;grid-template-columns:70px 1fr;gap:24px;padding:28px 0;border-bottom:1px solid var(--line)}
-  .step span{font-family:var(--mono);font-size:14px;color:var(--copper)}
-  .step h3{font-family:var(--serif);font-weight:380;font-size:2.2rem;letter-spacing:-.02em;margin:0 0 8px;line-height:1;transition:color .3s}
-  .step:hover h3{color:var(--copper)}
-  .step p{margin:0;font-size:18px;line-height:1.65;color:var(--ink-soft)}
-
-  /* final (night-deep) */
-  .final{background:var(--night-deep);color:var(--paper);padding:130px 0 0;position:relative;overflow:hidden}
-  .final:before{content:"";position:absolute;right:-12vw;top:6vh;width:52vw;height:32vh;background:var(--copper);clip-path:polygon(0 26%,100% 0,82% 100%,9% 72%)}
-  .final .wrap{position:relative;z-index:2}
-  .final h2{font-size:clamp(3.6rem,9.4vw,9.8rem);letter-spacing:-.025em;line-height:.98;max-width:1200px}
-  .final h2 em{display:block;color:var(--sky);margin-left:10vw}
-  .final-bottom{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:end;margin-top:78px}
-  .final-copy{font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,2.2vw,1.9rem);line-height:1.3;max-width:560px}
-  .final-ctas{display:flex;flex-direction:column;align-items:flex-start;gap:22px;justify-self:end}
-  .final-ctas .sub{display:flex;align-items:center;gap:10px;color:#a9bcc6;font-size:16px}
-  footer{position:relative;z-index:2;margin-top:100px;border-top:1px solid var(--line-r);background:transparent}
-  .ft-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr .8fr;gap:36px;padding:56px 0 40px}
-  .ft-brand img{width:72px;height:72px;margin-bottom:20px;transition:transform .6s var(--ease)}
-  .ft-brand img:hover{transform:rotate(30deg)}
-  .ft-brand .lock{font-family:var(--serif);font-size:1.4rem;margin-bottom:10px}
-  .ft-brand p{margin:0;font-size:18px;line-height:1.6;color:#a9bcc6}
-  .ft-brand p b{color:var(--sky);font-weight:600}
-  .ft-col h4{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sky);margin:6px 0 20px}
-  .ft-col a{display:block;font-size:18px;color:#ccd7dd;padding:6px 0;width:fit-content}
-  .ft-col a:hover{color:var(--paper)}
-  .ft-base{border-top:1px solid var(--line-r);padding:22px 0 34px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#8ba0ac;font-size:15px}
-  .ft-base b{color:var(--sky);font-weight:600}
-
-  /* landing-page modal */
-  .lp-overlay{position:fixed;inset:0;z-index:10000;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(5,15,28,.72);opacity:0;transition:opacity .18s ease}
-  .lp-overlay.is-open{display:flex;opacity:1}
-  .lp-card{width:100%;max-width:580px;max-height:90vh;overflow-y:auto;background:var(--paper);box-shadow:14px 16px 0 var(--copper);padding:38px 38px 30px;position:relative;transform:translateY(14px);transition:transform .2s var(--ease)}
-  .lp-overlay.is-open .lp-card{transform:translateY(0)}
-  .lp-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border:0;background:transparent;color:#7d8f98;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .3s var(--ease),color .2s}
-  .lp-close:hover{color:var(--ink);transform:rotate(90deg)}
-  .lp-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--copper);margin-bottom:14px}
-  .lp-title{font-family:var(--serif);font-weight:380;font-size:2.3rem;letter-spacing:-.03em;line-height:1;color:var(--ink);margin:0 0 10px}
-  .lp-sub{font-size:17px;line-height:1.6;color:var(--ink-soft);margin:0 0 26px}
-  .lp-label{display:block;font-family:var(--mono);font-size:13.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--copper);margin:0 0 6px}
-  .lp-input,.lp-select,.lp-ta{width:100%;font:400 18px/1.4 var(--sans);color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--line);padding:9px 2px 11px;outline:none;transition:border-color .14s}
-  .lp-input:focus,.lp-select:focus,.lp-ta:focus{border-color:var(--copper)}
-  .lp-input::placeholder,.lp-ta::placeholder{color:#98a8b0}
-  .lp-ta{resize:vertical;min-height:64px}
-  .lp-field{margin-bottom:20px}
-  .lp-2col{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-  .lp-file{display:flex;align-items:center;gap:12px;border:1px dashed var(--line);padding:14px 15px;cursor:pointer;transition:border-color .14s}
-  .lp-file:hover{border-color:var(--copper)}
-  .lp-file input{display:none}
-  .lp-err{font-size:15px;color:#a03518;min-height:1px;margin:2px 0 10px}
-  .lp-submit{width:100%;margin-top:6px;background:var(--night);color:var(--paper);border:0;padding:18px;font:700 16px var(--sans);letter-spacing:.05em;cursor:pointer;transition:background .14s}
-  .lp-submit:hover:not(:disabled){background:#143550}
-  .lp-submit:disabled{opacity:.6;cursor:default}
-
-  @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-
-  @media(max-width:1080px){
-    .gstep{grid-template-columns:70px 1fr}
-    .gstep p{grid-column:2}
-    .stat-row{grid-template-columns:64px 1fr}
-    .stat-row p{grid-column:2}
-    .b-row{grid-template-columns:64px 1fr}
-    .b-row p{grid-column:2}
-    .cov-row{grid-template-columns:1fr .3fr}
-    .cov-row .cov-track{grid-column:1 / -1;order:3}
-  }
-  @media(max-width:980px){
-    .navlinks a:not(.nav-cta){display:none}
-    .hero-inner,.check-head,.check-form-row,.why-grid,.geo-lede,.geo-stage,.shift-head,.growth,.play,.coverage-head,.trades,.believe-grid,.how-grid,.final-bottom,.sec-grid{grid-template-columns:1fr}
-    .hero-inner{gap:48px;padding-top:150px}
-    .hero h1 .two,.hero h1 .three,.final h2 em{margin-left:0}
-    .offer{justify-self:start;box-shadow:12px 14px 0 var(--copper)}
-    .sec-copy{grid-template-columns:1fr}
-    .believe h2,.how h2{position:static;margin-bottom:36px}
-    .final-ctas{justify-self:start}
-    .trades p{grid-column:1}
-    .ft-grid{grid-template-columns:1fr 1fr}
-    .geo:before{opacity:.4}
-  }
-  @media(max-width:640px){
-    .wrap{width:min(100% - 28px,1400px)}
-    .brand span{display:none}
-    .navin{height:80px}
-    .hero h1{font-size:3.3rem}
-    .check,.why,.geo,.shift,.coverage,.believe,.how{padding:78px 0}
-    .final{padding-top:88px}
-    .offer{padding:28px 24px 24px}
-    .browser-body{padding:24px 20px}
-    .forecast{padding:28px 22px 26px;box-shadow:10px 12px 0 var(--night-deep)}
-    .shift-yr{grid-template-columns:1fr;gap:6px;padding-left:14px}
-    .check-2col,.lp-2col{grid-template-columns:1fr}
-    .ft-grid{grid-template-columns:1fr}
-    .lp-card{padding:28px 22px 24px}
-    .u-input{font-size:19px}
-  }
-  </style>
+  <link rel="stylesheet" href="/campaign.css">
 </head>
 <body>
-
-<header class="nav" id="siteNav">
-  <div class="wrap navin">
-    <a class="brand" href="/">
-      <img src="/assets/logo-mark-small-reverse.svg" alt="A Light in the Sky mark">
-      <span>A Light in the Sky</span>
-    </a>
-    <nav class="navlinks" aria-label="Primary">
-      <a class="ul-link" href="/services">Services</a>
-      <a class="ul-link" href="/services#how">How It Works</a>
-      <a class="ul-link" href="/about">About</a>
-      <a class="ul-link" href="/faq">FAQ</a>
-      <a class="ul-link" href="/scan">AI Check</a>
-      <a class="ul-link" href="/news">News</a>
-      <a class="nav-cta" href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer">START WITH THE FREE AUDIT</a>
-    </nav>
-    <a class="mcta" href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer">FREE AUDIT &#8594;</a>
-  </div>
-</header>
 
 <main>
 
   <!-- ===== HERO ===== -->
-  <section id="hero" class="hero">
-    <div id="heroMedia">
-      <video id="heroVideo" src="/assets/hero-lighthouse.mp4" poster="/assets/lighthouse-final.jpg" autoplay loop muted playsinline preload="auto"></video>
-    </div>
-    <div class="hero-shade a"></div>
-    <div class="hero-shade b"></div>
-    <div id="heroScrollVeil"></div>
+  <section class="hero" id="top">
+    <div class="grain"></div>
 
-    <div class="wrap hero-inner">
-      <div>
-        <div class="kicker hero-kicker">Custom websites for service businesses</div>
-        <h1 class="display no-rv">
-          <span class="l"><span>Built to be found.</span></span>
-          <span class="l two"><span>Built to get</span></span>
-          <span class="l three"><span>booked.</span></span>
-        </h1>
-        <p class="hero-sub">Your customers are searching on Google, maps, and AI tools. We make your business easy to find, easy to trust, and easy to call.</p>
-        <div class="hero-actions">
-          <a class="btn" href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer">START WITH THE FREE AUDIT <span class="arr">&#8594;</span></a>
-          <a class="quiet" href="/services#how">See how it works</a>
-        </div>
+    <header class="topbar">
+      <a class="brand" href="#top">
+        <img class="spark" src="/assets/logo-mark-small.svg" alt="A Light in the Sky mark">
+        <span>
+          <strong>A LIGHT IN THE SKY</strong>
+          <small>STRATEGIC DESIGN &amp; BRANDING</small>
+        </span>
+      </a>
+      <nav aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#included">Included</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+        <a href="/ai-visibility">AI Visibility</a>
+        <a href="/news">News</a>
+      </nav>
+      <a class="mini-cta" href="#pricing">Start my website</a>
+    </header>
+
+    <div class="hero-center">
+      <p class="eyebrow">A website refresh for the business you&rsquo;ve become</p>
+      <h1>your website<br>deserves to <em>bloom.</em></h1>
+      <p class="hero-copy">You&rsquo;ve grown. Your work has evolved. Your website should feel like you again.</p>
+      <p class="hero-sub">Strategic design, clearer copy, brand direction + an SEO-ready foundation.</p>
+      <div class="hero-buttons">
+        <a class="button coral" href="#pricing" data-stripe="custom">Start my website &mdash; $500</a>
+        <a class="button sun" href="#pricing" data-stripe="wordpress">Build mine in WordPress &mdash; $799</a>
       </div>
-
-      <aside class="offer">
-        <div class="tag"><i></i>Free &middot; 24 hours</div>
-        <h2>Get a free landing page. <em>In the next 24 hours.</em></h2>
-        <p>Tell us what you do and where you work. We build one clean page, phone number front and center, and send it within 24 hours. Yours to keep.</p>
-        <button id="lp24Open" type="button" class="btn on-light" style="width:100%;">GET MY FREE LANDING PAGE <span class="arr">&#8594;</span></button>
-        <span class="fine">No card, no catch. We email it to you.</span>
-      </aside>
-    </div>
-
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker-inner" id="tickerInner">
-        <span>Be found</span><span>In AI search</span><span>In your city</span><span>Before your competitor</span><span>Search</span><span>Speed</span><span>Structure</span><span>Identity</span><span>Conversion</span><span>Indianapolis &middot; Serving nationwide</span>
+      <div class="micro">
+        <span>5 pages</span><span>3 revisions</span><span>14-day design timeline</span><span>mobile responsive</span><span>SEO-ready</span>
       </div>
     </div>
-  </section>
 
-  <div class="color-band" aria-hidden="true"><div></div><div></div><div></div><div></div></div>
-
-  <!-- ===== FREE AI VISIBILITY CHECK ===== -->
-  <section class="check" id="check">
-    <div class="wrap">
-      <div class="check-head">
-        <div>
-          <div class="index rv">01 &mdash; <span class="check-label" style="font-style:normal;">Free AI visibility check</span></div>
-          <h2 class="display sec-h2 rv" style="margin-top:22px;">Check how <em class="tone" style="color:var(--copper);">AI search</em> sees your business.</h2>
-        </div>
-        <p class="rv">Enter your website and we check whether ChatGPT, Google, and other AI tools can find, understand, and recommend you. Real signals, plain English, no vanity scores.</p>
-      </div>
-
-      <div class="check-form-row rv">
-        <form id="hpscForm" autocomplete="on" novalidate>
-          <div class="field">
-            <label for="hpscUrl">Your website</label>
-            <input id="hpscUrl" class="u-input" type="text" name="url" inputmode="url" placeholder="https://yourwebsite.com" aria-label="Your website address" />
-          </div>
-          <div class="check-2col">
-            <div class="field">
-              <label for="hpscBiz">Business name</label>
-              <input id="hpscBiz" class="u-input" type="text" name="organization" placeholder="Cool Breeze HVAC" autocomplete="organization" aria-label="Business name" />
-            </div>
-            <div class="field">
-              <label for="hpscEmail">Email</label>
-              <input id="hpscEmail" class="u-input" type="email" name="email" inputmode="email" placeholder="you@business.com" autocomplete="email" aria-label="Email" />
-            </div>
-          </div>
-          <div id="hpscErr" class="form-err" role="alert"></div>
-          <button id="hpscBtn" class="btn on-light" type="submit">CHECK MY AI VISIBILITY <span class="arr">&#8594;</span></button>
-          <p style="margin:16px 0 0;font-size:18px;color:#5d7078;">Free &middot; We email your results</p>
-        </form>
-        <div class="check-side">
-          <p>Six signals, checked against your live site:</p>
-          <ul class="check-list">
-            <li class="hoverable"><span>i.</span>AI crawlability</li>
-            <li class="hoverable"><span>ii.</span>Structured data</li>
-            <li class="hoverable"><span>iii.</span>Answer-ready content</li>
-            <li class="hoverable"><span>iv.</span>Local signals</li>
-            <li class="hoverable"><span>v.</span>Clear identity</li>
-            <li class="hoverable"><span>vi.</span>Findability basics</li>
-          </ul>
-        </div>
-      </div>
+    <div class="sky-story" aria-hidden="true">
+      <div class="beam beam-a"></div>
+      <div class="beam beam-b"></div>
+      <div class="horizon horizon-a"></div>
+      <div class="horizon horizon-b"></div>
+      <div class="horizon horizon-c"></div>
+      <img class="light-mark" src="/assets/logo-mark-small.svg" alt="">
     </div>
   </section>
 
-  <!-- ===== OUR WHY ===== -->
-  <section class="why" id="why">
-    <div class="wrap">
-      <div class="sec-grid">
-        <div class="index rv">02</div>
-        <div>
-          <h2 class="display sec-h2 rv">Good work should not lose to a <em class="tone" style="color:var(--copper);">bigger ad budget.</em></h2>
-          <div class="sec-copy">
-            <p class="rv">Many service business owners do great work but still lose calls online. The bigger company shows up first. The cheaper-looking company gets the click. The better business never gets the call.</p>
-            <p class="rv">A Light in the Sky exists to help real operators become easier to find, easier to trust, and easier to book.</p>
-          </div>
-        </div>
-      </div>
+  <!-- ===== INTRO ===== -->
+  <section class="center-section intro">
+    <p class="eyebrow rv">Strategic design + branding</p>
+    <h2 class="rv">Be seen. Be remembered. <em>Be you.</em></h2>
+    <p class="rv">For therapists, coaches, trainers, healers, stylists + independent practitioners whose name, perspective and reputation are part of what people are buying.</p>
+  </section>
 
-      <div class="why-grid">
-        <div class="why-copy rv" style="padding-top:12px;">
-          <p style="font-family:var(--serif);font-weight:400;font-size:1.7rem;line-height:1.25;letter-spacing:-.02em;color:var(--ink);">Before you spend a dollar on a rebuild, you should know exactly what is helping and what is hurting.</p>
-          <p>That is what the audit is for. No fake scores. No ranking promises. Just a clear diagnosis, in plain English, that you can act on with us or without us.</p>
-          <a class="action" href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer">Book the free audit</a>
-        </div>
-        <div class="audit-panel rv">
-          <h3>The audit preview</h3>
-          <p class="sub">What we check before you spend on a rebuild.</p>
-          <ul class="audit-list">
-            <li class="hoverable"><span>01</span>Can Google read your services?</li>
-            <li class="hoverable"><span>02</span>Are your service areas clear?</li>
-            <li class="hoverable"><span>03</span>Is your phone number easy to find?</li>
-            <li class="hoverable"><span>04</span>Does the site load fast on mobile?</li>
-            <li class="hoverable"><span>05</span>Is your proof visible?</li>
-            <li class="hoverable"><span>06</span>Can AI tools understand when your business is relevant?</li>
-          </ul>
-          <p class="note">No fake scores. No ranking promises. Just a clear diagnosis.</p>
-        </div>
-      </div>
+  <!-- ===== SELECTED WORK ===== -->
+  <section class="center-section work" id="work">
+    <p class="eyebrow rv">Selected work</p>
+    <h2 class="rv">See what your website could feel like.</h2>
+    <div class="portfolio-grid">
+      <article class="portfolio-card p-one rv">
+        <div class="portfolio-screen"><span>Project One</span></div>
+        <small>Replace with strongest approved client screenshot</small>
+      </article>
+      <article class="portfolio-card p-two rv">
+        <div class="portfolio-screen"><span>Project Two</span></div>
+        <small>Replace with strongest approved client screenshot</small>
+      </article>
+      <article class="portfolio-card p-three rv">
+        <div class="portfolio-screen"><span>Project Three</span></div>
+        <small>Replace with strongest approved client screenshot</small>
+      </article>
     </div>
   </section>
 
-  <!-- ===== FOUND IN AI SEARCH (GEO) ===== -->
-  <section class="geo" id="geo">
-    <div class="wrap">
-      <div class="index on-dark rv">03</div>
-      <h2 class="display rv" style="margin-top:22px;">Right now, AI is recommending someone in your city. <em class="tone">It is probably not you.</em></h2>
-      <div class="geo-lede">
-        <p class="rv">When someone asks ChatGPT, Perplexity, or Google AI for the best business in your category, the AI names a specific business. That business gets the call. The work that makes sure the name is yours, and keeps it there, is what we build into every site.</p>
-        <p class="rv">Most of your local competitors have not done this yet. <strong>That is the window.</strong> We do not know how long it stays open. The audit tells you exactly where you stand today.</p>
-      </div>
-
-      <div class="geo-stage">
-        <div class="geo-side rv">
-          <span class="kicker">Watch it happen</span>
-          <p>One question, one recommendation, one phone call. This is what most local service sites look like to AI right now &mdash; and what the optimized competitor looks like instead.</p>
-          <div class="window-note">
-            <p>Illustrative example. Your real coverage is measured in the audit.</p>
-          </div>
-          <div class="geo-ctas">
-            <a class="btn" href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer">START WITH THE FREE AUDIT <span class="arr">&#8594;</span></a>
-            <a class="quiet" href="/services#how" style="color:var(--sky);">How it works</a>
-          </div>
-        </div>
-
-        <div class="browser rv">
-          <div class="browser-top"><i></i><i></i><i></i><span>chatgpt.com</span></div>
-          <div class="browser-body">
-            <p class="q-label">Live query &middot; ChatGPT</p>
-            <p class="q-text" id="typeQ">&ldquo;Who is the best HVAC company near me for an emergency repair?&rdquo;</p>
-            <div class="a-block">
-              <p class="a-label">&#10022; ChatGPT recommended this business</p>
-              <p class="a-name">Cool Breeze Heating &amp; Air</p>
-              <ul class="a-list">
-                <li class="hoverable"><b>a.</b>Well-structured site &mdash; AI can read it</li>
-                <li class="hoverable"><b>b.</b>Schema complete &middot; Bing indexed &middot; Google verified</li>
-                <li class="hoverable"><b>c.</b>GEO active &mdash; shows up across AI tools</li>
-              </ul>
-              <div class="a-miss">
-                <p><strong>Your business without GEO:</strong> not mentioned. Cool Breeze got the call.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="geo-steps">
-        <div class="gstep hoverable rv"><span>Step 01</span><h3>Unlock the crawlers</h3><p>GPTBot, ClaudeBot, PerplexityBot. Most sites block them by default. We open the door so AI can find you.</p></div>
-        <div class="gstep hoverable rv"><span>Step 02</span><h3>Speak AI&rsquo;s language</h3><p>Schema markup, Bing submission, answer-first content. AI cannot recommend what it cannot read. We make you readable.</p></div>
-        <div class="gstep hoverable rv"><span>Step 03</span><h3>Enter the index</h3><p>ChatGPT sources from Bing. Most businesses are not there. We submit, verify, and confirm your presence.</p></div>
-        <div class="gstep hoverable rv"><span>Step 04</span><h3>Monitor every month</h3><p>We test your top queries, track appearance, adjust, and report. GEO is not set-and-forget, and neither are we.</p></div>
-      </div>
+  <!-- ===== SPLIT STORY ===== -->
+  <section class="split-story">
+    <div class="split-copy">
+      <p class="eyebrow rv">For the business that has outgrown its website</p>
+      <h2 class="rv">Maybe it works. It just doesn&rsquo;t feel like where you&rsquo;re going anymore.</h2>
+      <p class="rv">Your work deserves an online presence that feels established, easy to understand, memorable&mdash;and distinctly yours.</p>
+    </div>
+    <div class="riso-art" aria-hidden="true">
+      <div class="riso-field rf1"></div>
+      <div class="riso-field rf2"></div>
+      <div class="riso-field rf3"></div>
+      <div class="riso-stroke rs1"></div>
+      <div class="riso-stroke rs2"></div>
+      <img class="mark" src="/assets/logo-mark-small.svg" alt="">
     </div>
   </section>
 
-  <!-- ===== THE SEARCH SHIFT ===== -->
-  <section id="shift" class="shift">
-    <div class="wrap">
-      <div class="shift-head">
-        <div class="index rv">04</div>
-        <div>
-          <h2 class="display rv">The search shift is <em class="tone">real.</em></h2>
-          <p class="shift-lede rv">People aren&rsquo;t leaving Google. They&rsquo;re adding AI as a second front door, and AI is eating all the growth.</p>
-        </div>
-      </div>
-
-      <div class="stat-rows">
-        <div class="stat-row hoverable rv"><i>01</i><b data-shift-num data-target="37" data-dec="0">37%</b><p>now start searches with AI, not Google</p></div>
-        <div class="stat-row hoverable rv"><i>02</i><b data-shift-num data-target="55" data-dec="0">55%</b><p>use AI chat as a primary research tool</p></div>
-        <div class="stat-row hoverable rv"><i>03</i><b data-shift-num data-target="9.2" data-dec="1">9.2%</b><p>of search traffic is now AI (up from 7.8%)</p></div>
-        <div class="stat-row hoverable rv"><i>04</i><b data-shift-num data-target="47" data-dec="0">47%</b><p>have used AI to make a purchase decision</p></div>
-      </div>
-
-      <div class="growth">
-        <h3 class="rv">Where the growth is going <em class="tone">(YoY)</em></h3>
-        <div class="rv">
-          <div class="gbar">
-            <div class="gbar-head"><span>AI search visits</span><b>+42.8%</b></div>
-            <div class="gbar-track"><div id="shiftAiFill" class="lt"></div></div>
-          </div>
-          <div class="gbar">
-            <div class="gbar-head"><span>Google visits</span><b>+2.4%</b></div>
-            <div class="gbar-track"><div id="shiftGFill"></div></div>
-          </div>
-          <p class="fine">Total search (engines + AI) grew <strong>26%</strong> worldwide. The pie got bigger, traditional search barely moved.</p>
-        </div>
-      </div>
-
-      <div class="forecast rv">
-        <div class="forecast-top">
-          <div id="shiftBig">~10%</div>
-          <div id="shiftCap">Projected AI search share &middot; 2026</div>
-        </div>
-        <div id="shiftTrack">
-          <div id="shiftFcFill"></div>
-          <div id="shiftHandle"></div>
-        </div>
-        <div class="fc-years"><span>2026</span><span>2027</span><span>2028</span><span>2029&#8211;30</span></div>
-        <div class="fc-rows">
-          <div data-yr class="shift-yr shift-yr-active"><div class="shift-yr-year">2026</div><div class="shift-yr-body">Traditional search query volume drops 25% (Gartner). AI holds ~9&#8211;12% share but captures nearly all net-new search.</div></div>
-          <div data-yr class="shift-yr"><div class="shift-yr-year">2027</div><div class="shift-yr-body">AI matches Google&rsquo;s economic value &mdash; it converts 4&#8211;23&#215; harder. Coding &amp; research already 60%+ AI.</div></div>
-          <div data-yr class="shift-yr"><div class="shift-yr-year">2028</div><div class="shift-yr-body">Organic site traffic down 50% (Gartner). At least half of all queries shifting to AI.</div></div>
-          <div data-yr class="shift-yr"><div class="shift-yr-year">2029&#8211;2030</div><div class="shift-yr-body">AI search reaches 30&#8211;50%+ usage share and surpasses query-and-click search worldwide.</div></div>
-        </div>
-      </div>
-
-      <div class="play">
-        <div class="kicker rv">The play</div>
-        <p class="rv">The next 18&#8211;24 months are a land grab. Get found inside <strong>ChatGPT, Perplexity and AI Overviews</strong> now, and the advantage compounds as the crossover hits. Honest framing: <strong>61%</strong> still use AI and Google in tandem, so be findable in both.</p>
-      </div>
-
-      <p class="sources rv">Sources: Botify/YouGov, Orbit Media, Wix AI Search Lab, G2, Gartner, Ahrefs, Semrush (2025&#8211;2026)</p>
+  <!-- ===== WHAT IS INCLUDED ===== -->
+  <section class="center-section included" id="included">
+    <p class="eyebrow rv">What&rsquo;s included</p>
+    <h2 class="rv">More than a prettier website.</h2>
+    <div class="included-list">
+      <div class="rv"><span>&#8599;</span>5 custom-designed pages</div>
+      <div class="rv"><span>&#8599;</span>Strategic design + brand direction</div>
+      <div class="rv"><span>&#8599;</span>Clearer copy that still sounds like you</div>
+      <div class="rv"><span>&#8599;</span>Mobile-responsive + fast-loading</div>
+      <div class="rv"><span>&#8599;</span>SEO-ready from day one</div>
+      <div class="rv"><span>&#8599;</span>3 revision rounds</div>
+      <div class="rv"><span>&#8599;</span>Approximately 14-day design timeline</div>
     </div>
   </section>
 
-  <!-- ===== BE FOUND EVERYWHERE ===== -->
-  <section class="coverage" id="coverage">
-    <div class="wrap">
-      <div class="coverage-head">
-        <div>
-          <div class="index rv">05</div>
-          <h2 class="display rv" style="margin-top:22px;">Be found <em class="tone">everywhere</em> they search.</h2>
-        </div>
-        <p class="rv">Your business, visible where your customers search for answers &mdash; classic Google, and every AI front door beside it.</p>
-      </div>
+  <!-- ===== PRICING ===== -->
+  <section class="pricing" id="pricing">
+    <p class="eyebrow rv">Two ways to build</p>
+    <h2 class="rv">One powerful website. Two smart options.</h2>
+    <div class="price-grid">
+      <article class="rv">
+        <p class="price-label">Custom website</p>
+        <div class="price">$500</div>
+        <ul>
+          <li>5 pages</li>
+          <li>Strategic design + branding</li>
+          <li>Copy refinement</li>
+          <li>SEO-ready foundation</li>
+          <li>Mobile responsive</li>
+          <li>3 revision rounds</li>
+          <li>14-day design timeline*</li>
+        </ul>
+        <a class="button coral" href="#" data-stripe="custom">Start my website &mdash; $500</a>
+        <small>Does not include a WordPress editing dashboard.</small>
+      </article>
+      <article class="rv">
+        <p class="price-label">Custom WordPress website</p>
+        <div class="price">$799</div>
+        <ul>
+          <li>Everything in the custom package</li>
+          <li>WordPress CMS</li>
+          <li>Log in and edit after launch</li>
+          <li>Full ownership</li>
+          <li>Additional pages: $100 each</li>
+        </ul>
+        <a class="button sun" href="#" data-stripe="wordpress">Build mine in WordPress &mdash; $799</a>
+      </article>
+    </div>
+    <p class="timeline-note">*Timeline begins after discovery, creative-direction approval, and receipt of required assets/content.</p>
+  </section>
 
-      <div class="cov-rows" id="covRows">
-        <div class="cov-row hoverable rv"><span>Google SEO</span><div class="cov-track"><div data-cov="99"></div></div><b data-covnum="99">0%</b></div>
-        <div class="cov-row hoverable rv"><span>ChatGPT</span><div class="cov-track"><div data-cov="94"></div></div><b data-covnum="94">0%</b></div>
-        <div class="cov-row hoverable rv"><span>Gemini</span><div class="cov-track"><div data-cov="91"></div></div><b data-covnum="91">0%</b></div>
-        <div class="cov-row hoverable rv"><span>Claude</span><div class="cov-track"><div data-cov="88"></div></div><b data-covnum="88">0%</b></div>
-        <div class="cov-row hoverable rv"><span>Bing AI</span><div class="cov-track"><div data-cov="85"></div></div><b data-covnum="85">0%</b></div>
-      </div>
-      <p class="cov-note rv">Illustrative example. Your real coverage is measured in the audit.</p>
+  <!-- ===== WHY THIS OFFER EXISTS ===== -->
+  <section class="story">
+    <p class="eyebrow rv">Why this offer exists</p>
+    <h2 class="rv">Design instinct. Technical foundation. Human voice.</h2>
+    <p class="rv">A website can be generated in minutes. A presence people remember still takes taste, judgment and intention. As A Light in the Sky moves into its next direction, this campaign opens a focused collection of builds for independent professionals whose work has grown beyond the website representing them.</p>
+    <p class="story-emphasis rv">This isn&rsquo;t about giving you more internet. It&rsquo;s about making what is already yours clearer, stronger and easier to find.</p>
+  </section>
 
-      <div class="trades">
-        <h3 class="rv">Who we build for</h3>
-        <div class="rv">
-          <div class="trade-words">
-            <span>HVAC,</span> <span>plumbing,</span> <span>electrical,</span> <span>wellness,</span> <span>caf&eacute;s &amp; restaurants,</span> <span>medical</span> <i>&amp; every trade the neighborhood calls first.</i>
-          </div>
-          <p>If your business depends on local calls, quote requests, and booked jobs, we build for you.</p>
-        </div>
-      </div>
+  <!-- ===== PROCESS ===== -->
+  <section class="process" id="process">
+    <p class="eyebrow rv">The process</p>
+    <h2 class="rv">Pay &rarr; Discover &rarr; Define &rarr; Design &rarr; Refine &rarr; Launch</h2>
+    <div class="process-grid">
+      <article class="rv"><div class="n">01</div><h3>PAY</h3><p>Choose your build and secure your project.</p></article>
+      <article class="rv"><div class="n">02</div><h3>DISCOVER</h3><p>We review your site, business, audience and voice.</p></article>
+      <article class="rv"><div class="n">03</div><h3>DEFINE</h3><p>We establish the creative and brand direction together.</p></article>
+      <article class="rv"><div class="n">04</div><h3>DESIGN</h3><p>Your custom site is built around the approved direction.</p></article>
+      <article class="rv"><div class="n">05</div><h3>REFINE</h3><p>Up to 3 revision rounds.</p></article>
+      <article class="rv"><div class="n">06</div><h3>LAUNCH</h3><p>Your new website goes live.</p></article>
+    </div>
+    <p class="timeline-note">A note about timing: this is collaborative. Quick feedback, copy clarification, images or approvals may be needed during production.</p>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq" id="faq">
+    <p class="eyebrow rv">FAQ</p>
+    <h2 class="rv">Quick answers.</h2>
+    <div class="faq-list">
+      <details><summary>Is the domain included?<span class="pm">+</span></summary><p>No. This offer assumes you already own your domain.</p></details>
+      <details><summary>How many pages are included?<span class="pm">+</span></summary><p>Five pages. Additional pages are $100 each.</p></details>
+      <details><summary>Can I edit the website myself?<span class="pm">+</span></summary><p>Choose the $799 WordPress package if you want a WordPress dashboard for ongoing self-editing.</p></details>
+      <details><summary>How long does it take?<span class="pm">+</span></summary><p>Approximately 14 days after discovery is complete, the creative direction is approved, and required content and assets have been received.</p></details>
+      <details><summary>How many revisions are included?<span class="pm">+</span></summary><p>Three revision rounds are included.</p></details>
+      <details><summary>Is SEO included?<span class="pm">+</span></summary><p>Yes. The site includes an SEO-ready foundation: search-friendly structure, titles/descriptions, local language where appropriate, image optimization, sitemap/indexability, and Google Search Console connection. Rankings are not guaranteed.</p></details>
+      <details><summary>What happens after I pay?<span class="pm">+</span></summary><p>You&rsquo;ll be redirected to the welcome page to book your discovery session and complete onboarding.</p></details>
     </div>
   </section>
 
-  <!-- ===== WHAT WE BELIEVE ===== -->
-  <section class="believe" id="believe">
-    <div class="wrap believe-grid">
-      <div>
-        <div class="index rv">06</div>
-        <h2 class="display rv" style="margin-top:22px;">What we believe.</h2>
-      </div>
-      <div class="b-rows">
-        <div class="b-row hoverable rv"><i>01</i><h3>No fake promises.</h3><p>We don&rsquo;t promise rankings or lead volume. We promise clear work, honestly reported.</p></div>
-        <div class="b-row hoverable rv"><i>02</i><h3>No lock-in.</h3><p>You own your domain, code, hosting, and accounts. Leave whenever you want, with everything.</p></div>
-        <div class="b-row hoverable rv"><i>03</i><h3>No templates.</h3><p>Your site is custom-built for your business, not a recycled skin with your logo dropped in.</p></div>
-        <div class="b-row hoverable rv"><i>04</i><h3>No confusion.</h3><p>We explain the work in plain English. If you can&rsquo;t understand it, we haven&rsquo;t finished it.</p></div>
-      </div>
+  <!-- ===== FINAL CTA ===== -->
+  <section class="final-cta">
+    <div class="grain"></div>
+    <p class="eyebrow">You&rsquo;ve already done the growing.</p>
+    <h2>Let your website catch up.</h2>
+    <p>5 pages &middot; strategic design &middot; brand direction &middot; clearer copy &middot; SEO-ready</p>
+    <div class="hero-buttons" style="margin-top:28px;">
+      <a class="button coral" href="#" data-stripe="custom">Start my website &mdash; $500</a>
+      <a class="button sun" href="#" data-stripe="wordpress">I want WordPress &mdash; $799</a>
     </div>
   </section>
 
-  <!-- ===== HOW WE WORK ===== -->
-  <section class="how" id="how">
-    <div class="wrap how-grid">
-      <div>
-        <div class="index rv">07</div>
-        <h2 class="display rv" style="margin-top:22px;">We do not begin with a template.</h2>
-        <p class="how-intro rv">We begin with a diagnosis, and only build what the diagnosis calls for.</p>
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-foot">
+    <div class="foot-in">
+      <div class="foot-brand">
+        <img src="/assets/logo-mark-small-reverse.svg" alt="A Light in the Sky logo">
+        <div class="lock">A Light in the Sky</div>
+        <p>Strategic design and branding for independent professionals. Indianapolis, Indiana &middot; working nationwide.</p>
       </div>
-      <div class="steps">
-        <div class="step hoverable rv"><span>01</span><div><h3>Audit</h3><p>We find what&rsquo;s helping, what&rsquo;s hurting, and what to fix first.</p></div></div>
-        <div class="step hoverable rv"><span>02</span><div><h3>Recommend</h3><p>We recommend the right next step for your business. Sometimes that is not a rebuild.</p></div></div>
-        <div class="step hoverable rv"><span>03</span><div><h3>Build / Fix</h3><p>We build or fix what matters most. No fluff.</p></div></div>
-        <div class="step hoverable rv"><span>04</span><div><h3>Review</h3><p>We document what changed and keep improving what counts.</p></div></div>
+      <div class="foot-col">
+        <h4>The offer</h4>
+        <a href="#included">What&rsquo;s included</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="/about">About</a>
+        <a href="/services">Services</a>
+        <a href="/ai-visibility">AI Visibility</a>
+        <a href="/news">News</a>
+        <a href="mailto:admin@alitsky.com">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h4>Websites for</h4>
+        <a href="/hvac-websites">HVAC</a>
+        <a href="/plumber-websites">Plumbing</a>
+        <a href="/electrician-websites">Electrical</a>
+        <a href="/roofing-websites">Roofing</a>
+        <a href="/landscaping-websites">Landscaping</a>
+        <a href="/painter-websites">Painting</a>
       </div>
     </div>
-  </section>
-
-  <!-- ===== FINAL CTA + FOOTER ===== -->
-  <section class="final" id="start">
-    <div class="wrap">
-      <h2 class="display rv">Ready to stop guessing?<em class="tone">Start with a clear audit.</em></h2>
-      <div class="final-bottom">
-        <p class="final-copy rv">We&rsquo;ll show you what&rsquo;s helping, what&rsquo;s hurting, and what to fix first. No obligation. Just a clear, useful report &mdash; be found in AI search, in your city, before your competitor.</p>
-        <div class="final-ctas rv">
-          <a class="btn" href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer">START WITH THE FREE AUDIT <span class="arr">&#8594;</span></a>
-          <div class="sub">Free &middot; 30 minutes &middot; yours to keep either way</div>
-        </div>
-      </div>
+    <div class="foot-base">
+      <span>&copy; 2026 A Light in the Sky. All rights reserved. We do not sell what we cannot build.</span>
+      <span><b>Indianapolis, Indiana</b> &middot; Serving nationwide</span>
     </div>
+  </footer>
 
-    <footer>
-      <div class="wrap">
-        <div class="ft-grid">
-          <div class="ft-brand">
-            <img src="/assets/logo-mark-small-reverse.svg" alt="A Light in the Sky logo">
-            <div class="lock">A Light in the Sky</div>
-            <p><b>Be found.</b> In AI search. In your city. Before your competitor.</p>
-          </div>
-          <div class="ft-col">
-            <h4>Services</h4>
-            <a class="ul-link" href="/services">AI Visibility Audit</a>
-            <a class="ul-link" href="/services">Website Build</a>
-            <a class="ul-link" href="/services">Setup &amp; Handoff</a>
-            <a class="ul-link" href="/services">Before &amp; After Review</a>
-          </div>
-          <div class="ft-col">
-            <h4>Company</h4>
-            <a class="ul-link" href="/about">About</a>
-            <a class="ul-link" href="/services#how">How It Works</a>
-            <a class="ul-link" href="/faq">FAQ</a>
-            <a class="ul-link" href="/news">News</a>
-            <a class="ul-link" href="mailto:admin@alitsky.com">Contact</a>
-          </div>
-          <div class="ft-col">
-            <h4>Websites for</h4>
-            <a class="ul-link" href="/hvac-websites">HVAC</a>
-            <a class="ul-link" href="/plumber-websites">Plumbing</a>
-            <a class="ul-link" href="/electrician-websites">Electrical</a>
-            <a class="ul-link" href="/roofing-websites">Roofing</a>
-            <a class="ul-link" href="/landscaping-websites">Landscaping</a>
-            <a class="ul-link" href="/painter-websites">Painting</a>
-          </div>
-          <div class="ft-col">
-            <h4>Legal</h4>
-            <a class="ul-link" href="#">Privacy Policy</a>
-            <a class="ul-link" href="#">Terms of Service</a>
-          </div>
-        </div>
-        <div class="ft-base">
-          <span>&copy; 2026 A Light in the Sky. All rights reserved. We do not sell what we cannot build.</span>
-          <span><b>Indianapolis, Indiana</b> &middot; Serving nationwide</span>
-        </div>
-      </div>
-    </footer>
-  </section>
 </main>
 
-<!-- ===== FREE LANDING PAGE MODAL ===== -->
-<div id="lp24Overlay" class="lp-overlay" role="dialog" aria-modal="true" aria-label="Get your free landing page">
-  <div class="lp-card">
-    <button id="lp24Close" class="lp-close" type="button" aria-label="Close">
-      <svg width="20" height="20" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
-    <div class="lp-tag">Free landing page &middot; 24 hours</div>
-    <h2 class="lp-title">Your free landing page</h2>
-    <p class="lp-sub">Fill this in once. We build one clean page for your business and email it to you within 24 hours. Free, yours to keep, no obligation.</p>
-    <form id="lp24Form" autocomplete="on" novalidate>
-      <div class="lp-field"><label class="lp-label" for="lpBiz">Business name *</label><input id="lpBiz" class="lp-input" type="text" name="organization" placeholder="e.g. Cool Breeze HVAC" autocomplete="organization" /></div>
-      <div class="lp-2col lp-field">
-        <div><label class="lp-label" for="lpEmail">Email *</label><input id="lpEmail" class="lp-input" type="email" name="email" placeholder="you@business.com" autocomplete="email" inputmode="email" /></div>
-        <div><label class="lp-label" for="lpPhone">Phone (goes on the page)</label><input id="lpPhone" class="lp-input" type="tel" name="tel" placeholder="(317) 555-0134" autocomplete="tel" inputmode="tel" /></div>
-      </div>
-      <div class="lp-field"><label class="lp-label" for="lpDoes">What does your business do? *</label><input id="lpDoes" class="lp-input" type="text" placeholder="e.g. HVAC repair, hair salon, caf&eacute;, plumbing" /></div>
-      <div class="lp-field"><label class="lp-label" for="lpArea">City and service area *</label><input id="lpArea" class="lp-input" type="text" placeholder="e.g. Indianapolis and 30 miles around" /></div>
-      <div class="lp-field"><label class="lp-label" for="lpServices">Top services or offers to feature *</label><textarea id="lpServices" class="lp-ta" placeholder="2 or 3 lines. e.g. AC repair, furnace install, seasonal tune-up special"></textarea></div>
-      <div class="lp-2col lp-field">
-        <div><label class="lp-label" for="lpGoal">The page should get you</label><select id="lpGoal" class="lp-select"><option>Phone calls</option><option>Bookings</option><option>Quote requests</option><option>Walk-ins</option></select></div>
-        <div><label class="lp-label" for="lpSite">Current website or social (if any)</label><input id="lpSite" class="lp-input" type="text" inputmode="url" placeholder="yourwebsite.com or Instagram" /></div>
-      </div>
-      <div class="lp-field">
-        <span class="lp-label">Logo or symbol (if you have one)</span>
-        <label class="lp-file" for="lpLogo">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9e4b26" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-          <span id="lpLogoTxt" style="font-size:16px;color:var(--ink-soft);">Upload PNG, JPG, SVG, or WebP &middot; up to 3 MB</span>
-          <input id="lpLogo" type="file" accept=".png,.jpg,.jpeg,.svg,.webp,image/png,image/jpeg,image/svg+xml,image/webp" />
-        </label>
-      </div>
-      <div class="lp-field"><label class="lp-label" for="lpNotes">Anything else we should know</label><textarea id="lpNotes" class="lp-ta" placeholder="Hours, license number, years in business, a tagline you like..."></textarea></div>
-      <div id="lpErr" class="lp-err" role="alert"></div>
-      <button id="lpSubmit" class="lp-submit" type="submit">SEND MY DETAILS <span aria-hidden="true">&#8594;</span></button>
-      <div style="display:flex;align-items:center;gap:8px;justify-content:center;margin-top:14px;color:#7d8f98;font-size:14px;">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7d8f98" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" style="flex:none;"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V8a5 5 0 0 1 10 0v3"/></svg>
-        <span>We email your page here. No spam, ever.</span>
-      </div>
-    </form>
-    <div id="lp24Done" style="display:none;text-align:center;padding:18px 4px 8px;">
-      <div style="font-family:var(--serif);font-style:italic;font-size:2.6rem;color:var(--copper);margin-bottom:10px;">Got it.</div>
-      <h3 style="font-family:var(--serif);font-weight:400;font-size:1.7rem;color:var(--ink);margin:0 0 10px;">The clock starts now.</h3>
-      <p style="font-size:17px;line-height:1.6;color:var(--ink-soft);margin:0;">Your free landing page will be in your inbox within 24 hours. If anything is unclear we will reply from admin@alitsky.com first.</p>
-    </div>
-  </div>
-</div>
-
 <script>
+/* ---------------------------------------------------------------
+   Stripe Payment Links.
+   Replace these two with the real one-time Payment Link URLs, then
+   set each link's post-payment redirect to https://alitsky.com/welcome
+   --------------------------------------------------------------- */
+var STRIPE_LINKS = {
+  custom: "",      // Custom Website — $500
+  wordpress: ""    // Custom WordPress Website — $799
+};
 (function () {
-  'use strict';
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // ---- hero load-in ----
-  function arm() { document.body.classList.add('loaded'); }
-  if (reduce) { arm(); }
-  else if (document.readyState === 'complete' || document.readyState === 'interactive') { setTimeout(arm, 80); }
-  else { document.addEventListener('DOMContentLoaded', function () { setTimeout(arm, 80); }); }
-
-  // ---- ticker: duplicate content for seamless loop ----
-  var tick = document.getElementById('tickerInner');
-  if (tick) { tick.innerHTML = tick.innerHTML + tick.innerHTML; }
-
-  // ---- smart nav: solid after hero, hide on scroll down ----
-  var nav = document.getElementById('siteNav');
-  var lastY = 0;
-  function navApply() {
-    var y = window.scrollY;
-    nav.classList.toggle('scrolled', y > 60);
-    if (y > 480 && y > lastY + 4) nav.classList.add('hide');
-    else if (y < lastY - 4 || y <= 480) nav.classList.remove('hide');
-    lastY = y;
-  }
-  window.addEventListener('scroll', navApply, { passive: true });
-  navApply();
-
-  // ---- scroll reveal with per-parent stagger ----
-  var rvEls = Array.prototype.slice.call(document.querySelectorAll('.rv'));
-  if (reduce || !('IntersectionObserver' in window)) {
-    rvEls.forEach(function (el) { el.classList.add('in'); });
-  } else {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (!en.isIntersecting) return;
-        var el = en.target;
-        var sibs = el.parentElement ? Array.prototype.slice.call(el.parentElement.children).filter(function (c) { return c.classList && c.classList.contains('rv'); }) : [el];
-        var idx = Math.max(0, sibs.indexOf(el));
-        el.style.transitionDelay = Math.min(idx * 90, 450) + 'ms';
-        el.classList.add('in');
-        io.unobserve(el);
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
-    rvEls.forEach(function (el) { io.observe(el); });
-  }
-
-  // ---- hero video autoplay loop ----
-  var v = document.getElementById('heroVideo');
-  if (v) {
-    v.muted = true; v.defaultMuted = true; v.volume = 0;
-    var tryPlay = function () { v.loop = true; v.muted = true; var p = v.play(); if (p && p.catch) p.catch(function () {}); };
-    v.addEventListener('ended', function () { try { v.currentTime = 0; tryPlay(); } catch (e) {} });
-    v.addEventListener('canplay', tryPlay, { once: true });
-    tryPlay();
-  }
-
-  // ---- hero parallax + veil ----
-  var hero = document.getElementById('hero'), media = document.getElementById('heroMedia'), veil = document.getElementById('heroScrollVeil');
-  var ticking = false;
-  function heroApply() {
-    ticking = false;
-    if (hero && media) {
-      var h = hero.offsetHeight || 1;
-      var p = Math.min(1, Math.max(0, window.scrollY / h));
-      if (!reduce) media.style.transform = 'translateY(' + (p * 80).toFixed(1) + 'px) scale(' + (1.04 + p * 0.1).toFixed(3) + ')';
-      if (veil) veil.style.opacity = (p * 0.55).toFixed(3);
+  var buttons = document.querySelectorAll("[data-stripe]");
+  Array.prototype.forEach.call(buttons, function (b) {
+    var url = STRIPE_LINKS[b.getAttribute("data-stripe")];
+    if (url) {
+      b.setAttribute("href", url);
+      return;
     }
-  }
-  window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(heroApply); } }, { passive: true });
-  heroApply();
-
-  // ---- typewriter on the ChatGPT query (once, on scroll into view) ----
-  var tq = document.getElementById('typeQ');
-  if (tq && !reduce && 'IntersectionObserver' in window) {
-    var full = tq.textContent;
-    var typed = false;
-    var tio = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (!en.isIntersecting || typed) return;
-        typed = true; tio.disconnect();
-        tq.textContent = '';
-        var i = 0;
-        (function step() {
-          if (i <= full.length) { tq.textContent = full.slice(0, i); i++; setTimeout(step, 26); }
-        })();
-      });
-    }, { threshold: 0.5 });
-    tio.observe(tq);
-  }
-
-  // ---- coverage bars + count-up on scroll into view ----
-  var covRows = document.getElementById('covRows');
-  if (covRows) {
-    var fills = Array.prototype.slice.call(covRows.querySelectorAll('[data-cov]'));
-    var covNums = Array.prototype.slice.call(covRows.querySelectorAll('[data-covnum]'));
-    var covPlayed = false;
-    function covPlay() {
-      if (covPlayed) return; covPlayed = true;
-      fills.forEach(function (el, i) {
-        setTimeout(function () { el.style.width = el.getAttribute('data-cov') + '%'; }, reduce ? 0 : i * 130);
-      });
-      if (reduce) { covNums.forEach(function (el) { el.textContent = el.getAttribute('data-covnum') + '%'; }); return; }
-      var dur = 1300, start = 0;
-      function tickN(now) {
-        if (!start) start = now;
-        var t = Math.min(1, (now - start) / dur), e = 1 - Math.pow(1 - t, 3);
-        covNums.forEach(function (el) { el.textContent = Math.round(parseFloat(el.getAttribute('data-covnum')) * e) + '%'; });
-        if (t < 1) requestAnimationFrame(tickN);
+    // No link configured yet: send the visitor to pricing rather than a dead #.
+    b.setAttribute("href", "#pricing");
+    b.addEventListener("click", function (e) {
+      if (b.closest("#pricing")) {
+        e.preventDefault();
+        window.location.href = "mailto:admin@alitsky.com?subject=" +
+          encodeURIComponent("Website refresh — " + b.getAttribute("data-stripe"));
       }
-      requestAnimationFrame(tickN);
-    }
-    function covCheck() {
-      var r = covRows.getBoundingClientRect();
-      if (r.top < (window.innerHeight || 800) * 0.85 && r.bottom > 0) covPlay();
-    }
-    window.addEventListener('scroll', covCheck, { passive: true });
-    covCheck();
-  }
-})();
-</script>
-<script>
-(function () {
-  var f = document.getElementById("hpscForm");
-  if (!f) return;
-  var url = document.getElementById("hpscUrl"), biz = document.getElementById("hpscBiz"),
-      em = document.getElementById("hpscEmail"), err = document.getElementById("hpscErr"),
-      btn = document.getElementById("hpscBtn");
-  var RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  f.addEventListener("submit", function (e) {
-    e.preventDefault();
-    err.textContent = "";
-    var u = url.value.trim(), b = biz.value.trim(), m = em.value.trim();
-    if (!u) { err.textContent = "Please add your website address."; url.focus(); return; }
-    if (!b) { err.textContent = "Please add your business name."; biz.focus(); return; }
-    if (!RE.test(m)) { err.textContent = "Please add a valid email."; em.focus(); return; }
-    try { sessionStorage.setItem("alitskyPendingScan", JSON.stringify({ url: u, business: b, email: m })); } catch (_) {}
-    btn.disabled = true; btn.textContent = "Starting…";
-    window.location.href = "/scan";
-  });
-})();
-</script>
-<script>
-(function () {
-  var sec = document.getElementById("shift");
-  if (!sec) return;
-  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  // ---- Count-up stats + growth bars (play once on scroll into view) ----
-  var nums = Array.prototype.slice.call(sec.querySelectorAll("[data-shift-num]"));
-  var aiFill = document.getElementById("shiftAiFill"), gFill = document.getElementById("shiftGFill");
-  function setStats(p) {
-    nums.forEach(function (el) {
-      var v = parseFloat(el.getAttribute("data-target")), dec = el.getAttribute("data-dec") === "1";
-      el.textContent = (dec ? (v * p).toFixed(1) : Math.round(v * p)) + "%";
     });
-  }
-  function fillBars() { if (aiFill) aiFill.style.width = "96%"; if (gFill) gFill.style.width = "6%"; }
-  var played = false;
-  function play() {
-    if (played) return; played = true;
-    if (reduce) { setStats(1); fillBars(); return; }
-    var dur = 1300, start = 0;
-    function tick(now) {
-      if (!start) start = now;
-      var t = Math.min(1, (now - start) / dur), e = 1 - Math.pow(1 - t, 3);
-      setStats(e);
-      if (t < 1) requestAnimationFrame(tick); else fillBars();
-    }
-    requestAnimationFrame(tick);
-  }
-  function check() { var r = sec.getBoundingClientRect(); if (r.top < (window.innerHeight || 800) * 0.85 && r.bottom > 0) play(); }
-  window.addEventListener("scroll", check, { passive: true });
-  check();
-
-  // ---- Forecast scrubber ----
-  var track = document.getElementById("shiftTrack"), fcFill = document.getElementById("shiftFcFill"),
-      handle = document.getElementById("shiftHandle"), big = document.getElementById("shiftBig"),
-      cap = document.getElementById("shiftCap"), rows = Array.prototype.slice.call(sec.querySelectorAll("[data-yr]"));
-  var fr = [0, 0.34, 0.67, 1], sh = [10, 18, 30, 42], yrs = ["2026", "2027", "2028", "2029–2030"];
-  var scrub = 0, dragging = false;
-  function share(x) {
-    for (var i = 0; i < fr.length - 1; i++) {
-      if (x <= fr[i + 1]) { var t = (x - fr[i]) / (fr[i + 1] - fr[i]); return sh[i] + (sh[i + 1] - sh[i]) * t; }
-    }
-    return sh[sh.length - 1];
-  }
-  function idxOf(x) { return x < 0.17 ? 0 : x < 0.505 ? 1 : x < 0.835 ? 2 : 3; }
-  function render(animate) {
-    var i = idxOf(scrub), ease = "cubic-bezier(.3,.7,.3,1)";
-    big.textContent = "~" + Math.round(share(scrub)) + "%";
-    cap.textContent = "Projected AI search share · " + yrs[i];
-    handle.style.transition = animate ? "left .18s " + ease : "none";
-    fcFill.style.transition = animate ? "width .18s " + ease : "none";
-    handle.style.left = (scrub * 100) + "%";
-    fcFill.style.width = (scrub * 100) + "%";
-    rows.forEach(function (row, ri) { row.classList.toggle("shift-yr-active", ri === i); });
-  }
-  function setFromX(x) { var r = track.getBoundingClientRect(); scrub = Math.max(0, Math.min(1, (x - r.left) / r.width)); render(false); }
-  if (track) {
-    track.addEventListener("pointerdown", function (e) {
-      dragging = true;
-      try { track.setPointerCapture(e.pointerId); } catch (_) {}
-      setFromX(e.clientX);
-    });
-    window.addEventListener("pointermove", function (e) { if (dragging) setFromX(e.clientX); }, { passive: true });
-    window.addEventListener("pointerup", function () { dragging = false; });
-    rows.forEach(function (row, ri) { row.addEventListener("click", function () { scrub = fr[ri]; render(true); }); });
-    render(true);
-  }
+  });
 })();
-</script>
-<script>
+
+/* scroll reveal */
 (function () {
-  var overlay = document.getElementById("lp24Overlay");
-  if (!overlay) return;
-  var openBtn = document.getElementById("lp24Open"),
-      closeBtn = document.getElementById("lp24Close"),
-      form = document.getElementById("lp24Form"),
-      done = document.getElementById("lp24Done"),
-      err = document.getElementById("lpErr"),
-      submit = document.getElementById("lpSubmit"),
-      logoInp = document.getElementById("lpLogo"),
-      logoTxt = document.getElementById("lpLogoTxt");
-  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  var MAX_LOGO = 3 * 1024 * 1024;
-  var logoData = null;
-
-  function open() { overlay.classList.add("is-open"); document.addEventListener("keydown", onKey, true); setTimeout(function(){ try{ document.getElementById("lpBiz").focus(); }catch(_){} }, 60); }
-  function close() { overlay.classList.remove("is-open"); document.removeEventListener("keydown", onKey, true); }
-  function onKey(e) { if (e.key === "Escape") { e.preventDefault(); close(); } }
-  if (openBtn) openBtn.addEventListener("click", open);
-  closeBtn.addEventListener("click", close);
-  overlay.addEventListener("mousedown", function (e) { if (e.target === overlay) close(); });
-
-  logoInp.addEventListener("change", function () {
-    err.textContent = ""; logoData = null;
-    var f = logoInp.files && logoInp.files[0];
-    if (!f) { logoTxt.textContent = "Upload PNG, JPG, SVG, or WebP · up to 3 MB"; return; }
-    if (f.size > MAX_LOGO) { logoInp.value = ""; logoTxt.textContent = "Upload PNG, JPG, SVG, or WebP · up to 3 MB"; err.textContent = "That file is over 3 MB. Please upload a smaller version."; return; }
-    var r = new FileReader();
-    r.onload = function () { logoData = { name: f.name, type: f.type || "application/octet-stream", b64: String(r.result).split(",")[1] || "" }; logoTxt.textContent = f.name + " · " + Math.max(1, Math.round(f.size / 1024)) + " KB"; };
-    r.onerror = function () { err.textContent = "Could not read that file. Try a different one."; };
-    r.readAsDataURL(f);
-  });
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    err.textContent = "";
-    var v = function (id) { return document.getElementById(id).value.trim(); };
-    var biz = v("lpBiz"), email = v("lpEmail"), does = v("lpDoes"), area = v("lpArea"), services = v("lpServices");
-    if (!biz) { err.textContent = "Please add your business name."; return; }
-    if (!EMAIL_RE.test(email)) { err.textContent = "Please add a valid email."; return; }
-    if (!does) { err.textContent = "Tell us what your business does."; return; }
-    if (!area) { err.textContent = "Tell us your city and service area."; return; }
-    if (!services) { err.textContent = "List the services or offers to feature."; return; }
-    submit.disabled = true; submit.textContent = "Sending…";
-    fetch("/api/landing-page", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        business: biz, email: email, phone: v("lpPhone"), does: does, area: area,
-        services: services, goal: document.getElementById("lpGoal").value,
-        website: v("lpSite"), notes: v("lpNotes"), logo: logoData, page: location.pathname
-      })
-    }).then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
-      .then(function () { form.style.display = "none"; done.style.display = "block"; })
-      .catch(function () { submit.disabled = false; submit.innerHTML = "SEND MY DETAILS <span aria-hidden=\"true\">&#8594;</span>"; err.textContent = "Something went wrong. Email admin@alitsky.com and we will take it from there."; });
-  });
+  var els = document.querySelectorAll(".rv");
+  if (!("IntersectionObserver" in window)) {
+    Array.prototype.forEach.call(els, function (e) { e.classList.add("in"); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+    });
+  }, { rootMargin: "0px 0px -10% 0px", threshold: 0.08 });
+  Array.prototype.forEach.call(els, function (e) { io.observe(e); });
 })();
 </script>
-<script src="/audit-modal.js" defer></script>
 <script src="/chatbot.js" defer></script>
 </body>
 </html>
