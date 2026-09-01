@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Services — A Light in the Sky</title>
   <meta name="description" content="A clear first step, then a build worth keeping. Free AI visibility audit, custom future-proof website, setup and handoff, before and after review.">
-  <meta name="theme-color" content="#08192b">
+  <meta name="theme-color" content="#2457ff">
   <link rel="icon" type="image/svg+xml" href="/assets/logo-mark-small.svg">
   <link rel="canonical" href="https://www.alitsky.com/services">
   <meta property="og:type" content="website">
@@ -15,122 +15,81 @@
   <meta property="og:description" content="A clear first step, then a build worth keeping. Every engagement starts with the audit.">
   <meta property="og:image" content="https://www.alitsky.com/assets/og-card.svg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Space+Grotesk:wght@300..700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/kit.css">
+  <link rel="stylesheet" href="/site.css">
   <style>
-  /* ---- services-only sections ---- */
-  .offer-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:64px}
-  .offer-item{background:var(--cream);padding:46px 40px;display:flex;flex-direction:column;gap:14px;transition:background .3s var(--ease)}
-  .offer-item:hover{background:var(--paper)}
-  .offer-item .n{font-family:var(--serif);font-style:italic;font-size:2.1rem;line-height:1;color:var(--copper)}
-  .offer-item h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.7rem,2.6vw,2.2rem);letter-spacing:-.025em;line-height:1.06;margin:0}
-  .offer-item p{margin:0;font-size:18px;line-height:1.62;color:var(--ink-soft)}
-  .offer-item .price{margin-top:auto;padding-top:22px;font-family:var(--mono);font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--copper)}
-  .tri{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
-  .tri span{font-family:var(--mono);font-size:13px;letter-spacing:.16em;border:1px solid var(--line);padding:6px 12px}
-
-  /* difference: lose vs win */
-  .diff{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:60px}
-  .diff h3{font-family:var(--serif);font-weight:400;font-size:1.7rem;letter-spacing:-.02em;margin:0 0 26px}
+  .offer-item{display:flex;flex-direction:column}
+  .offer-item .price{margin-top:auto;padding-top:22px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral)}
+  .tri{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0}
+  .tri span{font-size:10px;font-weight:700;letter-spacing:.16em;border:1px solid var(--line);padding:6px 12px}
+  .diff{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:48px;text-align:left}
+  .diff h3{font-size:24px;margin:0 0 22px}
   .diff ul{list-style:none;margin:0;padding:0}
-  .diff li{padding:15px 0 15px 38px;border-bottom:1px solid var(--line-r);position:relative;font-size:18px;line-height:1.5}
+  .diff li{padding:15px 0 15px 34px;border-bottom:1px solid var(--line-r);position:relative;font-size:17px;line-height:1.5}
   .diff li:last-child{border-bottom:0}
-  .diff .lose li:before{content:"\2014";position:absolute;left:0;opacity:.5}
-  .diff .win li:before{content:"\2713";position:absolute;left:0;color:var(--sky)}
-  .diff .lose{opacity:.72}
-
-  /* checks grid */
-  .checks{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:56px}
-  .check-cell{background:var(--paper);padding:38px 32px}
-  .check-cell h3{font-family:var(--serif);font-weight:400;font-size:1.45rem;letter-spacing:-.02em;margin:0 0 10px}
-  .check-cell p{margin:0;font-size:18px;line-height:1.6;color:var(--ink-soft)}
-
-  /* path */
-  .path{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;margin-top:60px}
-  .step .n{font-family:var(--mono);font-size:14px;letter-spacing:.2em;color:var(--sky);display:block;margin-bottom:16px}
-  .step h3{font-family:var(--serif);font-weight:400;font-size:1.9rem;letter-spacing:-.025em;margin:0 0 12px;color:var(--paper)}
-  .step p{margin:0;font-size:18px;line-height:1.6;color:#a9bcc6}
-
-  @media(max-width:980px){
-    .offer-grid,.diff,.checks{grid-template-columns:1fr}
-    .path{grid-template-columns:1fr 1fr;gap:30px}
-    .diff{gap:36px}
-  }
-  @media(max-width:560px){.path{grid-template-columns:1fr}.offer-item{padding:34px 26px}}
+  .diff .lose li:before{content:"\2014";position:absolute;left:0;opacity:.55}
+  .diff .win li:before{content:"\2713";position:absolute;left:0;color:var(--sun)}
+  .diff .lose{opacity:.75}
+  @media(max-width:980px){.diff{grid-template-columns:1fr;gap:34px}}
   </style>
 </head>
 <body>
 
-<header class="nav" id="siteNav">
-  <div class="wrap navin">
-    <a class="brand" href="/">
-      <img src="/assets/logo-mark-small-reverse.svg" alt="A Light in the Sky mark">
-      <span>A Light in the Sky</span>
-    </a>
-    <nav class="navlinks" aria-label="Primary">
-      <a class="ul-link" href="/services">Services</a>
-      <a class="ul-link" href="/services#how">How It Works</a>
-      <a class="ul-link" href="/about">About</a>
-      <a class="ul-link" href="/faq">FAQ</a>
-      <a class="ul-link" href="/ai-visibility">AI Visibility</a>
-      <a class="ul-link" href="/news">News</a>
-      <a class="nav-cta" href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer">START WITH THE FREE AUDIT</a>
-    </nav>
-    <a class="mcta" href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer">FREE AUDIT &#8594;</a>
-  </div>
+<header class="topbar">
+  <a class="brand" href="/">
+    <img class="spark" src="/assets/logo-mark-small.svg" alt="A Light in the Sky mark">
+    <span><strong>A LIGHT IN THE SKY</strong><small>STRATEGIC DESIGN &amp; BRANDING</small></span>
+  </a>
+  <nav aria-label="Primary">
+    <a href="/services">Services</a>
+    <a href="/about">About</a>
+    <a href="/faq">FAQ</a>
+    <a href="/ai-visibility">AI Visibility</a>
+    <a href="/news">News</a>
+  </nav>
+  <a class="mini-cta" href="/">Start my website</a>
 </header>
 
 <main>
 
-  <!-- ===== PAGE HEAD ===== -->
   <section class="phead">
-    <div class="wrap">
-      <div class="kicker">The offer</div>
-      <h1 class="display">A clear first step, <em>then a build worth keeping.</em></h1>
+    <div class="grain"></div>
+    <div class="phead-art" aria-hidden="true">
+      <div class="beam b1"></div><div class="beam b2"></div>
+      <div class="hz h1x"></div><div class="hz h2x"></div>
+    </div>
+    <div class="phead-in">
+      <p class="eyebrow">The offer</p>
+      <h1>A clear first step, <em>then a build worth keeping.</em></h1>
       <p class="lede">Every engagement starts with the audit. Narrow, honest, and priced so you can prove the work before you commit to more.</p>
-      <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;margin-top:44px;">
-        <a class="btn" href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer">START WITH THE FREE AUDIT <span class="arr">&#8594;</span></a>
-        <a class="quiet" href="#how">Explore the steps</a>
-      </div>
+      <a class="button coral" href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer">Start with the free audit</a>
     </div>
   </section>
 
-  <!-- ===== THE FOUR SERVICES ===== -->
-  <section class="sect s-cream" id="offer">
+  <section class="sect s-paper" id="offer">
     <div class="wrap">
-      <div class="shead rv">
-        <div class="index">01</div>
-        <h2>What we build, and what it costs.</h2>
-      </div>
-
-      <div class="offer-grid">
-        <article class="offer-item rv">
-          <div class="n">i.</div>
+      <div class="shead rv"><div class="n">01</div><h2>What we build, and what it costs.</h2></div>
+      <div class="cards cards-2">
+        <article class="card offer-item rv">
+          <span class="n">i.</span>
           <h3>AI Visibility &amp; Lead Leak Audit</h3>
           <p>We find what is costing you calls, clicks, and booked jobs, and whether AI search tools can clearly understand your business. Plain-English report and a short video walkthrough in 2 to 3 business days.</p>
           <div class="price">Free</div>
         </article>
-
-        <article class="offer-item rv">
-          <div class="n">ii.</div>
+        <article class="card offer-item rv">
+          <span class="n">ii.</span>
           <h3>Future-Proof Website</h3>
           <p>A fast, custom-coded website built for local search, AI readability, and turning visitors into calls. You own everything: the domain, the code, the hosting, and every account.</p>
           <div class="tri"><span>SEO</span><span>AEO</span><span>GEO</span></div>
-          <p style="font-size:18px;">Built with SEO, AEO, and GEO &mdash; in short, search-everywhere optimized.</p>
           <div class="price">$3,500</div>
         </article>
-
-        <article class="offer-item rv">
-          <div class="n">iii.</div>
+        <article class="card offer-item rv">
+          <span class="n">iii.</span>
           <h3>Setup &amp; Handoff</h3>
           <p>We connect your forms, calls, Search Console, Bing Webmaster Tools, and structured data, then hand you a clear walkthrough so you know exactly what you own and how it works.</p>
           <div class="price">Included with every build</div>
         </article>
-
-        <article class="offer-item rv">
-          <div class="n">iv.</div>
+        <article class="card offer-item rv">
+          <span class="n">iv.</span>
           <h3>Before &amp; After Review</h3>
           <p>We document what changed after launch: speed, structure, indexing, and lead path. You see the work, and we both learn what moved the needle.</p>
           <div class="price">Included with every build</div>
@@ -139,17 +98,12 @@
     </div>
   </section>
 
-  <!-- ===== THE DIFFERENCE ===== -->
-  <section class="sect s-night" id="difference">
+  <section class="sect s-cobalt" id="difference">
     <div class="wrap">
-      <div class="shead rv">
-        <div class="index on-dark">02</div>
-        <h2 style="color:var(--paper);">What loses jobs. <em class="tone" style="color:var(--sky);">What wins them.</em></h2>
-      </div>
-
+      <div class="shead rv"><div class="n">02</div><h2>What loses jobs. <em style="color:var(--sun);">What wins them.</em></h2></div>
       <div class="diff">
         <div class="lose rv">
-          <h3 style="color:var(--paper);">A typical template site</h3>
+          <h3>A typical template site</h3>
           <ul>
             <li>Slow on phones.</li>
             <li>Phone number is hard to find.</li>
@@ -160,7 +114,7 @@
           </ul>
         </div>
         <div class="win rv">
-          <h3 style="color:var(--sky);">A site built by A Light in the Sky</h3>
+          <h3 style="color:var(--sun);">A site built by A Light in the Sky</h3>
           <ul>
             <li>Fast load. Built for mobile.</li>
             <li>Clear call buttons on every page.</li>
@@ -175,131 +129,89 @@
     </div>
   </section>
 
-  <!-- ===== HOW WE WORK ===== -->
-  <section class="sect s-paper" id="how">
+  <section class="sect s-sun" id="how">
     <div class="wrap">
-      <div class="shead rv">
-        <div class="index">03</div>
-        <h2>We check the things that <em class="tone" style="color:var(--copper);">actually win jobs.</em></h2>
-      </div>
-      <p class="rv" style="max-width:70ch;font-size:19px;line-height:1.66;color:var(--ink-soft);margin:0;">Before any site goes live, we check every part of it against a real list. No guessing. No &ldquo;looks good to me.&rdquo;</p>
-
-      <div class="checks">
-        <div class="check-cell rv"><h3>Page speed</h3><p>Fast load on every phone, where most of your customers are.</p></div>
-        <div class="check-cell rv"><h3>Mobile experience</h3><p>Easy to read, tap, and call on a small screen.</p></div>
-        <div class="check-cell rv"><h3>Local SEO structure</h3><p>Built so Google understands your service area.</p></div>
-        <div class="check-cell rv"><h3>AI answer readiness</h3><p>Structured so AI tools can understand when your business is relevant.</p></div>
-        <div class="check-cell rv"><h3>Structured data</h3><p>Schema markup so search engines read every page clearly.</p></div>
-        <div class="check-cell rv"><h3>Lead capture path</h3><p>A clear, working path from visitor to call or booking.</p></div>
+      <div class="shead rv"><div class="n">03</div><h2>We check the things that <em>actually win jobs.</em></h2></div>
+      <p class="rv" style="max-width:70ch;">Before any site goes live, we check every part of it against a real list. No guessing. No &ldquo;looks good to me.&rdquo;</p>
+      <div class="cards cards-3">
+        <div class="card rv"><h3>Page speed</h3><p>Fast load on every phone, where most of your customers are.</p></div>
+        <div class="card rv"><h3>Mobile experience</h3><p>Easy to read, tap, and call on a small screen.</p></div>
+        <div class="card rv"><h3>Local SEO structure</h3><p>Built so Google understands your service area.</p></div>
+        <div class="card rv"><h3>AI answer readiness</h3><p>Structured so AI tools can understand when your business is relevant.</p></div>
+        <div class="card rv"><h3>Structured data</h3><p>Schema markup so search engines read every page clearly.</p></div>
+        <div class="card rv"><h3>Lead capture path</h3><p>A clear, working path from visitor to call or booking.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== THE PATH ===== -->
-  <section class="sect s-night" id="path">
+  <section class="sect s-cobalt" id="path">
     <div class="wrap">
-      <div class="shead rv">
-        <div class="index on-dark">04</div>
-        <h2 style="color:var(--paper);">Audit. Build. Launch. <em class="tone" style="color:var(--sky);">Review.</em></h2>
-      </div>
-      <p class="rv" style="max-width:64ch;font-size:19px;line-height:1.66;color:#a9bcc6;margin:0;">One vertical. One clear process. Every engagement starts with the audit.</p>
-
-      <div class="path">
-        <div class="step rv"><span class="n">01</span><h3>Audit</h3><p>2 to 3 days. We find what is costing you calls and show you in plain English.</p></div>
-        <div class="step rv"><span class="n">02</span><h3>Build</h3><p>10 to 21 days. We design, build, check, and launch your custom site.</p></div>
-        <div class="step rv"><span class="n">03</span><h3>Launch</h3><p>We connect forms, calls, and search tools, then hand it all to you.</p></div>
-        <div class="step rv"><span class="n">04</span><h3>Review</h3><p>We document what changed, before and after, so the results are clear.</p></div>
+      <div class="shead rv"><div class="n">04</div><h2>Audit. Build. Launch. <em style="color:var(--sun);">Review.</em></h2></div>
+      <p class="rv" style="max-width:64ch;">One vertical. One clear process. Every engagement starts with the audit.</p>
+      <div class="cards cards-4">
+        <div class="card rv"><span class="n">01</span><h3>Audit</h3><p>2 to 3 days. We find what is costing you calls and show you in plain English.</p></div>
+        <div class="card rv"><span class="n">02</span><h3>Build</h3><p>10 to 21 days. We design, build, check, and launch your custom site.</p></div>
+        <div class="card rv"><span class="n">03</span><h3>Launch</h3><p>We connect forms, calls, and search tools, then hand it all to you.</p></div>
+        <div class="card rv"><span class="n">04</span><h3>Review</h3><p>We document what changed, before and after, so the results are clear.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ===== FINAL CTA + FOOTER ===== -->
-  <section class="final" id="start">
-    <div class="wrap">
-      <h2 class="display rv">Let&rsquo;s make sure<em class="tone">you&rsquo;re the answer.</em></h2>
-      <div class="final-bottom">
-        <p class="final-copy rv">Get a clear audit of your website, your local search, and your AI visibility. See exactly what is working, what is missing, and how to win more jobs &mdash; before you spend money on a rebuild.</p>
-        <div class="final-ctas rv">
-          <a class="btn" href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer">START WITH THE FREE AUDIT <span class="arr">&#8594;</span></a>
-          <div class="sub">No obligation. Just a clear, useful report.</div>
-        </div>
+  <section class="final-cta">
+    <p class="eyebrow">Start here</p>
+    <h2>Let&rsquo;s make sure you&rsquo;re the answer.</h2>
+    <p>Get a clear audit of your website, your local search, and your AI visibility &mdash; before you spend money on a rebuild.</p>
+    <div style="margin-top:26px;">
+      <a class="button sun" href="https://calendar.app.google/Jm7Yz47gpb8VEpDr9" target="_blank" rel="noopener noreferrer">Start with the free audit</a>
+    </div>
+    <p style="margin-top:18px;font-size:13px;opacity:.9;">No obligation. Just a clear, useful report.</p>
+  </section>
+
+  <footer class="site-foot">
+    <div class="foot-in">
+      <div class="foot-brand">
+        <img src="/assets/logo-mark-small-reverse.svg" alt="A Light in the Sky logo">
+        <div class="lock">A Light in the Sky</div>
+        <p>Strategic design and branding. Indianapolis, Indiana &middot; working nationwide.</p>
+      </div>
+      <div class="foot-col">
+        <h4>The offer</h4>
+        <a href="/">Website refresh</a>
+        <a href="/services">Services</a>
+        <a href="/ai-visibility">AI Visibility</a>
+        <a href="/faq">FAQ</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="/about">About</a>
+        <a href="/news">News</a>
+        <a href="mailto:admin@alitsky.com">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h4>Websites for</h4>
+        <a href="/hvac-websites">HVAC</a>
+        <a href="/plumber-websites">Plumbing</a>
+        <a href="/electrician-websites">Electrical</a>
+        <a href="/roofing-websites">Roofing</a>
+        <a href="/landscaping-websites">Landscaping</a>
+        <a href="/painter-websites">Painting</a>
       </div>
     </div>
-
-    <footer>
-      <div class="wrap">
-        <div class="ft-grid">
-          <div class="ft-brand">
-            <img src="/assets/logo-mark-small-reverse.svg" alt="A Light in the Sky logo">
-            <div class="lock">A Light in the Sky</div>
-            <p><b>Be found.</b> In AI search. In your city. Before your competitor.</p>
-          </div>
-          <div class="ft-col">
-            <h4>Services</h4>
-            <a class="ul-link" href="/services">AI Visibility Audit</a>
-            <a class="ul-link" href="/services">Website Build</a>
-            <a class="ul-link" href="/services">Setup &amp; Handoff</a>
-            <a class="ul-link" href="/services">Before &amp; After Review</a>
-          </div>
-          <div class="ft-col">
-            <h4>Company</h4>
-            <a class="ul-link" href="/about">About</a>
-            <a class="ul-link" href="/services#how">How It Works</a>
-            <a class="ul-link" href="/faq">FAQ</a>
-            <a class="ul-link" href="/news">News</a>
-            <a class="ul-link" href="mailto:admin@alitsky.com">Contact</a>
-          </div>
-          <div class="ft-col">
-            <h4>Websites for</h4>
-            <a class="ul-link" href="/hvac-websites">HVAC</a>
-            <a class="ul-link" href="/plumber-websites">Plumbing</a>
-            <a class="ul-link" href="/electrician-websites">Electrical</a>
-            <a class="ul-link" href="/roofing-websites">Roofing</a>
-            <a class="ul-link" href="/landscaping-websites">Landscaping</a>
-            <a class="ul-link" href="/painter-websites">Painting</a>
-          </div>
-          <div class="ft-col">
-            <h4>Legal</h4>
-            <a class="ul-link" href="#">Privacy Policy</a>
-            <a class="ul-link" href="#">Terms of Service</a>
-          </div>
-        </div>
-        <div class="ft-base">
-          <span>&copy; 2026 A Light in the Sky. All rights reserved. We do not sell what we cannot build.</span>
-          <span><b>Indianapolis, Indiana</b> &middot; Serving nationwide</span>
-        </div>
-      </div>
-    </footer>
-  </section>
+    <div class="foot-base">
+      <span>&copy; 2026 A Light in the Sky. All rights reserved. We do not sell what we cannot build.</span>
+      <span><b>Indianapolis, Indiana</b> &middot; Serving nationwide</span>
+    </div>
+  </footer>
 </main>
 
 <script>
-/* nav: hide on scroll down, show on scroll up, tint once scrolled */
-(function () {
-  var nav = document.getElementById("siteNav"), last = 0;
-  addEventListener("scroll", function () {
-    var y = scrollY;
-    nav.classList.toggle("scrolled", y > 40);
-    nav.classList.toggle("hide", y > last && y > 260);
-    last = y;
-  }, { passive: true });
-})();
-/* scroll reveal */
-(function () {
-  var els = document.querySelectorAll(".rv");
-  if (!("IntersectionObserver" in window)) {
-    els.forEach(function (e) { e.classList.add("in"); });
-    return;
-  }
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (en) {
-      if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
-    });
-  }, { rootMargin: "0px 0px -12% 0px", threshold: 0.08 });
-  els.forEach(function (e) { io.observe(e); });
+(function(){
+  var els=document.querySelectorAll(".rv");
+  if(!("IntersectionObserver" in window)){Array.prototype.forEach.call(els,function(e){e.classList.add("in")});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target);}})},{rootMargin:"0px 0px -10% 0px",threshold:.08});
+  Array.prototype.forEach.call(els,function(e){io.observe(e)});
 })();
 </script>
-<script src="/audit-modal.js" defer></script>
 <script src="/chatbot.js" defer></script>
 </body>
 </html>
