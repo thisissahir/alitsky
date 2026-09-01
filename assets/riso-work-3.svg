@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+  <title>Riso study 3</title>
+  <defs>
+    <filter id="g3" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="23" result="n"/>
+      <feColorMatrix in="n" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.17"/></feComponentTransfer>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <pattern id="d3" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="1.4" cy="1.4" r="1.4" fill="#12335b" opacity=".15"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="600" fill="#fff0ee"/>
+
+  <!-- light over a horizon, the through-line of the system -->
+  <g style="mix-blend-mode:multiply" transform="translate(-4,3)">
+    <circle cx="596" cy="150" r="72" fill="#2457ff" opacity=".85"/>
+    <path d="M596 150 L800 62 L800 250 Z" fill="#2457ff" opacity=".26"/>
+  </g>
+
+  <!-- layout suggestion: a masthead band and a reading column -->
+  <g style="mix-blend-mode:multiply" transform="translate(5,-3)">
+    <rect x="70" y="86" width="250" height="26" rx="13" fill="#a98aff" opacity=".82"/>
+    <rect x="70" y="140" width="404" height="54" rx="10" fill="#a98aff" opacity=".55"/>
+    <rect x="70" y="212" width="330" height="18" rx="9" fill="#a98aff" opacity=".34"/>
+    <rect x="70" y="244" width="286" height="18" rx="9" fill="#a98aff" opacity=".28"/>
+    <rect x="70" y="296" width="176" height="44" rx="22" fill="#ff8b4a" opacity=".9"/>
+  </g>
+
+  <!-- horizon plates -->
+  <g style="mix-blend-mode:multiply" transform="translate(-5,4)">
+    <path d="M0 392 C150 366 300 408 448 392 C580 378 690 344 800 362 L800 452 C690 436 588 470 448 484 C300 498 148 462 0 480 Z" fill="#ff8b4a" opacity=".62"/>
+  </g>
+  <g style="mix-blend-mode:multiply" transform="translate(4,2)">
+    <path d="M0 470 C160 444 320 490 476 472 C608 456 700 424 800 442 L800 600 L0 600 Z" fill="#ff5f6f" opacity=".72"/>
+  </g>
+
+  <rect width="800" height="600" fill="url(#d3)" style="mix-blend-mode:multiply"/>
+  <rect width="800" height="600" filter="url(#g3)" fill="#12335b" opacity=".5"/>
+</svg>

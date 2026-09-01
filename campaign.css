@@ -87,3 +87,16 @@ details[open] summary .pm{transform:rotate(45deg);display:inline-block}
   .riso-art{margin:0}
   :root{--r-card:20px}
 }
+
+/* ---------- riso plates (real artwork, not CSS approximations) ---------- */
+.riso-hero{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;opacity:.92;pointer-events:none}
+.hero-center{z-index:6}
+.topbar{z-index:9}
+/* the CSS light-forms now sit as a subtle overlay on the painted plate */
+.sky-story{z-index:3;opacity:.5}
+.riso-art{background:transparent;padding:0}
+.riso-art img{width:100%;height:100%;object-fit:cover;border-radius:var(--r-card)}
+.riso-art .riso-field,.riso-art .riso-stroke,.riso-art .mark{display:none}
+.portfolio-screen{padding:0;align-items:stretch}
+.portfolio-screen img{width:100%;height:100%;object-fit:cover}
+.portfolio-screen:before{opacity:.35}

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+  <title>Light moving across a horizon</title>
+  <defs>
+    <!-- paper grain: the tooth of uncoated stock -->
+    <filter id="grain" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="7" result="n"/>
+      <feColorMatrix in="n" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.16"/></feComponentTransfer>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <!-- halftone: riso screens rather than prints continuous tone -->
+    <pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse">
+      <circle cx="1.6" cy="1.6" r="1.6" fill="#12335b" opacity=".16"/>
+    </pattern>
+    <radialGradient id="glow" cx="66%" cy="27%" r="46%">
+      <stop offset="0%" stop-color="#ffc847" stop-opacity=".95"/>
+      <stop offset="60%" stop-color="#ffc847" stop-opacity=".28"/>
+      <stop offset="100%" stop-color="#ffc847" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="900" fill="#fff6ea"/>
+
+  <!-- ============ SUN PLATE ============ -->
+  <g style="mix-blend-mode:multiply">
+    <ellipse cx="790" cy="245" rx="470" ry="330" fill="url(#glow)"/>
+    <circle cx="792" cy="238" r="86" fill="#ffc847" opacity=".92"/>
+    <!-- light thrown across the field -->
+    <path d="M792 238 L1200 92 L1200 372 Z" fill="#ffc847" opacity=".30"/>
+    <path d="M792 238 L1200 300 L1200 520 Z" fill="#ff8b4a" opacity=".20"/>
+    <path d="M792 238 L376 96 L300 300 Z" fill="#ffc847" opacity=".18"/>
+  </g>
+
+  <!-- ============ PINK PLATE (offset = misregistration) ============ -->
+  <g style="mix-blend-mode:multiply" transform="translate(-6,4)">
+    <path d="M0 548 C210 494 372 578 560 552 C742 527 900 452 1200 494 L1200 640 C920 604 742 664 556 682 C368 700 196 640 0 668 Z" fill="#ff88b8" opacity=".76"/>
+    <path d="M0 470 C160 452 300 492 430 476 C520 465 590 436 660 440 L660 470 C570 470 500 500 420 512 C300 530 150 494 0 512 Z" fill="#ff5f6f" opacity=".40"/>
+  </g>
+
+  <!-- ============ TEAL PLATE ============ -->
+  <g style="mix-blend-mode:multiply" transform="translate(5,-3)">
+    <path d="M0 640 C230 596 420 672 640 646 C840 622 1000 566 1200 604 L1200 742 C980 712 830 766 620 782 C412 798 214 742 0 764 Z" fill="#13a88b" opacity=".62"/>
+  </g>
+
+  <!-- ============ COBALT PLATE — the reflective field ============ -->
+  <g style="mix-blend-mode:multiply" transform="translate(-3,6)">
+    <path d="M0 752 C240 716 440 786 660 762 C880 738 1010 690 1200 720 L1200 900 L0 900 Z" fill="#2457ff" opacity=".80"/>
+    <!-- reflection of the light on the field -->
+    <path d="M756 762 C784 800 782 858 764 900 L820 900 C838 856 838 798 812 760 Z" fill="#ffc847" opacity=".55"/>
+  </g>
+
+  <!-- ============ LAVENDER ACCENT ============ -->
+  <g style="mix-blend-mode:multiply">
+    <path d="M96 262 C168 214 258 232 300 292 C336 344 306 402 244 414 C176 428 108 386 92 330 Z" fill="#a98aff" opacity=".40"/>
+  </g>
+
+  <!-- screen + tooth -->
+  <rect width="1200" height="900" fill="url(#dots)" style="mix-blend-mode:multiply"/>
+  <rect width="1200" height="900" filter="url(#grain)" fill="#12335b" opacity=".5"/>
+</svg>

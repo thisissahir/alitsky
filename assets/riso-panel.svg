@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+  <title>A reflective field at dusk</title>
+  <defs>
+    <filter id="grain2" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="19" result="n"/>
+      <feColorMatrix in="n" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.18"/></feComponentTransfer>
+      <feComposite operator="in" in2="SourceGraphic"/>
+    </filter>
+    <pattern id="dots2" width="6" height="6" patternUnits="userSpaceOnUse">
+      <circle cx="1.4" cy="1.4" r="1.4" fill="#12335b" opacity=".18"/>
+    </pattern>
+    <radialGradient id="glow2" cx="52%" cy="30%" r="52%">
+      <stop offset="0%" stop-color="#ffc847" stop-opacity=".9"/>
+      <stop offset="70%" stop-color="#ff8b4a" stop-opacity=".22"/>
+      <stop offset="100%" stop-color="#ff8b4a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="1000" fill="#ffd8d5"/>
+
+  <!-- sky wash -->
+  <g style="mix-blend-mode:multiply">
+    <ellipse cx="416" cy="300" rx="430" ry="330" fill="url(#glow2)"/>
+    <circle cx="420" cy="286" r="64" fill="#ffc847" opacity=".95"/>
+  </g>
+
+  <!-- horizon plates, each slightly out of register -->
+  <g style="mix-blend-mode:multiply" transform="translate(-5,3)">
+    <path d="M0 470 C150 442 300 486 452 468 C596 452 700 410 800 430 L800 530 C690 512 590 552 452 566 C310 580 148 540 0 560 Z" fill="#a98aff" opacity=".55"/>
+  </g>
+  <g style="mix-blend-mode:multiply" transform="translate(6,-2)">
+    <path d="M0 566 C160 536 320 588 470 570 C610 554 700 512 800 532 L800 648 C690 630 596 674 452 690 C300 706 152 662 0 682 Z" fill="#ff88b8" opacity=".70"/>
+  </g>
+  <g style="mix-blend-mode:multiply" transform="translate(-4,5)">
+    <path d="M0 676 C170 646 330 700 486 680 C620 663 706 622 800 642 L800 774 C700 756 604 800 462 816 C312 832 156 788 0 806 Z" fill="#13a88b" opacity=".62"/>
+  </g>
+  <g style="mix-blend-mode:multiply" transform="translate(3,4)">
+    <path d="M0 792 C180 762 344 816 500 796 C634 779 716 742 800 760 L800 1000 L0 1000 Z" fill="#2457ff" opacity=".82"/>
+    <!-- light column reflected on the field -->
+    <path d="M392 796 C414 856 412 936 396 1000 L452 1000 C470 934 470 856 446 794 Z" fill="#ffc847" opacity=".5"/>
+  </g>
+
+  <!-- coral drift -->
+  <g style="mix-blend-mode:multiply">
+    <path d="M600 120 C676 84 758 122 764 190 C770 254 700 292 640 272 C580 252 552 168 600 120 Z" fill="#ff5f6f" opacity=".34"/>
+  </g>
+
+  <rect width="800" height="1000" fill="url(#dots2)" style="mix-blend-mode:multiply"/>
+  <rect width="800" height="1000" filter="url(#grain2)" fill="#12335b" opacity=".55"/>
+</svg>
