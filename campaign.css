@@ -100,3 +100,7 @@ details[open] summary .pm{transform:rotate(45deg);display:inline-block}
 .portfolio-screen{padding:0;align-items:stretch}
 .portfolio-screen img{width:100%;height:100%;object-fit:cover}
 .portfolio-screen:before{opacity:.35}
+
+/* Guard: font-size cannot size an <img>. Any mark placed in the art layers is
+   constrained explicitly so it can never render at natural size over content. */
+.light-mark,.riso-art .mark,.welcome-light{width:42px!important;height:42px!important}
