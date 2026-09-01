@@ -104,3 +104,7 @@ details[open] summary .pm{transform:rotate(45deg);display:inline-block}
 /* Guard: font-size cannot size an <img>. Any mark placed in the art layers is
    constrained explicitly so it can never render at natural size over content. */
 .light-mark,.riso-art .mark,.welcome-light{width:42px!important;height:42px!important}
+
+/* The included-list arrow lost its spacing and colour when the reference CSS
+   was restored verbatim (the reference used a text bullet, not a span). */
+.included-list div span{color:var(--coral);margin-right:12px;font-weight:700}
