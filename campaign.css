@@ -137,7 +137,7 @@ body{font-size:18px}
 .center-section>p:not(.eyebrow),.story>p{font-size:18px}
 .included-list div{font-size:18px}
 .price-grid ul{font-size:18px}
-.price-grid small{font-size:16px}
+.price-grid small{font-size:18px}
 .process-grid p{font-size:18px}
 .process-grid h3{font-size:20px;letter-spacing:.1em}
 .process-grid .n{font-size:15px}
@@ -151,7 +151,7 @@ body{font-size:18px}
 .foot-brand p{font-size:18px}
 .foot-col a{font-size:18px}
 .foot-col h4{font-size:15px}
-.foot-base{font-size:14px}
+.foot-base{font-size:15px}
 
 /* welcome page */
 .welcome-hero p:last-child{font-size:18px}
@@ -161,7 +161,7 @@ body{font-size:18px}
 .welcome-footer a{font-size:18px}
 
 /* footnotes / legal (floor 14) */
-.timeline-note{font-size:14px}
+.timeline-note{font-size:14px!important}
 
 @media(max-width:1180px){.topbar nav{gap:16px;font-size:16px}}
 @media(max-width:1040px){.topbar nav{display:none}}
