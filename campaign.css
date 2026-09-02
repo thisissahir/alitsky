@@ -165,3 +165,6 @@ body{font-size:18px}
 
 @media(max-width:1180px){.topbar nav{gap:16px;font-size:16px}}
 @media(max-width:1040px){.topbar nav{display:none}}
+/* split-story body copy was still at the reference 17px */
+.split-copy p{font-size:18px}
+.split-copy p.eyebrow{font-size:15px}
