@@ -214,3 +214,46 @@ details p{line-height:1.65;color:var(--muted);margin:14px 0 0;font-size:17px}
 .phead-art .beam{filter:blur(2px);opacity:.34}
 
 @media(max-width:640px){:root{--r-card:20px}}
+
+/* ============================================================
+   ALITSKY TYPE FLOORS (design standard section 2)
+   body/card/footer/CTA 18, nav/button 16, labels 15,
+   FAQ question 22 / answer 18, legal 14.
+   ============================================================ */
+body{font-size:18px}
+
+.brand strong{font-size:16px}
+.brand small{font-size:15px;letter-spacing:.1em}
+.topbar nav{font-size:16px;gap:22px;letter-spacing:.08em}
+.mini-cta{font-size:16px;letter-spacing:.06em;padding:14px 20px}
+
+.eyebrow{font-size:15px;letter-spacing:.12em}
+.button{font-size:16px;letter-spacing:.05em;min-width:262px}
+.quiet{font-size:16px}
+
+.sect p{font-size:18px}
+.card p{font-size:18px}
+.card h3{font-size:23px}
+.card .n{font-size:15px;letter-spacing:.1em}
+.rows li{font-size:18px}
+.prose p,.prose ul,.prose ol{font-size:18px}
+.prose h3{font-size:26px}
+.phead .lede{font-size:clamp(20px,1.9vw,28px)}
+
+.faq-list summary{font-size:22px}
+.faq-list details p{font-size:18px}
+
+.foot-brand p{font-size:18px}
+.foot-col a{font-size:18px}
+.foot-col h4{font-size:15px}
+.foot-base{font-size:14px}
+.final-cta p{font-size:18px}
+
+/* services-page specifics */
+.offer-item .price{font-size:15px}
+.tri span{font-size:14px}
+.diff li{font-size:18px}
+.diff h3{font-size:23px}
+
+@media(max-width:1180px){.topbar nav{gap:16px}}
+@media(max-width:1040px){.topbar nav{display:none}}

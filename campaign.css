@@ -108,3 +108,60 @@ details[open] summary .pm{transform:rotate(45deg);display:inline-block}
 /* The included-list arrow lost its spacing and colour when the reference CSS
    was restored verbatim (the reference used a text bullet, not a span). */
 .included-list div span{color:var(--coral);margin-right:12px;font-weight:700}
+
+/* ============================================================
+   ALITSKY TYPE FLOORS (design standard section 2)
+   The reference shipped 8-11px labels. The house floors override:
+   body/card/footer/CTA 18, nav/button 16, labels 15, FAQ Q 22,
+   legal 14. Nothing that carries meaning drops below its floor.
+   ============================================================ */
+body{font-size:18px}
+
+/* nav + brand */
+.brand strong{font-size:16px}
+.brand small{font-size:15px;letter-spacing:.1em}
+.topbar nav{font-size:16px;gap:22px;letter-spacing:.08em}
+.mini-cta{font-size:16px;letter-spacing:.06em;padding:14px 20px}
+
+/* labels and badges (utility floor 15) */
+.eyebrow{font-size:15px;letter-spacing:.12em}
+.micro{font-size:15px;letter-spacing:.05em;gap:22px}
+.price-label{font-size:15px;letter-spacing:.1em}
+.portfolio-card small{font-size:15px}
+
+/* buttons (floor 16) */
+.button{font-size:16px;letter-spacing:.05em;min-width:262px}
+
+/* body copy (floor 18) */
+.hero-sub{font-size:18px}
+.center-section>p:not(.eyebrow),.story>p{font-size:18px}
+.included-list div{font-size:18px}
+.price-grid ul{font-size:18px}
+.price-grid small{font-size:16px}
+.process-grid p{font-size:18px}
+.process-grid h3{font-size:20px;letter-spacing:.1em}
+.process-grid .n{font-size:15px}
+.final-cta p{font-size:18px}
+
+/* FAQ (question 22 / answer 18) */
+.faq-list summary{font-size:22px}
+.faq-list details p{font-size:18px}
+
+/* footer (floor 18; legal line may sit at 14) */
+.foot-brand p{font-size:18px}
+.foot-col a{font-size:18px}
+.foot-col h4{font-size:15px}
+.foot-base{font-size:14px}
+
+/* welcome page */
+.welcome-hero p:last-child{font-size:18px}
+.welcome-steps p{font-size:18px}
+.welcome-steps h2{font-size:30px}
+.what-next p{font-size:18px}
+.welcome-footer a{font-size:18px}
+
+/* footnotes / legal (floor 14) */
+.timeline-note{font-size:14px}
+
+@media(max-width:1180px){.topbar nav{gap:16px;font-size:16px}}
+@media(max-width:1040px){.topbar nav{display:none}}
